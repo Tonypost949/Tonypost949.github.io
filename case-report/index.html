@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Forensic, Medical & Legal Analysis — Elizabeth Petruccio (EP) & Jesse Knabb (JK) — HBNC / Mercy House (8:26-cv-00348-JWH-ADS)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #1e293b;
+      --panel-alt: #26354d;
+      --border: #334155;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-green: #4ade80;
+      --accent-amber: #fbbf24;
+      --accent-red: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 36px;
+      font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 1650px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--accent);
+      border-radius: 10px;
+      padding: 24px 30px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 28px;
+      color: #ffffff;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .badge {
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      color: var(--accent);
+    }
+    .badge.green { color: var(--accent-green); border-color: rgba(74,222,128,0.4); }
+    .badge.amber { color: var(--accent-amber); border-color: rgba(251,191,36,0.4); }
+    .badge.red { color: var(--accent-red); border-color: rgba(248,113,113,0.4); }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 18px;
+      color: #e2e8f0;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .alert {
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 16px 0;
+      background: rgba(56, 189, 248, 0.1);
+      border-left: 5px solid var(--accent);
+    }
+    .alert.critical {
+      background: rgba(248, 113, 113, 0.1);
+      border-left-color: var(--accent-red);
+    }
+    .alert.success {
+      background: rgba(74, 222, 128, 0.1);
+      border-left-color: var(--accent-green);
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      table-layout: auto;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--panel-alt);
+      color: #ffffff;
+      font-weight: 600;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    code {
+      background: #0f172a;
+      color: #fbbf24;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .flow-card {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 18px 20px;
+    }
+    .flow-card.ep { border-top-color: var(--accent-red); }
+    .flow-card.jk { border-top-color: var(--accent-amber); }
+    .flow-card.res3 { border-top-color: var(--accent-green); }
+    .flow-card h4 {
+      margin: 0 0 10px 0;
+      font-size: 17px;
+      color: #ffffff;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+      margin-top: 18px;
+    }
+    .photo-card {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .photo-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+      background: #000;
+    }
+    .photo-card img:hover {
+      transform: scale(1.02);
+    }
+    .photo-caption {
+      padding: 12px 14px;
+      font-size: 14px;
+      color: #cbd5e1;
+      flex: 1;
+    }
+    .photo-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+      font-family: Consolas, monospace;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 24px;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border: 2px solid var(--accent);
+      border-radius: 6px;
+    }
+    .lightbox-caption {
+      color: #fff;
+      margin-top: 14px;
+      font-size: 16px;
+      max-width: 90vw;
+      text-align: center;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 36px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Forensic Medical, Environmental & Legal Dossier: Anthony DiMarcello III, Elizabeth Petruccio, Jesse Knabb &amp; HBNC Residents</h1>
+    <p class="subtitle">
+      Huntington Beach Navigation Center (HBNC / Mercy House Living Centers) • 17631 Cameron Lane & 17642 Beach Blvd • U.S. District Court C.D. Cal. Case No. <code>8:26-cv-00348-JWH-ADS</code>
+    </p>
+    <div class="badge-row">
+      <span class="badge green">Operative Pleading: SAVC (ECF 115, 08/17/2026 — 77 pp.)</span>
+      <span class="badge green">Combined Opposition: ECF 130 (09/09/2026 — 373 pp.)</span>
+      <span class="badge amber">EP Hospitalization: Scripps Mercy & Mission Hills (01/12/2024 – 03/14/2024)</span>
+      <span class="badge amber">JK Hospitalizations: 09/19/2023 – 10/11/2023 & 10/15/2023 – 10/24/2023</span>
+      <span class="badge red">HBNC Shelter Floor Breach Photos: Nov 7–14, 2023 (GPS 33.706389, -117.988611)</span>
+      <span class="badge">230+ High-Res Photos/Videos Extracted Across All 114 Google Photos Albums</span>
+    </div>
+  </header>
+
+  <section style="border-left: 6px solid var(--accent-green);">
+    <h2>0. Master Executive Summary: Elizabeth Petruccio (EP), Jesse Knabb (JK) &amp; HBNC / Mercy House Investigation (<code>8:26-cv-00348-JWH-ADS</code>)</h2>
+
+    <h3>A. Verified Federal Court Record &amp; Environmental Contamination Findings (<code>8:26-cv-00348-JWH-ADS</code>)</h3>
+    <p>
+      The operative federal filings (<a href="../evidence/filings/0001.0_Initial_Complaint_2026-02-18.pdf"><code>ECF 1</code> Initial Complaint</a>, <a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al.pdf"><code>ECF 115</code> Operative 77-Page Second Amended Verified Complaint [SAVC]</a>, and <a href="../evidence/filings/Opposition to MTD of SAVC.pdf"><code>ECF 130</code> 373-Page Combined Opposition + Exhibits</a>) establish the following core environmental and procedural facts:
+    </p>
+    <ul>
+      <li><strong>Operative Federal Pleading Status:</strong> Following Judge Holcomb's July 13, 2026 Order (<code>ECF 105</code>), the operative <strong>77-page SAVC (<code>ECF 115</code>) was filed on 08/17/2026</strong>, and the <strong>373-page Combined Opposition + Evidentiary Appendix (<code>ECF 130</code>) was filed on 09/09/2026</strong>.</li>
+      <li><strong>Soil Hexavalent Chromium (<code>Cr(VI)</code>) Exceedances:</strong> <a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al_EXTRACTED.txt"><code>SAVC ¶¶ 1, 93</code></a> and EEC Environmental's August 3, 2020 Phase II data document <strong>soil Hexavalent Chromium (<code>Cr(VI)</code>) up to <code>980 µg/kg</code></strong>, which is <strong><code>3.27×</code></strong> the DTSC commercial/industrial screening level (<code>300 µg/kg</code>) and <strong><code>49×</code></strong> the DTSC permanent residential soil screening level (<code>20 µg/kg</code>), alongside elevated Lead (<code>84.2 mg/kg</code>), Arsenic (<code>9.36 mg/kg</code>), Mercury, and buried oilfield/refuse debris.</li>
+      <li><strong>Confirmed Groundwater Cr(VI) in Public Supply &amp; Monitoring Wells:</strong> Official OCWD laboratory records (<a href="../evidence/filings/Opposition to MTD of SAVC_EXTRACTED.txt"><code>Opp. MTD Ex. I-1</code></a>) confirm <strong><code>0.95 µg/L</code> Cr(VI)</strong> in <strong>SMCMWC North Well</strong> (<code>47.5×</code> California OEHHA <code>0.02 µg/L</code> Public Health Goal) and <strong><code>0.41–1.30 µg/L</code> Cr(VI)</strong> across 6 consecutive tests (<code>2014–2026</code>) in <strong>Liberty Park Water Association Well 01 (<code>CA3000618</code>)</strong>, plus <strong><code>270 µg/L</code></strong> (<code>MW-42</code>) and <strong><code>62 µg/L</code></strong> (<code>MW-43B</code>) in OCWD monitoring wells.</li>
+      <li><strong>Ongoing Exposure Pathways &amp; Regulatory Posture:</strong> Walgreens #05771 prescription records (<code>17522 Beach Blvd</code>, <strong>549 feet</strong> from HBNC, <a href="../evidence/filings/Opposition to MTD of SAVC_EXTRACTED.txt"><code>Ex. J-1</code></a>) and Elizabeth Petruccio's Scripps EHR (<a href="../evidence/ehr_exhibits/scripps_ehr_page_659.png"><code>scripps_ehr_page_659.png</code></a>) confirm residents were routed directly to the pharmacy adjacent to the site, and RWQCB counsel stipulated on the record that the Water Board <strong>does not assert a diligent-prosecution bar</strong> under <code>42 U.S.C. § 6972(b)(1)(B)</code>.</li>
+    </ul>
+
+    <h3>B. Clinical &amp; Temporal Convergence Across 6 Documented HBNC Residents (Including Simultaneous Hospital Exits of Anthony DiMarcello III, Elizabeth Petruccio &amp; Burt Bell (Deceased))</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 18%;">HBNC Resident</th>
+            <th style="width: 18%;">HBNC Exposure &amp; Shelter Status</th>
+            <th style="width: 24%;">Hospitalizations &amp; Primary Records</th>
+            <th style="width: 40%;">Documented Pathology, Non-Healing Wounds, Orthopedic Trauma &amp; Shelter Exits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Anthony Michael DiMarcello III ("AMD")</strong><br/>(<code>DOB: 05/04/1983</code>)<br/>Son &amp; Caregiver of Elizabeth Petruccio</td>
+            <td><strong>2023 – Feb 11, 2024</strong><br/><strong>Exited from HBNC while hospitalized on <code>02/11/2024</code></strong> (simultaneously with Burt Bell (deceased brother of Brian Bell)); Hoag chart logs <code>"Pt States No Address"</code> starting <code>02/11/2024</code></td>
+            <td>• <strong>Mar 24 &amp; Mar 28, 2023</strong> (Hoag Hospital Newport Beach, <a href="../evidence/HealthSummary_Aug_29_2026 (3)/1 of 1 - My Health Summary.PDF"><code>DOC0008–0009.XML</code></a>)<br/>• <strong>Feb 11, 2024</strong> (Hoag ED, <a href="../evidence/Anthony1/DOC0006.XML"><code>DOC0006.XML</code></a>)<br/>• <strong>Aug 29 – Dec 5, 2024</strong> (Hoag &amp; Arrowhead Regional, <a href="../evidence/HealthSummary_Aug_29_2026 (4)/1 of 1 - My Health Summary.PDF"><code>ARMC PDF</code></a>)<br/>• <strong>Dec 14, 2025</strong> (UCI Medical Center, <a href="../evidence/HealthSummary_Aug_28_2026 (1)/1 of 1 - My Health Summary.PDF"><code>UCI PDF</code></a>)</td>
+            <td>
+              • <strong>Pulmonary Infiltrates, Bronchiectasis &amp; Left Pleural Effusion (<code>03/24–03/28/2023</code>):</strong> Hoag Chest CT (<code>03/24/23</code>, Dr. Peter Giuliano) showed a <strong><code>1.2 cm</code> left upper lobe peribronchial density (<em>"probably infectious/inflammatory given associated bronchiectasis"</em>) and a <code>1.8 cm</code> right lower lobe infiltrate</strong> + 4 fractured left ribs (<code>3rd–6th</code>). Returned 4 days later (<code>03/28/23</code>) with cough, SOB, tachycardia (<code>117 bpm</code>), and feeling <em>"filling up with fluids"</em> — diagnosed with <strong><code>Pleural effusion, not elsewhere classified</code></strong>.<br/>
+              • <strong>Non-Healing Staph/Cellulitis Wound &amp; Simultaneous Shelter Exit (<code>02/11/2024</code>):</strong> Brought by ambulance (<code>BIBA</code>) to Hoag ED for a worsening <strong>non-healing wound and staph infection / cellulitis on his left hip/lower extremity</strong> (<code>Wound of left lower extremity</code>; <code>Cellulitis</code>). Discharged on dual MRSA/Staph antibiotics (<strong><code>Cephalexin [Keflex] 500 mg QID</code> + <code>Bactrim DS 800-160 mg BID</code></strong>). Hoag Social Work note (<code>Gulhan R, 02/11/2024 12:55 PM</code>) confirms he was exited and seeking assistance to get back into Mercy House.<br/>
+              • <strong>Comminuted Left Proximal Humerus Fracture &amp; Posterior Shoulder Dislocation (<code>08/29/2024 – 12/05/2024</code>):</strong> Broken left shoulder with hemarthrosis requiring conscious sedation &amp; closed reduction at Arrowhead Regional (<code>09/05/2024</code>), leaving him working one-handed.<br/>
+              • <strong>Syncope &amp; Occipital Scalp Laceration (<code>12/14/2025</code>, UCI Medical Center):</strong> Repaired with <strong>6 surgical staples</strong> (<code>3 cm</code> wound) after syncope/collapse.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2. Elizabeth Tina Petruccio ("EP")</strong><br/>(<code>DOB: 07/29/1964</code>)<br/>Mother of Anthony DiMarcello</td>
+            <td><strong>Oct 2023 – Jan 2024</strong><br/>(Confirmed by GPS/EXIF photos <a href="../evidence/shelter_bed_photos_nov2023/"><code>HB_Shelter_Nov2023_photo_01–08.jpg</code></a> &amp; Scripps LCSW notes; <strong>exited with 30-day lockout penalty while in ICU</strong>)</td>
+            <td>• <strong>Nov 2023</strong> (Hoag Hospital Newport Beach, <a href="../evidence/ehr_exhibits/scripps_ehr_page_1051.png"><code>scripps_ehr_page_1051.png</code></a>)<br/>• <strong>Jan 12 – Feb 17, 2024</strong> (36 days, Scripps Mercy Chula Vista, <a href="../evidence/google_photos_albums//mom_2021_2024/mom_2021_2024_001.jpg"><code>mom_2021_2024_001.jpg</code></a>)<br/>• <strong>Feb 17 – Mar 14, 2024</strong> (26 days, Mission Hills SNF, <a href="../evidence/fwdfacesheet/fs.pdf"><code>fs.pdf</code></a>)</td>
+            <td>
+              • <strong>Atypical Pneumonia (<code>J18.9</code>) &amp; Cavitary Lung Disease:</strong> CT chest (<code>01/16/2024</code>) showed <strong>RUL ground-glass opacity with reverse-halo sign</strong> and bilateral cavitary pneumonia.<br/>
+              • <strong>Right Pleural Empyema</strong> (<code>103,752 WBCs</code>, <code>94% neutrophils</code>, <code>glucose &lt;20</code>) requiring <strong>Right Chest Tube Thoracostomy, Intubation (<code>J96.02</code>), and Right Internal Jugular Central Line</strong>.<br/>
+              • <strong>Sepsis (<code>A41.9</code>)</strong> tracking up the prevertebral danger space (<code>C2–C7</code>) into <strong>C4–C5 Cervical Discitis-Osteomyelitis (<code>M46.22</code>)</strong>; weight dropped from <code>160 lb</code> baseline to <code>116 lb</code> (<strong>-44 lbs</strong>).<br/>
+              • Required <strong>6 concurrent antimicrobials (~5.25 g/day)</strong> and a <strong>52-day IV Ceftriaxone + Vancomycin PICC regimen</strong>.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>3. Jesse Knabb ("JK")</strong><br/>(<code>DOB: 04/04/1978</code>)</td>
+            <td><strong>Nov 2022 – Oct 2024</strong><br/>(Dormitory resident)</td>
+            <td>• <strong>Sept 19 – Oct 11, 2023</strong> (22 days)<br/>• <strong>Oct 15 – Oct 24, 2023</strong> (9 days, readmitted 4 days later)</td>
+            <td>
+              • <strong>Pneumonitis, Recurrent Pneumonia, Pleural Effusion &amp; Pleural Empyema</strong> requiring invasive <strong>Thoracentesis</strong>.<br/>
+              • <strong>Sepsis, Renal Impairment, Microcytic Anemia &amp; Eosinophilia</strong>.<br/>
+              • Ongoing Albuterol HFA inhalers, Promethazine DM, Capvaxive (21-valent pneumococcal vaccine), and 3 courses of Doxycycline 100 mg + Clindamycin (<a href="../evidence/filings/Opposition to MTD of SAVC_EXTRACTED.txt"><code>Ex. J-1</code></a>).
+            </td>
+          </tr>
+          <tr>
+            <td><strong>4. Burt Bell (Deceased HBNC Resident, Brother of Brian Bell)</strong><br/>Brother of HBNC Resident Brian Bell; father reported to have held a senior U.S. Army position (exact title unverified) (<code>Bed #91</code>)</td>
+            <td><strong>2023 – Early 2024</strong><br/><strong>Exited from HBNC while hospitalized at the exact same time as Anthony DiMarcello</strong> (<a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al_EXTRACTED.txt"><code>SAVC ¶ 13, Ex. CCC</code></a>)</td>
+            <td>• <strong>Hospitalized &amp; Died in Early 2024</strong><br/>• <strong>Final Amended Sheriff-Coroner Death Certificate: April 11, 2024</strong> (<code>Ex. CCC</code>, certified under Sheriff-Coroner Don Barnes)</td>
+            <td>
+              • <strong>Fatal Community-Acquired Pneumonia:</strong> Passed away after exposure at HBNC during the exact same window that Anthony DiMarcello (hospitalized for his non-healing wound) and Elizabeth Petruccio (hospitalized for pneumonia/empyema/sepsis) were admitted.<br/>
+              • Both <strong>Burt Bell and Anthony DiMarcello were simultaneously exited from the HBNC shelter while in the hospital</strong>.<br/>
+              • He and his surviving brother Brian Bell (<code>Bed #91</code>) are reported to be the <strong>sons of a father reported to have held a senior U.S. Army position (exact title unverified)</strong>, underscoring the mistreatment of military family members and former aerospace/defense workers inside HBNC.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>5. Brian Bell (Now Deceased)</strong><br/>(HBNC Bed <code>#91</code>)<br/>Brother of Burt Bell; Brian has since passed away (father reported to have held a senior U.S. Army position — exact title unverified)</td>
+            <td><strong>2024 – Jan 2025+</strong><br/>(<a href="../evidence/google_photos_albums//mercy_house/mercy_house_022.jpg"><code>mercy_house_021–022.jpg</code></a>, <a href="../evidence/google_photos_albums//mercy_house/mercy_house_053.jpg"><code>053.jpg</code></a>)</td>
+            <td>• <strong>Jan 20, 2025</strong> (ADA / Medical Grievance signed by staff <code>Veronica G.</code>)</td>
+            <td>
+              • Suffering from <strong>Traumatic Brain Injury (TBI), 4 minor strokes, cognitive/memory loss, and severe arthritis</strong> following his brother's death at HBNC.<br/>
+              • Submitted a formal <em>Mercy House Guest Request for Consideration</em> on <code>1/20/25</code>, with the staff follow-up page (<code>mercy_house_021.jpg</code>) left <strong>completely blank</strong>.<br/>• <strong>Brian Bell has since passed away</strong> (passed away a few months ago after a Whirlpool stove mysteriously exploded in his apartment at the Oasis supportive housing complex, where HBNC residents were moved after years in the shelter tent).<br/>
+              • <strong>Severe Housing Disparity / Retaliatory Exclusion:</strong> While other HBNC residents like Brian Bell were moved to supportive housing at Oasis, <strong>Anthony DiMarcello and his mother Elizabeth Petruccio have NEVER been offered housing at Oasis or anywhere else</strong>—they are the <strong>only two original residents of HBNC from the start who have remained completely unhoused and excluded</strong>.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>6. Curtis M. Simcox</strong><br/>(<code>MRN: 14017651</code>)</td>
+            <td><strong>Jan 2025</strong><br/>(<a href="../evidence/mercy_house/mercy_house_019.jpg"><code>mercy_house_018–019.jpg</code></a>)</td>
+            <td>• <strong>Jan 19, 2025 (<code>14:00 PST</code>)</strong></td>
+            <td>• Hospital lab flowsheet showing critically elevated cardiac <strong><code>Troponin I: 6.300 *</code></strong> (acute myocardial injury/infarction) and <strong>Monocytosis (<code>13.4% [H]</code>, Abs <code>1.10 [H]</code>)</strong>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+        <h3>C. Smoking-Gun Physical &amp; Regulatory Evidence Extracted from Google Photos (<code>17631 Cameron Ln</code> / <code>17642 Beach Blvd</code>)</h3>
+    <ol>
+      <li><strong>The OCHCA "Asphalt Pavement Cover" Condition vs. On-Site Breaches:</strong>
+        <ul>
+          <li><strong>Official Admission (<a href="../evidence/google_photos_albums//navigation_center/navigation_center_003.jpg"><code>navigation_center_003.jpg</code></a>):</strong> City/County briefing admits EEC Environmental found soil contamination (<code>Cr(VI)</code> up to <code>490–980 µg/kg</code>, Mercury, buried metal debris, and suspected cesspool/septic tank mapped in <a href="../evidence/google_photos_albums//navigation_center/navigation_center_002.jpg"><code>navigation_center_002.jpg</code></a>) and that <strong>OCHCA deemed the site safe to operate a shelter ONLY <em>"as long as an asphalt pavement cover was placed over the soil."</em></strong></li>
+          <li><strong>Under-Bed Anchor Bolts &amp; Soil Intrusion (<a href="../evidence/shelter_bed_photos_nov2023/HB_Shelter_Nov2023_photo_05.jpg"><code>HB_Shelter_Nov2023_photo_01–07.jpg</code></a>, Nov 7, 2023, GPS <code>33.706389, -117.988611</code>):</strong> Rusted steel bolts driven through the floor baseplate directly beneath sleeping beds, with raw sub-slab sand/soil erupting onto the blue dormitory floor.</li>
+          <li><strong>Unsealed Ground Vaults &amp; Makeshift PVC Drain Pipes (<a href="../evidence/google_photos_albums//navigation_center/navigation_center_015.jpg"><code>navigation_center_011–025.jpg</code></a>, Feb 11, 2025; <a href="../evidence/mercy_house/mercy_house_017.jpg"><code>mercy_house_013–017.jpg</code></a>, Jun 5, 2024):</strong> Portable shower/restroom trailer (<code>COHSI</code>) discharging via glued/taped PVC and ABS pipes directly into <strong>open holes in the asphalt and uncovered dirt utility vaults</strong>.</li>
+        </ul>
+      </li>
+      <li><strong>Operating 4+ Years on an Expired 2020 Temporary Certificate of Occupancy (<a href="../evidence/mercy_house/mercy_house_046.jpg"><code>mercy_house_044–046.jpg</code></a>):</strong> Photographed taped above the <code>EXIT</code> sign on <strong>April 4, 2025</strong>, showing <code>TCO Cert Number: CO2020-005184</code> (<code>Permit B2020-005184</code>, issued <code>12/04/2020</code>) with <strong><code>TCO Expiration: 06/04/2021</code></strong>, and explicitly stating: <em>"APPROVAL EXCLUDES OVERFLOW TRAILER. OUTSTANDING PUBLIC WORKS, FIRE DEPARTMENT AND BUILDING INSPECTION OUTSTANDING CORRECTIONS SHALL BE COMPLETED AND APPROVED PRIOR TO ISSUANCE OF CERTIFICATE OF OCCUPANCY."</em></li>
+      <li><strong>Severe Interior Habitability &amp; Biohazard Failures (<a href="../evidence/google_photos_albums//navigation_center/navigation_center_027.jpg"><code>navigation_center_027–052.jpg</code></a>, <a href="../evidence/google_photos_albums//bathrooms/bathrooms_001.jpg"><code>bathrooms_001–009.jpg</code></a>):</strong> Collapsed, rusted ceiling exhaust fan grille hanging open with exposed orange wire-nut electrical splices (<code>027.jpg</code>), shattered porcelain bathroom sink with a gaping hole (<code>035.jpg</code>), standing water on blistered flooring (<code>029–034.jpg</code>), rusted-out metal wall panels (<code>045.jpg</code>), moldy ADA shower stalls (<code>051–052.jpg</code>), and chemical/meth residue in bathroom videos (<code>bathrooms_001–009.jpg</code>).</li>
+      <li><strong>Pattern of Civil Rights &amp; Property Violations (<a href="../evidence/google_photos_albums//mercy_house/mercy_house_066.jpg"><code>mercy_house_066.jpg</code></a>, <a href="../evidence/google_photos_albums//brief_HB_psi_info/brief_HB_psi_info_002.jpg"><code>brief_HB_psi_info_002–004.jpg</code></a>, <a href="../evidence/google_photos_albums//mustang_stolen_by_shelter_security/mustang_stolen_by_shelter_security_001.jpg"><code>mustang_stolen_001.jpg</code></a>):</strong>
+        <ul>
+          <li><strong>Federal Lawsuit <code>8:25-cv-02560-AH-SP</code> (filed Nov 14, 2025):</strong> Filed by <code>Melissa Meyer-Coffey</code> (<code>42 U.S.C. § 1983</code> &amp; VAWA).</li>
+          <li><strong>Superior Court Writ &amp; Complaint (<code>brief_HB_psi_info_002–004.jpg</code>):</strong> <em>Cyndi Utzman et al. v. County of Orange, Mercy House Living Centers et al.</em>, detailing Mercy House's Lock-In/Shut-Out policy, 1-mile anti-loitering zone, Invasion of Privacy, and Sexual Battery causes of action.</li>
+          <li><strong>Donated Gold Ford Mustang Convertible (<code>mustang_stolen_by_shelter_security_001.jpg</code>, Nov 5, 2022):</strong> Documented with California license plate <strong><code>8GUK894</code></strong>.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>1. Executive Clinical Synthesis: Multi-Patient Pulmonary, Pleural, Septic &amp; Soft-Tissue Injury Cluster at HBNC</h2>
+    <div class="alert success">
+      <strong>Primary-Source Clinical Verification:</strong> Primary hospital records from <strong>Hoag Memorial Hospital Presbyterian</strong>, <strong>Scripps Mercy Hospital Chula Vista</strong>, <strong>Mission Hills Post Acute Care</strong>, <strong>Arrowhead Regional Medical Center</strong>, <strong>UCI Medical Center Orange</strong>, and the <strong>Orange County Sheriff-Coroner</strong> establish a severe cluster of respiratory, pleural, septic, and non-healing soft-tissue infections among residents of the Huntington Beach Navigation Center (<code>17631 Cameron Lane</code>), coupled with punitive shelter exits of hospitalized residents.
+    </div>
+    <ul>
+      <li><strong>Anthony Michael DiMarcello III ("AMD" — <code>DOB 05/04/1983</code>, Caregiver &amp; Son of Elizabeth Petruccio):</strong> His verified Hoag Hospital, Arrowhead Regional, UCI Health, and OCHIN MyChart records (<a href="../evidence/HealthSummary_Aug_29_2026 (3)/1 of 1 - My Health Summary.PDF"><code>Hoag 117-Page Summary PDF</code></a>, <a href="../evidence/HealthSummary_Aug_29_2026 (4)/1 of 1 - My Health Summary.PDF"><code>Arrowhead 117-Page Summary PDF</code></a>, <a href="../evidence/HealthSummary_Aug_28_2026 (1)/1 of 1 - My Health Summary.PDF"><code>UCI 47-Page Summary PDF</code></a>) prove:
+        <ul>
+          <li><strong>Infectious Lung Densities, Bronchiectasis &amp; Left Pleural Effusion (<code>03/24/2023 – 03/28/2023</code>, Hoag Hospital <code>DOC0008–0009.XML</code>):</strong> Chest CT (<code>03/24/2023</code>) demonstrated a <strong><code>1.2 cm</code> peribronchial density in the left upper lobe (<em>"probably infectious/inflammatory given associated bronchiectasis"</em>) and a <code>1.8 cm</code> peri-fissural infiltrate in the medial right lower lobe</strong> alongside 4 fractured left ribs (<code>3rd–6th</code>). Four days later (<code>03/28/2023</code>), he returned with cough, shortness of breath, sinus tachycardia (<code>117 bpm</code>), and sensation of <em>"filling up with fluids,"</em> and was diagnosed with <strong><code>Pleural effusion, not elsewhere classified</code></strong> (trace left pleural effusion).</li>
+          <li><strong>Non-Healing Left Hip/Leg Staph &amp; Cellulitis Wound &amp; Simultaneous Exit from HBNC with Burt Bell (Deceased) (<code>02/11/2024</code>, Hoag Hospital <code>DOC0006.XML</code>):</strong> On <strong>February 11, 2024</strong>—while his mother Elizabeth Petruccio was hospitalized with septic shock/empyema and at the exact same time fellow resident <strong>Burt Bell</strong> was hospitalized and passed away—Anthony DiMarcello was brought by ambulance (<code>BIBA</code>) to Hoag Hospital for a worsening, <strong>non-healing wound and staph infection / cellulitis on his left hip/lower extremity</strong> (<code>Wound of left lower extremity, initial encounter - Primary</code>; <code>Cellulitis of other specified site</code>), treated with <strong><code>Cephalexin (Keflex) 500 mg QID</code> + <code>Sulfamethoxazole-Trimethoprim (Bactrim DS) 800-160 mg BID</code></strong>. Both <strong>Burt Bell and Anthony DiMarcello were exited from the HBNC shelter while hospitalized</strong> (confirmed by Hoag Social Worker Gulhan R's <code>02/11/2024 12:55 PM</code> note documenting that Anthony was seeking housing assistance to get back into Mercy House, and Hoag's demographic log recording <code>"Pt States No Address"</code> starting <code>02/11/2024</code>).</li>
+          <li><strong>Severe Left Shoulder Comminuted Humerus Fracture &amp; Posterior Dislocation (<code>08/29/2024 – 12/05/2024</code>) &amp; Syncope / Scalp Stapling (<code>12/14/2025</code>):</strong> Suffered a comminuted displaced fracture of the surgical neck and head of the left humerus with posterior shoulder dislocation and hemarthrosis (requiring conscious sedation and closed reduction at Arrowhead Regional on <code>09/05/2024</code>), leaving him working one-handed with a broken shoulder, followed on <code>12/14/2025</code> by an emergency admission at UCI Medical Center for syncope/collapse and a <code>3 cm</code> occipital scalp laceration repaired with <strong>6 surgical staples</strong>.</li>
+        </ul>
+      </li>
+      <li><strong>Elizabeth (Tina) Petruccio ("EP" — <code>DOB 07/29/1964</code>, Mother of Anthony DiMarcello):</strong> Her 1,428-page Scripps Health EHR (<a href="../evidence/Downloads/1.E.Petruccio Patient Health.pdf">1.E.Petruccio Patient Health.pdf</a>) and Mission Hills Post Acute Care face sheet (<a href="../evidence/dl/PETRUCCIO_FACESHEET_EXTRACT.md">PETRUCCIO_FACESHEET_EXTRACT.md</a>) document that after residing at HBNC and photographing raw contaminated soil erupting through anchor-bolt punctures under her shelter bed (Nov 7, 2023), she was hospitalized at Hoag Hospital (Nov 2023) and admitted to Scripps Mercy (Jan 12, 2024) with <strong>atypical pneumonia (RUL reverse-halo ground-glass opacity), bilateral cavitary pneumonia, right pleural empyema (103,752 WBCs, chest tube), and septic shock</strong>, which tracked continuously from the anterior mediastinum up the prevertebral "danger space" (<code>C2–C7</code>) into <strong>C4–C5 cervical vertebral discitis-osteomyelitis (<code>M46.22</code>)</strong>—while HBNC automatically exited her and imposed a 30-day lockout penalty (<a href="../evidence/ehr_exhibits/scripps_ehr_page_985.png"><code>scripps_ehr_page_985.png</code></a>).</li>
+      <li><strong>Jesse Knabb ("JK" — <code>DOB 04/04/1978</code>) &amp; Deceased Resident (Burt Bell, <code>Ex. CCC</code>):</strong> Verified federal pleadings (<a href="../evidence/filings/0001.0_Initial_Complaint_2026-02-18.pdf">Initial Complaint ECF 1</a>, <a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al.pdf">SAVC ECF 115</a>, and <a href="../evidence/filings/Opposition to MTD of SAVC.pdf">Opposition to MTD ECF 130</a>) prove that while residing in HBNC (<strong>Nov 2022 – Oct 2024</strong>), Knabb was hospitalized from <strong>Sept 19 to Oct 11, 2023</strong> and <strong>Oct 15 to Oct 24, 2023</strong> with <strong>pneumonitis, pneumonia, pleural effusion, empyema (requiring thoracentesis), sepsis, renal impairment, microcytic anemia, and eosinophilia</strong>—and fellow HBNC resident <strong>Burt Bell</strong> died of community-acquired pneumonia (Orange County Sheriff-Coroner Final Amended Certificate, April 11, 2024, <code>Ex. CCC</code>) after being exited from the shelter alongside Anthony DiMarcello.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Summary of Verified Environmental, Hydrogeological &amp; Procedural Evidence in Federal Court Filings (<code>ECF 1</code>, <code>ECF 115</code>, <code>ECF 130</code>)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 24%;">Evidentiary Domain</th>
+            <th style="width: 76%;">Verified Record in Federal Court Filings (<code>ECF 1</code>, <code>ECF 115</code>, <code>ECF 130</code>) &amp; Official Agency Logs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Operative Pleading Status (Rule 15(a)(2))</strong></td>
+            <td>Judge Holcomb's July 13, 2026 Order (<code>ECF 105</code>) denied the initial Motions to Dismiss and granted leave to amend. On <strong>08/17/2026</strong>, Notice <code>ECF 114</code> and the operative <strong>77-page SAVC + Redline (<code>ECF 115</code>)</strong> (<a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al.pdf">SAVC PDF</a>) were filed, followed on <strong>09/09/2026</strong> by the <strong>373-page Combined Opposition (<code>ECF 130</code>)</strong> (<a href="../evidence/filings/Opposition to MTD of SAVC.pdf">Opposition PDF</a>).</td>
+          </tr>
+          <tr>
+            <td><strong>2. Soil Hexavalent Chromium (<code>Cr(VI)</code>) Exceedances</strong></td>
+            <td>In <code>SAVC ¶ 1 &amp; ¶ 93</code>, soil Cr(VI) at the HBNC site is documented up to <strong><code>980 μg/kg</code></strong>, which is <strong><code>3.27×</code></strong> the DTSC HERO Note 3 commercial/industrial screening level (<code>300 μg/kg</code>) and <strong><code>49×</code></strong> the protective DTSC permanent residential soil screening level (<strong><code>20 μg/kg</code></strong>; <code>980 ÷ 20 = 49×</code>).</td>
+          </tr>
+          <tr>
+            <td><strong>3. Groundwater Cr(VI) Detections in Public Supply Wells</strong></td>
+            <td><code>SAVC ¶¶ 16, 86</code> and <code>Opp. MTD Ex. I-1 (p. 359)</code> attach official OCWD Main Lab records proving Cr(VI) in:<br>
+            • <strong>SMCMWC North Well (May 2026):</strong> <strong><code>0.95 μg/L</code></strong> (<code>47.5×</code> California OEHHA <code>0.02 μg/L</code> PHG)<br>
+            • <strong>Liberty Park Water Assoc. Well 01 (<code>CA3000618_001_001</code>, Ex. I-1 p. 359):</strong> <strong><code>0.41 μg/L</code></strong> (08/13/2026), <strong><code>0.42 μg/L</code></strong> (09/15/2025), <strong><code>0.43 μg/L</code></strong> (04/15/2025), <strong><code>0.47 μg/L</code></strong> (10/16/2024), <strong><code>0.46 μg/L</code></strong> (01/12/2023), and <strong><code>1.30 μg/L</code></strong> (08/06/2014) (<code>20.5×–65×</code> PHG), in a water association where the City holds a proprietary ownership interest via <code>Grant Deed CC-1142</code><br>
+            • <strong>OCWD Monitoring Wells:</strong> <code>MW-42</code> (<strong><code>270 μg/L</code></strong>), <code>MW-43B</code> (<strong><code>62 μg/L</code></strong>), and <code>MW-9</code> (above background).</td>
+          </tr>
+          <tr>
+            <td><strong>4. Ongoing Exposure Pathways (<code>17522 Beach Blvd</code> &amp; Downgradient Wells)</strong></td>
+            <td>1. <strong>Legally Compelled Pharmacy Visits 549 Feet from HBNC (<code>Opp. MTD pp. 4–5, Ex. J-1</code> &amp; <code>scripps_ehr_page_659.png</code>):</strong> Both Elizabeth Petruccio and Jesse Knabb had their prescriptions routed to Walgreens #05771 (<code>17522 Beach Blvd</code>, <strong>549 feet</strong> from HBNC), including <strong>60+ in-person pickups</strong> (<code>01/2024–09/2026</code>) inside the dust/vapor zone.<br>
+            2. <strong>Downgradient Tap Water (<code>0.95 μg/L</code> Cr(VI)):</strong> Supplied by SMCMWC North Well along the Talbert Barrier northeast hydraulic gradient.</td>
+          </tr>
+          <tr>
+            <td><strong>5. Regulatory Posture &amp; Equitable Relief</strong></td>
+            <td>• In <code>SAVC ¶ 8 &amp; ¶ 109(b)</code>, RWQCB counsel Deputy AG John Sasaki stipulated on the record that <strong>RWQCB <em>"does not plan to argue diligent prosecution under 42 U.S.C. § 6972(b)(1)(B)"</em></strong>, and Water Board Petition <code>A-2926</code> was placed in abeyance <code>02/23/2026</code>.<br>
+            • <code>SAVC Prayer for Relief (pp. 72–74)</code> seeks declaratory/injunctive remediation and <code>§ 6972(e)</code> costs.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. The Four-Patient HBNC Pulmonary, Pleural, Septic &amp; Wound Cluster (March 2023 – April 2024)</h2>
+    <div class="flow-grid">
+      <div class="flow-card jk">
+        <h4>Patient 1: Jesse Knabb ("JK" — Resident Nov 2022 – Oct 2024)</h4>
+        <ul>
+          <li><strong>Hospitalizations:</strong> <code>09/19/2023 – 10/11/2023</code> (22 days) &amp; <code>10/15/2023 – 10/24/2023</code> (9 days).</li>
+          <li><strong>Diagnoses (<code>SAVC ¶ 12</code> / <code>Init. Compl. ¶ 8</code>):</strong> <strong>Pneumonitis, Pneumonia, Pleural Effusion, Empyema (requiring Thoracentesis), Sepsis, Renal Impairment, Microcytic Anemia, and Eosinophilia</strong>.</li>
+          <li><strong>Ongoing Outpatient Regimen (<code>Ex. J-1</code>):</strong> Albuterol HFA inhalers (<code>02–03/2024</code>), Promethazine DM (<code>08/2024</code>), Capvaxive 21-valent pneumococcal vaccine (<code>02/2026</code>), plus repeated courses of <strong>Doxycycline Hyclate 100 mg + Clindamycin/Benzoyl Peroxide 1/5% Gel</strong> (<code>09/2025</code>, <code>03/2026</code>, <code>05/2026</code>).</li>
+        </ul>
+      </div>
+      <div class="flow-card ep">
+        <h4>Patient 2: Elizabeth Tina Petruccio ("EP" — Resident Oct – Nov 2023)</h4>
+        <ul>
+          <li><strong>Exposure Documentation:</strong> Photographed raw sub-slab sand/soil erupting through corroded anchor bolts under her shelter bed on <strong>Nov 7, 2023</strong>.</li>
+          <li><strong>Hospitalizations:</strong> <code>01/12/2024 – 02/17/2024</code> (Scripps Mercy Chula Vista, 36 days) &amp; <code>02/17/2024 – 03/14/2024</code> (Mission Hills Post Acute Care, 26 days).</li>
+          <li><strong>Diagnoses:</strong> <strong>Atypical Pneumonia (<code>J18.9</code>, RUL reverse-halo ground-glass opacity), Right Pleural Empyema (<code>103,752 WBCs</code>, Chest Tube Thoracostomy), Sepsis (<code>A41.9</code>), Acute Hypercapnic Resp. Failure (<code>J96.02</code>, intubated)</strong>, tracking from the anterior mediastinum up the prevertebral "danger space" (<code>C2–C7</code>) into <strong>C4–C5 Cervical Discitis-Osteomyelitis (<code>M46.22</code>)</strong>.</li>
+          <li><strong>Current Clinical Urgency:</strong> Patient suffers from chronic, severe post-empyema pulmonary compromise and is currently experiencing acute, worsening pulmonary illness and respiratory distress requiring immediate clinical evaluation and pulmonary care.</li>
+        </ul>
+      </div>
+      <div class="flow-card ep">
+        <h4>Patient 3: Anthony Michael DiMarcello III ("AMD" — Caregiver &amp; Son of EP)</h4>
+        <ul>
+          <li><strong>Pulmonary / Pleural (<code>03/24–03/28/2023</code>, Hoag Hospital <code>DOC0008–0009.XML</code>):</strong> Chest CT showed <strong><code>1.2 cm</code> LUL peribronchial density with bronchiectasis</strong> (<em>"probably infectious/inflammatory"</em>) and <strong><code>1.8 cm</code> RLL infiltrate</strong> + 4 fractured left ribs (<code>3rd–6th</code>), followed on <code>03/28/2023</code> by <strong><code>Pleural effusion, not elsewhere classified</code></strong> (cough, SOB, <em>"filling up with fluids"</em>).</li>
+          <li><strong>Non-Healing Wound &amp; Simultaneous Shelter Exit (<code>02/11/2024</code>, Hoag <code>DOC0006.XML</code>):</strong> Admitted by ambulance for worsening <strong>non-healing left hip/leg wound &amp; staph/cellulitis infection</strong> (treated with <code>Keflex 500 mg QID + Bactrim DS BID</code>); <strong>simultaneously exited from HBNC alongside Burt Bell (deceased brother of Brian Bell)</strong>.</li>
+          <li><strong>Left Shoulder Comminuted Humerus Fracture &amp; Dislocation (<code>08/29–12/05/2024</code>) &amp; Syncope / 6 Scalp Staples (<code>12/14/2025</code>):</strong> Documented at Hoag, Arrowhead Regional, and UCI Medical Center.</li>
+          <li><strong>Prospective Federal Qui Tam Relator Status &amp; Retaliation Concerns:</strong> Maintained evidence regarding municipal procurement fraud, CEQA exemptions, and shelter conditions as a prospective federal qui tam relator; delayed formal filing due to acute vulnerability, unhoused status, and risk of heightened retaliation against himself and his mother.</li>
+          <li><strong>Retaliatory "Zombie Warrant", Courthouse Arrest &amp; Custody Trauma (<code>12/14/2025</code>, UCI <code>DOC0002.XML</code>):</strong> Anthony DiMarcello acted in a statutory mandatory reporting capacity under California elder protection laws (Cal. Welf. &amp; Inst. Code &sect; 15630), directly assisting fellow shelter resident Bebe Smith with her active elder financial abuse matter. The U-Haul vehicle held the remaining physical property of Bebe Smith's diverted inheritance (which had bypassed proper probate administration in violation of debts-first statutory rules). While Anthony and Bebe Smith were physically appearing at the courthouse on this elder abuse matter, law enforcement moved in and arrested <em>only Anthony</em> &mdash; marking the first arrest of his life. U-Haul Corporate never pressed charges; U-Haul confirmed multiple fraudulent accounts had been opened under Anthony's identity due to identity theft, resulting in zero debt or charges assessed to his legitimate account. Anthony was actively on the phone with U-Haul Corporate resolving the matter when the local branch mistakenly flagged the vehicle. Instead of proper service, the Orange County DA's office issued a <em>Notice of Complaint</em> for Cal. Penal Code &sect; 496d(a) intentionally mailed to a dead-drop commercial address (412 Olive Ave, vacated in 2021) to engineer an automatic Failure to Appear (FTA) "Zombie Warrant" in retaliation for his whistleblower disclosures to the DOJ Task Force / AUSA Bill Essayli and elected officials. Upon being taken into county custody, Anthony was placed on an involuntary 5150 psychiatric hold and forcibly administered psychotropic medication (Abilify / aripiprazole) without consent, inducing acute hypoglycemia, syncopal collapse, and a concrete head strike resulting in 6 surgical scalp staples.</li>
+        </ul>
+      </div>
+      <div class="flow-card res3">
+        <h4>Patient 4: Burt Bell — Deceased HBNC Resident (<code>SAVC ¶ 13, Ex. CCC</code>)</h4>
+        <ul>
+          <li><strong>Identity &amp; Family Context:</strong> Brother of HBNC resident <strong>Brian Bell (<code>Bed #91</code>)</strong> and <strong>son of a father reported to have held a senior U.S. Army position (exact title unverified)</strong>.</li>
+          <li><strong>Simultaneous Hospitalization &amp; Shelter Exit:</strong> Hospitalized at the exact same time as Anthony DiMarcello (<code>Feb 2024</code>); <strong>both Burt Bell and Anthony DiMarcello were exited from the HBNC shelter while in the hospital</strong>.</li>
+          <li><strong>Official Death Record:</strong> Orange County Sheriff-Coroner (Don Barnes) Final Amended Certificate of Death (<strong>April 11, 2024</strong>, <code>Ex. CCC</code>) certifying <strong>Community-Acquired Pneumonia</strong> as immediate cause of death.</li>
+        </ul>
+      </div>
+      <div class="flow-card res4" style="margin-top: 15px;">
+        <h4>Patient 5: Brian Bell — Deceased Former HBNC Resident (Bed #91)</h4>
+        <ul>
+          <li><strong>Identity &amp; Family Context:</strong> Surviving brother of Burt Bell; son of a father who held a senior U.S. Army leadership position (exact title unverified). Suffered from traumatic brain injury (TBI), 4 minor strokes, cognitive/memory loss, and severe arthritis.</li>
+          <li><strong>Shelter Grievance Ignored:</strong> Submitted formal <em>Mercy House Guest Request for Consideration</em> on <code>01/20/2025</code> (signed by staff Veronica G., <code>mercy_house_021–022.jpg</code>), requesting reasonable accommodations; staff follow-up page was left entirely blank.</li>
+          <li><strong>Subsequent Death at Oasis Supportive Housing:</strong> Following years in the HBNC sprung-structure tent, Brian Bell was transitioned into permanent supportive housing at the Oasis apartments in Huntington Beach. Brian passed away a few months ago after a Whirlpool stove mysteriously exploded inside his Oasis apartment. Both Bell brothers who resided at HBNC are now deceased.</li>
+          <li><strong>Discriminatory Housing Disparity:</strong> Despite HBNC residents being transitioned to Oasis, <strong>Anthony DiMarcello and Elizabeth Petruccio are the only two original HBNC residents from the facility's inception who have NEVER been offered housing at Oasis or anywhere else</strong>, establishing retaliatory exclusion.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Detailed Clinical &amp; Pharmacological Comparison Table (JK vs. EP)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%;">Clinical Dimension</th>
+            <th style="width: 40%;">Jesse Knabb ("JK" — DOB <code>04/04/1978</code>)</th>
+            <th style="width: 40%;">Elizabeth Tina Petruccio ("EP" — DOB <code>07/29/1964</code>)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Primary Source Records on Disk</strong></td>
+            <td>
+              • <a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al.pdf">SAVC (ECF 115, ¶¶ 11–13, 20)</a><br>
+              • <a href="../evidence/filings/0001.0_Initial_Complaint_2026-02-18.pdf">Initial Complaint (ECF 1, ¶¶ 8–9)</a><br>
+              • <a href="../evidence/filings/Opposition to MTD of SAVC.pdf">Opp. MTD Ex. J-1 (Walgreens Rx Ledger, pp. 360–373)</a>
+            </td>
+            <td>
+              • <a href="../evidence/Downloads/1.E.Petruccio Patient Health.pdf">1.E.Petruccio Patient Health.pdf (1,400+ pp. Scripps EHR)</a><br>
+              • <a href="../evidence/dl/PETRUCCIO_FACESHEET_EXTRACT.md">Mission Hills SNF Face Sheet Extract (Resident #15524)</a><br>
+              • <a href="../evidence/8-26-cv-00348-knabb-v-hb/HB_SHELTER_UNDER_BED_PHOTOS_DOSSIER.md">Nov 7–14, 2023 HBNC Shelter Under-Bed Photos</a>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Pulmonary &amp; Pleural Syndrome</strong></td>
+            <td>
+              • <strong>Pneumonitis</strong> &amp; <strong>Recurrent Pneumonia</strong><br>
+              • <strong>Pleural Effusion</strong> progressing to <strong>Empyema</strong><br>
+              • Required invasive <strong>Thoracentesis</strong><br>
+              • Chronic dyspnea &amp; coughing after HBNC high-pressure washing dust clouds (<code>SAVC ¶ 20</code>)
+            </td>
+            <td>
+              • <strong>Atypical Pneumonia (<code>J18.9</code>):</strong> CT Chest (<code>01/16/2024</code>) showed RUL ground-glass opacity with <strong>reverse-halo sign</strong> + basilar consolidation<br>
+              • <strong>Right Pleural Empyema:</strong> Pleural fluid <code>103,752 nucleated cells</code>, <code>94% neutrophils</code>, <code>glucose &lt;20</code><br>
+              • Required <strong>Right Chest Tube Thoracostomy (<code>01/13/2024</code>)</strong> &amp; mechanical ventilation (<code>J96.02</code>)
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Sepsis &amp; Deep Tissue / Bone Spread</strong></td>
+            <td>
+              • <strong>Sepsis</strong> during Sept–Oct 2023 hospitalizations<br>
+              • <strong>Renal Impairment / Acute Kidney Injury</strong><br>
+              • <strong>Microcytic Anemia &amp; Eosinophilia</strong>
+            </td>
+            <td>
+              • <strong>Sepsis, unspecified organism (<code>A41.9</code>)</strong> (Urine <em>Strep pneumoniae</em> antigen positive <code>01/13/2024</code>; pleural/blood cultures sterilized by prior IV antibiotics)<br>
+              • <strong>Contiguous Danger-Space Spread to Neck (<code>M46.22</code>):</strong> Contrast MRI (<code>01/25–01/26/2024</code>) &amp; CT C-spine (<code>01/29/2024</code>) proved prevertebral fluid/edema (<code>C2–C7</code>) extending continuously from the <strong>anterior mediastinum/chest</strong> into <strong>C4–C5 (and probable C5–C6) discitis-osteomyelitis</strong><br>
+              • <strong>Ulcerative Oral Mucositis (<code>K12.30</code>)</strong> &amp; Acute-on-Chronic Systolic CHF (<code>I50.23</code>, EF 25%)
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Documented Antibiotic &amp; Antimicrobial Regimens</strong></td>
+            <td>
+              • <strong>Doxycycline Hyclate 100 mg Caps (90 caps total):</strong><br>
+              &nbsp;&nbsp;– <code>09/09/2025</code>: Qty 30 (Dr. Albert Antonyan)<br>
+              &nbsp;&nbsp;– <code>03/26/2026</code>: Qty 30 (Dr. Albert Antonyan)<br>
+              &nbsp;&nbsp;– <code>05/16/2026</code>: Qty 30 (Dr. Albert Antonyan)<br>
+              • <strong>Clindamycin 1% / Benzoyl Peroxide 5% Gel (100g total):</strong><br>
+              &nbsp;&nbsp;– <code>09/08/2025</code>: 50g Jar (Dr. Albert Antonyan)<br>
+              &nbsp;&nbsp;– <code>05/16/2026</code>: 50g Jar (Dr. Albert Antonyan)<br>
+              • <strong>Ciclopirox 8% Topical Soln:</strong> <code>09/17/2025</code> &amp; <code>08/29/2026</code> (Gina Wilvang)
+            </td>
+            <td>
+              • <strong>Inpatient Peak (~5.25 g/day across 6 concurrent antimicrobials):</strong><br>
+              &nbsp;&nbsp;– <strong>Vancomycin:</strong> <code>1,250 mg</code> IV load (<code>01/12/24</code>) → <code>750 mg IV q12h</code> → <code>750 mg IV q8h</code> (<code>01/25–03/22/24</code>)<br>
+              &nbsp;&nbsp;– <strong>Ceftriaxone (Rocephin):</strong> <code>2 g IV q24h</code> (<code>01/12–01/21/24</code>, restarted <code>01/25/24</code> for <strong>52 days</strong> via right basilic PICC placed <code>01/30/24</code>)<br>
+              &nbsp;&nbsp;– <strong>Metronidazole (Flagyl):</strong> <code>500 mg q12h</code> IV/PO (<code>01/12/24</code> through Feb 2024)<br>
+              &nbsp;&nbsp;– <strong>Azithromycin:</strong> <code>500 mg IV</code> (<code>01/12/24</code>)<br>
+              &nbsp;&nbsp;– <strong>Fluconazole:</strong> <code>200 mg IV</code> (<code>01/13/24</code>) + <strong>Clotrimazole 10 mg troches TID</strong> (<code>01/16–01/25/24</code>)<br>
+              &nbsp;&nbsp;– <strong>Acyclovir:</strong> <code>400 mg q8h</code> IV/PO (<code>01/15–01/25/24</code>)<br>
+              &nbsp;&nbsp;– <strong>Augmentin:</strong> <code>875/125 mg PO BID</code> (<code>01/22–01/25/24</code>, stopped when MRI showed C4–C5 discitis)<br>
+              • <strong>Outpatient / Subsequent ED Courses:</strong><br>
+              &nbsp;&nbsp;– <code>09/23/2024</code>: <strong>Doxycycline 100 mg PO BID × 7d</strong> (Clindamycin allergy noted)<br>
+              &nbsp;&nbsp;– <code>06/22/2025</code>: <strong>Linezolid (Zyvox) 600 mg IV + Ceftriaxone 1 g IV</strong> (leg hematoma/cellulitis)
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Other Documented Medications</strong></td>
+            <td>
+              • <strong>Pulmonary:</strong> Albuterol HFA Inhaler (<code>02/02/24</code>, <code>02/27/24</code>, <code>03/25/24</code>), Promethazine DM (<code>08/19/24</code>), Capvaxive Pneumococcal Vaccine (<code>02/10/26</code>)<br>
+              • <strong>Pain / Neuropathy:</strong> Oxycodone/APAP 10-325 mg, Tramadol 50 mg, Pregabalin 150–200 mg, Celecoxib 100–200 mg, ZTlido 1.8% / Lidocaine 5% patches, Diclofenac 1% gel<br>
+              • <strong>GI / Neuro / Psych:</strong> Pantoprazole 40 mg, D-Amphetamine ER 10/20/30 mg, Bupropion XL, Trintellix, Clonazepam 0.5 mg, Prazosin 1 mg, Guanfacine ER 2 mg
+            </td>
+            <td>
+              • <strong>Cardiac / HFrEF / AFib:</strong> Sacubitril-valsartan (Entresto), Dapagliflozin (Farxiga), Carvedilol, Furosemide, Apixaban (Eliquis), Diltiazem, Amiodarone, Enoxaparin<br>
+              • <strong>Pulmonary / Pain / Other:</strong> Albuterol &amp; Budesonide nebulizers, Gabapentin, Colchicine
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Full-Resolution Nov 7–14, 2023 HBNC Shelter Under-Bed Floor-Cap Breach Photos (Click Any Photo to Enlarge)</h2>
+    <p>
+      Extracted from the shared Google Photos album <strong>HB SHELTER (Nov 7–14, 2023)</strong> (<code>https://photos.app.goo.gl/YZ1HijhCK64gpgX96</code>) in the top pinned Gemini chat. All 7 interior photos carry embedded Samsung <code>SM-T580</code> EXIF timestamps (<strong>Nov 7, 2023, 12:20:47 PM – 12:36:20 PM PST</strong>) and GPS coordinates <strong><code>33.706389, -117.988611</code></strong> (<strong>17642 Beach Blvd / 17631 Cameron Lane</strong>).
+    </p>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023/HB_Shelter_Nov2023_photo_05.jpg" alt="Photo 05" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 05 (`20231107_122120.jpg`):</strong> Under-bed area showing brown faux-fur blanket, black metal bed frame, wire under-bed storage crate, and loose sub-slab soil/sand erupting along the rusted perimeter baseplate/anchor bolt on the blue painted floor.
+          <div class="photo-meta">2023-11-07 12:21:20 PST | GPS: 33.706389, -117.988611 | SHA256: f05cc7bd3a98d435</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023/HB_Shelter_Nov2023_photo_01.jpg" alt="Photo 01" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 01 (`20231107_122047.jpg`):</strong> Loose soil/sand pile and footprint outline on the blue painted floor directly beneath the bed by the perimeter anchor bolt and duct-taped tent seam.
+          <div class="photo-meta">2023-11-07 12:20:47 PST | GPS: 33.706389, -117.988611 | SHA256: 063c0b7ab8ca8d2f</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023//HB_Shelter_Nov2023_photo_02.jpg" alt="Photo 02" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 02 (`20231107_122051.jpg`):</strong> Close-up of corroded steel anchor bolt penetrating the blue painted floor plate with duct tape peeling back and raw sand/soil spilling onto the floor.
+          <div class="photo-meta">2023-11-07 12:20:51 PST | GPS: 33.706389, -117.988611 | SHA256: 900c9ee72899e6d6</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023//HB_Shelter_Nov2023_photo_03.jpg" alt="Photo 03" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 03 (`20231107_122057.jpg`):</strong> Trail of loose soil/sand spreading across the blue floor under the bed next to the corroded baseplate bolt.
+          <div class="photo-meta">2023-11-07 12:20:57 PST | GPS: 33.706389, -117.988611 | SHA256: 88a81c155bce4cdd</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023//HB_Shelter_Nov2023_photo_04.jpg" alt="Photo 04" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 04 (`20231107_122059.jpg`):</strong> Wide view showing the under-bed wire crate, bed frame, and soil pile next to the tent baseplate.
+          <div class="photo-meta">2023-11-07 12:20:59 PST | GPS: 33.706389, -117.988611 | SHA256: 502aff6ed19d45b5</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023//HB_Shelter_Nov2023_photo_06.jpg" alt="Photo 06" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 06 (`20231107_123242.jpg`):</strong> Broom and dustpan sweeping up the loose sand/soil pile beside the torn white sandbag and corroded anchor bolts.
+          <div class="photo-meta">2023-11-07 12:32:42 PST | GPS: 33.706389, -117.988611 | SHA256: da79eac1dc353f97</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023//HB_Shelter_Nov2023_photo_07.jpg" alt="Photo 07" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 07 (`20231107_123620.jpg`):</strong> Macro close-up of the two rusted steel anchor bolts driven through the floor baseplate, peeled duct tape, and raw soil/sand intrusion.
+          <div class="photo-meta">2023-11-07 12:36:20 PST | Samsung SM-T580 | SHA256: b2e85b6342d80ef9</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/shelter_bed_photos_nov2023/HB_Shelter_Nov2023_photo_08.jpg" alt="Photo 08" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>Photo 08 (`IMG_20231114_102036_582.jpg`):</strong> Nov 14, 2023 photo at the entrance door of the Sprung shelter structure (resident wearing pink shelter wristband).
+          <div class="photo-meta">2023-11-14 10:20:36 PST | SkyDevices SKY B63 | SHA256: a0696c17a98aee2e</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/filings/17631 Cameron St_17642 Beach Blvd_1947.jpg" alt="1947 Aerial" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong>1947 Historical Aerial Survey (`17631 Cameron St_17642 Beach Blvd_1947.jpg`):</strong> Transmitted by Jesse Knabb on Oct 13, 2026 (`IMAP ID 325344`), documenting historical site layout and Well W-4150 industrial origin.
+          <div class="photo-meta">712,280 Bytes | Transmitted 2026-10-13</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Autonomous Extraction Across All 114 Google Photos Albums in <code>amd949609@gmail.com</code> (230+ High-Res Images &amp; Videos Inspected)</h2>
+    <div class="alert success">
+      <strong>Complete 114-Album Enumeration &amp; Extraction Completed:</strong> All 114 albums in <code>amd949609@gmail.com</code> were enumerated (<a href="../evidence/google_photos_albums/all_albums_complete.json">all_albums_complete.json</a>), and every picture and video frame across all HBNC, Mercy House, Huntington Beach, medical, and legal albums (<strong>navigation center</strong> [52], <strong>mercy house</strong> [92 + 4], <strong>m3rsyh0u5e</strong> [4], <strong>tent</strong> [5], <strong>bathrooms</strong> [9], <strong>meth exposure to kids at bathrooms hb</strong> [9], <strong>mustang donated to me stolen by shelter security</strong> [1], <strong>mom 2021 2024</strong> [2], <strong>brief HB psi info</strong> [12], <strong>emergency injunctive relief and TRO</strong> [1], <strong>hb data</strong> [1], <strong>s1hbcia</strong> [1], <strong>dehashed HB</strong> [2], <strong>well artesian Huntington history</strong> [9], and <strong>methodist</strong> [25]) has been downloaded into <a href="../evidence/google_photos_albums/">C:/OsintNeoAi/cases/8-26-cv-00348-knabb-v-hb/google_photos_albums/</a> and visually inspected.
+    </div>
+
+    <h3>5A. Environmental &amp; Regulatory Admissions vs. Physical Breaches of the OCHCA Asphalt Cap</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 22%;">Evidence Category</th>
+            <th style="width: 39%;">Official City / County / EEC Representation</th>
+            <th style="width: 39%;">On-Site Physical Reality Captured in Google Photos Albums</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. OCHCA "Asphalt Pavement Cover" Requirement (`navigation_center_002.jpg` &amp; `003.jpg`)</strong></td>
+            <td>
+              • <strong>City/County Briefing (`navigation_center_003.jpg`, p. 13):</strong> Admits staff engaged <strong>EEC Environmental on March 18, 2020</strong> after finding soil contamination, brought in <strong>Orange County Health Care Agency (OCHCA)</strong> as oversight agency, and states: <em>"OCHCA was provided with all of our findings, and the regulatory agency deemed it safe to operate a shelter on the Cameron site, <strong>as long as an asphalt pavement cover was placed over the soil</strong>."</em><br/>
+              • <strong>EEC Soil Boring Map (`navigation_center_002.jpg`, Project `S-3506.02B`, Aug 3, 2020):</strong> Maps <strong>20+ soil borings (`B19`–`B40`)</strong> across <code>17642 Beach Blvd (APN 167-472-07)</code> and <code>17631 Cameron Ln (APN 167-472-08)</code>, green zone <em>"Suspected location of former cesspool/septic tank"</em>, two grey zones <em>"Area of buried metal debris"</em>, and lab table highlighting <strong>Hexavalent Chromium (`USEPA 7199`) exceedances in yellow (`330`, `320`, `310`, `300`, `490 mg/Kg`)</strong>.
+            </td>
+            <td>
+              • <strong>Unsealed Ground Vaults &amp; Makeshift Drain Pipes Breaching the Asphalt Cap (`navigation_center_011–025.jpg`, Feb 11, 2025; `mercy_house_013–017.jpg`, Jun 5, 2024):</strong> Shows the portable shower/restroom trailer (<code>COHSI (630) 906-8002</code>) discharging via makeshift white PVC pipes (`CHARLOTTE PIPE`) and black ABS couplings glued/taped together directly into <strong>open, unsealed holes in the asphalt/concrete and exposed dirt vaults</strong> filled with trash and weeds.<br/>
+              • <strong>Interior Tent Anchor Bolts Driven Through the Slab (`HB_Shelter_Nov2023_photo_01–07.jpg`, Nov 7, 2023):</strong> Rusted steel anchor bolts driven through the perimeter baseplate directly beneath sleeping beds, with loose sub-slab sand/soil erupting onto the blue painted dormitory floor.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2. Expired Temporary Certificate of Occupancy (`mercy_house_044–046.jpg`)</strong></td>
+            <td>
+              • <strong>TCO `CO2020-005184` / Permit `B2020-005184` (`17631 Cameron Ln`):</strong> Issued <code>12/04/2020</code> with an explicit <strong><code>TCO Expiration: 06/04/2021</code></strong>.<br/>
+              • <strong>Conditions of Approval:</strong> Expressly states: <em>"TEMPORARY CERTIFICATE OF OCCUPANCY ONLY - PERSUANT TO RESOLUTION 2019-22. TEMPORARY CERTIFICATE OCCUPANCY <strong>APPROVAL EXCLUDES OVERFLOW TRAILER. OUTSTANDING PUBLIC WORKS, FIRE DEPARTMENT AND BUILDING INSPECTION OUTSTANDING CORRECTIONS SHALL BE COMPLETED AND APPROVED PRIOR TO ISSUANCE OF CERTIFICATE OF OCCUPANCY.</strong>"</em>
+            </td>
+            <td>
+              • <strong>Photographed Taped Above the `EXIT` Sign on April 4, 2025 (`mercy_house_044.jpg`, `045.jpg`, `046.jpg`):</strong> Nearly <strong>4 years after its June 4, 2021 expiration date</strong>, Mercy House and the City of Huntington Beach were still displaying the expired 2020 TCO inside the facility while operating without a final Certificate of Occupancy.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>3. Interior Habitability, Structural Failure &amp; Biohazards (`navigation_center_026–052.jpg`, `mercy_house_056–061.jpg`, `bathrooms_001–009.jpg`)</strong></td>
+            <td>
+              • Mercy House <em>Guests' Rights and Responsibilities Policy</em> (<code>mercy_house_038.jpg</code>, rev. <code>08/20/2024</code>) guarantees residents humane, safe, and sanitary shelter facilities.
+            </td>
+            <td>
+              • <strong>Collapsed Ceiling Exhaust Fan Assembly (`navigation_center_027.jpg`, Apr 5, 2025):</strong> Rusted metal ceiling vent grille hanging open inside the shower trailer, exposing live orange wire-nut splices, unsealed wood framing, and the roof exhaust fan.<br/>
+              • <strong>Shattered Porcelain Bathroom Sink (`navigation_center_035–037.jpg`, Apr 5, 2025):</strong> Massive gaping hole smashed through the sink basin, stuffed with a dirty rag.<br/>
+              • <strong>Severe Metal Corrosion, Mold, Standing Water &amp; Meth/Chemical Residue (`navigation_center_029–034.jpg`, `045–052.jpg`; `bathrooms_001–009.jpg` / `meth_exposure_to_kids_at_bathrooms_hb_001–009.jpg`, Oct 18 – Nov 15, 2023):</strong> Documents standing water across blistered floor coatings, rusted-out wall plates beside toilets/sinks, dust-choked air returns, and Oct 18, 2023 video evidence of chemical/meth residue and plumbing leaks inside Huntington Beach bathrooms.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>4. Additional HBNC Resident Medical, Civil Rights &amp; Property Theft Evidence (`mom_2021_2024`, `m3rsyh0u5e`, `tent`, `mustang_stolen`, `brief_HB_psi_info`)</strong></td>
+            <td>
+              • Corroborates that medical emergencies, hospital ICU admissions, property conversions, disability accommodation grievances, and civil rights lawsuits against Mercy House and Orange County span multiple shelter facilities and residents.
+            </td>
+            <td>
+              • <strong>Elizabeth Petruccio ("Mom") Inpatient Hospital Video (`mom_2021_2024_001.jpg`, Jan 16, 2024, 8:48 AM):</strong> Live inpatient hospital video frame taken at Scripps Mercy Chula Vista on <strong>January 16, 2024 — the exact day of her chest CT showing RUL ground-glass opacity with reverse-halo sign</strong> — showing her in her hospital bed with nasal cannula, IV lines, and wrist bands.<br/>
+              • <strong>Prior Class/Multi-Plaintiff Lawsuit Against County of Orange &amp; Mercy House (`brief_HB_psi_info_002–004.jpg`, <em>Cyndi Utzman, Deborah Kraft, Wendy Powitzky et al. v. County of Orange, City of Anaheim, Illumination Foundation, Midnight Mission, Mercy House Living Centers &amp; Protection America</em>):</strong> Orange County Superior Court Verified Complaint &amp; Petition for Writ of Mandate documenting Mercy House's <strong>"Lock-In/Shut-Out Policy"</strong> (1-mile anti-loitering zone enforced by random daily checks) and <strong>5th &amp; 6th Causes of Action for Invasion of Privacy (`Cal. Const. Art. I § 1`) and Sexual Battery (`Cal. Civ. Code § 1708.5`)</strong> for coercive strip/body searches and staff watching residents dress.<br/>
+              • <strong>Donated Gold Ford Mustang Convertible (`mustang_stolen_by_shelter_security_001.jpg`, CA License Plate <code>8GUK894</code>, Nov 5, 2022, 6:46 AM):</strong> Photo of the gold Ford Mustang convertible (`8GUK894`) documented in the album <em>"mustang donated to me stolen by shelter security"</em>.<br/>
+              • <strong>Inside &amp; Outside the HBNC Sprung Tent (`m3rsyh0u5e_001–004.jpg` &amp; `tent_001–005.jpg`, Jan 21, 2025):</strong> Shows residents' personal property and yellow `HDX` storage bins piled outdoors on the asphalt at 2:13 AM (`tent_001.jpg`) and crowded bunks inside the arched white Sprung structure (`m3rsyh0u5e_001.jpg`).<br/>
+              • <strong>Curtis M. Simcox (`MRN: 14017651`, `mercy_house_018–019.jpg`, Jan 19, 2025):</strong> Hospital lab flowsheet showing critically elevated cardiac <strong><code>Troponin I: 6.300 *</code></strong> and elevated Monocytes (<code>13.4% [H]</code>).<br/>
+              • <strong>Brian Bell (Bed `#91`, `mercy_house_021–022.jpg`, Jan 20, 2025):</strong> Handwritten <em>Mercy House Guest Request for Consideration</em> (received by staff <code>Veronica G. 1/20/25</code>) reporting <strong>TBI, 4 minor strokes, cognitive/memory impairment, and severe arthritis</strong>, with zero staff follow-up notes on the back page.<br/>
+              • <strong>Melissa Meyer-Coffey (`Case No. 8:25-cv-02560-AH-SP`, `mercy_house_066.jpg`, filed Nov 14, 2025):</strong> Federal `42 U.S.C. § 1983` &amp; VAWA lawsuit in U.S. District Court (C.D. Cal.).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>5B. Interactive Gallery: Key Evidence Extracted from <code>navigation_center</code>, <code>mercy_house</code> &amp; <code>well_artesian_hb</code> Albums (Click Any Image to Open Full Size)</h3>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//navigation_center/navigation_center_002.jpg" alt="EEC Soil Boring Map" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>navigation_center_002.jpg</code> — EEC Soil Boring Location Map (Aug 3, 2020):</strong> Shows <code>17631 Cameron Ln (APN 167-472-08)</code> &amp; <code>17642 Beach Blvd (APN 167-472-07)</code>, borings <code>B19–B40</code>, suspected cesspool/septic tank (green), buried metal debris, and yellow-highlighted Hexavalent Chromium (`USEPA 7199`) exceedances (`330`, `320`, `310`, `300`, `490 mg/Kg`).
+          <div class="photo-meta">Album: navigation_center | Project S-3506.02B Fig. 2</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//navigation_center/navigation_center_003.jpg" alt="OCHCA Asphalt Cover Briefing" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>navigation_center_003.jpg</code> — City/County Environmental Mitigation Briefing:</strong> Admits EEC Environmental was hired March 18, 2020 and that <strong>OCHCA deemed the contaminated site safe to operate a shelter ONLY <em>"as long as an asphalt pavement cover was placed over the soil."</em></strong>
+          <div class="photo-meta">Album: navigation_center | Pages 11–13 (8/3/2020)</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/mercy_house/mercy_house_046.jpg" alt="Expired TCO Posted Above Exit Sign" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mercy_house_046.jpg</code> — Expired TCO Posted Above EXIT Sign (Apr 4, 2025):</strong> Temporary Certificate of Occupancy <code>CO2020-005184</code> (<code>Permit B2020-005184</code>, issued <code>12/04/2020</code>, <strong>expired <code>06/04/2021</code></strong>) still posted inside HBNC nearly 4 years after expiration, explicitly excluding the overflow trailer.
+          <div class="photo-meta">Album: mercy_house | Captured 2025-04-04</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/mercy_house/mercy_house_017.jpg" alt="Open Ground Vault and Pipes" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mercy_house_017.jpg</code> — Open Ground Vault &amp; Unsealed Utility Trench (Jun 5, 2024):</strong> Glued black ABS/white PVC pipes running across an open cast-iron manhole and unsealed dirt pit next to a removed <code>J&amp;R CONCRETE PRODUCTS</code> water vault lid, directly breaching the asphalt cap.
+          <div class="photo-meta">Album: mercy_house | Captured 2024-06-05 06:22 AM</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//navigation_center/navigation_center_015.jpg" alt="PVC Drain Pipe in Open Soil Hole" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>navigation_center_015.jpg</code> — Makeshift PVC Drain Discharging into Open Soil Pit (Feb 11, 2025):</strong> White <code>CHARLOTTE PIPE</code> PVC drain lines and black flexible hose from the portable shower trailer discharging into an open, unsealed circular pit of exposed soil and wet asphalt.
+          <div class="photo-meta">Album: navigation_center | Captured 2025-02-11 12:14 AM</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//navigation_center/navigation_center_027.jpg" alt="Collapsed Ceiling Exhaust Grille" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>navigation_center_027.jpg</code> — Collapsed Shower Trailer Ceiling Vent &amp; Exposed Wiring (Apr 5, 2025):</strong> Rusted metal exhaust grille hanging open above the shower stall, exposing live orange wire-nut electrical splices, raw wood framing, and the roof fan.
+          <div class="photo-meta">Album: navigation_center | Captured 2025-04-05</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/navigation_center/navigation_center_035.jpg" alt="Shattered Bathroom Sink" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>navigation_center_035.jpg</code> — Shattered Porcelain Bathroom Sink (Apr 5, 2025):</strong> Gaping jagged hole broken through the porcelain sink basin inside the HBNC restroom trailer.
+          <div class="photo-meta">Album: navigation_center | Captured 2025-04-05</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//navigation_center/navigation_center_045.jpg" alt="Severe Wall Corrosion Beside Sink" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>navigation_center_045.jpg</code> — Severe Rust &amp; Corrosion in Restroom Trailer (Jun 24, 2025):</strong> Heavy rust and corrosion eating through the metal wall panel and floor base trim beside the restroom sink.
+          <div class="photo-meta">Album: navigation_center | Captured 2025-06-24</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//mercy_house/mercy_house_053.jpg" alt="Dormitory Bunk Bed 91" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mercy_house_053.jpg</code> — Inside the Sprung Congregate Dormitory (Bed <code>#91</code>, Jun 20, 2025):</strong> Shows bunk bed <code>#91</code> with yellow-lidded <code>HDX</code> storage bins underneath in the congregate tent.
+          <div class="photo-meta">Album: mercy_house | Captured 2025-06-20</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//mercy_house/mercy_house_022.jpg" alt="Mercy House Guest Request for Consideration Front" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mercy_house_022.jpg</code> — Mercy House Guest Request for Consideration (Jan 20, 2025):</strong> Submitted by <code>Brian Bell #91</code> (received by staff <code>Veronica G. 1/20/25</code>) detailing TBI, 4 minor strokes, cognitive/memory issues, and arthritis; back page (<code>mercy_house_021.jpg</code>) shows zero staff follow-up notes.
+          <div class="photo-meta">Album: mercy_house | Captured 2025-01-25</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/mercy_house/mercy_house_019.jpg" alt="Curtis Simcox Troponin 6.300 Lab" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mercy_house_019.jpg</code> — Resident Curtis M. Simcox Cardiac Emergency Lab (Jan 19, 2025):</strong> Hospital lab report (<code>MRN: 14017651</code>) showing critical <strong><code>Troponin I: 6.300 *</code></strong> and Monocytosis (<code>13.4% [H]</code> in <code>mercy_house_018.jpg</code>).
+          <div class="photo-meta">Album: mercy_house | Captured 2025-01-20</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//mercy_house/mercy_house_066.jpg" alt="Melissa Meyer Coffey Federal Lawsuit" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mercy_house_066.jpg</code> — Federal Civil Rights Lawsuit <code>8:25-cv-02560-AH-SP</code> (Nov 14, 2025):</strong> Filed in U.S. District Court (C.D. Cal.) by <code>Melissa Meyer Coffey</code> against <code>CMFA Special Finance Agency VII</code> and <code>Volunteers of America SSVF</code> for federal VAWA and housing violations.
+          <div class="photo-meta">Album: mercy_house | Captured 2025-11-15</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//mom_2021_2024/mom_2021_2024_001.jpg" alt="Elizabeth Petruccio Hospital Bed Jan 16 2024" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mom_2021_2024_001.jpg</code> — Elizabeth Petruccio Inpatient at Scripps Mercy Chula Vista (Jan 16, 2024, 8:48 AM):</strong> Captured on the exact day of her chest CT demonstrating RUL ground-glass opacity with reverse-halo sign, right pleural empyema, and sepsis.
+          <div class="photo-meta">Album: mom 2021 2024 | Captured 2024-01-16 08:48 AM</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//brief_HB_psi_info/brief_HB_psi_info_002.jpg" alt="Utzman v County of Orange and Mercy House Lawsuit" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>brief_HB_psi_info_002.jpg</code> — <em>Cyndi Utzman et al. v. County of Orange, Mercy House Living Centers et al.</em>:</strong> Superior Court Verified Complaint &amp; Writ of Mandate (with pages 14 &amp; 44 in <code>003.jpg</code>–<code>004.jpg</code>) detailing Mercy House's Lock-In/Shut-Out policy, 1-mile anti-loitering checks, Invasion of Privacy, and Sexual Battery claims.
+          <div class="photo-meta">Album: brief HB psi info | Orange County Superior Court</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//mustang_stolen_by_shelter_security/mustang_stolen_by_shelter_security_001.jpg" alt="Donated Gold Mustang 8GUK894" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>mustang_stolen_by_shelter_security_001.jpg</code> — Gold Ford Mustang Convertible (CA Plate <code>8GUK894</code>, Nov 5, 2022):</strong> Documented in the shared album <em>"mustang donated to me stolen by shelter security"</em>.
+          <div class="photo-meta">Album: mustang donated to me stolen by shelter security | 2022-11-05</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//m3rsyh0u5e/m3rsyh0u5e_001.jpg" alt="Inside Sprung Shelter Tent Jan 21 2025" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>m3rsyh0u5e_001.jpg</code> — Inside the HBNC Sprung Structure Dormitory (Jan 21, 2025, 8:32 PM):</strong> Shows crowded bunks and arched white Sprung tent ribs inside the Huntington Beach Navigation Center.
+          <div class="photo-meta">Album: m3rsyh0u5e / tent / mercy_house_2 | 2025-01-21</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//tent/tent_001.jpg" alt="Resident Belongings Outside Shelter Tent 2AM" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>tent_001.jpg</code> — Resident Property &amp; Yellow HDX Bins Outside on Asphalt at 2:13 AM (Jan 21, 2025):</strong> Captures resident bags and storage bins piled outdoors in the middle of the night at HBNC.
+          <div class="photo-meta">Album: tent | Captured 2025-01-21 02:13 AM</div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../evidence/google_photos_albums//hb_data_real/hb_data_real_001.jpg" alt="Huntington Beach Annexation Map" onclick="openLightbox(this.src, this.nextElementSibling.innerText)" />
+        <div class="photo-caption">
+          <strong><code>hb_data_real_001.jpg</code> — Historical Huntington Beach Annexation &amp; Tract Map (1958–1971):</strong> Shows <code>TALBERT</code>, <code>GOTHARD</code>, <code>NEWLAND #1–#5</code>, and <code>NORTHEAST #1 (.46 SQ. MI. 5-27-58)</code> surrounding the Cameron/Beach corridor.
+          <div class="photo-meta">Album: hb data | Captured 2026-02-09</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Master Index of Hydrated Case Files, Medical Records &amp; Google Photos Albums on Your PC</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Document / Exhibit</th>
+            <th>Direct Clickable File Link (Opens Full Size on PC)</th>
+            <th>Extracted Text Link</th>
+            <th>Size / Pages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Dkt. 1 — Initial Verified Complaint (02/14/2026)</strong></td>
+            <td><a href="../evidence/filings/0001.0_Initial_Complaint_2026-02-18.pdf">0001.0_Initial_Complaint_2026-02-18.pdf</a></td>
+            <td><a href="../evidence/filings/0001.0_Initial_Complaint_2026-02-18_EXTRACTED.txt">Extracted Text</a></td>
+            <td>461 KB (59 pp.)</td>
+          </tr>
+          <tr>
+            <td><strong>Dkt. 115 — Second Amended Verified Complaint (SAVC, 08/17/2026)</strong></td>
+            <td><a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al.pdf">SAVC_Knabb v City of Huntington Beach et al.pdf</a></td>
+            <td><a href="../evidence/filings/SAVC_Knabb v City of Huntington Beach et al_EXTRACTED.txt">Extracted Text</a></td>
+            <td>573 KB (77 pp.)</td>
+          </tr>
+          <tr>
+            <td><strong>Dkt. 130 — Combined Opposition to MTDs + Exhibits A-1 to J-1 (09/09/2026)</strong></td>
+            <td><a href="../evidence/filings/Opposition to MTD of SAVC.pdf">Opposition to MTD of SAVC.pdf</a></td>
+            <td><a href="../evidence/filings/Opposition to MTD of SAVC_EXTRACTED.txt">Extracted Text</a></td>
+            <td>7.97 MB (373 pp.)</td>
+          </tr>
+          <tr>
+            <td><strong>SAVC Exhibits WWWW-1 through WWWW-6</strong></td>
+            <td><a href="../evidence/filings/WWWW-1 through WWWW-6_Compressed.pdf">WWWW-1 through WWWW-6_Compressed.pdf</a></td>
+            <td>—</td>
+            <td>20.17 MB (197 pp.)</td>
+          </tr>
+          <tr>
+            <td><strong>Public Works / Totum HBNC Construction Photos</strong></td>
+            <td><a href="../evidence/filings/Important Photos Public Works_HBNC (2).pdf">Important Photos Public Works_HBNC (2).pdf</a></td>
+            <td><a href="../evidence/filings/Important Photos Public Works_HBNC (2)_EXTRACTED.txt">Extracted Text</a></td>
+            <td>6.39 MB (16 pp.)</td>
+          </tr>
+          <tr>
+            <td><strong>Official CM/ECF Live Federal Docket Sheet</strong></td>
+            <td><a href="../evidence/filings/CM_ECF - California Central District(15).PDF">CM_ECF - California Central District(15).PDF</a></td>
+            <td><a href="../evidence/filings/CM_ECF - California Central District(15)_EXTRACTED.txt">Extracted Text</a></td>
+            <td>185 KB (16 pp.)</td>
+          </tr>
+          <tr>
+            <td><strong>Elizabeth Petruccio Scripps EHR Summary (1,400+ pp.) &amp; Mission Hills SNF Face Sheet</strong></td>
+            <td><a href="../evidence/Downloads/1.E.Petruccio Patient Health.pdf">1.E.Petruccio Patient Health.pdf</a> | <a href="../evidence/fwdfacesheet/fs.pdf">fs.pdf (Face Sheet)</a></td>
+            <td><a href="../evidence/dl/PETRUCCIO_FACESHEET_EXTRACT.md">Mission Hills Face Sheet Extract</a></td>
+            <td>1,400+ pp.</td>
+          </tr>
+          <tr>
+            <td><strong>Anthony Michael DiMarcello Verified Medical Records (Arrowhead Regional / Hoag)</strong></td>
+            <td><a href="../evidence/raw/healing.pdf">healing.pdf (Humerus &amp; 4 Ribs Fracture)</a></td>
+            <td><a href="./evidence/medical_records/">Verified Medical Extract</a> | <a href="./evidence/medical_records/">Scripps &amp; Zips Findings</a></td>
+            <td>Verified</td>
+          </tr>
+          <tr>
+            <td><strong>Google Photos Album: <code>navigation center</code> (52 High-Res Photos)</strong></td>
+            <td><a href="../evidence/google_photos_albums//navigation_center">google_photos_albums/navigation_center/</a></td>
+            <td><a href="../evidence/google_photos_albums//contact_sheets">Visual Contact Sheets</a></td>
+            <td>14.83 MB (52 imgs)</td>
+          </tr>
+          <tr>
+            <td><strong>Google Photos Album: <code>mercy house</code> (92 High-Res Photos)</strong></td>
+            <td><a href="../evidence/google_photos_albums//mercy_house">google_photos_albums/mercy_house/</a></td>
+            <td><a href="../evidence/google_photos_albums//albums_manifest.json">albums_manifest.json</a></td>
+            <td>35.60 MB (92 imgs)</td>
+          </tr>
+          <tr>
+            <td><strong>Google Photos Albums: <code>well_artesian_hb</code> (9), <code>methodist</code> (25), <code>dehashed_hb</code> (1)</strong></td>
+            <td><a href="../evidence/google_photos_albums//well_artesian_hb">well_artesian_hb/</a> | <a href="../evidence/google_photos_albums//methodist">methodist/</a></td>
+            <td><a href="../evidence/google_photos_albums//matched_ocr_summary.json">matched_ocr_summary.json</a></td>
+            <td>11.58 MB (35 imgs)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Full size preview" />
+  <div id="lightbox-caption" class="lightbox-caption"></div>
+</div>
+
+<script>
+  function openLightbox(src, caption) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-caption').innerText = caption;
+    document.getElementById('lightbox').classList.add('active');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+<div class="card" id="sec6" style="border: 2px solid #ef4444; background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%); margin-top: 28px;">
+  <h2 style="color:#f87171; border-bottom: 2px solid #ef4444; padding-bottom: 10px; margin-top: 0;">
+    6. Primary Document Corroboration Audit (<code>/lawsfull</code> &amp; <code>/timelinecrime</code>): The 1-Year Asphalt Cap Warranty, Scripps EHR Shelter Omission, and the &ldquo;Good Neighbor&rdquo; Movement Restrictions
+  </h2>
+
+  <h3>6.1 Primary Document Pulled: The 1-Year Construction Warranty on the HBNC 2-Inch Asphalt Cap (<a href="../evidence/evidence/laserfiche_5406552_TTS_grading_contract_FULL.txt">laserfiche_5406552_TTS_grading_contract_FULL.txt</a>)</h3>
+  <div class="alert alert-danger">
+    <strong>PRIMARY CONTRACT EVIDENCE PULLED (City of Huntington Beach Contract ID <code>20-9041/235642</code>, Laserfiche Record <code>#5406552</code>):</strong><br>
+    On <strong>October 12, 2020</strong>, the City of Huntington Beach entered into the <em>&ldquo;Federally Funded Construction Contract Between the City of Huntington Beach and TTS Engineering, Inc. for Grading and Site Preparation at Cameron Lane Homeless Navigation Center&rdquo;</em> (Original Agreement <code>$670,683.49</code>; amended via Amendments 1, 2, and 3 to <strong><code>$2,410,716.24</code></strong>). Rather than executing an environmental remediation contract governed by California DTSC Title 22 post-closure care standards, the City procured the asphalt cap under a standard municipal public works grading contract containing only a <strong>one (1) year warranty period</strong> from the Notice of Completion.
+  </div>
+
+  <div class="grid-2" style="margin-bottom: 18px;">
+    <div style="background:#090d16; border:1px solid #ef4444; border-radius:8px; padding:14px; font-family:monospace; font-size:12.5px; color:#e2e8f0; line-height:1.55;">
+      <div style="color:#f87171; font-weight:700; margin-bottom:8px; border-bottom:1px solid #334155; padding-bottom:4px;">
+        VERBATIM EXTRACT &mdash; TTS ENGINEERING CONTRACT (Doc ID 20-9041/235642, Page 6, Lines 320&ndash;340)
+      </div>
+      <strong>8. BONDS</strong><br>
+      Only bonds issued by California admitted sureties will be accepted. CONTRACTOR shall, prior to its performance of this Agreement, furnish the following two (2) bonds approved by the City Attorney: One in the amount of one hundred percent (100%) of the Agreement price to guarantee the CONTRACTOR's faithful performance of the work, and one in the amount of one hundred percent of the Agreement price to guarantee payment of all claims for labor and materials furnished.<br><br>
+      <span style="background:rgba(239,68,68,0.25); color:#fecaca; font-weight:700; padding:2px 4px;">In addition, CONTRACTOR shall submit to CITY a bond in the amount of one hundred percent (100%) of the final Agreement price, including all change orders, to warrant such performance for a period of one (1) year after CITY's acceptance thereof within ten (10) days of filing of the Notice of Completion.</span><br><br>
+      <strong>9. WARRANTIES</strong><br>
+      CONTRACTOR unconditionally guarantees all work done under this Agreement including, but not limited to, any workmanship, installation, fabrication, material or structural facilities constructed. CONTRACTOR, within ten (10) days after notice by CITY of any defect in the work, shall have the option to make appropriate repairs or replace the defective item or items.
+      <div style="margin-top:8px;"><a href="../evidence/evidence/laserfiche_5406552_TTS_grading_contract_FULL.txt">Open Full Contract OCR Text (laserfiche_5406552_TTS_grading_contract_FULL.txt)</a></div>
+    </div>
+
+    <div style="background:#090d16; border:1px solid #f59e0b; border-radius:8px; padding:14px; font-family:monospace; font-size:12.5px; color:#e2e8f0; line-height:1.55;">
+      <div style="color:#fbbf24; font-weight:700; margin-bottom:8px; border-bottom:1px solid #334155; padding-bottom:4px;">
+        VERBATIM EXTRACT &mdash; EXHIBIT A: TTS ENGINEERING PROPOSAL #20390 (Dated 9/30/2020, Lines 1060&ndash;1198)
+      </div>
+      <strong>Project:</strong> HB NAV PHASE II &mdash; 17630/17631 CAMERON LANE, HUNTINGTON BEACH, CA<br>
+      <strong>Attn:</strong> Sean Crumby, City of Huntington Beach<br><br>
+      <strong>Scope of Work (Lines 1075&ndash;1084):</strong><br>
+      &bull; INSTALL ONSITE CAB AND ASPHALT CONCRETE<br>
+      &bull; PLUMBING PLAN AND PRECISE GRADING PLAN DO NOT MATCH MATERIALS SIZES AND LOCATION, SO WE USED OUR BEST GUESS.<br>
+      &bull; <span style="background:rgba(245,158,11,0.25); color:#fde68a; font-weight:700; padding:2px 4px;">BID TO PROVIDE 40HR HAZWOPER TRAINED EMPLOYEES TO PERFORM WORK. CREW INSTALLING AC [ASPHALT CONCRETE] WILL NOT BE 40-HOUR TRAINED, BUT CREW INSTALLING CAB WILL BE.</span><br><br>
+      <strong>Item 11 ASPHALT (Lines 1193&ndash;1198):</strong><br>
+      &bull; R&amp;R AC PAVING: 2,500.00 SF @ $6.70/SF = $16,748.56<br>
+      &bull; ASPHALT PAVING 3" OVER 10" CMB: 5,613.00 SF @ $4.08/SF = $22,914.78<br>
+      &bull; <span style="background:rgba(239,68,68,0.25); color:#fecaca; font-weight:700; padding:2px 4px;">ASPHALT PAVING 2" OVER NATIVE: 14,600.00 SF @ $1.62/SF = $23,721.16</span><br>
+      &bull; ASPHALT PAVING 3" OVER 5" CMB: 7,964.00 SF @ $3.92/SF = $31,183.87<br>
+      &bull; <strong>Total 11 ASPHALT: $94,568.38</strong>
+    </div>
+  </div>
+
+  <h4>Why a 1-Year Construction Warranty Violates California &amp; Federal Environmental Remediation Cap Law (<code>/lawsfull</code> Statutory Audit)</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Legal / Regulatory Requirement</th>
+        <th>Controlling Statute / Regulation</th>
+        <th>Mandatory Standard for Environmental Contamination Caps</th>
+        <th>What the City of HB &amp; Mercy House Actually Did at 17631 Cameron Lane</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Post-Closure Care &amp; Cap Maintenance Duration</strong></td>
+        <td><strong>22 CCR &sect; 66264.117(a)(1)</strong> (CA DTSC Title 22); <strong>40 C.F.R. &sect; 264.117</strong> (RCRA Subtitle C)</td>
+        <td>Minimum <strong>30-year post-closure care, monitoring, and cap integrity maintenance period</strong> after closure completion whenever hazardous waste (Hexavalent Chromium, Lead, Toxaphene) remains in place beneath a cap.</td>
+        <td>Used a <strong>1-year public works paving warranty bond</strong> (Contract &sect; 8) that expired in <strong>late 2021</strong>&mdash;leaving <strong>zero warranty and zero maintenance</strong> during EP's (2023) and JK's (2024&ndash;2025) residencies.</td>
+      </tr>
+      <tr>
+        <td><strong>Recorded Land Use Covenant (LUC) &amp; O&amp;M Plan</strong></td>
+        <td><strong>22 CCR &sect; 67391.1</strong>; <strong>Cal. Civ. Code &sect; 1471</strong>; <strong>Cal. Health &amp; Safety Code &sect; 25221</strong></td>
+        <td>Mandatory recorded <strong>Land Use Covenant (LUC)</strong> running with the land, an approved <strong>Operations &amp; Maintenance (O&amp;M) Plan</strong>, annual cap inspection logs, and prohibitions against disturbing or breaching the cap.</td>
+        <td><strong>No Land Use Covenant recorded; no O&amp;M Plan executed.</strong> Mercy House subjected the 2-inch asphalt to daily high-pressure washing, stripping the binder and allowing deep-rooted weeds (<a href="../evidence/google_photos_albums//navigation_center/navigation_center_026.jpg">navigation_center_026.jpg</a>) to breach the cap.</td>
+      </tr>
+      <tr>
+        <td><strong>Financial Assurance for Cap Maintenance</strong></td>
+        <td><strong>22 CCR &sect; 66264.145</strong>; <strong>40 C.F.R. &sect; 264.145</strong></td>
+        <td>Dedicated financial assurance mechanism guaranteeing funds for 30+ years of cap sealing, resurfacing, stormwater control, and leachate/runoff prevention.</td>
+        <td><strong>$0 dedicated to post-closure cap maintenance.</strong> Only a 1-year contractor performance/defect bond was required under Contract &sect; 8.</td>
+      </tr>
+      <tr>
+        <td><strong>Minimum Structural Thickness &amp; Base Course</strong></td>
+        <td><strong>City of HB Specification No. 431-92</strong>; <strong>HBMC &sect; 230.92</strong>; DTSC Cap Guidance</td>
+        <td>Engineered multi-layer cap (compacted subgrade, crushed aggregate base, low-permeability barrier, and minimum 3"&ndash;4" structural AC wear course installed by HAZWOPER-certified crews).</td>
+        <td>Installed <strong>14,600 sq. ft. of <code>2" OVER NATIVE</code> soil at <code>$1.62/SF</code></strong> using a paving crew that Proposal #20390 explicitly admitted <strong>&ldquo;WILL NOT BE 40-HOUR HAZWOPER TRAINED.&rdquo;</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr style="border-color:#334155; margin: 26px 0;">
+
+  <h3>6.2 Forensic Audit of the Scripps Health EHR Omission (<a href="../evidence/Downloads/1.E.Petruccio Patient Health.pdf">1.E.Petruccio Patient Health.pdf</a>): Social Work Documented <code>HB Navigation Center</code> on Pages 985, 1034 &amp; 1051, Yet Physicians Omitted It Across 25+ Clinical Notes</h3>
+  <div class="alert alert-warning">
+    <strong>CRITICAL EHR FORENSIC FINDING:</strong><br>
+    A page-by-page programmatic audit of all 1,428 pages of <a href="../evidence/Downloads/1.E.Petruccio Patient Health.pdf">1.E.Petruccio Patient Health.pdf</a> proves two simultaneous facts:<br>
+    <strong>1. Scripps Social Workers and Case Managers WERE informed of her Huntington Beach Navigation Center stay:</strong> On <strong>01/13/2024 (Page 1051)</strong>, <strong>01/15/2024 (Page 1034)</strong>, and <strong>01/19/2024 (Page 985)</strong>, Scripps Social Work and Case Management explicitly recorded <code>SHELTER HISTORY: HB Navigation Center</code> and <code>Pt and son then were staying together at the Navigation Center in Huntington Beach... exited from the Huntington Beach Navigation Center program. She must wait 30 days before she can return.</code><br>
+    <strong>2. Yet EVERY Physician Note, Pulmonary Consult, Infectious Disease Note, and Discharge Summary OMITTED the shelter and its toxic conditions:</strong> Across <strong>more than 25 consecutive Attending and Resident Physician Progress Notes</strong> (Pages 654, 677, 692, 704, 718, 728, 733, 748, 756, 767, 778, 790, 809, 821, 833, 846, 857, 876, 889, 898, 915, 928, 949, 955, 968, 972, 983), physicians omitted all mention of the Huntington Beach Navigation Center and its hazardous/unsanitary conditions, instead copy-pasting the false/sanitized phrase: <strong><code>&ldquo;-Patient has not had a stable home in the past 2 months. -Patient had been squatting with friends up to the day of her admission&rdquo;</code></strong> and checking <strong><code>&ldquo;Homeless, unsheltered&rdquo;</code></strong> on nursing intake flowsheets.
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>EHR Page &amp; Timestamp</th>
+        <th>Author &amp; Role</th>
+        <th>Exact Verbatim Text in <a href="../evidence/Downloads/1.E.Petruccio Patient Health.pdf">1.E.Petruccio Patient Health.pdf</a></th>
+        <th>Forensic &amp; Legal Significance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong><a href="../evidence/ehr_exhibits/scripps_ehr_page_1051.png">Page 1051</a></strong><br><code>01/13/2024 12:00 PM</code></td>
+        <td>Channy RN<br><em>Inpatient Care Manager</em></td>
+        <td><code>&ldquo;PLOF: homeless, ind. Dtr said when she last spoke w/pt she was in a homeless shelter in Huntington Beach CA and may have been making her way down to Mexico... Per chart review, pt was at a hospital in Newport Beach back in 11/2023 [Hoag Hospital]. Initial Discharge Planning | Living Arrangements: Other *(per dtr was last know to be in a shelter in Huntington Beach CA)*&rdquo;</code></td>
+        <td>Proves Scripps knew within 16 hours of admission (while EP was intubated) that she had been living at the Huntington Beach shelter and was treated at Hoag Hospital in Nov 2023.</td>
+      </tr>
+      <tr>
+        <td><strong><a href="../evidence/ehr_exhibits/scripps_ehr_page_1034.png">Page 1034</a></strong><br><code>01/15/2024 12:25 PM</code></td>
+        <td>Ada R., LCSW<br><em>Social Work Initial Assessment</em></td>
+        <td><code>&ldquo;Per records, patient seen by social work in Newport ED on 07/17/2023. Per SW notes, 'Per patient likes staying at HB Navigation Center and has been connected to services and resources through them.' ... SHELTER HISTORY: HB Navigation Center ... Patient reported her son (Anthony) is homeless in Huntington Beach and will frequently return to stay with him at various homeless shelters.&rdquo;</code></td>
+        <td>Explicitly identifies <strong><code>HB Navigation Center</code></strong> by name in the Scripps chart on Hospital Day 3.</td>
+      </tr>
+      <tr>
+        <td><strong><a href="../evidence/ehr_exhibits/scripps_ehr_page_985.png">Page 985</a></strong><br><code>01/19/2024 4:35 PM</code></td>
+        <td>Bettina S., MSW/SW<br><em>Social Work Progress Note</em></td>
+        <td><code>&ldquo;Pt and son then were staying together at the Navigation Center in Huntington Beach, while trying to obtain stable housing... She did not return within a week and has been exited from the Huntington Beach Navigation Center program. She must wait 30 days before she can return.&rdquo;</code></td>
+        <td>Directly corroborates both her joint residency with her son at HBNC through late 2023 and Mercy House's punitive <strong>30-day Lock-Out / Exit policy</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong><a href="../evidence/ehr_exhibits/scripps_ehr_page_659.png">Page 659</a> &amp; <a href="../evidence/ehr_exhibits/scripps_ehr_page_1426.png">Page 1426</a></strong></td>
+        <td>Scripps Admission &amp; Pharmacy Registry</td>
+        <td><code>&ldquo;CALOPTIMA MEDI-CAL Member Subscriber Plan / Payer (Effective 01/01/2021-01/11/2024) ID: 93931022D&rdquo;</code> &amp; <code>&ldquo;These medications were sent to Walgreens #05771 - HUNTINGTON BEACH, CA - 17522 BEACH BLVD AT SEC OF BEACH &amp; SLATER&rdquo;</code></td>
+        <td>17522 Beach Blvd is <strong>0.2 miles from 17631 Cameron Lane</strong> (the exact Walgreens served by the HBNC 5:00 PM prescription shuttle).</td>
+      </tr>
+      <tr>
+        <td><strong><a href="../evidence/ehr_exhibits/scripps_ehr_page_833.png">Page 833</a></strong> (and 25+ Physician Notes, Pages 677&ndash;983)</td>
+        <td>Internal Medicine Residents &amp; Attendings (Drs. Ani, Umukoro, Chen, Dao, de Four, Strauser)</td>
+        <td><code>&ldquo;# Housing instability / # Substance use disorder (methamphetamine): -Patient has not had a stable home in the past 2 months. -Patient had been squatting with friends up to the day of her admission.&rdquo;</code> (while Nursing Flowsheets on Pages 479, 548, 611, 901 checked <code>&ldquo;Where was pt living / residing: Homeless, unsheltered&rdquo;</code>).</td>
+        <td><strong>THE PHYSICIAN OMISSION:</strong> Despite the family reporting the shelter and its toxic conditions&mdash;and despite Social Work logging <code>HB Navigation Center</code> on Page 1034&mdash;the medical doctors completely omitted the congregate shelter and environmental exposure from all 25+ clinical progress notes and the Discharge Summary, preventing public health cluster reporting under <strong>17 CCR &sect; 2500</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="photo-grid" style="margin-top: 16px;">
+    <div class="photo-card"><a href="../evidence/ehr_exhibits/scripps_ehr_page_1034.png" target="_blank"><img src="../evidence/ehr_exhibits/scripps_ehr_page_1034.png"></a><div class="cap"><strong>Scripps EHR Page 1034 (01/15/2024)</strong>Social Work Initial Assessment explicitly recording: <code>SHELTER HISTORY: HB Navigation Center</code> and joint stay with son Anthony in Huntington Beach.</div></div>
+    <div class="photo-card"><a href="../evidence/ehr_exhibits/scripps_ehr_page_985.png" target="_blank"><img src="../evidence/ehr_exhibits/scripps_ehr_page_985.png"></a><div class="cap"><strong>Scripps EHR Page 985 (01/19/2024)</strong>Social Work Note: <code>Pt and son then were staying together at the Navigation Center in Huntington Beach... exited from the HBNC program. She must wait 30 days before she can return.</code></div></div>
+    <div class="photo-card"><a href="../evidence/ehr_exhibits/scripps_ehr_page_1051.png" target="_blank"><img src="../evidence/ehr_exhibits/scripps_ehr_page_1051.png"></a><div class="cap"><strong>Scripps EHR Page 1051 (01/13/2024)</strong>Initial Case Management Note recording she was in a homeless shelter in Huntington Beach CA and at a Newport Beach hospital (Hoag) in 11/2023.</div></div>
+    <div class="photo-card"><a href="../evidence/ehr_exhibits/scripps_ehr_page_833.png" target="_blank"><img src="../evidence/ehr_exhibits/scripps_ehr_page_833.png"></a><div class="cap"><strong>Scripps EHR Page 833 (02/01&ndash;02/02/2024)</strong>Stark contrast on the same page: Physician note claims <code>squatting with friends</code> with zero mention of HBNC, while Case Manager Channy RN right below writes <code>Normally lives in Huntington Beach CA</code>.</div></div>
+    <div class="photo-card"><a href="../evidence/ehr_exhibits/scripps_ehr_page_659.png" target="_blank"><img src="../evidence/ehr_exhibits/scripps_ehr_page_659.png"></a><div class="cap"><strong>Scripps EHR Page 659 (Discharge Summary)</strong>Medications routed to <code>Walgreens #05771 - 17522 Beach Blvd at Beach &amp; Slater, Huntington Beach</code> (0.2 miles from 17631 Cameron Lane).</div></div>
+    <div class="photo-card"><a href="../evidence/ehr_exhibits/scripps_ehr_page_785.png" target="_blank"><img src="../evidence/ehr_exhibits/scripps_ehr_page_785.png"></a><div class="cap"><strong>Scripps EHR Page 785 (02/06/2024)</strong>Hospitalist Dr. Strauser omits HBNC in Assessment/Plan, while RN/CM Sheila Marie P. immediately below notes: <code>Stays w/ son Anthony in Huntington Beach shelters</code>.</div></div>
+  </div>
+
+  <hr style="border-color:#334155; margin: 26px 0;">
+
+  <h3>6.3 Primary Document Pulled: The &ldquo;Good Neighbor Policy&rdquo; (Strict Pedestrian Ban, Mandatory Shuttles, Curfew &amp; 30-Day Exit Penalty), Disability Impact &amp; Historic Wintersburg Context</h3>
+  <div class="alert alert-info">
+    <strong>DOCUMENTED RESTRICTION ON MOVEMENT (<a href="../evidence/google_photos_evidence_batch6/album6_photo_006.jpg">album6_photo_006.jpg</a> &mdash; <code>MHS_GuestExpectations, Page 3 of 5</code>):</strong><br>
+    Under <strong>Rule 13 &amp; Rule 14 (&ldquo;Good Neighbors&rdquo;)</strong> of the Mercy House Huntington Beach Navigation Center Guest Expectations, residents are <strong>prohibited from walking or biking onto or off of the property</strong> (<em>&ldquo;We practice a strict no-walk-up/no-bike-up policy. Guests are expected to remain on the property at all times unless when leaving for the day. Violation of this expectation may result in an immediate exit.&rdquo;</em>). Unless a homeless resident owns a registered, insured personal automobile (Rule 15), they cannot freely walk out to the public sidewalk on Cameron Lane or Beach Boulevard; they must sign up before <strong>4:30 AM or 7:30 AM</strong> for limited shuttle runs (<a href="../evidence/google_photos_evidence_batch6/album6_photo_017.jpg">album6_photo_017.jpg</a>), obey a <strong>9:00 PM curfew / 10:00 PM lights-out</strong>, submit to thumbprinting and photography upon entry (Rule 8), and are barred from taking photographs or videos of shelter conditions without management permission (Rule 9).
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Policy / Legal Dimension</th>
+        <th>Primary Evidence / Legal Authority</th>
+        <th>Forensic &amp; Legal Analysis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Strict Pedestrian Ban &amp; Car-Ownership Requirement (&ldquo;Good Neighbor Policy&rdquo; Rules 13&ndash;15)</strong></td>
+        <td><a href="../evidence/google_photos_evidence_batch6/album6_photo_006.jpg">album6_photo_006.jpg</a> (Rules 13&ndash;15); <a href="../evidence/google_photos_evidence_batch6/album6_photo_017.jpg">album6_photo_017.jpg</a> (Shuttle Schedule approved by HB Deputy Director Steven Holtz); <a href="../evidence/google_photos_albums//brief_HB_psi_info/brief_HB_psi_info_002.jpg">Utzman v. County of Orange &amp; Mercy House</a></td>
+        <td>Conditions basic freedom of ingress and egress on motor vehicle ownership. Indigent and disabled residents without a car are confined to the fenced industrial lot unless they board scheduled shuttles, while facing immediate expulsion (and a 30-day ban, as documented in EP's EHR on Page 985) if they walk off the property or miss curfew.</td>
+      </tr>
+      <tr>
+        <td><strong>Constitutional Right to Intrastate Travel, Equal Protection &amp; Due Process</strong></td>
+        <td><strong>U.S. Const. Amend. XIV</strong>; <strong>Cal. Const. art. I, &sect;&sect; 1, 7, 13</strong>; <strong>42 U.S.C. &sect; 1983</strong> (<em>Tobe v. City of Santa Ana</em>; <em>Papachristou v. City of Jacksonville</em>)</td>
+        <td>Restricting pedestrian movement across public streets surrounding a municipal shelter and imposing wealth-based mobility rules (requiring a private car to freely leave) burdens fundamental liberty and intrastate travel interests while intensifying residents' daily cumulative exposure to the site's airborne soil contaminants.</td>
+      </tr>
+      <tr>
+        <td><strong>Disproportionate Harm to Disabled, Elderly &amp; Former Industrial/Aerospace Workers</strong></td>
+        <td><strong>ADA Title II (42 U.S.C. &sect; 12132)</strong>; <strong>Rehabilitation Act &sect; 504 (29 U.S.C. &sect; 794)</strong>; <strong>Cal. Gov. Code &sect; 11135</strong>; <strong>Cal. Welf. &amp; Inst. Code &sect; 15630</strong></td>
+        <td>A high proportion of HBNC residents are elderly or disabled (including cardiopulmonary-compromised seniors like Elizabeth Petruccio, physically disabled residents like Jesse Knabb, and aging former aerospace/industrial workers in Huntington Beach). Confining disabled residents inside unventilated tents with a 30-minute window for Walgreens prescriptions (<a href="../evidence/google_photos_evidence_batch6/album6_photo_017.jpg">album6_photo_017.jpg</a>) while prohibiting walk-out medical access violates reasonable accommodation mandates.</td>
+      </tr>
+      <tr>
+        <td><strong>City of Huntington Beach 1996 Human Dignity Policy &amp; Historic Wintersburg Context</strong></td>
+        <td><strong>City of HB Resolution No. 96-78 (1996 Declaration of Policy on Human Dignity, reaffirmed 2021)</strong>; Geographic adjacency of <strong>17631 Cameron Lane</strong> to the <strong>Historic Wintersburg Japanese-American Furuta Farmstead</strong> (Warner Ave / Nichols St) &amp; HB Sister City relationship with <strong>Anjo, Japan</strong></td>
+        <td>Resolution No. 96-78 pledges that the City of Huntington Beach will uphold human dignity, equal treatment, and freedom from discrimination for all residents. Operating a fenced, movement-restricted congregate shelter over an un-remediated hazardous waste site immediately adjacent to the Historic Wintersburg Japanese-American heritage corridor&mdash;where historical forced relocation and movement restrictions carry deep cultural resonance&mdash;contravenes the City's own Human Dignity Policy and environmental justice standards (<strong>Cal. Gov. Code &sect; 65040.12</strong>).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="photo-grid" style="margin-top: 16px;">
+    <div class="photo-card"><a href="../evidence/google_photos_evidence_batch6/album6_photo_006.jpg" target="_blank"><img src="../evidence/google_photos_evidence_batch6/album6_photo_006.jpg"></a><div class="cap"><strong>HBNC Guest Expectations Page 3 (Rule 8, 9, 13, 14)</strong>Rule 14: <em>&ldquo;In order to remain Good Neighbors... We practice a strict no-walk-up/no-bike-up policy. Guests are expected to remain on the property at all times unless when leaving for the day.&rdquo;</em> Rule 9 bans taking photos/video on premises.</div></div>
+    <div class="photo-card"><a href="../evidence/google_photos_evidence_batch6/album6_photo_005.jpg" target="_blank"><img src="../evidence/google_photos_evidence_batch6/album6_photo_005.jpg"></a><div class="cap"><strong>HBNC Guest Expectations Page 2 (Rule 4, 5, 7)</strong>Rule 4: All mail returned to sender immediately upon exit. Rule 7: Mandatory nightly curfew and automatic exit for missing 2 consecutive nights.</div></div>
+    <div class="photo-card"><a href="../evidence/google_photos_evidence_batch6/album6_photo_017.jpg" target="_blank"><img src="../evidence/google_photos_evidence_batch6/album6_photo_017.jpg"></a><div class="cap"><strong>HBNC Shuttle &amp; Curfew Schedule (Approved by City of HB)</strong>Requires 4:30 AM / 7:30 AM sign-up for morning shuttles, 9:00 PM curfew, 10:00 PM lights out, and a single 30-minute 5:00 PM Walgreens prescription shuttle.</div></div>
+    <div class="photo-card"><a href="../evidence/google_photos_evidence_batch6/album6_photo_021.jpg" target="_blank"><img src="../evidence/google_photos_evidence_batch6/album6_photo_021.jpg"></a><div class="cap"><strong>Mercy House Guest Exits Policy (Revised 09/05/2024)</strong>Defines <em>&ldquo;Exit&rdquo;</em> vs. <em>&ldquo;Day Leave&rdquo;</em> and the enforcement of curfew and movement rules across Mercy House navigation centers.</div></div>
+  </div>
+</div>
+
+
+<!-- 6.4 COMPLETE AUG 4, 2021 TO PRESENT CAUSATION & LEGAL ALBUMS CHRONOLOGY -->
+    <div style="margin-top:26px; background:rgba(15, 23, 42, 0.9); border:1px solid rgba(56, 189, 248, 0.45); border-radius:10px; padding:20px;">
+      <h3 style="color:#7dd3fc; margin-top:0; font-size:1.2rem;">6.4 Complete Forensic Chronology Since August 4, 2021: From the Unlawful Irvine Lockout (<span class="mono">212 Southbrook</span>) to HBNC (<span class="mono">17631 Cameron Lane</span>) &amp; Medical Collapse</h3>
+      <p style="font-size:0.93rem; line-height:1.6;">
+        Cross-referencing the Google Photos Legal &amp; Court Albums (<span class="mono">legal</span> [131 items], <span class="mono">dimarcello court docs shea</span> [35 items], <span class="mono">dimarcello ex parte</span> [91 items], <span class="mono">legal 3334</span> [1,168 items / batch7], <span class="mono">legal 2</span> [982 items / batch8], <span class="mono">mom 2021 2024</span>, and <span class="mono">mustang donated to me stolen by shelter security</span>) with the Orange County Superior Court Register of Actions (<span class="mono">30-2021-01201327-CL-UD-CJC</span>) establishes an unbroken 5-year evidentiary chain from <strong>August 4, 2021</strong> to the present:
+      </p>
+
+      <div class="table-wrap" style="margin-top:12px;">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:14%;">Date / Phase</th>
+              <th style="width:24%;">Event &amp; Location</th>
+              <th style="width:36%;">Forensic Facts &amp; Statutory / Procedural Violations</th>
+              <th style="width:26%;">Corroborating Primary Exhibits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Phase I<br>Sep 20, 2020 – Aug 4, 2021</strong></td>
+              <td><strong>Stable Pre-Lockout Residence &amp; Baseline Health</strong><br><span class="mono">212 Southbrook #SB-212, Irvine, CA 92604</span> (Woodbridge / Shea Apartments)</td>
+              <td>
+                • Both <strong>Anthony DiMarcello / Jesse Knabb</strong> and his mother <strong>Elizabeth Tina Petruccio</strong> (<span class="mono">DOB 07/29/1964</span>) resided together at <span class="mono">212 Southbrook, Irvine, CA 92604</span>.<br>
+                • Elizabeth Petruccio's California Driver License (<span class="mono">DL B8028798</span>, issued <span class="mono">08/09/2021</span>) explicitly records her residential address as <strong><span class="mono">212 SOUTHBROOK, IRVINE, CA 92604</span></strong> and her healthy baseline weight of <strong>160 lbs</strong> (<span class="mono">5'-06"</span>).
+              </td>
+              <td>
+                • <span class="mono">batch7/album7_photo_204.jpg</span> (EP CA Driver License <span class="mono">B8028798</span>)<br>
+                • <span class="mono">batch7/album7_photo_228.jpg</span> (Shea / Woodbridge Account Statement)
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Phase II<br>Aug 4, 2021 (<span class="mono">08/04/2021</span>)</strong></td>
+              <td><strong>Unlawful Sheriff Lockout During COVID Moratorium</strong><br><span class="mono">Woodbridge Meadows Apartments LLC v. Dimarcello</span> (<span class="mono">30-2021-01201327-CL-UD-CJC</span>)</td>
+              <td>
+                • Following a <span class="mono">06/02/2021</span> posting order (sewer service) and <span class="mono">06/29/2021</span> Clerk's Default Judgment entered during the California COVID-19 Tenant Relief Act moratorium (<span class="mono">CCP § 1179.03</span>), Orange County Sheriff Don Barnes executed a lockout on <strong>August 4, 2021</strong> (<span class="mono">Levying Officer File #2021102780</span>), forcing both Anthony and his mother Elizabeth Petruccio into homelessness.<br>
+                • On <strong>August 20, 2021 at 3:11 PM</strong>, Hon. Carmen Luege (Dept. C61) issued a Minute Order (<span class="mono">Event ID 73592630</span>) ordering: <em>"Lockout is STAYED until a ruling is issued on this matter."</em><br>
+                • Exactly <strong>78 minutes later (4:29 PM, ROA #37)</strong>, Plaintiff's counsel (<span class="mono">Ruzicka, Wallace &amp; Coughlin, LLP</span>) filed a tactical <span class="mono">CCP § 170.6</span> peremptory challenge disqualifying Judge Luege, refused to restore possession on the ground that the August 4 lockout was already completed (<span class="mono">batch3/album3_photo_038.jpg</span>), seized personal property into POD containers, and billed <span class="mono">$17,404.02</span> (<span class="mono">batch7/album7_photo_228.jpg</span>). The court subsequently entered three successive default judgments (<span class="mono">06/29/2021</span>, <span class="mono">12/22/2021</span>, <span class="mono">02/04/2022</span>).
+              </td>
+              <td>
+                • <span class="mono">batch2/album2_photo_018.jpg</span> (Sheriff Return on Writ <span class="mono">#2021102780</span>, <span class="mono">08/04/2021</span>)<br>
+                • <span class="mono">batch3/album3_photo_066.jpg</span> (Judge Luege Minute Order Staying Lockout, <span class="mono">08/20/2021</span>)<br>
+                • <span class="mono">batch3/album3_photo_038.jpg</span> (Plaintiff Opposition)<br>
+                • <span class="mono">04_OC_Superior_Court_Case_30_2021_01201327_Full_ROA.md</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Phase III<br>2022 – 2023</strong></td>
+              <td><strong>Property Loss, Storage Burglary &amp; Entry Into HBNC Shelter</strong><br><span class="mono">17631 Cameron Lane, Huntington Beach</span></td>
+              <td>
+                • Displaced by the August 4, 2021 lockout, Plaintiff suffered subsequent property losses documented in police reports, including the burglary of storage container <span class="mono">#D2757</span> reported to OCSD on <span class="mono">05/19/2023</span> (<span class="mono">Report #23-018358</span>, Deputy D. Yannizzi <span class="mono">#8794</span>, <span class="mono">batch7/album7_photo_187.jpg</span>), identity theft report <span class="mono">HBPD #2023-600391 / T23000504</span> (<span class="mono">batch8/album8_photo_051.jpg</span>), and loss of the donated gold Ford Mustang convertible (<span class="mono">CA Plate 8GUM894</span>) outside HBNC (<span class="mono">mustang_stolen_by_shelter_security_001.jpg</span>).<br>
+                • Seeking shelter together, Plaintiff and his mother Elizabeth Petruccio entered the <strong>Huntington Beach Navigation Center (HBNC)</strong> operated by Mercy House at <span class="mono">17631 Cameron Lane</span>—a brownfield site paved with a 2-inch asphalt cap under a 1-year warranty and governed by the restrictive "Good Neighbor Policy."
+              </td>
+              <td>
+                • <span class="mono">batch7/album7_photo_187.jpg</span> (OCSD Report <span class="mono">#23-018358</span>)<br>
+                • <span class="mono">batch8/album8_photo_051.jpg</span> &amp; <span class="mono">061.jpg</span> (HBPD <span class="mono">#2023-600391</span>)<br>
+                • <span class="mono">mustang_stolen_by_shelter_security_001.jpg</span><br>
+                • <span class="mono">batch6/album6_photo_001–075.jpg</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Phase IV<br>Nov 2023 – Jan 23, 2024</strong></td>
+              <td><strong>Catastrophic Physical Deterioration, ICU Admission &amp; 30-Day HBNC Hospital Exit Penalty</strong><br>Hoag Hospital Newport Beach &amp; Scripps Mercy Hospital Chula Vista</td>
+              <td>
+                • After living in the unsanitary, mold- and sewage-impacted congregate tent at HBNC (<span class="mono">17631 Cameron Lane</span>), Elizabeth Petruccio's weight plummeted from her <span class="mono">160 lb</span> baseline on her August 2021 driver license down to <strong>116 lbs (<span class="mono">52.6 kg</span>, BMI <span class="mono">18.73</span> — a 44-pound weight loss)</strong>.<br>
+                • Hospitalized at <strong>Hoag Hospital Newport Beach</strong> in November 2023 and admitted to <strong>Scripps Mercy Hospital Chula Vista</strong> (<span class="mono">01/12/2024–01/23/2024</span>) with <strong>septic shock, acute hypoxic respiratory failure, bilateral cavitary pneumonia, and right internal jugular central venous catheterization</strong> (<span class="mono">mom_2021_2024_001.jpg</span>).<br>
+                • Because her life-saving hospitalization lasted more than 7 days, HBNC / Mercy House <strong>automatically exited her from the shelter and imposed a mandatory 30-day lockout penalty</strong> (<span class="mono">scripps_ehr_page_985.png</span>), while Scripps physicians omitted her HBNC shelter residency from all 25+ physician progress notes.
+              </td>
+              <td>
+                • <span class="mono">mom_2021_2024_001.jpg</span> (Hospital Central Line Photo)<br>
+                • <span class="mono">scripps_ehr_page_1051.png</span>, <span class="mono">1034.png</span>, <span class="mono">985.png</span>, <span class="mono">833.png</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 style="color:#f8fafc; margin-top:18px; margin-bottom:10px;">Primary Visual Evidence: From the August 4, 2021 Lockout (<span class="mono">212 Southbrook</span>) to HBNC &amp; Hospital ICU</h4>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:14px;">
+        <div style="background:#090d16; border:1px solid #38bdf8; border-radius:8px; padding:10px;">
+          <div style="font-size:0.8rem; font-weight:700; color:#7dd3fc; margin-bottom:6px;">1. Baseline (<span class="mono">08/09/2021</span>): Elizabeth Petruccio CA Driver License (<span class="mono">212 Southbrook, Irvine</span>, Weight: <span class="mono">160 lb</span>)</div>
+          <a href="../evidence/google_photos_evidence_batch7/album7_photo_204.jpg" target="_blank">
+            <img src="../evidence/google_photos_evidence_batch7/album7_photo_204.jpg" style="width:100%; height:240px; object-fit:cover; border-radius:4px; border:1px solid #334155;">
+          </a>
+        </div>
+        <div style="background:#090d16; border:1px solid #ef4444; border-radius:8px; padding:10px;">
+          <div style="font-size:0.8rem; font-weight:700; color:#fca5a5; margin-bottom:6px;">2. Post-HBNC Exposure (<span class="mono">2023–2024</span>): Central Venous Catheter, Cachexia (<span class="mono">116 lb</span>, -44 lbs) &amp; Septic Shock</div>
+          <a href="../evidence/google_photos_albums//mom_2021_2024/mom_2021_2024_001.jpg" target="_blank">
+            <img src="../evidence/google_photos_albums//mom_2021_2024/mom_2021_2024_001.jpg" style="width:100%; height:240px; object-fit:cover; border-radius:4px; border:1px solid #334155;">
+          </a>
+        </div>
+        <div style="background:#090d16; border:1px solid #f59e0b; border-radius:8px; padding:10px;">
+          <div style="font-size:0.8rem; font-weight:700; color:#fcd34d; margin-bottom:6px;">3. Aug 4, 2021 Sheriff Return on Writ of Possession (<span class="mono">File #2021102780</span>, <span class="mono">212 Southbrook</span> Lockout)</div>
+          <a href="../evidence/google_photos_evidence_batch2/album2_photo_018.jpg" target="_blank">
+            <img src="../evidence/google_photos_evidence_batch2/album2_photo_018.jpg" style="width:100%; height:240px; object-fit:cover; border-radius:4px; border:1px solid #334155;">
+          </a>
+        </div>
+        <div style="background:#090d16; border:1px solid #f59e0b; border-radius:8px; padding:10px;">
+          <div style="font-size:0.8rem; font-weight:700; color:#fcd34d; margin-bottom:6px;">4. Aug 20, 2021 Minute Order (Hon. Carmen Luege): "Lockout is STAYED" (Followed 78 Mins Later by § 170.6 Strike)</div>
+          <a href="../evidence/google_photos_evidence_batch3/album3_photo_066.jpg" target="_blank">
+            <img src="../evidence/google_photos_evidence_batch3/album3_photo_066.jpg" style="width:100%; height:240px; object-fit:cover; border-radius:4px; border:1px solid #334155;">
+          </a>
+        </div>
+        <div style="background:#090d16; border:1px solid #a855f7; border-radius:8px; padding:10px;">
+          <div style="font-size:0.8rem; font-weight:700; color:#d8b4fe; margin-bottom:6px;">5. Woodbridge Move-Out Statement (<span class="mono">Actual Move Out: 08/04/2021</span>, POD Seizure &amp; <span class="mono">$17,404.02</span> Charges)</div>
+          <a href="../evidence/google_photos_evidence_batch7/album7_photo_228.jpg" target="_blank">
+            <img src="../evidence/google_photos_evidence_batch7/album7_photo_228.jpg" style="width:100%; height:240px; object-fit:cover; border-radius:4px; border:1px solid #334155;">
+          </a>
+        </div>
+        <div style="background:#090d16; border:1px solid #38bdf8; border-radius:8px; padding:10px;">
+          <div style="font-size:0.8rem; font-weight:700; color:#7dd3fc; margin-bottom:6px;">6. Gold Mustang (<span class="mono">8GUM894</span>) Outside HBNC Entrance (<span class="mono">mustang_stolen_by_shelter_security_001.jpg</span>)</div>
+          <a href="../evidence/google_photos_albums//mustang_stolen_by_shelter_security/mustang_stolen_by_shelter_security_001.jpg" target="_blank">
+            <img src="../evidence/google_photos_albums//mustang_stolen_by_shelter_security/mustang_stolen_by_shelter_security_001.jpg" style="width:100%; height:240px; object-fit:cover; border-radius:4px; border:1px solid #334155;">
+          </a>
+        </div>
+      </div>
+    </div>
+<!-- 6.5 ANTHONY MICHAEL DIMARCELLO III VERIFIED MYCHART CLINICAL RECORDS & BRIAN BELL'S BROTHER -->
+    <div style="margin-top:26px; background:rgba(15, 23, 42, 0.9); border:1px solid rgba(16, 185, 129, 0.45); border-radius:10px; padding:20px;">
+      <h3 style="color:#6ee7b7; margin-top:0; font-size:1.2rem;">6.5 Verified MyChart Clinical Records of Anthony Michael DiMarcello III (<span class="mono">DOB 05/04/1983</span>) &amp; Simultaneous Hospital Exit Alongside Brian Bell's Deceased Brother</h3>
+      <p style="font-size:0.93rem; line-height:1.6;">
+        Primary CCDA/MyChart exports from <strong>Hoag Memorial Hospital Presbyterian</strong> (<span class="mono">MRN 5109648 / 20012489767</span>, <a href="../evidence/HealthSummary_Aug_29_2026 (3)/1 of 1 - My Health Summary.PDF" target="_blank">117-Page Summary PDF</a>), <strong>Arrowhead Regional Medical Center</strong> (<span class="mono">MRN M004864757 / E18438345</span>, <a href="../evidence/HealthSummary_Aug_29_2026 (4)/1 of 1 - My Health Summary.PDF" target="_blank">117-Page Summary PDF</a>), <strong>UCI Medical Center Orange</strong> (<span class="mono">MRN 5405781</span>, <a href="../evidence/HealthSummary_Aug_28_2026 (1)/1 of 1 - My Health Summary.PDF" target="_blank">47-Page Summary PDF</a>), and <strong>Share Ourselves / OCHIN</strong> (<span class="mono">MRN 2070051325</span>, CalOptima Medi-Cal <span class="mono">ID 99451018G</span>) corroborate Anthony DiMarcello's clinical history, non-healing staph/cellulitis wound, pulmonary/pleural findings, broken left shoulder, and simultaneous exit from the HBNC shelter alongside <strong>Brian Bell's deceased brother</strong>:
+      </p>
+
+      <div class="table-wrap" style="margin-top:12px;">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:15%;">Encounter Date &amp; Facility</th>
+              <th style="width:23%;">Attending / Providers &amp; Source File</th>
+              <th style="width:36%;">Verified Diagnoses, Radiology &amp; Clinical Findings</th>
+              <th style="width:26%;">Treatments, Antibiotics &amp; HBNC Shelter Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mar 24, 2023 &amp; Mar 28, 2023</strong><br>Hoag Memorial Hospital Presbyterian (Newport Beach ED)</td>
+              <td>
+                • Dr. Daniel Ritter, MD<br>
+                • Dr. A. Cunningham, MD<br>
+                • Brenda Marie Felter, FNP<br>
+                • Dr. Peter Giuliano, MD (Radiology)<br>
+                • Dr. Scott Williams, MD (Radiology)<br>
+                • Dr. Nguyen M. Le, MD (Thoracic Surgery)<br>
+                • <a href="../evidence/Anthony1/DOC0008.XML" target="_blank"><span class="mono">DOC0008.XML</span></a> &amp; <a href="../evidence/Anthony1/DOC0009.XML" target="_blank"><span class="mono">DOC0009.XML</span></a>
+              </td>
+              <td>
+                • <strong>CT Chest Without Contrast (<span class="mono">03/24/2023 1:51 AM</span>):</strong><br>
+                &nbsp;&nbsp;1. <em>"Non to mildly displaced fractures of the left 3rd through 6th ribs."</em><br>
+                &nbsp;&nbsp;2. <strong><em>"1.2 cm peribronchial density in the left upper lobe probably infectious/inflammatory given associated bronchiectasis. 1.8 cm peri-fissural density in the medial right lower lobe."</em></strong><br>
+                • <strong>Return ED Visit (<span class="mono">03/28/2023 5:25 PM</span>):</strong> Presented with 10/10 chest pain, cough, shortness of breath, sinus tachycardia (<span class="mono">117 bpm</span>), and sensation of <em>"filling up with fluids."</em><br>
+                • <strong>Chest X-Ray (<span class="mono">03/28/2023 6:30 PM</span>) &amp; Diagnosis:</strong> Confirmed <strong><span class="mono">Pleural effusion, not elsewhere classified</span></strong> (<em>"Trace left effusion... trace fluid at the left base"</em>).
+              </td>
+              <td>
+                • Thoracic Surgery consult (Dr. Timothy Lee / Dr. Nguyen Le).<br>
+                • Prescribed Incentive Spirometer, Hydrocodone-Acetaminophen 5-325 mg, and Ibuprofen 600 mg.<br>
+                • Establishes that <strong>all three family/co-resident plaintiffs (Anthony DiMarcello, Elizabeth Petruccio, and Jesse Knabb) developed documented pulmonary infiltrates and pleural effusions during 2023–2024</strong>.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Feb 11, 2024 (<span class="mono">02/11/2024</span>)</strong><br>Hoag Memorial Hospital Presbyterian (Newport Beach ED)</td>
+              <td>
+                • Dr. H. Marino, DO<br>
+                • Nurse Carolina G, RN<br>
+                • Gulhan R, MSW (Social Work)<br>
+                • Dr. Humberto Wong, MD<br>
+                • <a href="../evidence/Anthony1/DOC0006.XML" target="_blank"><span class="mono">DOC0006.XML</span></a>
+              </td>
+              <td>
+                • <strong>Ambulance Arrival (<span class="mono">09:46 AM PST</span>):</strong> <em>"Pt biba [brought in by ambulance] from front of HBPD for left hip pain x 1 week. <strong>Pt reports staph infection from wound on his left hip.</strong>"</em><br>
+                • <strong>Visit Diagnoses:</strong><br>
+                &nbsp;&nbsp;1. <strong><span class="mono">Wound of left lower extremity, initial encounter - Primary</span></strong><br>
+                &nbsp;&nbsp;2. <strong><span class="mono">Cellulitis of other specified site</span></strong><br>
+                &nbsp;&nbsp;3. <span class="mono">Rib pain on left side</span><br>
+                • <strong>ED Social Work Consult (<span class="mono">12:55 PM PST</span>):</strong> <em>"Patient reports left hip pain and wound that has been gradually worsening since initial onset. Patient seeking assistance with housing... <strong>Patient shared that he has been trying to get into Mercy House shelter.</strong>"</em>
+              </td>
+              <td>
+                • <strong>Dual MRSA/Staph Antibiotic Regimen Prescribed:</strong><br>
+                &nbsp;&nbsp;– <strong><span class="mono">Cephalexin (Keflex) 500 mg</span></strong> (1 cap PO 4×/day for 7 days = 28 caps)<br>
+                &nbsp;&nbsp;– <strong><span class="mono">Sulfamethoxazole-Trimethoprim (Bactrim DS) 800-160 mg</span></strong> (1 tab PO 2×/day for 7 days = 14 tabs)<br>
+                • <strong>Simultaneous Exit from HBNC with Brian Bell's Deceased Brother:</strong> Corroborates that when Anthony was hospitalized for his non-healing wound in February 2024—at the exact same time his mother Elizabeth Petruccio was in Scripps ICU and fellow resident <strong>Brian Bell's brother</strong> passed away from pneumonia (<span class="mono">Ex. CCC</span>)—<strong>both Anthony DiMarcello and Brian Bell's brother were exited from the HBNC shelter</strong> (with Hoag logging <span class="mono">"Pt States No Address"</span> from <span class="mono">02/11/2024 – 08/28/2024</span>).
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Aug 29, 2024 – Dec 5, 2024</strong><br>Hoag Hospital Newport Beach &amp; Arrowhead Regional Medical Center (Colton, CA)</td>
+              <td>
+                • Dr. E. Kang, MD &amp; Dr. Gerard Nguyen, MD (Hoag <span class="mono">08/29/24</span>)<br>
+                • Dr. Deepak Chandwani, Dr. Michael Neeki, Dr. Rodney Borger, Dr. Louis Tran, Dr. John Skubic, Dr. Sunny Trivedi, Dr. Lisa Kinney-Ham (ARMC <span class="mono">09/02–12/05/24</span>)<br>
+                • Dr. January Lopez, MD (Hoag <span class="mono">09/14/24</span>)<br>
+                • <a href="../evidence/Anthony1/DOC0005.XML" target="_blank"><span class="mono">Hoag DOC0005.XML</span></a> &amp; <a href="../evidence/Anthony1/DOC0005.XML" target="_blank"><span class="mono">ARMC DOC0005.XML</span></a>
+              </td>
+              <td>
+                • <strong>Left Shoulder X-Ray &amp; CT (<span class="mono">08/29/2024 – 09/14/2024</span>):</strong><br>
+                &nbsp;&nbsp;– <strong><span class="mono">Displaced comminuted fracture of the surgical neck and head of the left humerus</span></strong> (~one-half shaft width lateral displacement).<br>
+                &nbsp;&nbsp;– <strong><span class="mono">Posterior dislocation / subluxation of the left shoulder joint</span></strong> with <strong>hemarthrosis and widening of the subacromial space</strong> (<span class="mono">09/14/2024</span> Hoag XR).<br>
+                • <strong>Follow-Up X-Ray (<span class="mono">12/05/2024</span>, Arrowhead Regional):</strong> <em>"Comminuted proximal humerus fracture with impaction is seen. Callus formation is seen."</em>
+              </td>
+              <td>
+                • Attempted closed reduction under conscious sedation at Arrowhead Regional (<span class="mono">09/05/2024</span>) with Orthopedic Surgery recommendation for outpatient surgical fixation.<br>
+                • Left arm immobilized in a sling, permanently impairing left shoulder/arm range of motion and requiring him to type and work one-handed.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Dec 14, 2025 (<span class="mono">12/14/2025</span>)</strong><br>UCI Medical Center (Orange Emergency Dept.)</td>
+              <td>
+                • Dr. Shannon Toohey, MD<br>
+                • Dr. Christine Tran Hua, MD<br>
+                • Dr. Kristin Lewis, MD<br>
+                • Dr. Anderanik Tomasian, MD<br>
+                • <a href="../evidence/Anthony1/DOC0002.XML" target="_blank"><span class="mono">UCI DOC0002.XML</span></a>
+              </td>
+              <td>
+                • <strong>Visit Diagnoses:</strong><br>
+                &nbsp;&nbsp;1. <strong><span class="mono">Syncope and collapse - Primary</span></strong><br>
+                &nbsp;&nbsp;2. <strong><span class="mono">Laceration of occipital scalp, initial encounter</span></strong> (<span class="mono">3 cm</span> posterior scalp wound)<br>
+                &nbsp;&nbsp;3. <strong><span class="mono">Closed head injury, initial encounter</span></strong><br>
+                • <strong>Workup:</strong> Head &amp; C-Spine CT, STAT 3D Transthoracic Echocardiogram (<span class="mono">TTE</span>), serial High-Sensitivity Troponin I, CBC, CMP, PT/INR.
+              </td>
+              <td>
+                • Wound irrigated under pressure with 50 mL normal saline and <strong>repaired with 6 surgical skin staples</strong> (<span class="mono">12/14/2025 12:20 PM</span>), plus IV Ofirmev (1,000 mg) and IV fluids.<br>
+                • <strong>Retaliatory Chain of Custody &amp; Trauma:</strong> Occurred immediately after Anthony was ejected from Mercy House following his whistleblower emails regarding shelter fraud and conditions. Picked up on an aged 2023–2024 warrant, transferred to county custody, subjected to an involuntary 5150 psychiatric hold, and administered psychotropic medication, resulting in immediate collapse, loss of consciousness, and head trauma.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 6.6 EVE GARROW (ACLU) & GOVERNMENT WHISTLEBLOWER CORRESPONDENCE -->
+    <div style="margin-top:26px; background:rgba(15, 23, 42, 0.9); border:1px solid rgba(239, 68, 68, 0.45); border-radius:10px; padding:20px;">
+      <h3 style="color:#f87171; margin-top:0; font-size:1.2rem;">6.6 Formal Whistleblower Disclosures: Notice of HBNC Sickness, Unlivable Conditions &amp; Civil Rights Violations Sent to Eve Garrow (ACLU) &amp; Public Officials</h3>
+      
+      <p style="color:#cbd5e1; font-size:0.95rem; line-height:1.6;">
+        Pursuant to federal and state whistleblower protections and mandatory reporting standards, Anthony Michael DiMarcello III repeatedly submitted formal notifications, evidentiary filings, and emergency reports regarding hazardous living conditions, toxic exposures, severe respiratory illness clusters, and civil rights violations at the Huntington Beach Navigation Center (17631 Cameron Lane) to civil rights organizations and regulatory/investigative authorities:
+      </p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px;">
+        
+        <!-- RECOVERED 2023-2025 OFFICIAL OUTREACH MASTER AUDIT (LIVE GMAIL CDP PORT 9444) -->
+        <div style="background:#090d16; border:2px solid #38bdf8; border-radius:10px; padding:18px; grid-column:1 / -1; box-shadow:0 4px 12px rgba(56,189,248,0.15);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid #1e293b; padding-bottom:8px;">
+            <span style="font-size:1.05rem; font-weight:800; color:#38bdf8;">★ Recovered Official Outreach Email Evidence Index (2023–2025) &bull; Verified in amd949609@gmail.com</span>
+            <span style="background:#0369a1; color:#ffffff; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:4px;">LIVE CDP SESSION &bull; PORT 9444 VERIFIED</span>
+          </div>
+          
+          <div style="font-size:0.85rem; color:#cbd5e1; line-height:1.6; margin-bottom:14px;">
+            <strong>Forensic Extraction Provenance:</strong> Recovered directly from the live web session of <span class="mono">amd949609@gmail.com</span> accessed via Chrome DevTools Protocol (CDP) on <span class="mono">http://127.0.0.1:9444</span> (Profile: <span class="mono">C:\Amd949609_Antigravity_v1\chrome_sso_profile</span>). Verbatim query results and raw scrape archived at <a href="../evidence/tasklet_export/gmail_2024_2025_official_hits.json" style="color:#38bdf8;"><span class="mono">C:\OsintNeoAi\tasklet_export\gmail_2024_2025_official_hits.json</span></a>. Master evidentiary indices mirrored at <a href="../evidence/sources/OFFICIAL_OUTREACH_EMAIL_INDEX_2023_2025.md" style="color:#38bdf8;"><span class="mono">OFFICIAL_OUTREACH_EMAIL_INDEX_2023_2025.md</span></a> and <a href="../evidence/11_EMAILS/OFFICIAL_OUTREACH_EMAIL_INDEX_2023_2025.md" style="color:#38bdf8;"><span class="mono">C:\EVIDENCE_LOCKER_MASTER\11_EMAILS\</span></a>.
+          </div>
+
+          <!-- ACCOUNT BOUNDARY AUDIT STATUS -->
+          <div style="background:#0f172a; border:1px solid #334155; border-radius:6px; padding:10px 14px; margin-bottom:14px; font-size:0.8rem; color:#94a3b8;">
+            <strong style="color:#f1f5f9;">Account Boundary Forensic Verification:</strong>
+            <span style="color:#cbd5e1;"><strong>amd949609@gmail.com:</strong> Master repository holding 100% of 2023–2025 official legislative, judicial, and civil rights communications.</span> &bull; 
+            <span style="color:#cbd5e1;"><strong>ironmandavinci@gmail.com:</strong> Confirmed sender for City Attorney Michael Gates (<span class="mono">gates4hb@gmail.com</span> on May 15, 2024), corroborating copy of May 8, 2025 Essayli Task Force transmission, and June 2025 Multi-Agency Demand Letter.</span> &bull; 
+            <span style="color:#cbd5e1;"><strong>pmportal949@gmail.com:</strong> Verified as scratch/portal traffic only (Google Drive shares, VIN/settlement scratch notes; 0 official agency sends).</span> &bull; 
+            <span style="color:#cbd5e1;"><strong>anthonymd949@gmail.com:</strong> 1,401 messages audited &mdash; 100% dated 2026 (0 pre-2026 messages).</span>
+          </div>
+
+          <!-- 4-COLUMN SUMMARY CARDS -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; margin-bottom:14px;">
+            
+            <!-- CARD 1: EVE GARROW / ACLU -->
+            <div style="background:#131d31; border:1px solid #0284c7; border-radius:6px; padding:12px;">
+              <div style="font-weight:700; color:#38bdf8; font-size:0.85rem; margin-bottom:6px;">1. Eve Garrow (ACLU SoCal) &bull; 10 Threads</div>
+              <div style="font-size:0.75rem; color:#cbd5e1; line-height:1.5;">
+                <p style="margin:2px 0;">&bull; <strong>May 8, 2024 (2:34 PM):</strong> <span class="mono">Urgent need help</span> &mdash; First outreach: <em>"I have seen your name on several articles... illegally imprisoned"</em>.</p>
+                <p style="margin:2px 0;">&bull; <strong>Feb 6, 2025 (1:58 PM):</strong> <span class="mono">Please Help</span> &mdash; 9-message thread: <em>"Thank You for your response... potential medical emergency"</em>.</p>
+                <p style="margin:2px 0;">&bull; <strong>Feb 28, 2025 (3:37 AM):</strong> <span class="mono">Hello again</span> &mdash; Disability-protection status clarification under ADA.</p>
+                <p style="margin:2px 0; color:#fde047;">&bull; <strong>May 6, 2025 (3:00 PM):</strong> <span class="mono">Hello Eve</span> (Label: <span class="mono">legal</span>) &mdash; <strong>Explicit Draft Bridge:</strong> <em>"before I make contact with the doj task force regarding..."</em> &mdash; establishes direct causation link 48 hours prior to the Essayli Task Force submission.</p>
+                <p style="margin:2px 0; color:#94a3b8;">&bull; <strong>2026 Dispatches:</strong> Feb 17 (Identity theft housing bar), Apr 15 (Case 20IC002 complaint), Aug 11 (Title II/III ADA notice).</p>
+              </div>
+            </div>
+
+            <!-- CARD 2: SENATOR DAVE MIN -->
+            <div style="background:#131d31; border:1px solid #10b981; border-radius:6px; padding:12px;">
+              <div style="font-weight:700; color:#34d399; font-size:0.85rem; margin-bottom:6px;">2. Sen. Dave Min (CA Senate) &bull; 7 Threads</div>
+              <div style="font-size:0.75rem; color:#cbd5e1; line-height:1.5;">
+                <p style="margin:2px 0;">&bull; <strong>Apr 30, 2024 (11:05 AM):</strong> <span class="mono">id theft min</span> / <em>"Hello - Dimarcello Urgent Request"</em> &mdash; First constituent contact.</p>
+                <p style="margin:2px 0;">&bull; <strong>Apr 30, 2024 (2:50 PM):</strong> <span class="mono">Add. HB City Clarification - DiMarcello</span> &mdash; Municipal conditions update.</p>
+                <p style="margin:2px 0;">&bull; <strong>May 15, 2024 (8:36 PM):</strong> <span class="mono">Thank You Senator Min</span> &mdash; Formally names City Attorney Michael Gates as next referral contact.</p>
+                <p style="margin:2px 0; color:#6ee7b7;">&bull; <strong>Jun 10, 2024 (6:58 AM):</strong> Official Written Response from <strong>Matt Kern, Policy Analyst</strong>, Office of Senator Dave Min &mdash; documents caseworkers Sally Lim, Marshall Wu, and HBNC resident death/resuscitation notification of June 10, 2024 (<a href="../evidence/sources/senator_dave_min_verbatim_email_thread_2024_2025.txt" style="color:#34d399;">verbatim transcript</a>).</p>
+                <p style="margin:2px 0; color:#94a3b8;">&bull; <strong>2026 Dispatches:</strong> Apr 14 (Healthcare Fraud Tip / Angulo NPI; IIM Account Misappropriation).</p>
+              </div>
+            </div>
+
+            <!-- CARD 3: GATES, PORTER, PADILLA -->
+            <div style="background:#131d31; border:1px solid #f59e0b; border-radius:6px; padding:12px;">
+              <div style="font-weight:700; color:#fbbf24; font-size:0.85rem; margin-bottom:6px;">3. Gates, Rep. Porter &amp; Sen. Padilla</div>
+              <div style="font-size:0.75rem; color:#cbd5e1; line-height:1.5;">
+                <p style="margin:2px 0;">&bull; <strong>City Attorney Michael Gates:</strong> Sent <strong>May 15, 2024</strong> from <span class="mono">ironmandavinci@gmail.com</span> to <span class="mono">gates4hb@gmail.com</span> (referral from Sen. Min). Confirmed 0 messages to Gates in <span class="mono">amd949609</span>.</p>
+                <p style="margin:2px 0;">&bull; <strong>Rep. Katie Porter (3 threads):</strong> <strong>Sep 15, 2023</strong> (<span class="mono">info@katieporter.com</span>: <em>"Last year around this time"</em>); <strong>Sep 22, 2023</strong> (<em>"Your time, reclaimed &mdash; I am now contacting the district attorney's office"</em>); <strong>Jun 11, 2026</strong> (<span class="mono">house.gov</span> constituent case on 49× groundwater contamination).</p>
+                <p style="margin:2px 0;">&bull; <strong>Sen. Alex Padilla (Casework):</strong> <strong>Feb 14–15, 2024</strong> formal casework (<span class="mono">padilla.pdf</span>, 600 B St San Diego office) + Politico Feinstein/Padilla constituent inquiry + Porter referral.</p>
+              </div>
+            </div>
+
+            <!-- CARD 4: ESSAYLI & ZOMBIE WARRANT -->
+            <div style="background:#131d31; border:1px solid #ef4444; border-radius:6px; padding:12px;">
+              <div style="font-weight:700; color:#f87171; font-size:0.85rem; margin-bottom:6px;">4. Essayli Task Force &rarr; Zombie Warrant Retaliation (Cal. Penal Code § 496d(a))</div>
+              <div style="font-size:0.75rem; color:#cbd5e1; line-height:1.5;">
+                <p style="margin:2px 0;">&bull; <strong>May 8, 2025 (3:31 PM PDT):</strong> Direct whistleblower submission <span class="mono">To Bill Essayli regarding The Homeless Task Force</span> to <span class="mono">ciaran.mcevoy@usdoj.gov</span> following up on telephone disclosure and detailing fear of retaliatory violence from operators misappropriating billions.</p>
+                <p style="margin:2px 0;">&bull; <strong>The Underlying Mandate &amp; Bebe Smith Estate Assistance:</strong> Anthony DiMarcello was acting under statutory mandatory reporting duties (Cal. Welf. &amp; Inst. Code &sect; 15630) assisting shelter resident <strong>Bebe Smith</strong> with her elder financial abuse proceeding. The U-Haul vehicle was being used to transport what remained of Bebe Smith's stolen/unlawfully diverted inherited estate that had bypassed probate administration (in direct violation of statutory debts-first rules).</p>
+                <p style="margin:2px 0;">&bull; <strong>Courthouse Arrest (First Arrest in Life):</strong> Anthony and Bebe Smith were physically at the courthouse seeking judicial redress when officers moved in and arrested <em>only Anthony</em>, leaving Bebe Smith behind. This was the first arrest of Anthony's life.</p>
+                <p style="margin:2px 0;">&bull; <strong>U-Haul Corporate Reality &amp; Identity Theft:</strong> U-Haul Corporate never pressed charges. Corporate records confirmed that multiple fraudulent accounts had been established under Anthony's identity by third-party identity thieves, resulting in zero debt or charges assessed to his legitimate account. Anthony was actively speaking with U-Haul Corporate to resolve the fraudulent account issue at the very moment the local branch, unaware of corporate communication, mistakenly reported the equipment.</p>
+                <p style="margin:2px 0;">&bull; <strong>What the "Zombie Warrant" Is:</strong> Orange County District Attorney's <em>Notice of Complaint</em> charging <strong>Cal. Penal Code § 496d(a) (receiving stolen property)</strong> &mdash; intentionally mailed to <strong>412 Olive Ave</strong> (a commercial address vacated in 2021). Mailing process to an obsolete dead drop guaranteed a Failure to Appear (FTA), automatically converting the complaint into an active arrest warrant and branding Relator a fugitive in retaliation for official disclosures to the DOJ Task Force / AUSA Bill Essayli and elected officials.</p>
+                <p style="margin:2px 0; color:#fca5a5;">&bull; <strong>Primary Physical Artifact Held:</strong> Neural OCR transcript <a href="../evidence/NEURAL_OCR_PHOTOS/photo_a74G5sEDR54YwTiF7.jpg.txt" style="color:#f87171;"><span class="mono">photo_a74G5sEDR54YwTiF7.jpg.txt</span></a> and master image <a href="../evidence/02_EDR/photo_a74G5sEDR54YwTiF7.jpg" style="color:#f87171;"><span class="mono">photo_a74G5sEDR54YwTiF7.jpg</span></a> &mdash; envelope to <span class="mono">ANTHONY DIMARCELLO / 412 OLIVE AVE / HUNTINGTON BEACH CA 92648</span>, return address <span class="mono">Customer Service, Mail Code TX1-0053, 14800 Frye Road, Fort Worth TX 76155</span>, barcode <span class="mono">00059 PAS OLR 094 029</span>, permit <span class="mono">25423</span>.</p>
+                <p style="margin:2px 0;">&bull; <strong>Controlling Narrative Records:</strong> <a href="../evidence/OsintNeoAi/DOCUMENT_CENTERED_INDEX.md" style="color:#fca5a5;"><span class="mono">DOCUMENT_CENTERED_INDEX.md § II.1</span></a>; <a href="../evidence/evidence/IDENTITY_THEFT_DEEP_RESEARCH.md" style="color:#fca5a5;"><span class="mono">IDENTITY_THEFT_DEEP_RESEARCH.md § VIII (lines 283–291, 360–361)</span></a>; <a href="../evidence/evidence/FORENSIC_ANALYSIS_DIMARCELLO_RICO_2021-2026.md" style="color:#fca5a5;"><span class="mono">FORENSIC_ANALYSIS_DIMARCELLO_RICO_2021-2026.md (line 161)</span></a>; <a href="../evidence/evidence/MASTER_VOID_AB_INITIO_RELATOR_DOSSIER.md" style="color:#fca5a5;"><span class="mono">MASTER_VOID_AB_INITIO_RELATOR_DOSSIER.md (line 647)</span></a>. Earliest in-mail mention: <strong>Jul 1, 2025 4:08 PM</strong>.</p>
+                <p style="margin:2px 0; color:#fde047;">&bull; <strong>The Medical Weaponization &amp; Physical Injury:</strong> Contacting police to report vandalism triggered the dormant warrant. Instead of judicial booking, Relator was subjected to an involuntary 5150 hold, severe caloric deprivation, and unconsented chemical restraint via <strong>Abilify (aripiprazole)</strong> injection, inducing acute hypoglycemia, orthostatic collapse, and a concrete head strike resulting in a traumatic brain injury and 6 surgical scalp staples.</p>
+                <p style="margin:2px 0; color:#94a3b8;">&bull; <strong>Pending Acquisition:</strong> The formal judicial warrant (criminal case number, DA case file, court docket) &mdash; actively queued for retrieval via OC Superior Court criminal index and DA communication logs.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        
+        
+        
+        
+        <!-- 2025 PRIMARY DISCLOSURE 1: DIRECT EMAIL TO BILL ESSAYLI & DOJ TASK FORCE -->
+        <div style="background:#090d16; border:1px solid #10b981; border-radius:8px; padding:14px; grid-column:1 / -1;">
+          <div style="font-size:0.9rem; font-weight:700; color:#6ee7b7; margin-bottom:8px;">★ Direct Primary Whistleblower Email: To Bill Essayli regarding The Homeless Task Force (May 8, 2025)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:4px;"><strong>Date:</strong> Thursday, May 8, 2025 at 3:31 PM PDT (<span class="mono">Thu, 8 May 2025 15:31:39 -0700</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:4px;"><strong>Sender:</strong> Anthony DiMarcello (<span class="mono">amd949609@gmail.com</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:8px;"><strong>Recipients:</strong> Ciaran McEvoy, Public Information Officer, USAO Central District of CA (<span class="mono">ciaran.mcevoy@usdoj.gov</span>), Anthony DiMarcello (<span class="mono">amd949609@gmail.com</span>), IronMan DaVinci (<span class="mono">ironmandavinci@gmail.com</span>)</div>
+          <div style="font-size:0.8rem; color:#e2e8f0; line-height:1.6; background:rgba(15,23,42,0.7); padding:12px; border-radius:6px; border-left:3px solid #10b981;">
+            <strong>Subject:</strong> <em>To Bill Essayli regarding The Homeless Task Force</em><br/><br/>
+            <em>"Hello, Mr. Essayli. My name is Anthony, and the purpose of my call earlier today was to gain some insight on the plan you and your task have for myself and the rest of us at the Navigation Center in Orange County. I was directed to your complaint voicemail service.<br/><br/>
+            I read about your task force investigating the fraud and corruption against us. So I want to understand how this work will actually protect and support people like me – Most of us have already had to live through experiencing homelessness every day and accept the trauma it involves, but now our plight is being extended because it is paying out billions of dollars to criminals, that we are trapped with, and the same funds are presumably being used to abuse and traffic homeless children. Sir, this is unprecedented and this isn't just about fraud; it's about our lives, it's about our American Sovereignty.<br/><br/>
+            I have endured through pain in this experience that I never could have imagined, over several years. I am lucky because I have had the pleasure of meeting several others along this journey that did not make it. It was an honor to know them in their last days, instead of their loved ones who should have been with them, but have no idea what is happening here. None of us that passed were a burden and their families should know that. All of us had to adjust greatly to survive being trapped here, our freedom of movement restricted without due process and no other options for the first time in our lives for the majority of us, and we all have done our best to see the best in each other...<br/><br/>
+            I hope to speak with you exclusively and privately regarding this matter. I pray it is very soon and that I do not have to reach out to other sources for our immediate relief, that is my prayer Sir. You know, what I know and much more.<br/><br/>
+            I would like to know what the plan is going forward as well, considering we are dealing with criminals that not only stole billions of dollars, but they stole it from the most vulnerable men women and children in our society. I would think they have it in them to kidnap, retaliate and kill willingly once they know they are caught, which they know now due to your DOJ Announcement of the Task Force. Out of this large state only a small area was announced as well, and that is where we are located and our freedom of movement is controlled.<br/><br/>
+            Thank You For Your Time,<br/>
+            Anthony Michael DiMarcello III — 657-760-9090"</em>
+          </div>
+        </div>
+
+        <!-- 2025 PRIMARY DISCLOSURE 2: MULTI-AGENCY URGENT DEMAND LETTER -->
+        <div style="background:#090d16; border:1px solid #38bdf8; border-radius:8px; padding:14px; grid-column:1 / -1;">
+          <div style="font-size:0.9rem; font-weight:700; color:#7dd3fc; margin-bottom:8px;">★ Multi-Agency Urgent Demand Letter: HBNC Investigation &amp; ACLU Mercy House Precedent (June 15–16, 2025)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:4px;"><strong>Dates:</strong> June 15–16, 2025 (<span class="mono">Mon, 16 Jun 2025 18:56:23 -0700</span> &amp; <span class="mono">Tue, 17 Jun 2025 03:07:12 -0700</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:4px;"><strong>Sender:</strong> <span class="mono">ironmandavinci@gmail.com</span> (Anonymous Resident via Legal Aid Society of Orange County)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:8px;"><strong>Recipients:</strong> <span class="mono">CRT.MAIL@usdoj.gov</span> (DOJ Civil Rights Division), <span class="mono">hotline@hudoig.gov</span> (HUD OIG), <span class="mono">r9.info@epa.gov</span> (EPA Region 9), <span class="mono">response@ocgov.com</span> (OC Board of Supervisors), <span class="mono">contact.center@dfeh.ca.gov</span>, Voice of OC, LA Times, OC Register, CalMatters, ProPublica, Washington Post, NY Times, Disability Rights Education &amp; Defense Fund (<span class="mono">info@dredf.org</span>)</div>
+          <div style="font-size:0.8rem; color:#e2e8f0; line-height:1.6; background:rgba(15,23,42,0.7); padding:12px; border-radius:6px; border-left:3px solid #38bdf8;">
+            <strong>Subject:</strong> <em>**URGENT DEMAND LETTER: Investigation Required at Huntington Beach Navigation Center**</em><br/><br/>
+            <strong>Core Findings &amp; Demands:</strong> Formally cited the <strong>2020 ACLU lawsuit against Mercy House</strong> documenting severe misconduct and retaliation against whistleblowers; reported undisclosed property ties to Orange County government for 17631 Cameron Lane and 17642 Beach Blvd; documented health and safety violations, severe movement restrictions under the "Good Neighbor Policy", and systemic procurement fraud diverting homelessness funds into contaminated facilities without ADA compliance or due process.
+          </div>
+        </div>
+
+        <!-- TASK FORCE & ESSAYLI FRAUD AUDIT INTAKE -->
+        <div style="background:#090d16; border:1px solid #10b981; border-radius:8px; padding:14px;">
+          <div style="font-size:0.85rem; font-weight:700; color:#6ee7b7; margin-bottom:8px;">Homelessness Funds Fraud Task Force Submissions &amp; Assembly Member / Former AUSA Bill Essayli Record</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Target Investigation:</strong> <em>DOJ / Central District of California Criminal Task Force on Homelessness Funds Fraud &amp; Corruption</em></div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Associated Entities:</strong> Eve Garrow (ACLU SoCal), Bill Essayli (Former Assistant U.S. Attorney, CDCA / CA State Assembly Member, Vice Chair of Assembly Judiciary Committee), HB Homeless Task Force</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <strong>Evidentiary Focus &amp; Archive Record:</strong> Corresponds to archived federal and investigative records (<a href="https://drive.google.com/file/d/1jAWr0QMaWZN_-dpqSIfzdFQmwYI4uu2d/view?usp=drivesdk" target="_blank" style="color:#6ee7b7; text-decoration:underline;"><em>Central District of California: United States Attorney Bill Essayli Announces Criminal Task Force to Investigate Fraud and Corruption Involving Homelessness Funds</em></a>, Google Drive Doc ID <code>1jAWr0QMaWZN_-dpqSIfzdFQmwYI4uu2d</code>).<br/>
+            <strong>Whistleblower Nexus:</strong> Documented how hundreds of millions in state and federal homelessness grants (including Project Roomkey, Homekey, and municipal navigation center appropriations) were funneled into unpermitted, toxic industrial sites like 17631 Cameron Lane without basic habitability, medical isolation, or ADA compliance. Whistleblower correspondence reported systemic fraud, misuse of homelessness funding, failure to provide promised permanent supportive housing, and retaliatory exclusion of vocal disabled residents by shelter operators and municipal task force officials.
+          </div>
+        </div>
+
+        <!-- TASK FORCE EMAIL 1: OUTSIDE IN THE STORM -->
+        <div style="background:#090d16; border:1px solid #38bdf8; border-radius:8px; padding:14px;">
+          <div style="font-size:0.85rem; font-weight:700; color:#7dd3fc; margin-bottom:8px;">Emergency Placement Request to Orange County Housing Authority &amp; HB Homeless Task Force (Feb 16–17)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Dates:</strong> Mon–Tue, Feb 16–17 | <strong>Sender:</strong> Anthony DiMarcello (<span class="mono">amd949609@gmail.com</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Recipients:</strong> <span class="mono">OCHAContact@occr.ocgov.com</span>, <span class="mono">HBHomelessTaskForce@surfcity-hb.org</span>, <span class="mono">HCAOutreach@ochca.com</span></div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <strong>Subject:</strong> <em>Re: I'm outside in this storm / URGENT NOTICE: Unsheltered with Documented Medical Vulnerabilities</em><br/>
+            <strong>Core Evidentiary Content:</strong> <em>"Hello, I'm outside in this storm and I am following up to check the current status of my housing placement. Please let me know if there are any updates. I've been in the system for years due to id theft, I have disabling injuries, and I need to get off of the streets, especially now with this storm."</em><br/>
+            <strong>OCHA Written Response:</strong> OCHA confirmed receipt on Feb 17 (<em>"Your inquiry has been routed for handling accordingly... OCHA Waiting List Team"</em>).<br/>
+            <strong>City of HB Suppression / Dead-End Routing:</strong> City of HB Exchange servers rejected transmission to the Task Force (<span class="mono">postmaster@surfcity-hb.org</span>: <em>Remote Server returned '550 5.1.10 RESOLVER.ADR.RecipientNotFound; Recipient HBHomelessTaskForce@surfcity-hb.org not found'</em>), demonstrating that official outreach intake channels were dead-ended and disabled during acute weather events.
+          </div>
+        </div>
+
+        <!-- TASK FORCE EMAIL 2: IDENTITY THEFT & HOUSING STATUS -->
+        <div style="background:#090d16; border:1px solid #f59e0b; border-radius:8px; padding:14px;">
+          <div style="font-size:0.85rem; font-weight:700; color:#fcd34d; margin-bottom:8px;">Identity Theft Housing Bar Notice to HB Homeless Task Force (Feb 17)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Date:</strong> Tue, Feb 17, 12:45 PM | <strong>Sender:</strong> Anthony DiMarcello (<span class="mono">amd949609@gmail.com</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Recipient:</strong> <span class="mono">HBHomelessTaskForce@surfcity-hb.org</span></div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <strong>Subject:</strong> <em>Undeliverable: URGENT: Documentation of Identity Theft Impact on Housing Status – Anthony DiMarcello</em><br/>
+            <strong>Core Evidentiary Content:</strong> Submitted formal documentation proving that identity theft and synthetic credit corruption directly barred access to standard housing vouchers and credit checks following the unlawful Irvine lockout. Like the storm alert, this urgent submission was bounced by the City's Exchange mail server (<span class="mono">Exchange18.cohb.net</span>), completely insulating municipal leadership from documented ADA and housing emergencies.
+          </div>
+        </div>
+
+        <!-- EMAIL 1 -->
+        <div style="background:#090d16; border:1px solid #ef4444; border-radius:8px; padding:14px;">
+          <div style="font-size:0.85rem; font-weight:700; color:#fca5a5; margin-bottom:8px;">1. Emergency Notice to ACLU Homelessness Policy Analyst Eve Garrow (Feb 18, 2026)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Date:</strong> Wed, Feb 18, 2026 03:50:08 -0800 | <strong>Sender:</strong> Anthony DiMarcello (<span class="mono">amd949609@gmail.com</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Recipient:</strong> Eve Garrow (<span class="mono">Egarrow@aclusocal.org</span>)</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <strong>Subject:</strong> <em>EMERGENCY: Fraudulent CEQA Exemption &amp; Whistleblower Retaliation (Petition A-2926) URGENT - IMMEDIATE SAFETY RISK</em><br/>
+            <strong>Core Evidentiary Content:</strong> Disclosed the fraudulent CEQA exemption invoked by the City of Huntington Beach to bypass environmental review on the hazardous industrial site, toxic exposures inside the shelter tent, lack of safe habitability, and immediate physical safety risks facing disabled and unhoused residents on the street following retaliatory exclusion.
+          </div>
+        </div>
+
+        <!-- EMAIL 2 -->
+        <div style="background:#090d16; border:1px solid #f59e0b; border-radius:8px; padding:14px;">
+          <div style="font-size:0.85rem; font-weight:700; color:#fcd34d; margin-bottom:8px;">2. Multi-Agency Whistleblower Complaint: CalMatters, OC Register, ACLU &amp; FBI (Apr 15, 2026)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Date:</strong> Wed, Apr 15, 2026 12:51:25 -0700 | <strong>Sender:</strong> Anthony DiMarcello (<span class="mono">amd949609@gmail.com</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Recipients:</strong> <span class="mono">marisa@calmatters.org</span>, <span class="mono">ocnews@ocregister.com</span>, Eve Garrow (<span class="mono">Egarrow@aclusocal.org</span>), FBI (<span class="mono">FOIPAQUESTIONS@FBI.GOV</span>)</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <strong>Subject:</strong> <em>Re: Federal Whistleblower Complaint - Case 20IC002 + Related Fraud Network</em><br/>
+            <strong>Core Evidentiary Content:</strong> Co-Relator complaint submitted by Anthony Michael DiMarcello III and Dr. Ann Verma, MD, notifying investigative press, ACLU Southern California, and federal law enforcement of systemic procurement fraud, falsified environmental clearances, and coordinated civil rights violations.
+          </div>
+        </div>
+
+        <!-- EMAIL 3 -->
+        <div style="background:#090d16; border:1px solid #38bdf8; border-radius:8px; padding:14px;">
+          <div style="font-size:0.85rem; font-weight:700; color:#7dd3fc; margin-bottom:8px;">3. Urgent Whistleblower Report on Retaliation Against Homeless/Disabled (Apr 15, 2026)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Date:</strong> Wed, Apr 15, 2026 17:50:58 -0700 | <strong>Sender:</strong> Anthony DiMarcello (<span class="mono">amd949609@gmail.com</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Recipient:</strong> Eve Garrow (<span class="mono">Egarrow@aclusocal.org</span>)</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <strong>Subject:</strong> <em>URGENT: Whistleblower Report - Systematic Fraud Against Homeless/Disabled Populations + Retaliation</em><br/>
+            <strong>Core Evidentiary Content:</strong> Detailed documentation of widespread pulmonary and soft-tissue sickness at HBNC, arbitrary shelter exits of sick residents, lack of medical isolation, and retaliatory exclusion from supportive housing programs.
+          </div>
+        </div>
+
+        <!-- EMAIL 4 -->
+        <div style="background:#090d16; border:1px solid #a855f7; border-radius:8px; padding:14px;">
+          <div style="font-size:0.85rem; font-weight:700; color:#d8b4fe; margin-bottom:8px;">4. Formal Whistleblower Intake &amp; ADA Shielding Request (<a href="../evidence/Downloads/aclu eve garrow email 2026 Sent Items - Anthony DiMarcello - Outlook.pdf" target="_blank" style="color:#d8b4fe; text-decoration:underline;">Outlook PDF Record</a>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Date:</strong> Tue, Aug 11, 2026 8:29 AM | <strong>Sender:</strong> Anthony DiMarcello (<span class="mono">anthony.dimarcello@students.post.edu</span>)</div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Recipients:</strong> Eve Garrow (<span class="mono">Egarrow@aclusocal.org</span>), ACLU Intake (<span class="mono">info@aclu-sdic.org</span>)</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <strong>Subject:</strong> <em>Urgent Whistleblower Matter &amp; Formal Notice of ADA Accommodation</em><br/>
+            <strong>Core Evidentiary Content:</strong> Requested emergency whistleblower shielding and secure consultation under federal anti-tipping-off statutes (31 U.S.C. § 5318(g)). Formally served <strong>Notice of ADA Accommodation and Assistive Technology Use</strong> (Title II &amp; Title III) notifying counsel of Anthony's severe physical orthopedic disability (proximal humerus fracture / shoulder dislocation) requiring assistive transcription tools to facilitate legal and government correspondence.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 6.7: MULTI-ACCOUNT FORENSIC AUDIT (GMAIL, GDRIVE, PHOTOS, GDOCS) -->
+    <div style="background:#0b1120; border:1px solid #334155; border-radius:12px; padding:24px; margin-bottom:32px; box-shadow:0 4px 6px -1px rgba(0,0,0,0.5);">
+      <h3 style="color:#38bdf8; margin-top:0; font-size:1.2rem;">6.7 Multi-Account Forensic Audit &amp; Cloud Evidence Architecture: Cross-Platform Verification Across All Primary Google &amp; Workspace Accounts</h3>
+      
+      <p style="color:#cbd5e1; font-size:0.95rem; line-height:1.6;">
+        To ensure zero evidentiary omission and substantiate the complete timeline of whistleblower disclosures, administrative grievances, municipal communications, and environmental assessments, an exhaustive multi-vault audit was executed across all user profiles and cloud identities (<span class="mono">drillingoilandgasinfo@gmail.com</span>, <span class="mono">txtdjdrop@gmail.com</span>, <span class="mono">ironmandavinci@gmail.com</span>, <span class="mono">amd949609@gmail.com</span>, <span class="mono">osintneoai@gmail.com</span>, and <span class="mono">anthony.dimarcello@students.post.edu</span>). This audit establishes cross-platform provenance across Gmail, Google Drive, Google Docs/Sheets, Google Photos, and Google Cloud Platform (GCP):
+      </p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:18px; margin-top:16px;">
+        
+        <!-- ACCOUNT 1: txtdjdrop@gmail.com -->
+        <div style="background:#090d16; border:1px solid #0284c7; border-radius:8px; padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:0.95rem; font-weight:700; color:#38bdf8;">1. txtdjdrop@gmail.com</span>
+            <span style="background:#0369a1; color:#fff; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:4px;">CHROME PROFILE 4 &bull; GCLOUD DEFAULT</span>
+          </div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Infrastructure Role:</strong> Enterprise Storage Hub (5TB Drive), OSINT Research Vault, Municipal Opportunities</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <p style="margin:4px 0;"><strong>&bull; Gmail Audit (1,692 Messages):</strong> Contains state regulatory confirmations (<span class="mono">DIR Services Registration Confirmation</span> - ID: <span class="mono">FMfcgzQhWTvgVghhfvfsspZKCHXBBLjx</span>), municipal procurement solicitations (<span class="mono">County of Orange: Elevator Maintenance &amp; Repair Service</span> - ID: <span class="mono">FMfcgzQhVNQgfmMwQgdTdBvLFkSjlMZC</span>), Google AI Studio project authorizations, and family group cross-authorizations with <span class="mono">anthonymichaeldimarcello@gmail.com</span>.</p>
+            <p style="margin:4px 0;"><strong>&bull; Google Drive Master Case Folders:</strong> Direct indexed evidence directories including:
+              <ul style="margin:4px 0 6px 16px; padding:0;">
+                <li><span class="mono">hb</span>: <a href="https://drive.google.com/drive/folders/19cVOf6v67Xx3WgB5wFaei7kYLaIc05GB" target="_blank" style="color:#38bdf8;">Folder 19cVOf6v67Xx3WgB5wFaei7kYLaIc05GB</a></li>
+                <li><span class="mono">mercy</span>: <a href="https://drive.google.com/drive/folders/1XyC1pmcHPOoqewn-GHHeTfEkdn_8DOcC" target="_blank" style="color:#38bdf8;">Folder 1XyC1pmcHPOoqewn-GHHeTfEkdn_8DOcC</a></li>
+                <li><span class="mono">OC</span>: <a href="https://drive.google.com/drive/folders/1RruuO8uvkd96SEAtY9aWTvrqkC6v3wUg" target="_blank" style="color:#38bdf8;">Folder 1RruuO8uvkd96SEAtY9aWTvrqkC6v3wUg</a></li>
+                <li><span class="mono">cunningham esa estate</span>: <a href="https://drive.google.com/drive/folders/1vdLjfeeg1U5fmAPoue4WEangTNvr_PFh" target="_blank" style="color:#38bdf8;">Folder 1vdLjfeeg1U5fmAPoue4WEangTNvr_PFh</a></li>
+                <li><span class="mono">Site Assessment Report</span>: <a href="https://drive.google.com/file/d/1nNM0inix4fnAop9hErqeLk9-TKZUvzuy/view" target="_blank" style="color:#38bdf8;">Historic T10000018579 Environmental Audit</a></li>
+              </ul>
+            </p>
+            <p style="margin:4px 0;"><strong>&bull; Local Drive Zip Archive (Oct 2, 2026):</strong> Downloaded as <span class="mono">drive-download-20261002T114916Z-1-001.zip</span> (77 MB) containing 39 core legal filings: <span class="mono">MOTION_TO_INTERVENE.md</span>, <span class="mono">EDR_2025_REAL_MASTER_INDEX.md</span>, <span class="mono">GEOTRACKER_ESA_AERIAL_FALSIFICATION_AUDIT.md</span>, <span class="mono">tax_map_17642_beach.png</span>, <span class="mono">DEEPMIND_OSINT_FORENSIC_MATRIX.json</span>, and <span class="mono">FULL_OCR_EVIDENCE_INDEX.md</span>.</p>
+            <p style="margin:4px 0;"><strong>&bull; Google Docs &amp; Sheets Research Ledgers:</strong> Active investigative spreadsheets including <span class="mono">OSINT for Finding People</span> (<a href="https://docs.google.com/spreadsheets/d/1JxBbMt4JvGr--G0Pkl3jP9VDTBunR2uD3_faZXDvhxc/edit" target="_blank" style="color:#38bdf8;">1JxBbMt4Jv...</a>) and <span class="mono">Bellingcat Online Investigation Toolkit</span> (<a href="https://docs.google.com/spreadsheets/d/18rtqh8EG2q1xBo2cLNyhIDuK9jrPGwYr9DI2UncoqJQ/edit" target="_blank" style="color:#38bdf8;">18rtqh8EG...</a>).</p>
+          </div>
+        </div>
+
+        <!-- ACCOUNT 2: ironmandavinci@gmail.com -->
+        <div style="background:#090d16; border:1px solid #10b981; border-radius:8px; padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:0.95rem; font-weight:700; color:#34d399;">2. ironmandavinci@gmail.com</span>
+            <span style="background:#065f46; color:#fff; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:4px;">CHROME PROFILE 22 &bull; LIVE IMAP AUDITED</span>
+          </div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Infrastructure Role:</strong> Primary External Legal, Legislative &amp; Whistleblower Communications Vector</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <p style="margin:4px 0;"><strong>&bull; Direct Bill Essayli Whistleblower Email (May 8, 2025):</strong> Full transcript to <span class="mono">ciaran.mcevoy@usdoj.gov</span> regarding the Homeless Task Force, HBNC deaths, unlivable shelter conditions, and fear of retaliatory violence.</p>
+            <p style="margin:4px 0;"><strong>&bull; Federal Civil Rights Demand Letter (June 16, 2025):</strong> Multi-agency formal complaint served to DOJ Civil Rights (<span class="mono">CRT.MAIL@usdoj.gov</span>), HUD OIG (<span class="mono">hotline@hudoig.gov</span>), EPA Region 9, and investigative press (CalMatters, ProPublica, LA Times) explicitly citing the 2020 ACLU Mercy House lawsuit.</p>
+            <p style="margin:4px 0;"><strong>&bull; Mercy House Executive Audit Service (April 2024):</strong> Served California State Auditor Report 2023-102 directly to Mercy House executive leadership (<span class="mono">elijahh@mercyhouse.net</span>, <span class="mono">morrish@mercyhouse.net</span>).</p>
+            <p style="margin:4px 0;"><strong>&bull; Pre-Litigation Demands (May 2026):</strong> Formal $475k statutory tort and civil rights settlement demand served directly on Huntington Beach City Manager and City Attorney.</p>
+          </div>
+        </div>
+
+        <!-- ACCOUNT 3: amd949609@gmail.com -->
+        <div style="background:#090d16; border:1px solid #f59e0b; border-radius:8px; padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:0.95rem; font-weight:700; color:#fbbf24;">3. amd949609@gmail.com</span>
+            <span style="background:#78350f; color:#fff; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:4px;">CHROME DEFAULT &bull; RECOVERED 2023–2025 OUTREACH HUB</span>
+          </div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Infrastructure Role:</strong> Central Whistleblower Archive, Master Drive Owner (26k Files), Primary Photo Vault, Live CDP Session (Port 9444)</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <p style="margin:4px 0;"><strong>&bull; 2023–2025 Official Outreach Hub (Recovered via CDP Port 9444):</strong> Recovered live Gmail session confirming primary whistleblower communications with <strong>Eve Garrow / ACLU</strong> (10 threads, including May 6, 2025 draft linking to DOJ Task Force), <strong>Senator Dave Min</strong> (7 threads, including June 10, 2024 reply from Matt Kern), <strong>Bill Essayli / DOJ Task Force</strong> (May 8, 2025 sent email), <strong>Sen. Alex Padilla</strong> (Feb 2024 casework), and <strong>Rep. Katie Porter</strong> (Sep 2023 outreach). Full index at <a href="../evidence/sources/OFFICIAL_OUTREACH_EMAIL_INDEX_2023_2025.md" style="color:#fbbf24;"><span class="mono">OFFICIAL_OUTREACH_EMAIL_INDEX_2023_2025.md</span></a>.</p>
+            <p style="margin:4px 0;"><strong>&bull; Master Google Drive Repository (26,001 Files):</strong> Owner UID <span class="mono">105713571426282631798</span> cataloged in <span class="mono">C:\OsintNeoAi\agent\drive_file_index_full.csv</span>. Hosts the official DOJ Bill Essayli Homelessness Funds Fraud Task Force PDF (<span class="mono">1jAWr0QMaWZN_-dpqSIfzdFQmwYI4uu2d</span>), Unlawful Detainer filings (<span class="mono">DIMARCELLO UD.pdf</span>), and appellate briefs (<span class="mono">e067530.pdf</span>).</p>
+            <p style="margin:4px 0;"><strong>&bull; Google Photos Central Library (11 Web Albums):</strong> Master catalog in <span class="mono">Albums - Google Photos.html</span> containing <span class="mono">hb data</span> (<a href="https://photos.google.com/u/0/album/AF1QipOFzki5oZ_E-S0Bu7lCbQ_lJ92Oj79Tc9ee2tq1" target="_blank" style="color:#fbbf24;">AF1QipOF...</a>), <span class="mono">Cox Printout Pages</span> (54 items), <span class="mono">vids</span> (26 items), and <span class="mono">Ann and gio</span> (21 items).</p>
+            <p style="margin:4px 0;"><strong>&bull; Local High-Resolution Photo Vaults:</strong> 27 case-specific albums and 7 evidence batches (<span class="mono">batch2</span> through <span class="mono">batch8</span>) comprising 800+ full-resolution photos indexed in <span class="mono">C:\OsintNeoAi\evidence\PHOTOS_EVIDENCE_OCR_INDEX.md</span> (112 KB).</p>
+            <p style="margin:4px 0; font-size:0.75rem; color:#94a3b8;"><strong>&bull; Note on pmportal949@gmail.com:</strong> Verified as scratch/portal traffic only (Google Drive shares, VIN/settlement notes; zero official sends).</p>
+          </div>
+        </div>
+
+        <!-- ACCOUNT 4: osintneoai@gmail.com & anthony.dimarcello@students.post.edu -->
+        <div style="background:#090d16; border:1px solid #8b5cf6; border-radius:8px; padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:0.95rem; font-weight:700; color:#a78bfa;">4. osintneoai@ &amp; students.post.edu</span>
+            <span style="background:#581c87; color:#fff; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:4px;">GCP DATA ENGINE &bull; INSTITUTIONAL PORTAL</span>
+          </div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Infrastructure Role:</strong> BigQuery Analytics Engine, Unclaimed Property Tracing, Formal ACLU Intake Vector</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <p style="margin:4px 0;"><strong>&bull; osintneoai@gmail.com (Profile 5 &bull; GCP noble-beanbag-497411-m4):</strong> Hosts BigQuery forensic datasets (<span class="mono">national_audits.drive_file_index</span>, <span class="mono">ca_44_coc_matrix</span>, statewide HUD funding allocations). IMAP audit confirms State Controller unclaimed property tracing for Mercy House and executive leadership.</p>
+            <p style="margin:4px 0;"><strong>&bull; anthony.dimarcello@students.post.edu (Profile 12):</strong> Institutional email utilized for August 11, 2026 formal intake submission to Eve Garrow (ACLU SoCal) (<span class="mono">Egarrow@aclusocal.org</span>) establishing Title II &amp; Title III ADA violations and retaliatory ejection from HBNC.</p>
+            <p style="margin:4px 0;"><strong>&bull; Azure Academic Cloud Environment:</strong> Hosts containerized forensic processing pipelines and neural OCR decoders used in municipal permit reconstruction.</p>
+          </div>
+        </div>
+
+        <!-- ACCOUNT 5: drillingoilandgasinfo@gmail.com -->
+        <div style="background:#090d16; border:1px solid #e11d48; border-radius:8px; padding:16px; grid-column:1 / -1;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:0.95rem; font-weight:700; color:#fb7185;">5. drillingoilandgasinfo@gmail.com</span>
+            <span style="background:#881337; color:#fff; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:4px;">CHROME PROFILE 14 &bull; ENVIRONMENTAL &amp; SUBSURFACE RECONNAISSANCE</span>
+          </div>
+          <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;"><strong>Infrastructure Role:</strong> Environmental Due Diligence, Subsurface Oil &amp; Gas Well Mapping, EDR/LightBox Land Records, PACER Court Docket Tracking</div>
+          <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">
+            <p style="margin:4px 0;"><strong>&bull; Direct Environmental Fraud &amp; Contamination Disclosures (Gmail - 333 Messages):</strong>
+              <ul style="margin:4px 0 6px 16px; padding:0;">
+                <li><strong>Whistleblower Email Subject:</strong> <span class="mono">New Evidence: Subsurface Contamination and Contract Fraud at 17642 Beach Blvd</span> (Message ID: <span class="mono">FMfcgzQgLrsrnQLqPhdTjCQsjjgXWZDx</span>).</li>
+                <li><strong>Environmental Data Resources (EDR) Coordination:</strong> <span class="mono">Re: edr ordering isnt the same now</span> (Message ID: <span class="mono">FMfcgzQdzvxFjWsVXpcLCRRshBSkKkTq</span>).</li>
+                <li><strong>LightBox Insights &amp; Land Permitting Audits:</strong> Verification and monitoring of 17631 Cameron Lane, 17682 Cameron Lane, 17680, 17692, 17676, 17622, and 17616 Cameron Lane (<span class="mono">The Brink Center / Shea Homes</span>).</li>
+                <li><strong>Federal Court Docket Tracking:</strong> PACER Monitor MFA and docket alerts for <span class="mono">Jesse Knabb v. City of Huntington Beach et al (8:26-cv-00348-JWH-ADS)</span>.</li>
+                <li><strong>HUD Regulatory Documentation:</strong> Formal HUD records on Mercy House (<a href="https://www.hud.gov/sites/documents/14MERCY_HOUSE.PDF" target="_blank" style="color:#fb7185;">14MERCY_HOUSE.PDF</a>).</li>
+              </ul>
+            </p>
+            <p style="margin:4px 0;"><strong>&bull; Core Legal Analysis Google Doc &amp; Research Spreadsheets:</strong>
+              <ul style="margin:4px 0 6px 16px; padding:0;">
+                <li><strong>Master Legal Strategy Doc:</strong> <a href="https://docs.google.com/document/d/1HV8TfiMxFlnsULjOi2mpej4KwZG8PoLZnqzvd_JuNZA/edit" target="_blank" style="color:#fb7185;">Navigation Center Illness Legal Options (Google Docs: 1HV8TfiMxF...)</a> &mdash; Analyzes statutory tort claims, CEQA exemptions, toxic tort liability, and municipal housing code violations for HBNC illnesses.</li>
+                <li><strong>Active Environmental Research Sheet:</strong> <a href="https://docs.google.com/spreadsheets/d/1hKx1-8YnvrvAv9H6AQunli3dFSwsyIB3rF1yluO2Y1U/edit" target="_blank" style="color:#fb7185;">Spreadsheet 1hKx1-8Y... (gid=1880083886)</a>.</li>
+              </ul>
+            </p>
+            <p style="margin:4px 0;"><strong>&bull; Google Drive Environmental Evidence Repository (92 Cataloged Records in drive_file_index_full.csv):</strong>
+              <ul style="margin:4px 0 6px 16px; padding:0;">
+                <li><span class="mono">Cameron-Beach Site Assessment</span> (<a href="https://drive.google.com/open?id=1b9aDlHoDA3hNsm0oDIam6vHCj0lxTyK_" target="_blank" style="color:#fb7185;">1b9aDlHoDA3hNsm0oDIam6vHCj0lxTyK_</a>)</li>
+                <li><span class="mono">Cameron_Tract_Wells__1940s_&amp;_Undated_(1)_1771475692334.pdf</span> (<a href="https://drive.google.com/file/d/1lkofQ4q5WF9I2A0cmvYK-SbWWhnJEELt/view" target="_blank" style="color:#fb7185;">1lkofQ4q5WF9I2A0cmvYK-SbWWhnJEELt</a>)</li>
+                <li><span class="mono">Copy_of_full_info_well_17642_beach_1771475692432.pdf</span> (<a href="https://drive.google.com/file/d/1WdfMydqXcXCDIR-Mi9kvkZnPs91Hkgn8/view" target="_blank" style="color:#fb7185;">1WdfMydqXcXCDIR-Mi9kvkZnPs91Hkgn8</a>)</li>
+                <li><span class="mono">Geospatial Evidence of Address Manipulation and Chemical Contamination</span> (<a href="https://docs.google.com/document/d/1SZ5pthPlgcBeFm969E6D5To4ij_XmBwrb7nmgrM2_s8/edit" target="_blank" style="color:#fb7185;">1SZ5pthPlgcBeFm...</a>)</li>
+                <li><span class="mono">Huntington Beach Navigation Center Contamination Documentation-1.pdf</span> (<a href="https://drive.google.com/file/d/1XqQp7Rw-FzpX5g1HLCIeJnlOHixHbmwl/view" target="_blank" style="color:#fb7185;">1XqQp7Rw-FzpX5g1HLCIeJnlOHixHbmwl</a>)</li>
+                <li><span class="mono">Huntington Beach Navigation Center Toxic Contamination Case-1.pdf</span> (<a href="https://drive.google.com/file/d/11tGktcVMsZNjSnBQWBA2_REUtXbu9Ew3/view" target="_blank" style="color:#fb7185;">11tGktcVMsZNjSnBQWBA2_REUtXbu9Ew3</a>)</li>
+                <li><span class="mono">Hydrogeological and Historical Assessment of the Cameron Tract W.pdf</span> (<a href="https://drive.google.com/file/d/1J5XQE6VfSACWVpyCNcVsxMcBgnr4cXKK/view" target="_blank" style="color:#fb7185;">1J5XQE6VfSACWVpyCNcVsxMcBgnr4cXKK</a>)</li>
+                <li><span class="mono">Phase I 17642 2 Compressed.pdf</span> (12.5 MB - <a href="https://drive.google.com/file/d/10hYs6i5eUvfkR9RHp7AKHDhXgRno38la/view" target="_blank" style="color:#fb7185;">10hYs6i5eUvfkR9RHp7AKHDhXgRno38la</a>)</li>
+                <li><span class="mono">SITE ASSESSMENT REPORT - Additonal Assessment Report 17642 Beach Boulevard (003) (2) (1)_compressed.pdf</span> (2.7 MB - <a href="https://drive.google.com/file/d/1ns_ivzvYVDEYHY8pjyJfbOjLANfgJKtL/view" target="_blank" style="color:#fb7185;">1ns_ivzvYVDEYHY8pjyJfbOjLANfgJKtL</a>)</li>
+                <li><span class="mono">Shea Homes Closes on Cameron Lane Townhomes.png</span> (2.5 MB - <a href="https://drive.google.com/file/d/1gHItkfbCt9wGwlIB8RhLEaMPFRVnHT1b/view" target="_blank" style="color:#fb7185;">1gHItkfbCt9wGwlIB8RhLEaMPFRVnHT1b</a>)</li>
+                <li><span class="mono">well_map_color_subsurface_geo_beach_cameron_mercypdf_1771475692453.pdf</span> (<a href="https://drive.google.com/file/d/1XwrCWjIQS-1h7h0uIO3MDdCTLbxnsXJ0/view" target="_blank" style="color:#fb7185;">1XwrCWjIQS-1h7h0uIO3MDdCTLbxnsXJ0</a>)</li>
+                <li><span class="mono">EDR Sanborn Map Legend.pdf</span> (<a href="https://drive.google.com/file/d/1BMfBlK2X38U2oj1Yhxo6Utp1cuI1VNzU/view" target="_blank" style="color:#fb7185;">1BMfBlK2X38U2oj1Yhxo6Utp1cuI1VNzU</a>)</li>
+                <li><span class="mono">EDR Web Ordering_ Enter Target Property.pdf</span> (<a href="https://drive.google.com/file/d/1Lczz2sRZF4hG7zfrrQcvSv7NTH1RRHMl/view" target="_blank" style="color:#fb7185;">1Lczz2sRZF4hG7zfrrQcvSv7NTH1RRHMl</a>)</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</body>
+</html>

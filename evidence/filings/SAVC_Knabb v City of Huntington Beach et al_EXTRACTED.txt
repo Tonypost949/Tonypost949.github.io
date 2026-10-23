@@ -1,0 +1,4391 @@
+--- PAGE 1 ---
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+JESSE KNABB
+15161 Van Buren St, Unit 206
+Midway City, CA 92655
+(949) 274-6223 
+jesseknabb@gmail.com
+PLAINTIFF, IN PRO PER
+UNITED STATES DISTRICT COURT
+CENTRAL DISTRICT OF CALIFORNIA
+SOUTHERN DIVISION
+JESSE KNABB,
+                                        Plaintiff,
+v.
+CITY OF HUNTINGTON BEACH; 
+ORANGE COUNTY HEALTH CARE 
+AGENCY (OCHCA); ERIC 
+LINDBERG, IN HIS OFFICIAL 
+CAPACITY AS EXECUTIVE 
+OFFICER OF THE CALIFORNIA 
+REGIONAL WATER QUALITY 
+CONTROL BOARD, SANTA ANA 
+REGION 8; EEC ENVIRONMENTAL; 
+MERCY HOUSE LIVING CENTERS, 
+INC; MITSURU YAMADA; COUNTY 
+OF ORANGE; MACRO-Z-
+TECHNOLOGY CO.; DOES 1-100,
+                                         Defendants,        
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+ ) 
+ )
+ )
+ )
+Case No.: 8:26-cv-00348-JWH-ADS
+Judge: Hon. John W. Holcomb
+Magistrate: Hon. Autumn D. Spaeth
+SECOND AMENDED VERIFIED 
+COMPLAINT FOR:
+1) VIOLATIONS OF RCRA, 42 
+U.S.C. § 6972(a)(1)(B) 
+(IMMINENT AND 
+SUBSTANTIAL 
+ENDANGERMENT);
+2) VIOLATIONS OF RCRA, 42 
+U.S.C. § 6972(a)(1)(A) (ILLEGAL 
+DISPOSAL);
+3) DECLARATORY AND 
+INJUNCTIVE RELIEF.
+JURY TRIAL DEMANDED
+08/17/2026
+mba
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 1 of 77   Page ID
+#:4258
+
+--- PAGE 2 ---
+ 
+- 2 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+       TABLE OF CONTENTS 
+ 
+I. INTRODUCTION ................................................................................. 5 
+ 
+II. JURISDICTION AND VENUE  .................................. ................. 6 
+ 
+III. RCRA PRE-SUIT NOTICE  .................................................. 7 
+ 
+IV. PRIOR LITIGATION AND RES JUDICATA  ............................ 8 
+ 
+V. STANDING  .......................................................................... 9 
+ 
+A. Injury-in-Fact ............................................................. 10  
+ 
+B. Traceability – Groundwater Migration Pathway............................. 12 
+ 
+C. Airborne Toxic Dust Pathway .................................................... 14  
+ 
+D. Redressability ................................................................ 14 
+ 
+E. Reasonable Concern for Future Health Effects.................................. 15 
+F. Conclusion ..................................................... 15 
+ 
+VI. PARTIES  ............................................... 16 
+ 
+VII. FACTUAL ALLEGATIONS  ................................................... 18  
+ 
+A. Historical Contamination and Institutional Knowledge ...................... 18  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 2 of 77   Page ID
+#:4259
+
+--- PAGE 3 ---
+ 
+- 3 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+ 
+A-1. The City's Pattern of Regulatory Non-Compliance at Water Operations 
+ ........................................................................................ 18 
+A-2. The City of Huntington Beach's Decades-Long Municipal Strategy of 
+Avoiding Environmental Compliance .............................................. 22 
+A-3. Well W-4150: Industrial Origin and the City's 1969 Abandonment 
+Admission.............................................. 25 
+ B. Fraudulent RAS Forms and Unauthorized Regulatory Initiation .......... 28 
+ 
+C. Ultra Vires Retention of Jurisdiction and Bypass of Mandatory DTSC  
+Referral ............................................................................................. 29  
+ 
+D. GeoTracker Record Suppression, APN Substitution, and Retroactive   
+Assembly ............................................................................................... 29 
+D-1. Escobedo's Westminster Copy-Paste – OCHCA's Fabricated Jurisdictional 
+Predicate ................................................................. 30 
+E. Fabricated Fieldwork: EEC's July 2020 Access Admissions ........ 32 
+F. California Public Records Act Obstruction ............... 34 
+G. The NFA is Void Ab Initio – Eight Independent Grounds ............ 35 
+H. 23 CCR § 3893(b) – Analytical Data Non-Compliance ........... 36 
+I. The 2022 NFA-Nullification Warning and OCHCA's Undisclosed Operator 
+Status ........................................... 38 
+J. Ongoing Illegal Disposal Mechanisms .......................... 40 
+J-1. OCHCA's Written Trenching Prohibition and the October 2020 Notice of 
+Apparent Noncompliance .............. 40 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 3 of 77   Page ID
+#:4260
+
+--- PAGE 4 ---
+ 
+- 4 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+J-2. The Fabricated StormTech MC-3500 Installation .............. 41 
+J-3. Active Cap Failure Documented by Weed Penetration .............. 48 
+K. The HHAP MOU: Party-Opponent Admission of Ongoing Engineering 
+Control Failure .......... 51 
+L. Retroactive and Post-Petition Regulatory Conduct ............ 51 
+M. RWQCB's Affirmative Misdirection ............... 52 
+N. Hydrogeology and Cr(VI) Detections ............... 53 
+O. The Fraudulent HUD Environmental Review Record (HEROS No. 
+900000010330431) ................. 54 
+VIII. TIMELINESS AND CONTINUING VIOLATIONS ....... 56 
+A. Legal Standard ...................................... 56 
+B. Cr(VI) and Co-Contaminants Present an Imminent Threat ......... 56 
+C. Groundwater Migration Creates a Present and Ongoing Endangerment 
+................... 57 
+          D. Airborne Toxic Dust Presents an Independent Endangerment ..... 58 
+          E. Engineered and Historical Conditions Increase the Risk ....... 58 
+          F. Plaintiff's Current Exposure Confirms Endangerment ......... 59 
+G. Endangerment Does Not Require Proof of Causation ... 59 
+H. Requested Relief Will Abate the Endangerment ...... 60 
+IX. ABSTENTION DOES NOT BAR THIS ACTION ............ 62 
+X. ACTIVE STRUCTURAL FAILURE OF REMEDIAL CAPS AND  
+     FAILURE  OF AGENCY OVERSIGHT ............................................. 63 
+ 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 4 of 77   Page ID
+#:4261
+
+--- PAGE 5 ---
+ 
+- 5 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+XI. CLAIMS FOR RELIEF ..................................................... 64 
+FIRST CLAIM FOR RELIEF —  RCRA § 6972(a)(1)(B): Imminent and  
+Substantial  Endangerment ...................................................................... 64 
+SECOND CLAIM FOR RELIEF —  RCRA § 6972(a)(1)(A): Illegal Disposal  
+.......................... 69  
+THIRD CLAIM FOR RELIEF —  Declaratory and Injunctive     
+Relief........................................... 71 
+XII. PRAYER FOR RELIEF ......................................  72 
+XIII. VERIFICATION .............................  75 
+LIST OF NEW EXHIBITS ................. 76                                                
+ 
+ 
+ 
+ 
+I. INTRODUCTION 
+ 
+1. Plaintiff Jesse Knabb brings this Second Amended Verified Complaint against 
+Defendants for violations of the Resource Conservation and Recovery Act ("RCRA"), 
+42 U.S.C. § 6972(a)(1)(A)-(B), arising from the fraudulent siting, construction, and 
+operation of the Huntington Beach Naviga tion Center ("HBNC")  at 17631 Cameron 
+Lane and 17642 Beach Boulevard, Huntington Beach, California 92647, on land 
+documented to be contaminated with hexavalent chromium ("Cr(VI)") at 
+concentrations up to 980 μg/kg – 3.27 times the DTSC HERO Note 3 residential 
+regulatory screening level of 300 μg/kg, and 49 times the more protective DTSC Cr(VI) 
+residential soil screening level of 20 μg/kg governing permanent residential land use – 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 5 of 77   Page ID
+#:4262
+
+--- PAGE 6 ---
+ 
+- 6 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+along with lead, arsenic, toxaphene, and 4,4'-DDE. Th is Complaint incorporates 
+evidence obtained since the First Amende d Complaint was filed March 25, 2026, 
+including OCHCA's June 1, 2026 production of previously withheld laboratory data 
+confirming nineteen Cr(VI) exceedances, a May 2026 Cr(VI) detection in the drinking-
+water well serving Plaintiff's current residence, and documentary and metadata 
+evidence – detailed below – that the regulatory closure of the Site was procured through 
+fabricated and retroactively altered records. See Interfaith Community Organization v. 
+Honeywell International, Inc., 399 F.3d 248 (3d Cir. 2005); Meghrig v. KFC Western, 
+Inc., 516 U.S. 479 (1996); Friends of the Earth v. Laidlaw Envtl. Servs., 528 U.S. 167 
+(2000). 
+2. On February 9, 1959, the California Department of Public Health issued the 
+City a domestic water permit noting that the " northwest portion of the area may have 
+high ground water and will require special care in design and construction of the water 
+lines." On July 2, 1962, the City Council passed Resolution No. 1615, declaring a 
+public health emergency requiring construction of a sanitary sewer system in the 
+Cameron Street corridor and directing the County Health Officer to investigate. These 
+records placed the County Health Officer and its institutional successor, OCHCA, on 
+notice of groundwater and sanitary hazards in the corridor beginning in 1959. 
+II. JURISDICTION AND VENUE 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 6 of 77   Page ID
+#:4263
+
+--- PAGE 7 ---
+ 
+- 7 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+3. This Court has subject-matter jurisdiction under 28 U.S.C. § 1331, arising 
+under RCRA's citizen-suit provision, 42 U.S.C. § 6972(a)(1)(A)-(B). 
+4. Venue is proper under 28 U.S.C. § 1391(b)(2) because the contaminated Site 
+is located in Huntington Beach, California, within this District, and all relevant events 
+occurred here. 
+III. RCRA PRE-SUIT NOTICE 
+5. On September 21, 2025, Plaintiff served a written 90-Day Notice of Intent to 
+File Citizen Suit under 42 U.S.C. § 6972(a )(1)(B) on all Defendants, EPA, and the 
+California Attorney General, as required  by 42 U.S.C. § 6972(b) and 40 C.F.R. Part 
+254. The Notice named RWQCB as a Resp onsible Party, identified 42 U.S.C. § 
+6972(a)(1)(B) as the statutory basis, and specified both facility addresses with correct 
+APNs (167-472-08 and -09). (Ex. 1.) 
+6. On October 3, 2025, Heraclio Piment el, Esq., of the State Water Resources 
+Control Board's Office of Chief Counsel, responded on RWQCB's behalf, quoting the 
+Notice's title, identifying both parcels by APN, and directing that all further NOI 
+communications be sent to him. (Ex. VVVV-4.) Between October 3, 2025 and the 
+filing of this action, Plaintiff transmitted sixty-two Addenda to Pimentel detailing 
+RWQCB's alleged violations, including fa ilure to enforce expired NPDES permit 
+WDID 8 30W004769 and failure to consolidate dual GeoTracker records 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 7 of 77   Page ID
+#:4264
+
+--- PAGE 8 ---
+ 
+- 8 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+T10000018579 and T10000020555. Pimentel provided no substantive response to any 
+Addendum. 
+7. RWQCB thus had actual, acknowledged notice from October 3, 2025 forward. 
+This action was filed more than 90 days after both the original Notice and RWQCB's 
+acknowledgment, satisfying 42 U.S.C. § 6972(b). RWQCB is estopped from asserting 
+notice deficiency having directed and received 62 evidentiary submissions without 
+response. 
+8. A petition before the State Water Board (File No. A-2926) was placed in 
+abeyance February 23, 2026 and does not constitute diligent prosecution under § 
+6972(b)(1)(B). RWQCB's counsel J ohn Sasaki stated in pr ior briefing that RWQCB 
+"does not plan to argue diligent prosecution under  42 U.S.C. § 6972(b)(1)(B)" – a 
+binding admission by party-opponent. 
+IV. PRIOR LITIGATION AND RES JUDICATA 
+9. In 2024, Plaintiff filed administrative complaints with the California Civil 
+Rights Department (CRD Nos. 202404- 24292310, 20240 9-26401826) alleging 
+disability-based housing discrimination at the Navigation Center. In January 2025, 
+Plaintiff settled those complaints for $6,000, expressly releasing only claims under 
+FEHA, the Unruh Act, the Disabled Persons Act, and the Fair Housing Act. (Ex. 2.) 
+The settlement did not release RCRA claims. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 8 of 77   Page ID
+#:4265
+
+--- PAGE 9 ---
+ 
+- 9 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+10. Under Costantini v. Trans World Airlines, 681 F.2d 1199, 1201-02 (9th Cir. 
+1982), res judicata does not bar this action: the prior action concerned disability 
+accommodations under different evidence (s helter policy and ADA records); this 
+action concerns hazardous-waste contamination under different evidence (OCHCA 
+activity logs, DTSC soil data, hydrogeologic modeling, and metadata establishing 
+forgery of RAS forms). The operative facts here – forged signatures, dual GeoTracker 
+records, suppressed Cr(VI) data, and the existence of Well W-4150 – were fraudulently 
+concealed and discovered post-settlement through CPRA disclosures and metadata 
+analysis, so the prior settlement does not bar this suit. Fraudulent concealment 
+independently defeats preclusion. See Guerrero v. Dep't of Corr., 2012 WL 13006058 
+(C.D. Cal. Sept. 5, 2012). 
+ 
+V. STANDING 
+Standing Overview: Plaintiff has Article III standing because  
+(1) he suffered concrete injuries from documented exposure  to carcinogenic 
+Cr(VI), lead, arsenic, toxaphene, and 4,4'-DDE while residing at the Site;  
+(2) he faces ongoing exposure through groundwater and airborne pathways that 
+originate at the Site; and  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 9 of 77   Page ID
+#:4266
+
+--- PAGE 10 ---
+ 
+- 10 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(3) the requested injunctive relief will directly eliminate each exposure pathway. 
+Friends of the Earth v. Laidlaw , 528 U.S. 167, 181 –83 (2000); Interfaith Community 
+Org. v. Honeywell, 399 F.3d 248, 257–62 (3d Cir. 2005). 
+A. Injury-in-Fact 
+11. Plaintiff resided at the Navigation Center from November 2022 through 
+October 2024, where he was directly exposed to hexavalent chromium at 980 μg/kg, 
+lead, arsenic, toxaphene, and 4,4'-DDE. (Exs. NNN-5, NNN-6.) 
+12. Plaintiff's medical reco rds document acute and chr onic injuries consistent 
+with exposure to nephrotoxic and hematologic toxicants, including pneumonitis, 
+pleural effusion, renal impairment, sepsis , pneumonia, empyema, microcytic anemia, 
+and eosinophilia, and was hospitalized from September 19 to October 11, 2023, and 
+again just four days later, from October 15 to October 24, 2023. (E x. 5.) Cr(VI) is a 
+Group 1 human carcinogen with latency periods of years to decades; Plaintiff therefore 
+faces continuing risk of latent disease. 
+Supplemental Authority : Exposure to carcinogens and resulting health 
+concerns constitute a concrete injury under Ninth Circuit precedent. Ecological Rights 
+Foundation v. Pacific Lumber Co., 230 F.3d 1141, 1149 (9th Cir. 2000) (" reasonable 
+concerns about the effects of pollution will support standing "). See also Covington v. 
+Jefferson County, 358 F.3d 626, 639 (9th Cir. 2004) (environmental exposure and fear 
+of future harm constitute injury-in-fact). 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 10 of 77   Page
+ID #:4267
+
+--- PAGE 11 ---
+ 
+- 11 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+13. Plaintiff's injury is not isolated. A fellow HBNC resident died during 
+Plaintiff's residency; the Orange County Sheriff-Coroner's Final Amended Certificate 
+(April 11, 2024) documents community-acq uired pneumonia as the immediate cause 
+of death, with pre-existing conditions noted as contributing factors that rendered him 
+vulnerable to respiratory insult from environmental exposure. (Ex. CCC.) Plaintiff does 
+not allege Cr(VI) exposure was the sole cause of death; Plaintiff alleges this 
+documented fatality, at a s ite with concurrent chronic exposure to airborne and 
+waterborne Cr(VI), is factual evidence bearing on whether conditions at the Site "may 
+present an imminent and substantial endangerment to health." 
+14. Plaintiff now resides at 15161 Van Buren St., Unit 206, Midway City, CA 
+92655— approximately two miles northeast of the Site, within the Bolsa/Midway 
+Disadvantaged Unincorporated Community (DUC) — and continues to face 
+exposure through two active pathways described below. 
+Personal Observations : Plaintiff's firsthand observations of airborne dust 
+clouds emanating from the Site and s ubsequent respiratory symptoms (¶20) 
+independently establish injury-in-fact. Ecological Rights Foundation , 230 F.3d at 
+1149. 
+Official State Environmental Justice Data: The State Water Resources 
+Control Board's own GeoTracker record for the Site (Beach Boulevard Project, 
+T10000018579) confirms a DWR 2016 Disadvantaged Community (DAC) 
+designation and assigns the Site a CalEnviroScreen 3.0 Toxic Releases percentile of 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 11 of 77   Page
+ID #:4268
+
+--- PAGE 12 ---
+ 
+- 12 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+93%, placing it in the top 7% of all census tracts statewide for toxic release burden. 
+This official pollution-burden data corroborates Plaintiff's injury-in-fact allegations 
+and independently establishes the severity of the exposure risk from which Plaintiff's 
+injuries arise. (Ex. WWWW-6.) 
+B. Traceability – Groundwater Migration Pathway 
+15. The Site sits atop the Orange County Groundwater Basin (Basin 8-1). 
+OCWD's Talbert Seawater Intrusion Barrier injects purified recycled water through 36 
+wells, creating a persistent inland hydraulic gradient that forces groundwater northeast 
+from the Huntington Beach mesa toward Mi dway City. (Exs. 21-22.) The shallow 
+aquifer beneath the Site is hydraulically connected to the principal aquifer supplying 
+Plaintiff's water provider, the South Midway City Mutual Water Company 
+("SMCMWC"), which extracts directly from the downgradient basin. (Exs. 23-24.) 
+16. In May 2026, SMCMWC's North Well recorded Cr(VI) at 0.95 μg/L— 47.5 
+times California's Public Health Goal of 0.02 μg/L. (Ex. 38.) This detection lies within 
+the documented migration pathway from the Site and confirms the plume hypothesis 
+in Exhibits 35-A through 35-D filed with the First Amended Complaint. RCRA's "may 
+present" standard is satisfied when Cr(VI) appears in a public supply well at 47.5 times 
+the state Public Health Goal within a documented migration corridor. Honeywell, 399 
+F.3d at 258-62. 
+Supplemental Causal Chain Clarification : The Site is the only documented 
+Cr(VI) source upgradient of SMCMWC's extraction wells, and the May 2026 detection 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 12 of 77   Page
+ID #:4269
+
+--- PAGE 13 ---
+ 
+- 13 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+occurred precisely along the advective axis predicted by OCWD's contour maps. 
+Traceability is satisfied where contamination migrates through hydrologic pathways. 
+NRDC v. EPA, 542 F.3d 1036, 1043 (9th Cir. 2008). 
+17. Three features accelerate migration:  
+(a) unsealed Well W-4150 , a 140-foot well 25 feet west of Cameron Street 
+penetrating high-permeability gravel and prov iding a direct conduit  to the aquifer, 
+detailed in Section VII.A-1, infra;  
+(b) the un-engineered trench -and-pipe system the City in stalled in place of the 
+StormTech MC-3500 chambers represented on its construction blueprints —  which, 
+lacking any chamber structure, stone bedding, or geotextile containment, drives soluble 
+contaminants downward during every storm event with less containment than even the 
+represented design provided (Section VII.J-2, infra)  
+(c) the NPDES stormwater permit (W DID 8 30W004769), expired August 20, 
+2020— one day before the NFA issued— with no renewal obtained. 
+18. OCWD monitoring well MW-9, 1.5 miles downgradient, has detected Cr(VI) 
+exceeding background levels , confirming northeast plu me migration. (Ex. 25.) The 
+SMCMWC North Well detection provides direct confirmation that contamination has 
+reached the water supply serving Plaintiff's current residence. (Ex. VVVV-3.) 
+Proximity-Based Standing : Proximity to a contaminated site and plausible 
+migration pathways independently establish standing. Honeywell, 399 F.3d at 257–58. 
+Plaintiff resides two miles downgradient within the documented migration corridor. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 13 of 77   Page
+ID #:4270
+
+--- PAGE 14 ---
+ 
+- 14 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+C. Airborne Toxic Dust Pathway 
+19. The Site's asphalt cap is two inches thick over loose gravel, violating City 
+Specification No. 431-92 and Huntington B each Municipal Code § 230.92. (Ex. 20.) 
+The City spent $1.2 million on a permanent cap at City Hall in 2008 but only $128,000 
+on the Navigation Center's cap. (Ex. Y.) Defendant Mercy House conducts daily high-
+pressure washing of the cap, degrading the asphalt and aerosolizing Cr(VI)- and lead-
+laced soils; prevailing onshore winds carry this dust northeast toward Plaintiff's 
+residence. (Exs. 19, 26.) 
+20. Plaintiff has personally observed dust clouds emanating from the Site on 
+multiple occasions during periods of high-pressure washing, and has experienced 
+respiratory symptoms — including coughing and shortness of breath — on days 
+following such washing. These symptoms are documented in Pl aintiff's medical 
+records (Ex. 5). The airborne pathway thus presents a concrete, ongoing exposure route 
+independent of groundwater migration. 
+Supplemental Authority : Airborne pollutant exposure constitutes injury-in-
+fact. Ecological Rights Foundation, 230 F.3d at 1149. 
+D. Redressability 
+21. The requested injunctive relief is tailored to each active migration 
+mechanism: sealing Well W-4150 eliminat es the primary subsurface conduit to 
+Plaintiff's water supply; requiring a lawful cap and stormwater system halts downward 
+mobilization and dust genera tion; and ceasing unpermitte d high-pressure washing 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 14 of 77   Page
+ID #:4271
+
+--- PAGE 15 ---
+ 
+- 15 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+eliminates daily aeros olization. Plaintiff therefore has standing under Article III and 
+RCRA's citizen-suit provision. Laidlaw, 528 U.S. at 181; Honeywell, 399 F.3d at 257-
+58 (proximity-based standing confirmed by plausible migration pathway). 
+Redressability Clarification : Redressability does not require complete 
+remediation; it requires only that the requested relief will reduce Plaintiff's exposure or 
+risk. Laidlaw, 528 U.S. at 185. Each requested injunction will materially reduce 
+Plaintiff's exposure. 
+E. Reasonable Concern for Future Health Effects 
+22. Cr(VI) is a Group 1 human carcinogen with latency periods of years to 
+decades (¶12). Plaintiff's reasonable concern for future health effects constitutes injury-
+in-fact. Laidlaw, 528 U.S. at 183; Ecological Rights Foundation, 230 F.3d at 1149. 
+F. Conclusion 
+23. Plaintiff's past exposure, documented medical injuries, ongoing groundwater 
+and airborne pathways, confirmed Cr(VI) detection in his current drinking-water well, 
+and tailored injunctive relief together satisfy all three elements of Article III standing. 
+The allegations demonstrate a concrete injury, a scientifically supported causal chain, 
+and relief that will materially reduce Plaintiff's exposure and risk. Laidlaw, 528 U.S. at 
+181–85; Honeywell, 399 F.3d at 257–62. 
+ 
+ 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 15 of 77   Page
+ID #:4272
+
+--- PAGE 16 ---
+ 
+- 16 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+VI. PARTIES 
+24. Plaintiff Jesse Knabb is a disabled former resident of the Huntington Beach 
+Navigation Center, a person exposed to hazardous substances within the meaning of 
+RCRA, and a resident of  the Bolsa/Midway Disadvantaged Unincorporated 
+Community (DUC) within the affected groundwater basin and airborne dust zone. 
+25. Defendant City of Huntington Beach ("City") is a municipal corporation that 
+acquired, developed, and operates the Site. The City orchestrated the fraudulent 
+environmental clearance, installed an un-e ngineered trench-and-pipe system in place 
+of the StormTech MC-3500 chambers represented on its construction blueprints, in 
+contaminated soil, and continues to contribute to endangerment. 
+26. Defendant Orange County Health Care Agency ("OCHCA") is the local 
+agency that assumed jurisdiction over the S ite, issued the closure certificate at issue, 
+and – as alleged in Section VII, infra – did so through a fabricated jurisdictional 
+predicate, non-compliant analytical data, and a suppressed and manipulated regulatory 
+record. OCHCA is a department of the County of Orange; the County also acts 
+independently through the Orange County Public Works Department ("OCPW") as 
+alleged in Section VII.J-1, infra. Plaintiff opposes any substitution of the County of 
+Orange in OCHCA's place. 
+27. Defendant Eric Lindberg is sued in his official capacity as Executive Officer 
+of the RWQCB, Santa Ana Region  8, a state agency, for pros pective injunctive relief 
+under Ex parte Young , 209 U.S. 123 (1908), which is not barred by the Eleventh 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 16 of 77   Page
+ID #:4273
+
+--- PAGE 17 ---
+ 
+- 17 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+Amendment. RCRA authorizes suit against " any person, including  . . . any State or  
+local government agency." 42 U.S.C. § 6972(a). 
+28. Defendant EEC Environmental ("EEC") is the consulting firm that prepared 
+the Site's Phase I and II environmental assessments and RAS forms, alleged in Sections 
+VII.B, D-1, and E, infra to have submitted forged and fabricated documentation. 
+29. Defendant Mercy House Living Centers, Inc. ("Mercy House") operates the 
+Navigation Center and conducts the daily high-pressure washing alleged in Sections 
+V.C and VII.J, infra. 
+30. Defendant Mitsuru Yamada is the former owner of the Site who in 1990 
+personally applied for City Building Permit No. B-019112 for cesspool and septic tank 
+backfill at 17642 Beach Boulevard, and who was formerly employed as Assistant 
+Subdivision Engineer at OCHCA's predecessor agency. His conduct is alleged in 
+Section VII.A and Claim One, infra. The Yamada Living Trust received $3,077,010 at 
+the August 19, 2020 escrow close. 
+31. Defendant Macro-Z-Technology Company ("MZT") is the OCPW-
+contracted demolition contractor whose proj ect manager, Zach Zatica, is alleged in 
+Section VII.J-1, infra, to have documented contaminated waste on site and then routed 
+demolition debris to an unauthorized facility without hazardous-waste characterization. 
+32. Defendant County of Orange ("Count y") is sued separately for OCPW's 
+construction-management failures alleged in Section VII.J-1, infra, and for vicarious 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 17 of 77   Page
+ID #:4274
+
+--- PAGE 18 ---
+ 
+- 18 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+liability for OCHCA's acts under Cal. G ov't Code § 815.2. The County is not a mere 
+substitute for OCHCA; it has independent liability through OCPW. 
+33. Does 1-100 are unnamed persons or entities who participated in or 
+contributed to the unlawful conduct alleged. 
+ 
+VII. FACTUAL ALLEGATIONS 
+A. Historical Contamination and Institutional Knowledge 
+34. The Site has been a documented contamination sink for decades. In 1995, a 
+severe winter storm deposited industrial and agricultural contaminants – including 
+Cr(VI), lead, arsenic, toxaphene, and 4,4'-DDE – onto the Site after the City failed for 
+over four years to construct stormwater improvements it had approved funding for in 
+1991. (Ex. 3.) 
+35. The Cameron Lane parcel is burdened by a permanent municipal storm drain 
+easement (City Contract CC-435, completed 1979), constructed to alleviate chronic 
+flooding that had repeatedly deposited industrial contaminants into the basin – creating 
+a known pathway for contami nated runoff, soil gas migration, and groundwater 
+infiltration of which the City had institutional knowledge before developing the Site. 
+(Ex. 29.) 
+A-1. The City's Pattern of Regulatory Non-Compliance at Water Operations 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 18 of 77   Page
+ID #:4275
+
+--- PAGE 19 ---
+ 
+- 19 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+35-A. While the City now claims that it complied with all environmental 
+requirements for the Navigation Center, the City's regulatory history demonstrates a 
+decades-long pattern of evading environmental obligations. The City operated its 
+Water Operations facility at 19001 Huntington Street - a facility with the identical 
+regulatory issues now present at the Navigation Center - without required permits for 
+years. 
+35-B. On August 19, 1997, the Orange County Health Care Agency issued a 
+Notice of Violation to City personnel Don Noble and Jim Sankey for " Failure to 
+Properly Close Underground Storage Tank at 19001 Huntington Street ." (Ex. 
+WWWW-3 at 16) The Notice stated: " Information provided to this Agency indicates 
+that the underground storage tank located at the subject site was not closed in 
+accordance with the requirements of the law." (Id.) The City was warned that "Failure 
+to comply with these provisions of the law and regulations may result in civil penalties 
+of not less than five hundred dollars ($500.00) or more than five thousand dollars 
+($5,000.00) for each day the facility is in violation." (Id.) 
+35-C. The 1997 violations were not is olated. OCHCA inspection reports from 
+1996 through 2000 repeatedly documented that the City was " Operating without a 
+permit" at the same facility. (Ex. WWWW-3 at 17, 85-87, 131-132, 134) The City 
+failed to submit required monitoring records,  tank integrity test results, and financial 
+responsibility documentation. (Ex. WWWW-3 at 131-132) When the City did submit 
+documents, they were frequently deficient, expired, or otherwise non-compliant. (Id.) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 19 of 77   Page
+ID #:4276
+
+--- PAGE 20 ---
+ 
+- 20 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+35-D. The City's Water Operations personnel named in these 1990s violations - 
+including Don Noble, Maintenance Operations Manager, and Steve Tully, the 
+designated City contact - were the same institutional actors responsible for the 
+fraudulent environmental clearance of the Navigation Center in 2020. Noble executed 
+the September 1997 " Status Letter " for the Water Operations UST closure (Ex. 
+WWWW-3 at 10), and Tully repeatedly si gned inspection reports acknowledging 
+violations. (Ex. WWWW-3 at 140) These individuals had actual, personal notice of 
+regulatory requirements and their facility's compliance failures. 
+35-E. This documented pattern of envi ronmental non-compliance is directly 
+relevant to the allegations in this Complaint. The City had actual notice of the 
+requirements for proper closure, monitoring, and documentation. The City knowingly 
+and repeatedly failed to meet these re quirements, operating without permits and 
+ignoring deadlines. The frau dulent RAS forms, fabricated fieldwork, and suppressed 
+data for the Navigation Center are consistent with - and explained by - this decades-
+long pattern of regulatory evasion. 
+35-F. Moreover, the City's pattern of regulatory delay and evasion contradicts 
+any claim that the City acted in "good faith" or made an "innocent mistake." The City 
+knew precisely what was required because it had been cited repeatedly for failing to 
+meet those requirements. The City had a practice of submitting incomplete 
+documentation and operating without permits until forced to comply - a practice that 
+continued through the issuance of the Navigation Center's 2020 NFA closure letter. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 20 of 77   Page
+ID #:4277
+
+--- PAGE 21 ---
+ 
+- 21 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+35-G. The City's regulatory failures were not confined to the Water Operations 
+facility; they represented a citywide institutional crisis. On March 24, 1997, the City's 
+UST Task Force completed a " Seven Year Master Plan " acknowledging that, at that 
+time, only two (2) of the City's thirty (3 0) underground storage tanks complied 
+with federal regulations— rendering 28 of 30 tanks non-compliant. (Ex. WWWW-
+3 at 14). 
+35-H. Faced with a December 22, 1998 regulatory deadline to bring these tanks 
+into compliance, the City did not immediately appropriate funds or prioritize public 
+health. Instead, the Master Plan deliberately proposed a seven-year extension (through 
+2003), explicitly stating that due to " revenue shortfalls ," it was " unlikely that an 
+appropriation of that amount [$1,530,000] can be made in time. " (Ex. WWWW-3 at 
+12). The City then specifically asked Orange County regulators the " vital 
+question": "Will regulators allow a program started prior to December 22, 1998, to 
+remain in place and functioning after that date? " (Id.)— a direct admission that the 
+City was seeking permission to violate federal law for nearly a decade. 
+35-I. This Master Plan was reviewed  and approved by a "UST Compliance 
+Team" composed of the City's Directors of Public Works and Community Services, 
+and the Chiefs of Fire and Police. (Ex. WWWW-3 at 14). Thus, the City's highest-
+ranking officials had actual, documented k nowledge that the City was operating an 
+illegal, hazardous system en masse years before the Navigation Center project even 
+began. The decision to delay compliance for financial reasons, rather than emergency 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 21 of 77   Page
+ID #:4278
+
+--- PAGE 22 ---
+ 
+- 22 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+public safety, establishes a municipal culture of deliberate regulatory evasion that 
+directly explains the fabricated RAS fo rms, forged field data, and suppressed 
+laboratory data alleged throughout this Complaint. 
+35-J. The Master Plan's ad mission that it contained " no funds for soil 
+remediation" and that "[a]ny discovery of contaminated soils will add to this cost and 
+possibly delay the timetable " (Ex. WWWW-3 at 15) is particularly instructive. It 
+demonstrates that the City's institutional practice was to treat soil contamination as 
+a budgetary inconvenience  to be delayed or hidden, rather than a human health 
+emergency to be immediately remediated — exactly the same calculus applied to the 
+Navigation Center's Cr(VI) and lead contamination. 
+A-2. The City of Huntington Beach’s decades-long municipal strategy of avoiding 
+environmental compliance by claiming fiscal incapacity and relying on regulatory 
+forbearance. 
+a. Deliberate Underfunding of Remediation:  In a March 28, 1997, letter to 
+OCHCA (attached), the City explicitly admitted it was facing "revenue shortfalls" and 
+could not afford the $1.5 million required for UST upgrades. Critically, the City 
+conceded that its proposed budget "does not contain any funds for soil 
+remediation." This demonstrates a reckless, deliberate disregard for the cost of 
+environmental damage, prioriti zing municipal balance sheets over public health and 
+groundwater protection. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 22 of 77   Page
+ID #:4279
+
+--- PAGE 23 ---
+ 
+- 23 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+b. Actual Violation of Federal/State Law: The City’s conduct was not a minor 
+paperwork error. On August 19, 1997, OCHCA issued a formal Notice of Violation 
+(NOV) against the City for failing to properly close the UST at 19001 Huntington 
+Street. This constitutes a direct violation of the State Underground Storage Tank Law 
+(Chapter 6.7, H&SC) and the implementing federal EPA regulations under 40 CFR 
+280.72, which mandate soil sampling during closure to demonstrate no release has 
+occurred. 
+c. "Bulk File" Negotiatio n and Unlawful Leniency:  Rather than issuing the 
+mandatory escalating fines of up to $5,000 per day, OCHCA entered into a "Bulk File" 
+review of the City's Seven-Year Master Plan . The City explicitly asked regulators for 
+permission to ignore the December 22 , 1998, federal deadline, and OCHCA 
+acquiesced. This pattern of " negotiated compliance " encouraged the City to delay 
+remediation, knowing that regulatory agen cies would accommodate their financial 
+excuses rather than impose strict penalties. 
+d. Material Omission from GeoTracker:  These documents were not present 
+in GeoTracker until the 2026 " bulk upload." The concealment of the City's admitted 
+financial incapacity and the regulatory accommodation for over two decades prevented 
+the public and subsequent oversight bodies from recognizing this historical pattern of 
+misconduct. 
+36. On January 23, 2020 —  nearly two months before Governor Newsom's 
+Executive Order N-32-20 —  the City published notice of a February 3, 2020 hearing 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 23 of 77   Page
+ID #:4280
+
+--- PAGE 24 ---
+ 
+- 24 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+on General Plan Amendment No. 19-003 and Zoning Text Amendment No. 19-006, 
+identifying 17642 Beach Boulevard and 1 7631 Cameron Lane by address as sites 
+within a proposed Affordable Housing Overlay. The notice represented that no further 
+environmental review was required for either parcel, relying on a Negative Declaration 
+adopted August 27, 2013 and an Environmental Impact Report certified December 8, 
+2009 —  both necessarily predating, and bl ind to, the Cr(VI) co ntamination first 
+documented at the Site in April 2020. (Ex. WWWW-2.) The City's plan to develop 
+these specific parcels thus predates both  the pandemic emergency later cited as the 
+Site's origin and any environmental assessment of the contamination alleged 
+throughout this Complaint. 
+37. On August 1, 2020, historian Mary Adams Urashima notified the City 
+Council that the 17631 Cameron Lane structure was designated "3CS" in the City's 
+2014 Historic Context & Survey Report as appearing eligible for the California 
+Register, and warned that demolition required CEQA review. The City proceeded 
+without CEQA analysis, consultation, or disclosure. 
+38. A 1947 survey map documents an "Iron Tank" and Well W-4150 (State Well 
+No. 05S/11W-25M09) on the parcel. (Ex. 4.) 
+39. City Building Permit No. B-01911 2 (1990), issued to Mitsuru Yamada 
+personally for cesspool and septic tank backfill at 17642 Beach Boulevard, has a blank 
+inspection-approval field and expired in 1994 without completion; the cesspool was 
+never inspected, confirmed backfilled, or fo rmally closed. This subsurface void is 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 24 of 77   Page
+ID #:4281
+
+--- PAGE 25 ---
+ 
+- 25 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+precisely the feature DTSC engineer Robe rt Senga's April 27, 2020 conditional 
+requirements – deeper sampling and soil gas collection – were designed to characterize; 
+OCHCA never satisfied those conditions. (Ex. VVVV-1.) 
+40. April 2020 soil sampling revealed Cr(VI) up to 980 μg/kg – 3.27 times the 
+DTSC residential screening level and approximately 49 times health-protective 
+thresholds – along with elevated l ead, arsenic, toxaphene, and 4,4'-DDE, triggering 
+mandatory referral to DTSC under Health & Safety Code § 101480 and SB 1248. (Exs. 
+NNN-5, NNN-6.) 
+A-3. Well W-4150: Industrial Origin and the City's 1969 Abandonment 
+Admission 
+41. A 1956 County building permit shows the structures at 17642 Beach 
+Boulevard originated as industrial utility buildings later converted to residential use, 
+bearing the notation "Recon sent from County after annexation" – establishing that the 
+City received the County's regulatory files upon annexation and had actual knowledge 
+of the parcel's industrial origin. (Ex. MMM-1.) The 1956 OCWD well log documents 
+a 140-foot borehole atypical for a domestic well, consistent with the 1947 survey map 
+depicting a 2,000-gallon iron tank, pump house, and utility buildings on the same 
+parcel. (Ex. 4.) 
+42. The City's own April 15, 1969 engineering memorandum states: "Residents 
+depend on an abandoned mutual water well " – a direct, contemporaneous admission 
+that Well W-4150 was abandoned by 1969, more than fifty years before this action. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 25 of 77   Page
+ID #:4282
+
+--- PAGE 26 ---
+ 
+- 26 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(Ex. MMM-2.) Under California law an abandoned well must be properly destroyed; 
+no destruction permit or record has been produced by any agency. 
+43. OCHCA's own 2020 internal communications, obtained through CPRA 
+disclosure, state: " Well destruction status unknown "; " Well destruction permit 
+required"; and "Well poses contamination pathway and sinkhole hazard." (Ex. MMM-
+4.) Rather than requiring destruction, the City altered the parcel address to prevent 
+regulatory identification of the well's location, asserted the well was located elsewhere, 
+waived the destruction permit requirement, and buried the site under fill. (Ex. MMM-
+4.) This decades-long, documented institutional knowledge of an unaddressed vertical 
+migration conduit bears directly on th e imminent-and-substantial-endangerment 
+analysis in Section VIII, infra. 
+44. On February 26, 2020 —  more than six weeks before any soil sampling and 
+more than five weeks before the City obtained title to the Cameron Lane parcel —  City 
+personnel began investigating Well W-4150's status through correspondence 
+subsequently produced in native .msg format with full routing metadata intact. City 
+employee Lili Hernandez wrote to Water Qu ality Supervisor Derek Smith, under the 
+subject line "FW: Cameron Narrative," asking: "Are you aware of any private wells on 
+Cameron Lane? " (Ex. PPP.) Smith replied the s ame afternoon that his own 2014 
+OCWD records showed an old well on Cameron Lane with "status unknown," and that 
+he would contact OCWD and OCHCA's Well Permit group for further information. 
+(Ex. PPP.) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 26 of 77   Page
+ID #:4283
+
+--- PAGE 27 ---
+ 
+- 27 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+45. Smith forwarded the inquiry to OCHCA Environmental Health Specialist 
+Juan Anzora and OCWD's Rita Hintlian that same day. On February 27, 2020, Anzora 
+responded that OCHCA had " checked our permits database and we do not have any 
+records for construction or destruction of a water well for that address ." (Ex. PPP.) 
+OCHCA thus had actual, documented knowledge —  five weeks before the City 
+acquired title and more than six weeks before any sampling occurred —  that Well W-
+4150 had no permit record of proper construction or destruction on file. 
+46. The inquiry lay dormant for nearly six months. On August 17, 2020 —  four 
+days before OCHCA issued the August 21, 2020 NFA —  Smith renewed the inquiry, 
+describing the well as an obstacle to a " high priority" City construction project and 
+asking whether a well-destruction permit was required only " if the well is 
+discovered/exposed during grading ," rather than before grading began. (Ex. QQQ.) 
+OCHCA Environmental Health Specialist Jane Nguyen initially asked Smith to clarify 
+what he meant. (Ex. QQQ.) 
+47. At 7:23 a.m. on August 18, 2020, Nguyen gave OCHCA's unambiguous 
+determination: "If the well is no longer needed and they are doing grading to build 
+something on top of it, they need to locate the well and destroy it properly. Thus it 
+needs a well destruction permit ." Nguyen further warned: " We are not sure how the 
+well was before it has been abandoned. The well may have not been capped or 
+destroyed properly. In addition to it being a potential pathway of contamination to 
+groundwater, it may be a sink hole. " (Ex. QQQ.) This contemporaneous, named 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 27 of 77   Page
+ID #:4284
+
+--- PAGE 28 ---
+ 
+- 28 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+determination independently corroborates the contamination-pathway and sinkhole-
+hazard concerns alleged at ¶43, supra. 
+48. Eighty-five minutes after receiving Nguyen's determination, at 8:48 a.m. on 
+August 18, 2020, Smith —  without acknowledging Nguyen's answer —  forwarded the 
+entire chain to a different, more senior  OCHCA official, Supervising Environmental 
+Health Specialist Lauren Robinson, and re-posed the same either/or question as though 
+it remained unresolved. (Ex. QQQ.) At 3:53 p.m. that same day, Robinson forwarded 
+the full chain —  including Nguyen's determination —  to OCHCA's Anthony Martinez, 
+three days before Martinez's agency issued the August 21, 2020 NFA. (Ex. QQQ.) 
+49. No well-destruction permit for Well W-4150 has been produced in any 
+CPRA release to date, and th e well remains unsealed as alleged at ¶¶38-40, supra. 
+Anthony Martinez received Robinson's forward of the full chain —  including Nguyen's 
+August 18, 2020 determination that a destruction permit was required —  three days 
+before he signed the August 21, 2020 NFA closing the Site without requiring well 
+destruction. (Ex. QQQ.) Martinez is thus the OCHCA official who, with actual and 
+contemporaneous notice of his own agency's determination that a permit was required, 
+personally waived that requirement in issuing the closure alleged at ¶40, supra. 
+B. Fraudulent RAS Forms and Unauthorized Regulatory Initiation 
+50. The deed for 17631 Cameron Lane transferred from the Yamada Living Trust 
+to the City on April 3, 2020, but the City delayed formal acceptance until August 14, 
+2020 and recordation until August 19, 2020. (Exs. 15-17.) Despite lacking legal title, 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 28 of 77   Page
+ID #:4285
+
+--- PAGE 29 ---
+ 
+- 29 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+the City submitted RAS forms to OCHCA on April 27, 2020 bearing the signature of 
+George Felix, a CBRE real estate broker with no ownership interest or environmental 
+authority, in the field for " Person or Entity Responsible for Cleanup ." (Ex. 9.) 
+OCHCA's May 4, 2020 acceptance letter was addressed to City staff, confirming 
+OCHCA knew it was dealing with a party lacking legal title, and opened Case No. 
+20IC002 on that basis. (Ex. 10.) 
+C. Ultra Vires Retention of Jurisdiction and Bypass of Mandatory DTSC 
+Referral 
+51. On April 30, 2020, OCHCA and RWQCB jointly decided to bypass 
+mandatory DTSC referral by characterizing the Site as a "simple waste cleanup," with 
+full knowledge that Cr(VI) was documented at 49 times safety thresholds. (Ex. 10.) On 
+July 7, 2020, OCHCA Project Manager Tamara Escobedo instructed the City to unify 
+multiple parcels on revised RAS forms to avoid parcel-specific DTSC review. (Ex. 11.) 
+D. GeoTracker Record Suppression, APN Substitution, and Retroactive 
+Assembly 
+52. OCHCA maintained two separate Ge oTracker Global IDs for the same 
+cleanup case: T10000018579 (containing some data) and T10000020555 (an 
+incomplete ID combining both parcels under the non-existent lead agency "Orange 
+County"). The second ID contained no repor ts, laboratory data, or correspondence. 
+Several Cr(VI) and lead detections were manually replaced with "NONE SPECIFIED" 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 29 of 77   Page
+ID #:4286
+
+--- PAGE 30 ---
+ 
+- 30 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+in GeoTracker, preventing automated state- level red-flagging. The dual-parcel listing 
+ultimately recognized by CalEnviroStor – "17631 Cameron Lane and 17642 Beach 
+Blvd" (T10000020555) – was assigned to "Orange County," not the standard "Orange 
+County LOP" designation, preventing DTSC, CalEPA, and OEHHA from receiving 
+laboratory data for the Cameron Lane parcel. (Ex. 13.) 
+53. On July 7, 2020, Escobedo instructed the City to " combine the two parcels 
+into one RAS form" and "use the Cameron Lane address only" – concealing the Beach 
+Boulevard parcel's separate regulatory history, including the 1990 cesspool permit. 
+(Ex. 11.) This instruction caused the Site to  disappear from parcel-based regulatory 
+searches and forms part of the GeoTracker dual-ID evasion structure. 
+D-1. Escobedo's Westminster Copy-Paste – OCHCA's Fabricated Jurisdictional 
+Predicate 
+54. OCHCA produced the Cameron Lane RAS letter in native Word format with 
+Track Changes metadata intact. Page 2 contains a "Deleted:" annotation reproducing, 
+verbatim, the complete header of the West minster letter, including its addressee, 
+subject line, site description, parcel nu mber, and case number. A standard OCHCA 
+template would not contain the name, address, and case number of an active, unrelated 
+enforcement matter; the tracked-changes r ecord establishes that Escobedo had the 
+Westminster letter open as  a working document and su bstituted the Cameron Lane 
+information into it without purging the revision history before production. (Ex. MMM-
+6.) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 30 of 77   Page
+ID #:4287
+
+--- PAGE 31 ---
+ 
+- 31 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+55. The Westminster letter, issued by Escobedo the same day, requires Cr(VI) 
+sampling protocols, TPH and VOC/SVOC analysis, confirmation sampling, hazardous 
+waste manifest documentation, and 48-hour advance notice for field-activity 
+witnessing – none of which appear in the Cameron Lane RAS letter. This absence, in 
+light of the copy-paste origin, is evidence that the Cameron Lane RAS letter received 
+no independent substantive regulatory analysis and constitutes an eighth, independent 
+ground rendering the resulting NFA void ab initio, as alleged in Section G, infra. 
+55-A. OCHCA produced a native Word document dated May 21, 2020 —  the 
+same date on which, per ¶63, supra, OC HCA's own Activity L og shows the agency 
+was still requesting basic data —  addressed to Carlos Marquez of the City of 
+Huntington Beach, Re: " Cameron Ln. Property (APN 167-042-08) ," bearing Tamara 
+Escobedo's signature block. (Ex. WWWW-1.) The document contains three " SITE 
+INVESTIGATION AND LIMITED EXCAVATION"  sections describing two factually 
+inconsistent site histories in the same letter, unreconciled: one describing a 0.79-acre 
+lot with two former residences, Well W-4150, and an abandoned cesspool investigated 
+through seventeen soil borings (B19 through B40 series), and another describing a 
+single 1947-built residence investigated through six initial soil borings (B1 through 
+B6). The document retains unresolved drafting artifacts, including the instruction "Say 
+something about the case number " left in the body text, and an unfilled data field 
+reading "a maximum concentrations detected at 820 ug/kg (B? at ?.? ft bgs)," in which 
+no specific boring identification or depth was ever inserted. (Ex. WWWW-1.) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 31 of 77   Page
+ID #:4288
+
+--- PAGE 32 ---
+ 
+- 32 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+55-B. The same draft states: "Please note, all assessment was conducted without 
+OCHCA oversight. " (Ex. WWWW-1.) This is a contemporaneous admission, in 
+OCHCA's own working document, that the fieldwork underlying the closure 
+determination it was preparing to issue had never been independently supervised by 
+the agency —  corroborating both the fabricated-fieldwork allegations in Section E, 
+infra, and the copy-paste jurisdictional predicate alleged in Section D-1, supra. 
+E. Fabricated Fieldwork: EEC's July 2020 Access Admissions 
+56. Emails between EEC and OCHCA dated July 13-14, 2020 confirm EEC had 
+no access to the Beach Boulevard parcel du ring the period Defendants claim soil 
+sampling and geophysical surveying occurred in April 2020. EEC Project Manager 
+Laura Holder wrote: "We do not have a tentative date because we do not have the green 
+light to move forward yet – they need to work out some access details first." (Ex. 27.) 
+57. Holder retroactively annotated boring designations B-19A and B-21A onto 
+an April 13, 2020 Site Interpretation Map on May 8, 2020 – three days before those 
+borings were physically drilled on May 11, 2020 – with PDF metadata confirming 
+username "lholder" and a May 8, 2020 modification date. OCHCA counsel denied this 
+retroactive annotation in prior briefing despite the metadata evidence. (Ex. MMM-8.) 
+58. Because EEC lacked access to the Beach parcel until at least mid-July 2020, 
+the April 2020 boring logs and sampling claims for that parcel are necessarily 
+fabricated; the July 14 email included a "proposed boring location map" demonstrating 
+that boring locations were created for the first time in July, no t April. (Ex. 27.) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 32 of 77   Page
+ID #:4289
+
+--- PAGE 33 ---
+ 
+- 33 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+Metadata for the SubSurface Surveys geophysical report, dated April 27, 2020, shows 
+the PDF was created June 4, 2020 using "PScript5.dll Version 5" – post-hoc fabrication 
+weeks after the stated survey date. (Ex.  12.) Photographs obtained through CPRA 
+confirm no sampling, boring, or geophysical work occurred on the Beach Boulevard 
+parcel during the period Defendants claim fieldwork occurred. (Ex. 20.) 
+59. Eurofins Calscience analytical reports produced by OCHCA on June 1, 2026 
+document 19 confirmed Cr(VI) detections across the B4 through B10 boring clusters 
+at depths from 0.5 to 8 feet, with a maximum of 980 μg/kg at boring B9-A-5.0. None 
+of this data appears in the official GeoTracker record; it was withheld for over six years. 
+These results document precisely what Honeywell identified as establishing imminent 
+endangerment: Cr(VI) above applicable screenin g levels at a site used for residential 
+occupancy. (Exs. NNN-5, NNN-6.) 
+60. The GeoTracker Bulk File containing this data (filename 
+T10000018579.20200408.Analytical Report) carries metadata showing it was created 
+March 7, 2025 using an EPSON DS-32000 scanner and Adobe Acrobat OCR – nearly 
+five years after the original Eurofins re ports, which carry a May 4, 2020 creation 
+timestamp. The Bulk File's embedded filename date of April 8, 2020 predates the May 
+2020 reports it purports to contain, an inconsistency for which no innocent explanation 
+exists. This print-scan-OCR workflow is the specific mechanism by which pages can 
+be physically excluded before scanning, consistent with the wholesale absence of all 
+nineteen Cr(VI) detections from the official record. (Ex. NNN-6.) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 33 of 77   Page
+ID #:4290
+
+--- PAGE 34 ---
+ 
+- 34 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+61. OCHCA has taken affirmative action rega rding this Site in each of the last 
+three years: it assembled the GeoTracker BulkFile on March 10, 2025; uploaded the 
+Beach Boulevard Site Assessment Report through Lena Shaw on November 18, 2025, 
+after Plaintiff's RCRA Notice; produced the Eurofins reports on June 1, 2026 under a 
+"historical PDF" designation misrepresent ing the absence of native EDF data; and 
+continues, as of this filing, to maintain the August 21, 2020 closure certificate as valid 
+notwithstanding the eight grounds alleged in Section G, infra. (See Exs. 13, MMM-6, 
+VVVV-6.) OCHCA's regulatory record for this Site is a document OCHCA has edited, 
+supplemented, and relied upon within the last thirteen months, and continues to assert 
+that it governs the Site today. 
+F. California Public Records Act Obstruction 
+62. OCHCA has obstructed Plaintiff's parallel December 4, 2025 CPRA request 
+(No. 25-7256) through eight consecutive postponement letters between January 11 and 
+June 2026, culminating in a June 29, 2026 letter stating "HCA will not be producing 
+any records" without citing any exemption, notwithstanding that OCHCA had already 
+produced hundreds of responsive records and identified no new search burden. No 
+records have been produced since June 1, 2026, and no committed production date has 
+been given as of this filing. (Ex. VVVV-6.) This ongoing, present-tense obstruction of 
+access to environmental hazar d information is relevant to the imminent-and-
+substantial-endangerment standard under 42 U.S.C. § 6972(a)(1)(B) and to the pattern 
+of retroactive and defensive agency conduct alleged in Section L, infra. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 34 of 77   Page
+ID #:4291
+
+--- PAGE 35 ---
+ 
+- 35 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+G. The NFA is Void Ab Initio – Eight Independent Grounds 
+63. OCHCA issued the August 21, 202 0 "Case Closed" cer tificate without 
+laboratory data, without a Site Assessment Report, without boring logs, without 
+QA/QC documentation, and without the mandatory 30-day public notice. The closure 
+was drafted on May 21, 2020 – the same day OCHCA's own Activity Log shows the 
+agency was still requesting basic data – and issued under the non-existent lead agency 
+"Orange County." (Exs. 10, 13.) 
+64. The NFA is void ab initio on eight independent grounds:  
+(1) no valid DTSC authorization for the Beach Boulevard parcel – DTSC’s 
+Robert Senga's April 27, 2020 conditions were never satisfied (deeper soil 
+measurements with soil gas analysis);  
+(2) no RWQCB no-objection letter for that parcel;  
+(3) no executed RAS form at NFA issuance – the Higgins/Escobedo February 
+2022 email chain establishes the dual-parcel RAS bearing a manually entered July 20, 
+2020 date was fabricated at the time of the 2022 GeoTracker upload;  
+(4) no Phase II data for the Beach Boulev ard parcel at issuance, as EEC lacked 
+access through at least July 14, 2020;  
+(5) a retroactively assembled GeoTracker record, per Section D, supra;  
+(6) no investigation of the documented 1990 cesspool at 17642 Beach 
+Boulevard, identifiable from EEC's own February 24, 2020 EDR aerial photo package;       
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 35 of 77   Page
+ID #:4292
+
+--- PAGE 36 ---
+ 
+- 36 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+ (7) analytical data lega lly invalid under 23 CCR § 389 3(b), detailed in Section 
+H, infra; and  
+(8) a fabricated jurisdictional predicate – the May 4, 2020 RAS letter produced 
+by copying the Westminster case file, per Section D-1, supra. 
+H. 23 CCR § 3893(b) – Analytical Data Non-Compliance 
+65. Title 23, California Code of Regulations § 3893(b) requires that chemical 
+analysis data generated after January 1, 20 05 be submitted in Electronic Deliverable 
+Format ("EDF") and validated through the Electronic Deliverable Consistency Checker 
+("EDCC") before it may be considered "va lid data." Chapter 30's requirements apply 
+to reports concerning subs urface investigation of haza rdous substance releases, 
+including Cr(VI), and to reports submitted under any local agency directive – including 
+OCHCA's directives to EEC in Case No. 20IC002. 23 CCR §§ 3890(a)(2), 3892(e). 
+66. EEC submitted the Eurofins analytical data to OCHCA in PDF format only; 
+it was never submitted in EDF format and never passed EDCC validation. Under § 
+3893(b)'s plain terms, this data is not "valid data." OCHCA compounded the violation 
+by uploading the reports to GeoTracker in June 2026 under a "historical PDF" 
+designation reserved for legacy pre-2005 documents for which no EDF was ever 
+generated – though EDF files were in fact genera ted and delivered to EEC as part of 
+the standard laboratory reporting package for Job IDs 570-27951-1, -2, and -3. (Ex. 
+SSS.) An NFA issued on data California's own regulatory framework classifies as 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 36 of 77   Page
+ID #:4293
+
+--- PAGE 37 ---
+ 
+- 37 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+invalid is independently void ab initio, without requiring any finding of intentional 
+fabrication, and elaborates the seventh ground identified in Section G, supra. 
+67. This requirement is independently enforceable in a RCRA citizen suit 
+because California's Hazardous Waste Cont rol Law, implemented through Title 22 
+CCR, is the state program EPA has authorized  "in lieu of" the federal RCRA Subtitle 
+C program under 42 U.S.C. § 6926(b); Health & Safety Code § 25159 confirms this 
+express delegation. Requirements imposed under an EPA-authorized state hazardous 
+waste program are requirements that have "become effective pursuant to" RCRA within 
+the meaning of 42 U.S.C. § 6972(a)(1)(A). Lutz v. Chromatex, Inc., 725 F. Supp. 258, 
+268-70 (M.D. Pa. 1989); McClellan Ecological Seepage Situation v. Weinberger, 707 
+F. Supp. 1182, 1190-91 (E.D. Cal. 1988); 49 Fed. Reg. 48300, 48304 (Dec. 12, 1984). 
+Health & Safety Code § 101480(b)(2)(C) – the local-officer referral statute under 
+which OCHCA claimed authority over Case No. 20IC002 – independently requires, as 
+a condition of any remedial action agreemen t, an attestation of compliance with 
+Chapter 30's electronic reporting requirements. OCHCA's acceptance and retention of 
+PDF-only data breached that statutory condition directly, in addition to the void-ab-
+initio grounds in Section G, supra, and is independently enforceable under 42 U.S.C. 
+§§ 6926(b) and 6972(a)(1)(A). 
+I. The 2022 NFA-Nullification Warning and OCHCA's Undisclosed Operator 
+Status 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 37 of 77   Page
+ID #:4294
+
+--- PAGE 38 ---
+ 
+- 38 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+68. The 2020 closure was, by its own terms, conditional: the GeoTracker record 
+states the case was "CLOSED AS PAVED LOT FOR TEMPORARY HOUSING TENTS" 
+and warns the "SITE MUST BE REEVALUATED FOR ANY LAND USE CHANGES." 
+No reevaluation was ever performed desp ite the Site's conversion to permanent 
+residential housing for more than 164 individuals. 
+69. On August 12, 2022, Geniece Higgins – OCHCA's Supervising Hazardous 
+Materials Specialist with authority over Case No. 20IC002 – authored Comment Letter 
+C-2 in the Final SEIR for the City's 2021-2029 Housing Element Update, stating that 
+NFA determinations " were evaluated . . . based on site use at the time of the NFA 
+determination" and that a land-use change "may nullify the NFA letter(s)." (Ex. DDD.) 
+Higgins authored this warning six months after her own February 2022 email exchange 
+with Escobedo confirming no official RAS letter existed for the Beach Boulevard 
+parcel. (Ex. M.) The City responded that the comment " does not raise environmental 
+issues" and required " no further response ," while simultaneously operating a 
+permanent 164-plus-bed residential facility on the Site without ever applying the 
+reevaluation process OCHCA's own comment identified as required. (Ex. DDD.) This 
+continuing failure independently defeats any argument that the endangerment at the 
+Site is "wholly past." 
+70. OCHCA's role at the Site extended beyond post-closure regulatory review. 
+The April 20, 2020 Emergency Facility Use Agreement designates the County – acting 
+through OCHCA's Office of Care Coordination – as Licensee responsible for 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 38 of 77   Page
+ID #:4295
+
+--- PAGE 39 ---
+ 
+- 39 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+demolition, grading, trenching, underground utilities, stormwater retention, paving, 
+and waste disposal during construction: operator functions within the meaning of 
+RCRA. (Ex. EEE.) The September 29, 2020 Subrecipient Agreement confirms the 
+County remained financially and operationally responsible for the facility's 
+construction and ongoing op erations (Ex. FFF), and the 2024-2028 HHAP MOU 
+confirms the County continues to exercise  operational authority, monitoring, and 
+capital-improvement ov ersight through June 30, 20 28. (Exs. GGG, III.) OCHCA's 
+involvement with the Site was neither transient nor "wholly past" at any point between 
+2020 and this filing. 
+70-A. On April 28, 2025, Plaintiff spoke by telephone with Escobedo. Plaintiff's 
+contemporaneous notes of that call reflect that he told Escobedo he had been 
+hospitalized as described at ¶12, supra, and that he told her of the death of a fellow 
+Navigation Center resident during his residency, described at ¶13, supra. Escobedo told 
+Plaintiff that "capping of metals is a common practice " and that "direct contact is the 
+issue." (Ex. VVVV-7.) 
+70-B. OCHCA took no reportable action in response: it did not open a new case 
+file, did not refer the matter to DTSC, CalEP A, or OEHHA, and did not initiate the 
+land-use-change reevaluation its own August 12, 2022 Comment C-2 identified as 
+required (¶69, supra). This is a further instance —  consistent with OCHCA's October 
+2020 non-response to the documented trenching-violation photographs (§§ 73-74, 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 39 of 77   Page
+ID #:4296
+
+--- PAGE 40 ---
+ 
+- 40 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+infra) and the pattern alleged in Section L, infra —  of OCHCA receiving actual, direct 
+notice of harm to health at the Site and taking no action. Gwaltney, 484 U.S. at 57. 
+J. Ongoing Illegal Disposal Mechanisms 
+71. The Site's NPDES stormwater permit (WDID 8 30W004769) expired August 
+20, 2020 – one day before the NFA issued. A construction stormwater permit was 
+activated one day before construction be gan and terminated 48 hours later while 
+construction continued through November 2020; no renewal has been obtained. Mercy 
+House conducts daily high-pressure washing, discharging contaminated wastewater 
+without permit or treatment. (Ex. 19.) Well W-4150 remains unsealed; the mandatory 
+destruction permit was waived based on a fieldwork narrative the record establishes 
+never occurred. The un-engineered trench-a nd-pipe system installe d in place of the 
+represented StormTech MC-3500 chambers (Section VII.J-2, infra) operates 
+continuously, driving contaminants downward during every storm event – each 
+injection event a new act of disposal under RCRA. United States v. Price , 688 F.2d 
+204, 213 (3d Cir. 1982); 40 C.F.R. §§ 144.12-13. 
+J-1. OCHCA's Written Trenching Prohibition and the October 2020 Notice of 
+Apparent Noncompliance 
+72. On September 10, 2020, OCHCA Engineering Geologist Tamara Escobedo 
+transmitted a written memorandum, produced in native .msg format with full routing 
+metadata, to OCPW personnel, stating that OCHCA " requested that trenching 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 40 of 77   Page
+ID #:4297
+
+--- PAGE 41 ---
+ 
+- 41 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+activities or soil excavation not take place in areas of contamination as seen in the 
+highlighted boxes in the attached figures, " that a pre-trenching site plan be submitted 
+for verification, and that backfill soil be " verified as clean soil  under residential 
+cleanup levels" before use. (Ex. FF.) No record produced by any Defendant shows a 
+pre-trenching plan was ever submitted, reviewed, or approved, or that backfill soil was 
+verified. 
+J-2. The Fabricated StormTech MC-3500 Installation 
+72-A. On October 12, 2020 — the same day constructi on photographs were 
+transmitted to Escobedo documenting active trenching in apparent violation of 
+OCHCA's prohibition (¶73) — City of Huntington Beach blueprints bearing the 
+notation "FOR REFERENCE ONLY"  represented that StormTech MC-3500 
+infiltration chambers were being installed at the Navigation Center. (Ex. WWWW-5) 
+The StormTech MC-3500 is a large plastic  arch-shaped chamber, approximately 6.5 
+feet wide and 5 feet tall, designed for subsurface stormwater detention and infiltration. 
+(Ex. WWWW-5 at 1-3) 
+72-A-1. The City's grading plans specify the represented system in exhaustive 
+detail: ten MC-3500 chambers and four end caps with a designed system volume of 
+2,248 cubic feet, at chamber elevations from 19.70 feet (bottom) to 23.45 feet (top). 
+(Ex. WWWW-5, Sheet 8.) The same sheet contains a boxed instruction that 
+'[c]ontractor shall not instal l StormTech system until a pre-construction meeting has 
+been held with the manufacturer’s represen tative, geotechnical engineer, and civil 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 41 of 77   Page
+ID #:4298
+
+--- PAGE 42 ---
+ 
+- 42 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+engineer.' (Id.) [No record of any such meeting —  sign-in sheet, minutes, or 
+correspondence —  has been produced in any CPRA release to date. / Plaintiff is 
+investigating whether any such meeting occurred.] 
+72-B. The construction photo logs covering the period from August 21, 2020 
+through December 4, 2020— produced by the City's own construction manager, Totum 
+Consulting— document the full progression of site work: demolition, grading, asphalt 
+installation, Spr ung structure erection, utility trench ing, and trailer placement. (Ex.   
+) Nowhere in this extensive photographic record does any StormTech MC-3500 
+chamber appear. No chambers on pallets, no chambers in trenches, no chambers being 
+assembled— despite the fact that such chambers are unmistakable and would have 
+required documentation at multiple stages of construction. 
+72-C. The October 12, 2020 trenching photographs produced by City contractor 
+TTS and transmitted to OCHCA Escobedo by EEC Vice President David Bernier 
+document active trenching with perforated inlet pipe in direct contact with native soil, 
+dark-stained soil, and liquid sheen — but no StormTech MC-3500 chambers . (Ex. 
+"TRENCH PHOTOS HBNC.pdf") Indeed, the trench visible in these photographs 
+is too shallow and too narrow  to accommodate StormTech MC-3500 chambers, 
+which require approximately 24 inches of stone base below (9 inches) and above (12 
+inches) with chambers placed in a bedding of specified aggregate. The photographs 
+show a standard utility trench with the perforated pipe directly in contact with native 
+soil— a configuration wholly inconsistent with StormTech MC-3500 specifications. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 42 of 77   Page
+ID #:4299
+
+--- PAGE 43 ---
+ 
+- 43 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+72-D. The Totum construction log for the week of October 16, 2020 states: 
+"Utility trenching, with the plastic membrane installation, backfill, backfill and utility 
+piping underway." (Ex. at 9) The phrase "plastic membrane" is a generic construction 
+term that could refer to any number of materials — not the StormTech chambers. The 
+photo accompanying this entry shows a trench with piping only; no StormTech 
+chambers are visible. (Id.) 
+72-E. The City's claim of StormTech installation is further undermined by the 
+course of construction. StormTech MC-350 0 chambers are typica lly installed in a 
+single coordinated phase, with chambers placed, connected, and backfilled before 
+paving. The City's photographic record shows asphalt installation occurring on 
+September 26, 2020 (north side) and progressively throughout October and November 
+2020. (Ex.  at 6-7) If StormTech chambers had been installed, they would have been 
+visible during the extended period between trenching (early October) and final 
+paving— yet no such images exist. 
+72-F. The absence of StormTech MC-35 00 chambers from the construction 
+record is not a mere omission; it is evidence that the City represented the installation 
+of an engineered stormwater infiltrati on system that was never actually 
+installed. This mirrors the pattern alleged throughout this Complaint: fabricated RAS 
+forms (¶50), retroactively an notated boring designations (¶56-58), and suppressed 
+laboratory data (¶59-60). The City is willing to represent compliance on paper while 
+failing to execute it in the field. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 43 of 77   Page
+ID #:4300
+
+--- PAGE 44 ---
+ 
+- 44 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+72-G. The StormTech MC-3500, if insta lled according to specifications, is 
+intended to provide engineered infiltration with a 40% stone porosity storage volume 
+of 175.0 ft³ per chamber, with chambers placed on a 9-inch stone base and covered by 
+12 inches of stone. (Ex. WWWW-5 at 3) The absence of these chambers means that 
+whatever stormwater system was installe d at the Navigation Center lacks the 
+engineered infiltration and storag e capacity the City represented — creating an 
+unmonitored, un-engineered infiltration pathway that drives contaminants downward 
+into groundwater, exactly as alleged in ¶17. 
+72-H. This independent, documented fraud in the City's construction records 
+corroborates the allegations in ¶¶79-80 regarding the HHAP MOU's admission of 
+ongoing engineering control failure. If the City never installed the StormTech 
+chambers it claimed on its blueprints, the "engineering controls" underpinning 
+OCHCA's void NFA never existed. The Sprung Structure base seal failure is thus not 
+the only documented engineer ing failure; the StormTech in filtration system is either 
+entirely absent or improperly installed in direct contravention of specifications. 
+72-I. The City's failure to install the StormTech MC-3500 chambers as 
+represented constitutes illegal disposal under RCRA. 40 C.F.R. § 144.12(a) prohibits 
+the "injection, placement, or release" of any hazardous waste through any "well, surface 
+impoundment, or other disposal system" that may allow contaminants to reach 
+groundwater. By constructing an unlined, un-engineered infiltration system (or no 
+infiltration system at all) at a site docume nted to contain Cr(VI) at 49 times health-
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 44 of 77   Page
+ID #:4301
+
+--- PAGE 45 ---
+ 
+- 45 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+protective thresholds, the City has created and continues to operate an unpermitted 
+disposal system driving contaminants into the regional aquifer— a new, ongoing act of 
+disposal under United States v. Price, 688 F.2d 204, 213 (3d Cir. 1982). 
+73. On October 12, 2020 – thirty-two days later – construction-progress 
+photographs were transmitted through City  personnel and EEC Vice President David 
+Bernier directly to Escobedo, also produced in native .msg format with full metadata. 
+(Ex. MMM-7.) The photographs document active installation of the substitute trench-
+and-pipe system in an open trench with a pe rforated inlet pipe in direct contact with 
+native soil, no engineered liner, visually anomalous dark-stained soil in the trench wall 
+and spoil pile, apparent liquid sheen on staged polyethylene sheeting, and a dark stain 
+on adjacent asphalt. 
+74. Escobedo received these photographs documenting active soil disturbance 
+thirty-two days after issuing an explicit geographic trenching prohibition, showing 
+conditions facially inconsistent with excavation outside the mapped contamination 
+zones. No enforcement response, stop-work directive, or follow-up communication has 
+been produced in any CPRA release to date. (Ex. MMM-7.) Because the un-engineered 
+trench-and-pipe system installed through this trench run —  in place of the represented 
+StormTech chambers —  is the same system that no w functions as the primary 
+engineering control underlying the NFA for a site housing more than 164 residents, 
+OCHCA's receipt of dated photographic notice of apparent noncompliance followed 
+by documented silence is independent evidence of a " continuous or intermittent 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 45 of 77   Page
+ID #:4302
+
+--- PAGE 46 ---
+ 
+- 46 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+violation" under Gwaltney of Smithfield, Ltd. v. Chesapeake Bay Foundation, Inc., 484 
+U.S. 49, 57 (1987), and establishes that OCHCA's post-closure oversight was non-
+responsive when confronted with contemporaneous evidence of active hazardous waste 
+disposal. 
+75. On April 6, 2020, EEC generated investigation-derived waste from initial 
+soil borings, placing contaminated cuttings and decontamination water into DOT-
+approved 55-gallon drums labeled " PENDING ANALYSIS " – confirming waste 
+characterization under 40 C.F.R. § 262.11 remained incomplete at generation. The 
+RCRA 90-day storage clock began that day.  EEC's June 25, 2020 Site Assessment 
+Report, signed by Laura Holder and David Bernier, PG, stated wastes "will be profiled, 
+manifested, and disposed of within 90 days of generation " – a statement false when 
+made. The report represented ten drums had been filled; Zatica's June 16, 2020 
+photographs document only nine, leaving th e tenth undocumented in any manifest or 
+removal record. The statutory deadline expired July 5, 2020. 
+76. On June 16, 2020 – Day 71 – MZT Project Manager Zach Zatica 
+photographed the drums and emailed OCPW Project Manager David Ahern: " Do you 
+know what the contents are ?" Ahern forwarded the inquiry  to City Acting Engineer 
+Deborah DeBow and Community Development Director Ursula Luna-Reynosa, asking 
+whether the material s needed to be " handled as hazardous materials in terms of 
+removal." DeBow responded that "[t]he barrels are a result of our environmental 
+investigations. We can certainly remove them at your request " – treating documented 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 46 of 77   Page
+ID #:4303
+
+--- PAGE 47 ---
+ 
+- 47 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+investigation-derived waste from a known Cr(VI) site as a scheduling matter, with no 
+acknowledgment of RCRA manifesting or licensed-transporter requirements. 
+77. On June 17 (Day 72), DeBow told Ahern she was " not certain of the 
+requirements" and would " look into it ." On July 8 (Day 93, three days past the 
+deadline), DeBow emailed Ahern that the "Soils Constr Note" in the approved grading 
+blueprints had been " intentionally left somewhat vague " due to " uncertainty as to 
+exactly what OC Health would be requiring " – blueprints issued to MZT as the 
+contracted demolition contract or. This admission directly links the City's deliberate 
+imprecision to MZT's subsequent August 18, 2020 Waste Reduction and Recycling 
+Plan ("WRRP") routing all demolition debris to Rainbow Disposal without hazardous 
+waste characterization, manifesting, or licensed transport. (Ex. VVVV-5.) On July 9 
+(Day 94), Ahern emailed OCHCA's Christin e Lane requesting direction, copying 
+OCHCA Chief Deputy Director Tim Corbett – giving OCHCA actual, documented 
+knowledge that the drums rema ined on site past deadline forty-three days before 
+OCHCA issued the August 21, 2020 NFA. 
+78. By July 9, 2020, the City was operating an unpermitted Treatment, Storage, 
+and Disposal Facility under RCRA, in violation of 42 U.S.C. § 6925, by storing 
+hazardous waste past the statutory 90-day limit without a permit. The County, through 
+OCPW, bears independent liability: OCPW retained and managed Zatica's work, Ahern 
+acted within the scope of his employment in receiving and failing to act on the June 16 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 47 of 77   Page
+ID #:4304
+
+--- PAGE 48 ---
+ 
+- 48 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+inquiry, and OCPW sat on that inquiry twenty-three days before escalating to OCHCA. 
+Cal. Gov't Code § 815.2. 
+J-3.  Active Cap Failure Documented by Weed Penetration 
+78-A.  In March 2026 — during the pendency of this litigation — photographs 
+submitted by Mercy House itself to California Rural Development mediator Nina Paul 
+documented vegetation actively breaching the asphalt cap surface at the 
+Navigation Center. (Ex. II-A, II-B; ¶80) These photographs established that the cap, 
+represented as the primary engineering control for the Site's contamination, was already 
+failing during Plaintiff's residency and continued to fail through at least March 2026. 
+78-B. Additional photographs taken between March and July 2026— including 
+photographs obtained through independent documentation as recently as six weeks 
+before this filing — show weeds actively penetrating the asphalt cap at multiple 
+locations across the Site. (Ex. WWWW-4) The photographs show vegetation growing 
+through cracks and breaches in the asphalt surface, with some plants having established 
+significant root systems through the cap. 
+78-C. The presence of weeds penetratin g the asphalt cap is direct, observable 
+evidence of cap failure. A properly cons tructed 2-inch asphalt cap over compacted 
+base— if installed according to City Specification No. 431-92 and Huntington Beach 
+Municipal Code § 230.92 (¶19)— would not permit vegetation to penetrate the surface. 
+The fact that weeds are actively growing through the cap demonstrates that: 
+x The cap is not sufficiently thick or compacted 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 48 of 77   Page
+ID #:4305
+
+--- PAGE 49 ---
+ 
+- 49 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+x The cap has cracks, breaches, or deteriorated areas 
+x The cap is not functioning as an engineering control 
+x Contaminated soil beneath the cap is exposed to the surface through the breaches 
+78-D. The cap breaches documented in the March-July 2026 photographs are direct 
+pathways for contaminated dust to become airborne. Cr(VI)- and lead-laden soils 
+beneath the cap are exposed to wind, rain, and human activity through the breaches. 
+This corroborates Plaintiff's allegations regarding the airborne toxic dust pathway 
+(¶¶19-20) and the ongoing respiratory exposure documented in Plaintiff's medical 
+records (¶20). 
+78-E.  The cap breaches also create pathways for water infiltration , allowing 
+stormwater to penetrate the cap and mobi lize contaminants downward toward the 
+aquifer. This corroborates Plaintiff's allegations regarding the unlined infiltration 
+pathway (¶17) and the documented Cr(VI) migration to Plaintiff's current drinking-
+water well (¶16). 
+78-F.. The April 29, 2026 HHAP MOU admi tted that the Sprung Structure's base 
+seal required repair — an admission of engineering control failure. (¶79) The March-
+July 2026 weed penetration photographs document a second, independent 
+engineering control failure— the asphalt cap— which was also identified in the March 
+2026 photographs submitted by Mercy House to CRD mediator Nina Paul. (¶80; Ex. 
+II-A, II-B) The City and Mercy House had actual notice of the cap failure through the 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 49 of 77   Page
+ID #:4306
+
+--- PAGE 50 ---
+ 
+- 50 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+March 2026 photographs, yet as of July 2026 — the date of the most recent 
+photographs— the cap breaches remain unrepaired. 
+78-G. The City's failure to repair the cap breaches is not a minor maintenance issue. 
+The cap is the primary institutional control relied upon to prevent exposure to Cr(VI) 
+at 980μg/kg, lead, arsenic, toxaphene, and  4,4′-DDE at the Site. The cap's failure 
+means contaminated soil is no longer contained— it is exposed to the surface, to the 
+air, and to stormwater infiltration. This is the exact endangerment alleged throughout 
+this Complaint. 
+78-H. The March-July 2026 cap failure photographs are contemporaneous 
+evidence that the Site's conditions are not "wholly past" but are ongoing and actively 
+deteriorating. Under Gwaltney of Smithfield, Ltd. v. Chesapeake Bay Foundation, Inc., 
+484 U.S. 49, 57 (1987), RCRA citizen suit s are not time-barred where a defendant's 
+conduct constitutes a "continuous or intermittent violation." The cap breaches 
+documented in July 2026— less than two months before this filing — establish that the 
+City's violations are ongoing and continuous. 
+78-I. The City's failure to repair the cap breaches, despite actual notice through the 
+March 2026 photographs and the April 2026 HHAP MOU (which allocated $75,000 
+for Sprung Structure repairs but did not address the cap), demonstrates a deliberate 
+choice to allow the cap to remain deteriorated. As of this filing — six weeks after the 
+most recent photographs were taken— no repairs have been made. This is evidence of 
+the City's ongoing disregard for public health and the environment. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 50 of 77   Page
+ID #:4307
+
+--- PAGE 51 ---
+ 
+- 51 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+K. The HHAP MOU: Party-Opponent Admission of Ongoing Engineering 
+Control Failure 
+79. On April 29, 2026 – during the pendency of this litigation – the City and 
+County executed an HHAP MOU (File #26-225) allocating $75,000 for repair of the 
+Sprung Structure's base seal, the Site's so le engineered contai nment structure, along 
+with $500,000 for front office and $750,00 0 for restroom replacement. (Ex. III.) The 
+base-seal repair allocation is a party-opponent admission under FRE 801(d)(2) that the 
+structure's containment is currently failing. 
+80. This admission is corroborated by two independent bodies of physical 
+evidence: construction-era photographs depi cting a continuous sandbag berm around 
+the Sprung structure responding to water pooling at the cap surface, and March 2026 
+photographs – submitted by Mercy House itself to CRD mediator Nina Paul – showing 
+vegetation actively breaching the cap surface. (Exs. II-A, II-B.) Together with the April 
+2026 MOU, these establish that cap failure was recognized at construction, persisted 
+through Plaintiff's residency and through March 2026, and remained unrepaired as of 
+this filing. As of this filing, none of the MOU repairs has been executed. No argument 
+that any endangerment at the Site is "wholly past" can be sustained against this record. 
+Gwaltney, 484 U.S. at 57. 
+L. Retroactive and Post-Petition Regulatory Conduct 
+81. Four documented database modifications to the HBNC GeoTracker record 
+correlate to Plaintiff's regulatory and litigation activity:  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 51 of 77   Page
+ID #:4308
+
+--- PAGE 52 ---
+ 
+- 52 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(a) the March 10, 2025 BulkFile assembly, approximately six months before 
+Plaintiff's September 21, 2025 RCRA Notice;  
+(b) the November 18, 2025 Beach Boulevard SAR upload, after that Notice;  
+(c) the June 2026 Eurofins upload under "historical PDF" designation, four days 
+before Plaintiff's original opposition brief was due; and  
+(d) the June 12, 2026 RWQCB closed-session defense meeting, described below. 
+An agency diligently prosecuting contamination would produce evidence promptly to 
+support that prosecution; timing releases to minimize a plaintiff's ability to use them 
+supports the opposite inference. 
+82. On June 12, 2026 – one day after Plaintiff filed his opposition to OCHCA's 
+motion to dismiss – RWQCB published a closed-session agenda listing this action as 
+pending litigation, with Pimentel identified as contact counsel, convened under the 
+pending-litigation exception to the Bagley-Keene Act, Cal. Gov. Code § 11126(e). (Ex. 
+VVVV-2.) A regulatory agency convening a closed-session defense strategy meeting 
+about an RCRA citizen suit is categorically inconsistent with diligent prosecution of 
+contamination for public health purposes. 
+M. RWQCB's Affirmative Misdirection 
+83. RWQCB's liability rests on affirma tive conduct, not passive regulatory 
+inaction. Specifically:  
+(a) RWQCB staff member Alan Kuoch re viewed the empty GeoTracker shell 
+record T10000020555 rather than the primary record T10000018579 to pre-dismiss 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 52 of 77   Page
+ID #:4309
+
+--- PAGE 53 ---
+ 
+- 53 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+Plaintiff's formal complaint, without en gaging the evidentiary package Plaintiff 
+provided – including Phase II reports, OCHCA activity logs, laboratory data, grading 
+blueprints, and the coroner's record – before characterizing the complaint internally as 
+"full of issues from the complainant";  
+(b) Pimentel directed all NOI comm unications through himself and then 
+provided zero substantive response to 62 detailed submissions over nine months;  
+(c) RWQCB activated NPDES permit WDID 8 30W004769 one day before 
+construction and terminated it 48 hours later while construction continued; and  
+(d) RWQCB convened the June 12, 2026 closed-session defense meeting 
+described above. Each is affirmative agen cy conduct contributi ng to the present 
+handling of hazardous waste at an occupied residential site. 
+84. Plaintiff's September 12, 2025 petition to the federal Agency for Toxic 
+Substances and Disease Registry ("ATSD R") for a Public Health Assessment is 
+contemporaneous corroboration that Plaintiff's complaint was not, as Kuoch 
+represented internally, " full of issues ": ATSDR acknowledged receipt within three 
+business days and assigned a Regional Director to the matter. (Exs. MM, NN, OO.) 
+N. Hydrogeology and Cr(VI) Detections 
+85. The Orange County Groundwater Basin is a managed coastal alluvial system 
+in which the Talbert Barrier and inland pumping together create a persistent inland 
+hydraulic gradient from the coastal margin  toward Midway City . (Ex. 30.) Cr(VI) is 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 53 of 77   Page
+ID #:4310
+
+--- PAGE 54 ---
+ 
+- 54 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+highly soluble and mobile in oxic groundwater and poorly sorbed to aquifer materials; 
+OEHHA's Public Health Goal is 0.02 μg/L. (Ex. 31.) 
+86. OCWD monitoring data document Cr(VI) at 270 μg/L in MW-42 and 62 
+μg/L in MW-43B (July 2019), consistent with a plume elongated along the documented 
+advective axis toward Midway City. (Ex. 32.) The May 2026 SMCMWC North Well 
+detection of 0.95 μg/L confirms that this migrati on pathway has reached the water 
+supply serving Plaintiff's current community. Honeywell, 399 F.3d at 258-62. Plaintiff 
+has prepared litigation-grade hydrogeolo gic diagrams (Exs. 35-A through 35-D) 
+synthesizing OCWD contour data, monitoring well data, and W-4150 construction 
+records, and respectfully requests leave to supplement the record with a signed expert 
+hydrogeologist declaration within 14 days of retention of a qualified expert, or as 
+otherwise ordered by the Court. 
+87. The combination of the Talbert Barrier's coastal injection mound, inland 
+pumping depressions, docum ented shallow Cr(VI) source concentrations, vertical 
+conduits including unsealed Well W-4150, and the confirmed SMCMWC detection 
+establishes a continuous adve ctive pathway from the Site to municipal wells serving 
+Plaintiff's community. 
+O. The Fraudulent HUD Environmental Review Record (HEROS No. 
+900000010330431) 
+88. To secure approximately $990,000 in federal housing funds for the 
+Navigation Center, the City prepared and certified an Environmental Review Record 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 54 of 77   Page
+ID #:4311
+
+--- PAGE 55 ---
+ 
+- 55 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+under HUD's HEROS system, HEROS No. 900000010330431. (Ex. TTTT.) 
+Attachment C – the Contamination and Toxic Substances Worksheet – was submitted 
+completely blank, while the City certifie d that environmental review and clearance 
+were complete. At the time of certification, the City possessed or had ready access to 
+the April 2020 soil data documenting Cr(VI) at 980 μg/kg. The blank Attachment C, 
+juxtaposed against the City's contemporaneous knowledge, constitutes a false 
+certification of environmental compliance to a federal agency. (Ex. UUUU.) 
+89. City Manager Oliver Chi personally executed the City's CARES Act 
+Subrecipient Certification on December 1, 2020, certify ing Coronavirus Relief Fund 
+expenditures for the Cameron Lane project an d allocating more than $1.19 million in 
+"Public Health Expenses" to it – confirming the City was an active institutional actor 
+with direct, personal knowledge of the project's funding, timeline, and contamination 
+history, knowledge that makes the blank HUD Attachment C still more difficult to 
+reconcile with good faith. (Ex. JJJ-1.) 
+90. The Environmental Review Record further lists the project's location as 
+"2000 Main Street " – Huntington Beach City Hall's address – rather than the 
+Navigation Center site, removing the reco rd from location- and parcel-based public 
+searches, paralleling the APN-substitution and dual-GeoTracker concealment alleged 
+above. Plaintiff discovered the HEROS record on June 22, 2026; it is newly discovered 
+evidence that could not have been include d in the First Amended Complaint. (Ex. 
+TTTT.) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 55 of 77   Page
+ID #:4312
+
+--- PAGE 56 ---
+ 
+- 56 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+VIII. TIMELINESS AND CONTINUING VIOLATIONS 
+A. Legal Standard 
+91. RCRA's imminent-and-substantial-endangerment standard is " expansive," 
+requiring only that conditions may present a threat to health or the environment. 
+Meghrig v. KFC Western, Inc., 516 U.S. 479, 485–86 (1996). The endangerment need 
+not be certain, nor must harm have already occurred; it is enough that contamination 
+"may present" a risk. Interfaith Community Org. v. Honeywell, 399 F.3d 248, 258–59 
+(3d Cir. 2005). Courts apply a "precautionary, forward-looking" standard that focuses 
+on risk, not proof of causation. Laidlaw, 528 U.S. at 181–83. 
+92. The Ninth Circuit recognizes that endangerment exists where contaminants 
+migrate through groundwater or air pathways toward human receptors. NRDC v. EPA, 
+542 F.3d 1036, 1043 (9th Cir. 2008). Even low-level detections of carcinogens satisfy 
+the standard when ex posure is plausible. Ecological Rights Foundation v. Pacific 
+Lumber Co., 230 F.3d 1141, 1152 (9th Cir. 2000). 
+B. Cr(VI) and Co-Contaminants Present an Imminent Threat 
+93. Cr(VI) is a Group 1 human carcinogen with no safe exposure threshold. The 
+Site contains Cr(VI) at concentrations up to 980 μg/kg, "49 times the more protective 
+DTSC Cr(VI) residential soil screening level of 20 μg/kg" (SAVC ¶1). Lead, arsenic, 
+toxaphene, and 4,4'-DDE co-occur at elevated levels (SAVC ¶40). These contaminants 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 56 of 77   Page
+ID #:4313
+
+--- PAGE 57 ---
+ 
+- 57 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+are mobile, persistent, and capable of causing chronic disease, including cancer, renal 
+injury, hematologic disorders, and respiratory compromise. 
+94. The presence of multiple contaminan ts at levels exceeding regulatory 
+thresholds satisfies RCRA's  endangerment standard. Honeywell, 399 F.3d at 258 –62 
+(Cr(VI) plume migration constituted imminent endangerment). 
+C. Groundwater Migration Creates a Present and Ongoing Endangerment 
+95. The Site overlies Basin 8-1, and OCWD's Talbert Barrier creates a persistent 
+inland gradient directing groundwater northeast toward Plaintiff's residence (SAVC 
+¶15). The unsealed 140-foot Well W-4150 — described by OCHCA as a " potential 
+pathway of contamination to groundwater" and "a sink hole" (SAVC ¶47)— provides 
+a direct vertical conduit for contaminants to enter the aquifer. 
+96. The May 2026 detection of Cr(VI) at 0.95 μg/L in SMCMWC's North Well 
+(SAVC ¶16) confirms active plume migration. This detection is 47.5 times California's 
+Public Health Goal and li es precisely along the pred icted advective axis. OCWD 
+monitoring well MW-9 also shows Cr(VI) above background (SAVC ¶18). 
+97. Courts routinely find imminent endangerment where contaminants appear in 
+downgradient drinking-water wells. Honeywell, 399 F.3d at 258–62; NRDC, 542 F.3d 
+at 1043. 
+98. The expired NPDES permit (SAVC ¶17) and the un-engineered trench-and-
+pipe system installed in pl ace of the represented StormTech chambers (SAVC ¶17) 
+accelerate downward migration, increasing the risk of exposure. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 57 of 77   Page
+ID #:4314
+
+--- PAGE 58 ---
+ 
+- 58 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+D. Airborne Toxic Dust Presents an Independent Endangerment 
+99. The Site's asphalt cap is two inches thick over loose gravel, violating City 
+Specification No. 431-92 (SAVC ¶19). Daily high-pressure washing by Mercy House 
+aerosolizes Cr(VI)- and lead-laden soils (SAVC ¶19). Prevailing winds carry this dust 
+northeast toward Plaintiff's residence (SAVC ¶19). 
+100. Plaintiff has personally observed dust clouds and experienced respiratory 
+symptoms documented in medical records (SAVC ¶20). Airborne exposure to 
+carcinogenic dust constitutes imminent endangerment. Ecological Rights Foundation, 
+230 F.3d at 1152. 
+101. The cap's structural failure — combined with daily washing — creates 
+continuous, intermittent releases satisfying Gwaltney's requirement for ongoing 
+violations. 
+E. Engineered and Historical Conditions Increase the Risk 
+102. Multiple engineered and historical features amplify endangerment:  
+(1) Unsealed Well W-4150.  OCHCA warned the well " may have not been 
+capped or destroyed properly" and is a "potential pathway of contamination" (SAVC 
+¶47). No destruction permit exists (SAVC ¶49).  
+(2) Un-engineered trench-and-pipe substitute system. Installed in place of the 
+represented StormTech MC-3500 chambers (S ection VII.J-2, in fra), directly in 
+contaminated soil, and drives soluble contaminants downward (SAVC ¶17).  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 58 of 77   Page
+ID #:4315
+
+--- PAGE 59 ---
+ 
+- 59 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(3) Expired NPDES permit. WDID 8 30W004769 expired one day before the 
+NFA (SAVC ¶17), eliminating regulatory oversight.  
+(4) Asphalt cap failure.  Two-inch cap over loose gravel violates municipal 
+specifications (SAVC ¶19).  
+(5) Daily high-pressure washing. Aerosolizes contaminated soils (SAVC ¶19–
+20).  
+(6) Historical flooding and storm drain easement.  Chronic deposition of 
+industrial contaminants documented since 1995 (SAVC ¶34 –35). These conditions 
+collectively create a present, ongoing, and scientifically supported risk of exposure. 
+F. Plaintiff's Current Exposure Confirms Endangerment 
+103. Plaintiff resides two miles downgradient within the Bolsa/Midway 
+Disadvantaged Unincorporated Community  (SAVC ¶14). The May 2026 Cr(VI) 
+detection in his drinking-water well (SAVC ¶16) confirms active exposure. Plaintiff's 
+respiratory symptoms following dust events (SAVC ¶20) further demonstrate ongoing 
+harm. 
+104. Courts recognize that current exposure — even at low levels — constitutes 
+imminent endangerment. Laidlaw, 528 U.S. at 181–83. 
+G. Endangerment Does Not Require Proof of Causation 
+105. RCRA does not require Plaintiff to prove that contaminants have already 
+caused disease. It requires only a showing that conditions may present a risk. Meghrig, 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 59 of 77   Page
+ID #:4316
+
+--- PAGE 60 ---
+ 
+- 60 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+516 U.S. at 485 –86. The presence of carcinogens in Plaintiff's drinking water and 
+airborne dust satisfies this standard. 
+H. Requested Relief Will Abate the Endangerment 
+106. Sealing Well W-4150 will eliminate the primary vertical conduit to the 
+aquifer. Suspending operation of the trench-and-pipe system installed in place of the 
+represented StormTech chambers will halt downward migration. Replacing the cap and 
+ceasing high-pressure washing will eliminate airborne rel eases. These remedies will 
+materially reduce exposure and therefore abate imminent endangerment. Laidlaw, 528 
+U.S. at 185. 
+107. Under Gwaltney of Smithfield, Ltd. v.  Chesapeake Bay Foundation, Inc., 
+484 U.S. 49, 57 (1987), RCRA citizen suit s are not time-barred where a defendant's 
+conduct constitutes a "continuous or intermittent violation" rather than a "wholly past" 
+occurrence. Here, each Defendant has committed acts within the limitations period that 
+constitute separate and continuing violations:  
+(a) City of Huntington Beach: On April 29, 2026, the City executed the HHAP 
+MOU admitting ongoing cap failure (§§ 79-80); on November 18, 2025, it participated 
+in the Beach Boulevard SAR upload (§ 61 ); and it continues to operate the un-
+engineered trench-and-pipe system installed in place of the represented StormTech 
+chambers, and a substandard cap (§ 19), on a daily basis.  
+ 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 60 of 77   Page
+ID #:4317
+
+--- PAGE 61 ---
+ 
+- 61 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(b) OCHCA: On June 1, 2026, it produced previously withheld Cr(VI) data; on 
+June 29, 2026, it issued a CPRA postponement letter stating it "will not be producing 
+any records" (§ 62); and it continues to maintain the void NFA as the governing closure 
+determination (§§ 63-64); and on April 28, 2025, it received actual notice from Plaintiff 
+of his hospitalizations described at ¶12 and of a fellow resident's death, and took no 
+reportable action (§§ 70-A–70-B).  
+(c) RWQCB: On June 12, 2026, it convened a closed-session defense meeting 
+about this action (§ 82); it continues to maintain dual GeoTracker records and the 
+expired NPDES permit without enforcement; and it has received 62 addenda without 
+substantive response (§ 6).  
+(d) EEC Environmental: Its fabricated reports continue to serve as the sole 
+regulatory predicate for the NFA; by allowing its false data to remain the basis for the 
+Site's closure, EEC continues to contribute to the present endangerment. Meghrig v. 
+KFC Western, 516 U.S. 479 (1996).  
+(e) Mercy House : Daily high-pressure washing constitutes ongoing illegal 
+disposal (§ 19).  
+(f) Mitsuru Yamada : His failure to disclose the cesspool, well, and 
+contamination continues to have ongoing effects; moreover, the 1990 permit remains 
+uncompleted, and the void remains unsealed (§ 39).  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 61 of 77   Page
+ID #:4318
+
+--- PAGE 62 ---
+ 
+- 62 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(g) MZT: The WRRP certification in August 2020 is within the limitations 
+period (5 years from filing in 2026), and the unpermitted disposal of demolition debris 
+continues to affect the Site.  
+(h) County of Orange: Through OCPW's ongoing role in Site maintenance and 
+through OCHCA's continuing regulatory assertion, the County remains an active 
+participant. 
+108. Each of these acts co nstitutes a separate violation within the limitations 
+period, and the endangerment is not " wholly past ." Accordingly, no statute-of-
+limitations defense bars this action. 
+IX. ABSTENTION DOES NOT BAR THIS ACTION 
+109. Defendants may argue that the Court should abstain under Burford, 
+Younger, or the primary-jurisdiction doctrine because of the State Water Board petition 
+(A-2926) and OCHCA's regulatory process. These arguments fail for the following 
+reasons:  
+(a) The State Water Board petition was placed in abeyance on February 23, 2026 
+and does not constitute " diligent prosecution" under 42 U.S.C. § 6972(b)(1)(B). See, 
+e.g., Friends of the Earth v. Laidlaw, 528 U.S. 167, 189-90 (2000).  
+(b) RWQCB has expressly stated through counsel that it "does not plan to argue 
+diligent prosecution" (§ 8) – a binding admission that defeats any Younger or primary-
+jurisdiction argument based on ongoing state enforcement.  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 62 of 77   Page
+ID #:4319
+
+--- PAGE 63 ---
+ 
+- 63 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(c) OCHCA has obstructed CPRA requests  and withheld critical data for over 
+six years, undermining any claim that the state provides an "adequate remedy." (§ 62.)   
+ (d) This is a narrow federal statutory claim under RCRA, not a broad challenge 
+to a complex state regulatory scheme; Burford abstention is inapplicable. See, e.g., 
+Quackenbush v. Allstate Ins. Co., 517 U.S. 706, 728-29 (1996).  
+(e) RCRA's citizen-suit provision specifically authorizes federal suits against 
+state and local agencies, 42 U.S.C. § 6972(a), and Congress intended federal courts to 
+adjudicate such claims. See, e.g., Interfaith Community Organization v. Honeywell , 
+399 F.3d 248, 261-63 (3d Cir. 2005).  
+(f) The relief sought – sealing a well, requiring lawful investigation, and ceasing 
+unpermitted discharges – is specific injunctive relief that does not require ongoing 
+supervision of a state regulatory scheme. 
+110. For these reasons, ab stention is inappropriate, and this Court should 
+exercise its jurisdiction. 
+ 
+X. ACTIVE STRUCTURAL FAILURE OF REMEDIAL CAPS AND 
+FAILURE OF AGENCY OVERSIGHT 
+111. Defendants previously asserted, and state regulatory bodies (including the 
+DTSC and RWQCB) accepted, a passive surface barrier— specifically an asphalt 
+cap— as a complete and permanent remed ial measure for the historically 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 63 of 77   Page
+ID #:4320
+
+--- PAGE 64 ---
+ 
+- 64 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+contaminated parcels located at the Huntington Beach Navigation Center 
+(HBNC). 
+112. As established by recent site inspections conducted six weeks prior to the 
+filing of this Second Amended Verified Complaint, the alleged "engineering 
+control" has suffered cataclysmic structural  failure. Photographic evidence, 
+designated and incorporated herein as Exhibit WWWW-4 , documents 
+pervasive fissures and co mplete ruptures of the asphalt pavemen t across the 
+facility grounds. 
+113. Specifically, as shown in Exhibit WWWW-4, mature vegetative 
+growth— including pervasive, three-foot-tall weed root systems— has physically 
+split the asphalt cap from beneath, tear ing open the surface layer and exposing 
+the underlying un-remediated, toxic soil matrix containing elevated 
+concentrations of Hexavalent Chromium [Cr(VI)], Lead, Toxaphene, 4,4-DDE, 
+and Arsenic in direct violation of established screening levels. 
+ 
+XI. CLAIMS FOR RELIEF 
+FIRST CLAIM FOR RELIEF 
+Violation of RCRA, 42 U.S.C. § 6972(a)(1)(B) 
+(Imminent and Substantial Endangerment) 
+(Against All Defendants) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 64 of 77   Page
+ID #:4321
+
+--- PAGE 65 ---
+ 
+- 65 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+114. Plaintiff incorporates by reference all preceding paragraphs. 
+115. RCRA authorizes suit against any person " who has contributed or is 
+contributing to the past or present handling, storage, treatment, transportation, or 
+disposal of any solid or hazardous waste which may present an imminent and 
+substantial endangerment to health or the environment." 42 U.S.C. § 6972(a)(1)(B). 
+116. The Site contains Cr(VI), lead, arsenic, toxaphene, and 4,4'-DDE at 
+concentrations far above health-protective screening levels. (Exs. NNN-5, NNN-6.) 
+116-A. The severity of this threat is independently confirmed by the State Water 
+Resources Control Board's own GeoTracker  record for the Site (Beach Boulevard 
+Project, T10000018579), which carries a DWR 2016 Disadvantaged Community  
+designation and assigns the Site a CalEnviro Screen 3.0 Toxic Releases percentile of 
+93%, placing it in the top 7% of all census tracts statewide for toxic release burden. 
+(Ex. WWWW-6.) 
+117. Seven active mechanisms  continue to mobili ze these contaminants, 
+creating imminent and substantial endangerment:  
+(a) the unsealed Well W-4150, providing a direct conduit to the regional aquifer 
+(§§ 38-40);  
+(b) the un-engineered trench-and-pip e system installed in place of the 
+represented StormTech chambers, driving contaminants downward during every storm 
+event (§ 17);  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 65 of 77   Page
+ID #:4322
+
+--- PAGE 66 ---
+ 
+- 66 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(c) the expired NPDES permit and ongoing unpermitted wastewater discharges 
+(§ 71);  
+(d) the failing Sprung Structure lining admitted in the April 2026 HHAP MOU 
+(§§ 79-80);  
+(e) the uncompleted cesspool backfill (§ 39);  
+(f) OCHCA's undischarged obligation to reevaluate the conditional 2020 closure 
+upon the Site's conversion to permanent residential use (§§ 68-69); and  
+(g) continued post-petition GeoTracker manipulation (§ 81).  
+The May 2026 SMCMWC detection at 47.5 times the Public Health Goal 
+confirms these mechanisms have resulted in  actual migration to the water supply 
+serving Plaintiff's community, and the documented respiratory fatality of a fellow 
+HBNC resident (Section V.A) is independent evidence of the human-health 
+endangerment these mechanisms have caused. 
+118. Each Defendant has contributed or is contributing to the handling or 
+disposal of hazardous waste presenting imminent and substantial endangerment:  
+(a) City of Huntington Beach: orchestrated the fraudulent regulatory clearance 
+alleged in Sections VII.B, D-1, and O; in stalled an un-engineered trench-and-pipe 
+system in place of the represented StormT ech chambers, in apparent defiance of 
+OCHCA's own trenching prohibition (VII.J-1); maintains a substandard cap (V.C); 
+waived the well-destruction permit despite its own 1969 admission (VII.A-1); executed 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 66 of 77   Page
+ID #:4323
+
+--- PAGE 67 ---
+ 
+- 67 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+the April 2026 HHAP MOU admitting ongoing engineering control failure (VII.K); 
+and falsely certified federal environmental compliance to HUD (VII.O).  
+(b) OCHCA: issued an NFA void on eight independent grounds, including a 
+foundational RAS letter fabricated by copying an unrelated case file (VII.D-1, G); 
+accepted non-compliant analytical data (VII.H); maintained the false NFA for over six 
+years without the reevaluation its own 2022 comment required (VII.I); assembled the 
+GeoTracker record retroactively (VII.D, L); and exercised direct operator authority 
+under the Emergency Facility Use Agreement (VII.I).  
+(c) RWQCB (Executive Officer Lindberg): through the affirmative misdirection 
+alleged in Section VII.M, has contributed to the present handling of hazardous waste 
+at an occupied residential site.  
+(d) EEC Environmental: prepared false Phase I and II assessments, submitted 
+forged RAS forms, retroactively annotated boring designations, and fabricated 
+fieldwork records, as alleged in Sections VII.B, D-1, and E. EEC's fabricated reports 
+remain the sole basis for the NFA; by allowi ng its false data to remain the regulatory 
+predicate, EEC continues to contribute to the present endangerment.  
+(e) Mercy House: conducts daily high-pressure washing generating unpermitted 
+contaminated wastewater discharge and aerosolizing Cr(VI), as alleged in Sections V.C 
+and VII.J.  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 67 of 77   Page
+ID #:4324
+
+--- PAGE 68 ---
+ 
+- 68 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(f) Mitsuru Yamada: failed to disclose docume nted subsurface contamination 
+features – the cesspool, Well W-4150, and historical contamination – during the 2020 
+sale, enabling continued resident exposure, as alleged in Section VII.A.  
+(g) Macro-Z-Technology Company: documented contaminated investigation-
+derived waste, received no adequate regulatory direction after inquiring, and then 
+certified a WRRP routing demolition debris to an unauthorized facility without 
+characterization, manifesting, or licensed transport, as alleged in Section VII.J-1.  
+(h) County of Orange: through OCHCA's regulatory and operator conduct and, 
+independently, through OCPW's construction-management failures alleged in Section 
+VII.J-1, has contributed to the handling and storage of hazardous waste presenting 
+imminent and substantial endangerment. Cal. Gov't Code § 815.2. 
+119. A claimed remediation authorization does not defeat a § 6972(a)(1)(B) 
+claim where contamination remains above health-based thresholds; the question at the 
+pleading stage is not whether some cleanu p occurred but whether contamination 
+remains that may present an imminent and substantial endangerment. Honeywell, 399 
+F.3d at 261-63. A closure void ab initio on eight independent grounds cannot serve as 
+a remediation defense at any stage. 
+120. Post-filing and continuing conduct further satisfy Gwaltney's "continuous 
+or intermittent violation" standard: the March 2025 BulkFile assembly, the November 
+2025 SAR upload, the April 2026 HHAP MOU admission, the June 2026 RWQCB 
+closed session, OCHCA's non-response to the October 2020 trenching-violation 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 68 of 77   Page
+ID #:4325
+
+--- PAGE 69 ---
+ 
+- 69 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+photographs, and the unvalidated analytical data that continues to underlie an active 
+NFA governing an o ccupied facility above docume nted Cr(VI) contamination. 
+Gwaltney, 484 U.S. at 57. 
+121. Plaintiff is entitled to injunctive relief requiring abatement of the imminent 
+and substantial endangerment. 
+ 
+SECOND CLAIM FOR RELIEF 
+Violation of RCRA, 42 U.S.C. § 6972(a)(1)(A) 
+(Illegal Disposal of Hazardous Waste) 
+(Against All Defendants) 
+122. Plaintiff incorporates by reference all preceding paragraphs. 
+123. RCRA prohibits the " past or present handling, storage, treatment, 
+transportation, or disposal of any solid or hazardous waste" in violation of applicable 
+regulations or permits. 42 U.S.C. § 6972(a)(1)(A). 
+124. Defendants have engaged in, contributed to, or allowed illegal disposal of 
+hazardous waste through:  
+(a) installation and operation of the un-engineered trench-and-pipe system 
+installed in place of the represented StormTech infilt ration chambers, driving 
+contaminants downward (Ex. 8);  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 69 of 77   Page
+ID #:4326
+
+--- PAGE 70 ---
+ 
+- 70 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(b) daily high-pressure washing that mobilizes contaminated soil and generates 
+unpermitted wastewater discharges (Ex. 19);  
+(c) disturbance and dispersal of contaminated soil during grading without proper 
+hazardous-materials controls (Ex. 20);  
+(d) failure to seal Well W-4150, allowing direct migration to groundwater (Exs. 
+7, 10, 14);  
+(e) storage of investigation-derived wa ste beyond the 90-day RCRA deadline 
+without a permit (§§ 75-78); and  
+(f) routing demolition debris to an unauthorized facility without hazardous-waste 
+characterization, manifesting, or licensed transport (§ 77). 
+125. These actions constitute ongoing "disposal" under RCRA. 
+126. Specific violations include:  
+(a) City of Huntington Beach: Violated 40 C.F.R. § 257.3-4, Health & Safety 
+Code § 25280 et seq., and its own expired NPDES permit.  
+(b) OCHCA: Violated Health & Safety Code § 101480 and SB 1248 by retaining 
+jurisdiction without DTSC referral, and issued a closure certificate without required 
+data or public notice.  
+(c) RWQCB: Violated 33 U.S.C. § 1311 and its Porter-Cologne duties by 
+allowing unpermitted discharges and maintaining sanitized GeoTracker records.  
+(d) EEC: Violated 40 C.F.R. § 312.10, Business & Professions Code § 7835, 
+and 40 C.F.R. Part 257 by submitting forged RAS forms and fabricated reports.  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 70 of 77   Page
+ID #:4327
+
+--- PAGE 71 ---
+ 
+- 71 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+(e) Mercy House : Violated 33 U.S.C. § 1311 and 40 C.F.R. Part 122 by 
+conducting unpermitted high-pressure washing.  
+(f) Mitsuru Yamada: Violated Health & Safety Code § 25359.7 by failing to 
+disclose known contamination, the unsealed well, and the uncompleted cesspool 
+backfill.  
+(g) Macro-Z-Technology Company: Violated 40 C.F.R. § 262.11 by failing to 
+complete waste characterization before construction, and 40 C.F.R. Part 262 by 
+designating a non-licensed transporter and non-RCRA-permitted facility for probable 
+hazardous demolition debris, certifying a WRRP under penalty of perjury that treated 
+the debris as ordinary municipal solid waste despite Zatica's own June 16, 2020 
+documentation of site contamination 63 days earlier (Section VII.J-1).  
+(h) County of Orange : Through OCPW's failure to ensure proper waste 
+characterization, manifesting, and disposal, and through its vicarious liability for 
+OCHCA's regulatory and operator conduct, the County violated RCRA and its 
+implementing regulations. 
+127. Plaintiff is entitled to declaratory and injunctive relief to abate these 
+ongoing violations. 
+THIRD CLAIM FOR RELIEF 
+Declaratory and Injunctive Relief 
+(Against All Defendants) 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 71 of 77   Page
+ID #:4328
+
+--- PAGE 72 ---
+ 
+- 72 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+128. Plaintiff incorporates by reference all preceding paragraphs. 
+129. Plaintiff seeks a declaration that Defendants have violated RCRA and an 
+injunction requiring abatement of the violat ions and endangerment, as detailed in the 
+Prayer for Relief. 
+130. Plaintiff is entitled to such relief because:  
+(a) the NFA is void ab initio and provides no legal basis for continued operation 
+of the Site without proper investigation and remediation;  
+(b) the ongoing disposal and migration mechanisms continue to threaten Plaintiff 
+and the environment; and  
+(c) no adequate remedy at law exists for the continuing exposure to carcinogenic 
+and toxic substances. 
+XII. PRAYER FOR RELIEF 
+WHEREFORE, Plaintiff respectfully requests that this Court: 
+1. Declare that Defendants have  violated RCRA § 6972(a)(1)(B) by 
+contributing to conditions presenting imminent and substantial 
+endangerment to health and the environment; 
+2. Declare that Defendants identified in the Second Claim have violated 
+RCRA § 6972(a)(1)(A) by contributing to illegal disposal of hazardous 
+waste; 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 72 of 77   Page
+ID #:4329
+
+--- PAGE 73 ---
+ 
+- 73 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+3. Order Defendants to seal Well W-4150 in accordance with state and 
+federal well destruction standards within 90 days; 
+4. Order Defendants to complete the ces spool backfill and formal closure at 
+17642 Beach Boulevard documented in the 1990 Building Permit, under 
+DTSC oversight, within 90 days; 
+5. Order Defendants to cease all unper mitted discharges , including high-
+pressure washing, immediately; 
+6. Order Defendants to suspend operation of the trench-and-pipe system 
+installed in place of the represented StormTech infiltration chambers, 
+pending lawful environmental review; 
+7. Order a full Site investigation under DTSC oversight, including soil, soil-
+gas, and groundwater sampling sufficient to characterize the full extent of 
+Cr(VI) and co-contaminant migration; 
+8. Order preparation of a lawful Site Assessment Report with QA/QC 
+documentation, boring logs, and laboratory data submitted in Electronic 
+Deliverable Format (EDF) as requ ired by 23 CCR § 3893(b), reviewed 
+and validated by EDCC, and subject to  independent third-party quality 
+assurance; 
+9. Order implementation of appropri ate remediation and institutional 
+controls, including a lawful engineered cap meeting City Specification 
+No. 431-92 standards; 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 73 of 77   Page
+ID #:4330
+
+--- PAGE 74 ---
+ 
+- 74 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+10. Order OCHCA to perform the land-u se-change reevaluation required by 
+the conditional terms of its own August 21, 2020 closure record and by its 
+August 12, 2022 Comment C-2, within 90 days; 
+11. Order the RWQCB Executive Officer, Eric Lindberg, to:  
+ (a) enforce the expired NPDES stor mwater permit (WDID 8 30W004769) 
+or require a new permit application within 30 days;  
+ (b) consolidate the dual GeoTracker records (T10000018579 and 
+T10000020555) into a single accurate record; and  
+ (c) provide written notification to DTSC, CalEPA, and OEHHA of the 
+Cr(VI) detections documented in the Eurofins Calscience reports; 
+12. Award Plaintiff costs of litigation, including expert witness fees and any 
+reasonable fees recoverable by a pro se litigant, as authorized by 42 U.S.C. 
+§ 6972(e); 
+13. Grant such other and further relief as the Court deems just and proper; and 
+14. Plaintiff respectfully requests leave to supplement the record with a signed 
+expert hydrogeologist declaration and finalized litigation-grade figures 
+within 14 days of retention of a qualified expert, or as otherwise ordered 
+by the Court. 
+ 
+ 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 74 of 77   Page
+ID #:4331
+
+--- PAGE 75 ---
+ 
+- 75 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+XIII. VERIFICATION 
+I, Jesse Knabb, am the Plaintiff in this action. I have read the foregoing Second 
+Amended Verified Complaint and know its contents. The facts stated therein are true 
+to the best of my knowledge, information, and belief, and those matters stated on 
+information and belief I believe to be true. I declare under penalty of perjury under the 
+laws of the United States that the foregoing is true and correct. 
+ 
+Executed on August 17, 2026, at Midway City, California. 
+ 
+Respectfully submitted, 
+ 
+/s/ Jesse Knabb 
+Plaintiff, In Pro Per 
+15161 Van Buren St., Unit 206 
+Midway City, CA 92655 
+(949) 274-6223 
+jesseknabb@gmail.com 
+ 
+ 
+NOTICE OF REVISIONS 
+A redline version showing all amendments from the First Amended Complaint will 
+be filed contemporaneously herewith, as directed by the Court's July 13, 2026 Order. 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 75 of 77   Page
+ID #:4332
+
+--- PAGE 76 ---
+ 
+- 76 - 
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+ 
+LIST OF NEW EXHIBITS 
+ 
+ 
+Exhibit WWWW-1 - Site Summary and Recommendations_AM 
+Exhibit WWWW-2 - Affordable Housing Overla y; Negative Declaration for 
+Beach and Cameron Parcels 
+Exhibit WWWW-3 - T0605901823.FA0023960 Bulkfile  
+(City of Huntington Beach Water Operations facility at 19001 Huntington 
+Street, Regulatory Failures and Non-Compliance.) 
+Exhibit WWWW-4 - HBNC Weeds Breaching Asphalt Cap (March - July 
+2026.) 
+Exhibit WWWW-5 - City of Huntington Beach Grading Plans PW# 20-020, 
+StormTech MC-3500 Installation Sheets, and StormTech MC-3500 Product 
+Specification Sheet. 
+Exhibit WWWW-6 - GeoTracker Beach Boulevar d Project (T10000018579) 
+Environmental Justice Data (DWR 2016 Disadvantaged Community 
+Designation and CalEnviroScreen 3.0 Toxic Releases Percentile of 93%.) 
+  
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 76 of 77   Page
+ID #:4333
+
+--- PAGE 77 ---
+ 
+SECOND AMENDED VERIFIED COMPLAINT 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+THIS PAGE INTENTIONALLY LEFT BLANK 
+ 
+ 
+ 
+Case 8:26-cv-00348-JWH-ADS     Document 115     Filed 08/17/26     Page 77 of 77   Page
+ID #:4334
