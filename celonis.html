@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OsintNeoAi - Celonis Process Mining Live Explorer</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0b0f19; color: #e2e8f0; margin: 0; padding: 20px; }
+        h1 { color: #38bdf8; margin-bottom: 5px; }
+        .header { border-bottom: 2px solid #1e293b; padding-bottom: 15px; margin-bottom: 20px; }
+        .stats { display: flex; gap: 15px; margin-bottom: 25px; }
+        .card { background: #1e293b; padding: 15px 20px; border-radius: 8px; flex: 1; border-left: 4px solid #38bdf8; }
+        .card h3 { margin: 0 0 5px 0; font-size: 14px; color: #94a3b8; text-transform: uppercase; }
+        .card .value { font-size: 24px; font-weight: bold; color: #f8fafc; }
+        table { width: 100%; border-collapse: collapse; background: #131c2e; border-radius: 8px; overflow: hidden; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #1e293b; font-size: 14px; }
+        th { background: #1e293b; color: #38bdf8; font-weight: 600; text-transform: uppercase; font-size: 12px; }
+        tr:hover { background: #1e293b; }
+        .status { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .status-confirmed { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .status-documented { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+        .status-investigation { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>OsintNeoAi - Celonis Process Mining Forensic Dashboard</h1>
+        <p style="color: #94a3b8; margin: 0;">Active Forensic Extraction: 17631 Cameron Lane & Municipal Entity Event Log</p>
+    </div>
+    <div class="stats">
+        <div class="card"><h3>Total Events</h3><div class="value">65</div></div>
+        <div class="card"><h3>Target Entities</h3><div class="value">47</div></div>
+        <div class="card"><h3>Named Individuals</h3><div class="value">20</div></div>
+        <div class="card"><h3>Operational Readiness</h3><div class="value" style="color: #4ade80;">100% (ONLINE)</div></div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Case ID</th>
+                <th>Activity / Event</th>
+                <th>Timestamp</th>
+                <th>Category</th>
+                <th>Target Entity</th>
+                <th>Individual</th>
+                <th>Status</th>
+                <th>Legal Precedent / Violation</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><strong>CASE-001</strong></td>
+                <td>Intake Denial</td>
+                <td style="color: #94a3b8;">2021-12-01 00:00:00</td>
+                <td>Bureaucratic Blockade</td>
+                <td><strong>Huntington Beach Police Department</strong></td>
+                <td>Kristy Conway</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;"></td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-002</strong></td>
+                <td>Undisclosed Kickback</td>
+                <td style="color: #94a3b8;">2023-01-15 00:00:00</td>
+                <td>Financial Conflict</td>
+                <td><strong>Mercy House Board of Directors</strong></td>
+                <td>Tom Conway</td>
+                <td><span class="status status-investigation">Under Investigation</span></td>
+                <td style="color: #cbd5e1;">SEC Investment Advisers Act of 1940</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-003</strong></td>
+                <td>Family/Business Link</td>
+                <td style="color: #94a3b8;">2023-06-01 00:00:00</td>
+                <td>Network Connection</td>
+                <td><strong>Conway Network</strong></td>
+                <td>Kristy & Tom Conway</td>
+                <td><span class="status status-documented">Unconfirmed</span></td>
+                <td style="color: #cbd5e1;"></td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-004</strong></td>
+                <td>Cyberattack</td>
+                <td style="color: #94a3b8;">2025-03-15 00:00:00</td>
+                <td>Data Breach</td>
+                <td><strong>Huntington Beach City Government</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California SB 446</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-005</strong></td>
+                <td>Credential Exposure</td>
+                <td style="color: #94a3b8;">2025-03-15 00:00:00</td>
+                <td>Data Breach</td>
+                <td><strong>HBPD / hbpd.org</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California SB 446 / HIPAA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-006</strong></td>
+                <td>Email Provider Confirmation</td>
+                <td style="color: #94a3b8;">2025-03-15 00:00:00</td>
+                <td>Data Breach</td>
+                <td><strong>HBPD / Microsoft 365</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;"></td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-007</strong></td>
+                <td>Cyber Incident</td>
+                <td style="color: #94a3b8;">2025-04-01 00:00:00</td>
+                <td>Regional Attack</td>
+                <td><strong>City of Irvine</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California SB 446</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-008</strong></td>
+                <td>Security Incidents</td>
+                <td style="color: #94a3b8;">2025-05-15 00:00:00</td>
+                <td>Regional Attack</td>
+                <td><strong>City of Newport Beach</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California SB 446</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-009</strong></td>
+                <td>Nationwide Scanning</td>
+                <td style="color: #94a3b8;">2026-06-15 00:00:00</td>
+                <td>Data Breach</td>
+                <td><strong>Multiple U.S. Cities & Agencies</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">CFAA (Computer Fraud and Abuse Act)</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-010</strong></td>
+                <td>SCE Scan</td>
+                <td style="color: #94a3b8;">2026-06-15 00:00:00</td>
+                <td>Infrastructure</td>
+                <td><strong>Southern California Edison (SCE)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">CFAA / NERC CIP</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-011</strong></td>
+                <td>Turkish Government Scan</td>
+                <td style="color: #94a3b8;">2026-06-15 00:00:00</td>
+                <td>Foreign Intelligence</td>
+                <td><strong>Republic of Turkey</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">CFAA / Espionage Act</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-012</strong></td>
+                <td>Cyberattack</td>
+                <td style="color: #94a3b8;">2023-08-01 00:00:00</td>
+                <td>Data Breach</td>
+                <td><strong>Kroll (Risk Advisory Firm)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California SB 446 / HIPAA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-013</strong></td>
+                <td>Identity Theft / Fraud</td>
+                <td style="color: #94a3b8;">2023-08-15 00:00:00</td>
+                <td>Financial Crime</td>
+                <td><strong>FTX / Kroll</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">CFAA / Identity Theft Act</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-014</strong></td>
+                <td>Data Privacy</td>
+                <td style="color: #94a3b8;">2024-01-15 00:00:00</td>
+                <td>Healthcare Violation</td>
+                <td><strong>Headway (TherapyMatch, Inc.)</strong></td>
+                <td>Dr. Ann Verma</td>
+                <td><span class="status status-documented">Active</span></td>
+                <td style="color: #cbd5e1;">HIPAA / CCPA / CIPA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-015</strong></td>
+                <td>Billing Fraud</td>
+                <td style="color: #94a3b8;">2024-01-15 00:00:00</td>
+                <td>Healthcare Violation</td>
+                <td><strong>Headway (TherapyMatch, Inc.)</strong></td>
+                <td>Dr. Ann Verma</td>
+                <td><span class="status status-documented">Active</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / California Labor Code § 1102.5</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-016</strong></td>
+                <td>Wage Theft</td>
+                <td style="color: #94a3b8;">2024-01-15 00:00:00</td>
+                <td>Healthcare Violation</td>
+                <td><strong>Headway (TherapyMatch, Inc.)</strong></td>
+                <td>Dr. Ann Verma</td>
+                <td><span class="status status-documented">Active</span></td>
+                <td style="color: #cbd5e1;">FLSA / California Labor Code</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-017</strong></td>
+                <td>Forced Biometric Verification</td>
+                <td style="color: #94a3b8;">2024-01-15 00:00:00</td>
+                <td>Healthcare Violation</td>
+                <td><strong>Headway (TherapyMatch, Inc.)</strong></td>
+                <td>Dr. Ann Verma</td>
+                <td><span class="status status-documented">Active</span></td>
+                <td style="color: #cbd5e1;">CCPA / California Privacy Rights Act</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-018</strong></td>
+                <td>Retaliation</td>
+                <td style="color: #94a3b8;">2024-02-01 00:00:00</td>
+                <td>Whistleblower</td>
+                <td><strong>Headway (TherapyMatch, Inc.)</strong></td>
+                <td>Dr. Ann Verma</td>
+                <td><span class="status status-documented">Active</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / California Labor Code § 1102.5 / Anti-Retaliation Provisions</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-019</strong></td>
+                <td>Superfund Site</td>
+                <td style="color: #94a3b8;">2025-06-01 00:00:00</td>
+                <td>Environmental</td>
+                <td><strong>Ascon Landfill (Huntington Beach)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">CERCLA / Superfund Act</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-020</strong></td>
+                <td>Child Endangerment</td>
+                <td style="color: #94a3b8;">2025-06-01 00:00:00</td>
+                <td>Environmental</td>
+                <td><strong>Ascon Landfill (Huntington Beach)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Unconfirmed</span></td>
+                <td style="color: #cbd5e1;">CERCLA / ADA / Child Abuse Reporting</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-021</strong></td>
+                <td>HUD Noncompliance</td>
+                <td style="color: #94a3b8;">2025-06-01 00:00:00</td>
+                <td>Federal Grants</td>
+                <td><strong>HUD / Mercy House</strong></td>
+                <td>Mercy House Board of Directors</td>
+                <td><span class="status status-investigation">Under Investigation</span></td>
+                <td style="color: #cbd5e1;">HUD ESG Program Requirements / 24 CFR 576</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-022</strong></td>
+                <td>ADA Violation</td>
+                <td style="color: #94a3b8;">2025-07-01 00:00:00</td>
+                <td>Civil Rights</td>
+                <td><strong>Huntington Beach Homeless Task Force</strong></td>
+                <td>Kristy Conway</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">ADA Title II / Section 504</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-023</strong></td>
+                <td>Constitutional Violation</td>
+                <td style="color: #94a3b8;">2025-07-01 00:00:00</td>
+                <td>Civil Rights</td>
+                <td><strong>Huntington Beach Police Department</strong></td>
+                <td>Kristy Conway</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">4th Amendment / 14th Amendment</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-024</strong></td>
+                <td>Failure to Report</td>
+                <td style="color: #94a3b8;">2025-08-01 00:00:00</td>
+                <td>Mandatory Reporting</td>
+                <td><strong>Mercy House</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Unconfirmed</span></td>
+                <td style="color: #cbd5e1;">CA Penal Code § 11166</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-025</strong></td>
+                <td>EMTALA Violation</td>
+                <td style="color: #94a3b8;">2025-09-01 00:00:00</td>
+                <td>Medical</td>
+                <td><strong>Huntington Beach Hospital</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Unconfirmed</span></td>
+                <td style="color: #cbd5e1;">EMTALA (42 U.S.C. § 1395dd)</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-026</strong></td>
+                <td>Form 990 Violation</td>
+                <td style="color: #94a3b8;">2025-10-01 00:00:00</td>
+                <td>Tax</td>
+                <td><strong>Mercy House</strong></td>
+                <td>Tom Conway</td>
+                <td><span class="status status-investigation">Under Investigation</span></td>
+                <td style="color: #cbd5e1;">IRS Form 990 / Tax Fraud</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-027</strong></td>
+                <td>RICO Pattern</td>
+                <td style="color: #94a3b8;">2025-11-01 00:00:00</td>
+                <td>Criminal</td>
+                <td><strong>Conway Network</strong></td>
+                <td>Tom Conway & Associates</td>
+                <td><span class="status status-documented">Unconfirmed</span></td>
+                <td style="color: #cbd5e1;">RICO Act (18 U.S.C. § 1961 et seq.)</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-028</strong></td>
+                <td>Money Laundering</td>
+                <td style="color: #94a3b8;">2025-12-01 00:00:00</td>
+                <td>Criminal</td>
+                <td><strong>Mercy House / DIS</strong></td>
+                <td>Tom Conway</td>
+                <td><span class="status status-documented">Unconfirmed</span></td>
+                <td style="color: #cbd5e1;">Money Laundering Control Act (18 U.S.C. § 1956)</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-029</strong></td>
+                <td>Whistleblower Complaint</td>
+                <td style="color: #94a3b8;">2026-01-15 00:00:00</td>
+                <td>Activist / Legal</td>
+                <td><strong>Headway (TherapyMatch, Inc.)</strong></td>
+                <td>Dr. Ann Verma</td>
+                <td><span class="status status-documented">Active</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / CCPA / HIPAA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-030</strong></td>
+                <td>Foreign Intelligence Connection</td>
+                <td style="color: #94a3b8;">2026-02-01 00:00:00</td>
+                <td>Network</td>
+                <td><strong>Kroll / FTX / Turkey</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Unconfirmed</span></td>
+                <td style="color: #cbd5e1;">CFAA / Espionage Act</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-031</strong></td>
+                <td>Agricultural Pollution</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>Environmental</td>
+                <td><strong>Visalia / Fresno CoCs</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">EPA / CERCLA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-032</strong></td>
+                <td>National CoC Listing</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>CoC Master</td>
+                <td><strong>CA-602 (Orange)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">HUD CoC Program Requirements</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-033</strong></td>
+                <td>CPRA Request Filed</td>
+                <td style="color: #94a3b8;">2026-04-01 00:00:00</td>
+                <td>Activist / Legal</td>
+                <td><strong>City of Huntington Beach / HUD</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Filed</span></td>
+                <td style="color: #cbd5e1;">California Public Records Act (CPRA)</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-034</strong></td>
+                <td>Bar Complaint</td>
+                <td style="color: #94a3b8;">2026-05-01 00:00:00</td>
+                <td>Activist / Legal</td>
+                <td><strong>Unknown</strong></td>
+                <td>Dr. Ann Verma</td>
+                <td><span class="status status-documented">Planned</span></td>
+                <td style="color: #cbd5e1;">California Business and Professions Code § 6068</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-035</strong></td>
+                <td>Foreign Infrastructure</td>
+                <td style="color: #94a3b8;">2026-06-01 00:00:00</td>
+                <td>Data Breach</td>
+                <td><strong>Turkish Police</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">CFAA / Espionage Act</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-036</strong></td>
+                <td>Vendor Conflicts</td>
+                <td style="color: #94a3b8;">2023-01-20 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Johnny Bryant</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">IRC Section 4941 / California Corp. Code Section 5233</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-037</strong></td>
+                <td>Construction Contracts</td>
+                <td style="color: #94a3b8;">2023-02-10 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Bryan Pavalko</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">18 U.S.C. Section 287 (False Claims Act) / IRC Section 4941</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-038</strong></td>
+                <td>Infrastructure Contracts</td>
+                <td style="color: #94a3b8;">2023-03-01 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Mladen Buntich</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">IRC Section 4941 / California Corp. Code Section 5233</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-039</strong></td>
+                <td>Real Estate Transactions</td>
+                <td style="color: #94a3b8;">2023-04-15 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Mia Bergman</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / California Corp. Code Section 5233</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-040</strong></td>
+                <td>Real Estate Transaction voting control</td>
+                <td style="color: #94a3b8;">2023-04-20 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Natalie McCarty</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">California Corp. Code Section 5233 / Breach of Duty of Loyalty</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-041</strong></td>
+                <td>Lease Transactions</td>
+                <td style="color: #94a3b8;">2023-05-10 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Paul Julian</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">IRC Section 4941 / California Corp. Code Section 5233</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-042</strong></td>
+                <td>Wealth Management</td>
+                <td style="color: #94a3b8;">2023-06-15 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Daryl Cole</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">SEC Investment Advisers Act of 1940 / California Corp. Code Section 5233</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-043</strong></td>
+                <td>Accounting Contracts</td>
+                <td style="color: #94a3b8;">2023-07-01 00:00:00</td>
+                <td>Self-Dealing</td>
+                <td><strong>Mercy House Living Centers</strong></td>
+                <td>Lisa Rumbaugh</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">IRC Section 4941 / California Corp. Code Section 5233</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-044</strong></td>
+                <td>Circular Lease Tax Evasion</td>
+                <td style="color: #94a3b8;">2020-07-13 00:00:00</td>
+                <td>Property Shuffle</td>
+                <td><strong>Covenant House California / Starpoint Properties</strong></td>
+                <td>Paul Daneshrad</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">18 U.S.C. Section 1341 (Mail Fraud) / 18 U.S.C. Section 1343 (Wire Fraud)</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-045</strong></td>
+                <td>Forced Eviction</td>
+                <td style="color: #94a3b8;">2020-08-01 00:00:00</td>
+                <td>Civil Rights</td>
+                <td><strong>Starpoint Properties LLC / 213 N. Gilbert St</strong></td>
+                <td>Jose Nunez</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California Civil Code Section 1940 / CA Tenant Protection Act</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-046</strong></td>
+                <td>Forced Eviction</td>
+                <td style="color: #94a3b8;">2020-11-15 00:00:00</td>
+                <td>Civil Rights</td>
+                <td><strong>Starpoint Properties LLC / 632 N. East St</strong></td>
+                <td>Barnes</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California Civil Code Section 1940</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-047</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Arizona Balance of State CoC (AZ-500)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / HUD ESG Requirements</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-048</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Colorado Balance of State CoC (CO-500)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / CERCLA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-049</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Georgia Balance of State CoC (GA-501)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / HUD ESG Requirements</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-050</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Texas Balance of State CoC (TX-611)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / HUD ESG Requirements</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-051</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Missouri Balance of State CoC (MO-505)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / CERCLA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-052</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Ohio Balance of State CoC (OH-506)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / HUD ESG Requirements</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-053</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Oregon Balance of State CoC (OR-504)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / CERCLA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-054</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>Washington Balance of State CoC (WA-507)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / HUD ESG Requirements</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-055</strong></td>
+                <td>Vulnerability Node</td>
+                <td style="color: #94a3b8;">2026-03-15 00:00:00</td>
+                <td>National Expansion</td>
+                <td><strong>West Virginia Balance of State CoC (WV-501)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;">False Claims Act / CERCLA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-056</strong></td>
+                <td>Counterfeit Pill Manufacturing</td>
+                <td style="color: #94a3b8;">2025-08-01 00:00:00</td>
+                <td>Criminal</td>
+                <td><strong>Edwin Cabrera / Unknown</strong></td>
+                <td>Edwin Cabrera</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">21 U.S.C. § 841 / § 846</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-057</strong></td>
+                <td>Oxycodone Trafficking Ring</td>
+                <td style="color: #94a3b8;">2025-02-01 00:00:00</td>
+                <td>Criminal</td>
+                <td><strong>Orange County Trafficking Network</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">21 U.S.C. § 841 / § 846</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-059</strong></td>
+                <td>Fentanyl Precursor Export</td>
+                <td style="color: #94a3b8;">2024-10-01 00:00:00</td>
+                <td>International</td>
+                <td><strong>Hanhong Pharmaceutical Technology</strong></td>
+                <td>Wuhan-based company</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">21 U.S.C. § 959 / § 960</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-060</strong></td>
+                <td>US-China Fentanyl Conflict</td>
+                <td style="color: #94a3b8;">2024-10-01 00:00:00</td>
+                <td>International</td>
+                <td><strong>China / United States</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">Diplomatic / International Law</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-062</strong></td>
+                <td>Homeless Task Force Drug Arrests</td>
+                <td style="color: #94a3b8;">2025-08-01 00:00:00</td>
+                <td>Criminal</td>
+                <td><strong>HBPD Homeless Task Force</strong></td>
+                <td>Kristy Conway</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California Health & Safety Code § 11350</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-063</strong></td>
+                <td>Methamphetamine Seizure</td>
+                <td style="color: #94a3b8;">2025-08-01 00:00:00</td>
+                <td>Criminal</td>
+                <td><strong>HBPD Homeless Task Force</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">California Health & Safety Code § 11378</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-065</strong></td>
+                <td>Surveillance Infrastructure</td>
+                <td style="color: #94a3b8;">2026-07-01 00:00:00</td>
+                <td>Silent War</td>
+                <td><strong>NSA / 33 T*** Street (NYC)</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">NSA / FISA</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-066</strong></td>
+                <td>Military-Corporate Nexus</td>
+                <td style="color: #94a3b8;">2026-07-01 00:00:00</td>
+                <td>Silent War</td>
+                <td><strong>L3Harris / DoD</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">10 U.S.C. § 2304</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-068</strong></td>
+                <td>Black Sites</td>
+                <td style="color: #94a3b8;">2026-07-01 00:00:00</td>
+                <td>Silent War</td>
+                <td><strong>Plum Island / Hawaiian Islands / Various</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-confirmed">Confirmed</span></td>
+                <td style="color: #cbd5e1;">48 U.S.C. / DHS</td>
+            </tr>
+
+            <tr>
+                <td><strong>CASE-069</strong></td>
+                <td>Counter-Surveillance</td>
+                <td style="color: #94a3b8;">2026-07-01 00:00:00</td>
+                <td>Silent War</td>
+                <td><strong>Unknown</strong></td>
+                <td>Unknown</td>
+                <td><span class="status status-documented">Documented</span></td>
+                <td style="color: #cbd5e1;"></td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
