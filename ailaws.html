@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>/ailaws — HBNC Case 3 Interactive Legal Matrix, Statutory Proof Mapper & Demand Generator</title>
+<style>
+  :root{
+    --bg:#0b0f19; --panel:#111827; --panel2:#1e293b; --ink:#f8fafc; --muted:#94a3b8;
+    --line:#334155; --accent:#3b82f6; --green:#10b981; --amber:#f59e0b; --red:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:15px; line-height:1.6;
+  }
+  .topbar{
+    position:sticky; top:0; z-index:100; background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(8px); border-bottom:2px solid var(--accent);
+    padding:12px 24px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;
+  }
+  .topbar h1{margin:0; font-size:17px; letter-spacing:.04em; display:flex; align-items:center; gap:10px}
+  .badge-cmd{background:var(--accent); color:#fff; padding:3px 8px; border-radius:5px; font-family:monospace; font-size:13px}
+  .wrap{max-width:1140px; margin:0 auto; padding:32px 24px 100px}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:6px; padding:8px 14px; border-radius:6px;
+    font-size:13px; font-weight:700; text-decoration:none; cursor:pointer; border:1px solid transparent;
+    transition:all .15s; color:#fff; background:var(--panel2); border-color:var(--line);
+  }
+  .btn:hover{border-color:var(--accent); background:#273549}
+  .btn.active, .btn-primary{background:var(--accent); border-color:#60a5fa; color:#fff}
+  .btn-danger{background:#dc2626; border-color:#f87171}
+  .btn-success{background:#059669; border-color:#34d399}
+
+  .hero{
+    background:linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border:1px solid var(--line); border-left:6px solid var(--accent);
+    border-radius:10px; padding:22px 26px; margin-bottom:28px;
+  }
+  .hero h2{margin:0 0 8px; font-size:22px}
+  .hero p{margin:0; color:#cbd5e1; font-size:14.5px}
+
+  .filter-bar{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px}
+
+  .law-grid{display:grid; grid-template-columns:1fr; gap:16px}
+  .law-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:10px;
+    padding:20px 22px; transition:border-color .15s;
+  }
+  .law-card:hover{border-color:#60a5fa}
+  .law-header{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; margin-bottom:12px}
+  .law-title{font-size:18px; font-weight:800; color:#fff; margin:0}
+  .law-cite{font-family:monospace; font-size:13px; color:#93c5fd; background:#1e3a8a; padding:3px 8px; border-radius:4px}
+  .clock-pill{font-size:12px; font-weight:700; padding:3px 9px; border-radius:4px; background:#3f1d24; color:#fca5a5; border:1px solid #ef4444}
+
+  .matrix-cols{display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:12px}
+  @media(max-width:860px){.matrix-cols{grid-template-columns:1fr}}
+  .col-box{background:#0f172a; border:1px solid #1e293b; border-radius:8px; padding:12px 14px}
+  .col-box h4{margin:0 0 8px; font-size:11.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted)}
+  .col-box ul{margin:0; padding-left:18px; font-size:13.5px; color:#e2e8f0}
+  .col-box li{margin-bottom:5px}
+
+  code{
+    background:#1e293b; color:#93c5fd; padding:2px 6px; border-radius:4px;
+    font-size:12.5px; border:1px solid #334155;
+  }
+  a.ev-link{text-decoration:none}
+  a.ev-link:hover code{background:#2563eb; color:#fff}
+
+  /* GENERATOR SECTION */
+  .gen-box{
+    background:var(--panel); border:2px solid var(--accent); border-radius:10px;
+    padding:24px; margin-top:36px;
+  }
+  .gen-box h3{margin:0 0 8px; font-size:20px}
+  .gen-tabs{display:flex; flex-wrap:wrap; gap:8px; margin:16px 0}
+  textarea#docOutput{
+    width:100%; height:360px; background:#090d16; color:#e2e8f0;
+    border:1px solid var(--line); border-radius:8px; padding:16px;
+    font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:13.5px; line-height:1.55;
+  }
+  .disclaimer{
+    margin-top:24px; padding:14px 18px; border-radius:8px; background:#27171c;
+    border:1px solid #7f1d1d; color:#fecaca; font-size:13px;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>
+    <span class="badge-cmd">/ailaws</span>
+    <span>HBNC Case 3 — Statutory Elements, Evidence Mapping &amp; Legal Action Generator</span>
+  </h1>
+  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+    <a class="btn" href="/">⬅ Return to Applet</a>
+    <a class="btn btn-primary" href="#generator">⚡ 1-Click Demand Generator</a>
+    <button class="btn" onclick="window.print()">🖨️ Print Matrix</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h2>Interactive Statutory Proof Matrix &amp; Demand Generator</h2>
+    <p>Every legal theory in <b>HBNC Case 3</b> (Elizabeth Tina Petruccio &amp; Anthony Michael DiMarcello III) is mapped below by: <b>(1) Statutory Elements Required</b>, <b>(2) Direct Record Proof in Your Folder</b>, and <b>(3) Relief &amp; Fee-Shifting Remedies</b>. Scroll down to the <b>Action Document Generator</b> to produce ready-to-send legal notices in one click.</p>
+  </div>
+
+  <!-- CATEGORY FILTERS -->
+  <div class="filter-bar">
+    <button class="btn active" onclick="filterLaws('all', this)">All Claims (8)</button>
+    <button class="btn" onclick="filterLaws('disability', this)">Disability &amp; Housing Civil Rights (ADA / §504 / FHA / Unruh)</button>
+    <button class="btn" onclick="filterLaws('environmental', this)">Environmental &amp; Premises (RCRA / Cr(VI) Cap Breach)</button>
+    <button class="btn" onclick="filterLaws('elder', this)">Elder / Dependent Adult Neglect &amp; Medical</button>
+    <button class="btn" onclick="filterLaws('constitutional', this)">§ 1983 Monell &amp; Whistleblower Retaliation</button>
+  </div>
+
+  <!-- STATUTORY CARDS -->
+  <div class="law-grid" id="lawGrid">
+
+    <!-- 1. ADA TITLE II & REHAB ACT 504 -->
+    <div class="law-card" data-cat="disability">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">1. ADA Title II &amp; Rehabilitation Act § 504 (Medical-Exit Expulsion &amp; Integration Mandate)</h3>
+          <span class="law-cite">42 U.S.C. §§ 12131–12134 · 29 U.S.C. § 794 · 28 C.F.R. § 35.130(b)(7) · Cal. Gov. Code § 11135</span>
+        </div>
+        <span class="clock-pill">Clock: 2 Years (Borrowed CCP § 335.1)</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li>Qualified individual with a disability;</li>
+            <li>Excluded from participation in or denied benefits of a public entity's/federally funded shelter program;</li>
+            <li>Refusal to make reasonable modification to policies (7-day hospitalization automatic exit + 30-day ban);</li>
+            <li><i>Duvall</i> deliberate indifference (for compensatory damages).</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li><code>scripps_ehr_page_985.png</code>: SW Bettina S. (01/19/2024) records automatic program exit &amp; 30-day bar while intubated/in ICU.</li>
+            <li><code>album6_photo_006.jpg</code> &amp; <code>album6_photo_017.jpg</code>: Written walk-up ban, 30-min pharmacy rule, 4:30 a.m. shuttle rule.</li>
+            <li>HHAP MOU &amp; federal/state funding contracts establishing § 504 &amp; Gov. Code § 11135 coverage.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li>Injunctive relief abolishing the 7-day hospitalization forfeiture rule;</li>
+            <li>Immediate supportive housing placement (<i>Olmstead</i> mandate);</li>
+            <li>Compensatory damages &amp; statutory attorney's fees (42 U.S.C. § 12205; 29 U.S.C. § 794a).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. FAIR HOUSING ACT -->
+    <div class="law-card" data-cat="disability">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">2. Fair Housing Act (FHA) &amp; California FEHA Housing Protections</h3>
+          <span class="law-cite">42 U.S.C. § 3604(f)(1)–(3)(B) · Cal. Gov. Code § 12955</span>
+        </div>
+        <span class="clock-pill">Clock: 2 Yrs Civil Action / 1 Yr HUD FHEO</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li>Dwelling covered under FHA (transitional/navigation shelter);</li>
+            <li>Handicap/disability known or reasonably evident to operator;</li>
+            <li>Refusal to make reasonable accommodation in rules/policies necessary to afford equal opportunity to use and enjoy dwelling.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li><code>1.E.Petruccio Patient Health.pdf</code> (pp. 985, 1034, 1051): Hospital social workers directly communicated with shelter during inpatient stay.</li>
+            <li><code>scripps_ehr_page_985.png</code>: Shelter enforced 30-day bar rather than holding bed for hospitalized disabled resident.</li>
+            <li>Disparate non-placement into Oasis supportive housing vs. comparator residents.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li>HUD FHEO administrative investigation with federal subpoena power (Letter E in <code>04_Outreach_Pack.md</code>);</li>
+            <li>Actual and punitive damages, injunctive housing order, attorney's fees (42 U.S.C. § 3613(c)).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. RCRA CITIZEN SUIT -->
+    <div class="law-card" data-cat="environmental">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">3. Resource Conservation and Recovery Act (RCRA) — Imminent &amp; Substantial Endangerment</h3>
+          <span class="law-cite">42 U.S.C. § 6972(a)(1)(B)</span>
+        </div>
+        <span class="clock-pill">Active in Related Federal Case: ECF 115 / ECF 130</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li>Past or present handling, storage, treatment, or disposal of solid/hazardous waste;</li>
+            <li>Contributes to an imminent and substantial endangerment to health or the environment;</li>
+            <li>90-day pre-suit notice &amp; absence of diligent prosecution bar (§ 6972(b)(1)(B)).</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li>EEC Phase II (08/03/2020): Cr(VI) up to <b>980 µg/kg</b> (49× DTSC residential screening level); lead, arsenic, toxaphene, DDE, PCE/TCE.</li>
+            <li><code>navigation_center_003.jpg</code>: County approved shelter <i>only</i> "as long as an asphalt pavement cover was placed over the soil."</li>
+            <li><code>HB_Shelter_Nov2023_photo_01.jpg</code> – <code>08.jpg</code>: GPS-stamped breach beneath beds on 11/07/2023.</li>
+            <li>RWQCB DAG John Sasaki stipulation: no diligent-prosecution bar asserted (SAVC ¶¶ 8, 109(b)).</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li>Federal court injunction ordering indoor air/wipe sampling, cap remediation, or facility closure/relocation;</li>
+            <li>Prevailing party expert &amp; attorney's fees under 42 U.S.C. § 6972(e).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. DANGEROUS CONDITION OF PUBLIC PROPERTY & PREMISES LIABILITY -->
+    <div class="law-card" data-cat="environmental">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">4. Dangerous Condition of Public Property &amp; Negligent Premises Maintenance</h3>
+          <span class="law-cite">Cal. Gov. Code §§ 835, 815.6 · Cal. Civ. Code § 1714</span>
+        </div>
+        <span class="clock-pill">Clock: Gov. Code § 911.2 (6 Mos) / CCP § 335.1 (2 Yrs Private Operator)</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li>Property was in a dangerous condition at time of injury;</li>
+            <li>Created by negligent/wrongful act or public entity had actual/constructive notice under § 835.2;</li>
+            <li>Private contractor/operator (Mercy House) owed independent duty of care and habitability.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li>Contract Laserfiche #5406552 ($2.41M): 2" asphalt cap given only a <b>1-year warranty</b>; Proposal #20390 states <b>"CREW INSTALLING AC WILL NOT BE 40-HOUR TRAINED."</b></li>
+            <li>Daily high-pressure washing inside sleeping tent driving moisture through unsealed anchor-bolt penetrations.</li>
+            <li><code>mercy_house_044.jpg</code> (expired 2020 TCO posted in 2025); <code>navigation_center_027.jpg</code>, <code>029.jpg</code>, <code>045.jpg</code>, <code>051.jpg</code>.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li>Special &amp; general tort damages (62-day hospitalization, spinal osteomyelitis, permanent shoulder disability);</li>
+            <li>Claims against private non-profit operator Mercy House under CCP § 335.1 do not require Gov. Code § 911.2 claim presentation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. ELDER & DEPENDENT ADULT ABUSE / NEGLECT -->
+    <div class="law-card" data-cat="elder">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">5. California Elder &amp; Dependent Adult Civil Protection Act (EADACPA)</h3>
+          <span class="law-cite">Cal. Welf. &amp; Inst. Code §§ 15610.23, 15610.57, 15657</span>
+        </div>
+        <span class="clock-pill">Clock: 2 Years (CCP § 335.1)</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li>Plaintiff is a "dependent adult" or elder (65+);</li>
+            <li>Defendant had care or custody and failed to protect from health and safety hazards (§ 15610.57);</li>
+            <li>Recklessness, oppression, fraud, or malice (§ 15657).</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li>Ms. Petruccio's documented disability, 44-lb weight loss (160 lb → 116 lb), intubation, and C4–C5 discitis-osteomyelitis.</li>
+            <li>Summary expulsion while in ICU (<code>scripps_ehr_page_985.png</code>), leaving a critically ill dependent adult with no shelter bed upon discharge.</li>
+            <li>Pattern corroborated by Burt Bell (exited while hospitalized; died) and Brian Bell (grievance follow-up left blank; died).</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li>Enhanced remedies under Welf. &amp; Inst. Code § 15657: unilateral attorney's fees, costs, and punitive damages;</li>
+            <li>Immediate OC Adult Protective Services (APS) jurisdiction.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. SECTION 1983 MONELL & STATE-CREATED DANGER -->
+    <div class="law-card" data-cat="constitutional">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">6. 42 U.S.C. § 1983 — Fourteenth Amendment State-Created Danger &amp; Monell Policy Liability</h3>
+          <span class="law-cite">42 U.S.C. § 1983 · Monell v. Dep't of Soc. Servs., 436 U.S. 658 (1978)</span>
+        </div>
+        <span class="clock-pill">Clock: 2 Years</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li>Affirmative state action placing residents in a known, foreseeable danger with deliberate indifference to bodily integrity;</li>
+            <li>Official municipal policy, contract, or custom caused the constitutional violation.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li>Official written Good Neighbor Policy (<code>album6_photo_006.jpg</code>) confining residents inside the contaminated footprint under threat of immediate exit.</li>
+            <li>Municipal contract knowingly limiting the only engineered toxic-soil barrier to a 1-year warranty with non-HAZWOPER labor.</li>
+            <li>Photography ban + thumbprinting rule designed to suppress documentation of interior conditions.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li>Compensatory &amp; punitive damages, declaratory/injunctive relief, and 42 U.S.C. § 1988 attorney's fees.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. UNRUH & BANE CIVIL RIGHTS ACTS -->
+    <div class="law-card" data-cat="disability">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">7. California Unruh Civil Rights Act &amp; Tom Bane Civil Rights Act</h3>
+          <span class="law-cite">Cal. Civ. Code §§ 51, 52, 52.1</span>
+        </div>
+        <span class="clock-pill">Clock: 2 Years (Bane / Unruh Disability)</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li><b>Unruh (§ 51(f)):</b> Any violation of the federal ADA is <i>per se</i> a violation of the Unruh Act;</li>
+            <li><b>Bane (§ 52.1):</b> Interference or attempted interference by threat, intimidation, or coercion with exercise of constitutional or statutory rights.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li>Written threat of immediate expulsion onto the street (<code>album6_photo_006.jpg</code> Rules 8, 9, 13) used to coerce compliance with photography bans and confinement rules.</li>
+            <li>Per se ADA violation via automatic medical-exit policy (<code>scripps_ehr_page_985.png</code>).</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li>Statutory minimum damages of $4,000 per offense, treble actual damages (Civ. Code § 52(a)), and mandatory attorney's fees.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. FIRST AMENDMENT RETALIATION & FCA 3730(h) -->
+    <div class="law-card" data-cat="constitutional">
+      <div class="law-header">
+        <div>
+          <h3 class="law-title">8. First Amendment Retaliation &amp; False Claims Act Anti-Retaliation</h3>
+          <span class="law-cite">42 U.S.C. § 1983 (1st Am.) · 31 U.S.C. § 3730(h) · Cal. Gov. Code § 12653</span>
+        </div>
+        <span class="clock-pill">Clock: 3 Years (§ 3730(h)) / 2 Years (§ 1983)</span>
+      </div>
+      <div class="matrix-cols">
+        <div class="col-box">
+          <h4>Elements to Prove</h4>
+          <ul>
+            <li>Protected whistleblowing activity (reporting environmental hazards, habitability violations, and grant misuse to Senate/DOJ/agencies);</li>
+            <li>Adverse action that would chill a person of ordinary firmness;</li>
+            <li>Causal nexus / temporal proximity.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Record Proof in Evidence Locker</h4>
+          <ul>
+            <li>Protected disclosures documented via <code>amd949609@gmail.com</code> to ACLU, two U.S. Senate offices, Congressional office, City Attorney, and federal task force.</li>
+            <li>Warrant/complaint mailed to 2021 former address after disclosures (<code>photo_a74G5sEDR54YwTiF7.jpg</code>) &amp; exclusion from Oasis housing placement.</li>
+            <li>Full analysis isolated in <code>06_Relator_Protection_Record.md</code>.</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Remedies &amp; Leverage</h4>
+          <ul>
+            <li><b>CRITICAL SEAL WARNING:</b> Do not publicly disclose any sealed § 3730(b) filing; consult <code>06_Relator_Protection_Record.md</code> first.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INTERACTIVE LEGAL ACTION DOCUMENT GENERATOR -->
+  <div class="gen-box" id="generator">
+    <h3>⚡ 1-Click Legal Action &amp; Demand Generator</h3>
+    <p style="color:#cbd5e1; font-size:14px; margin:0 0 12px;">Select a document template below to generate a ready-to-copy legal notice populated with the exact dates, citations, and exhibit filenames from your record:</p>
+
+    <div class="gen-tabs">
+      <button class="btn btn-primary" onclick="loadTemplate('intake')">1. Counsel Intake &amp; Case Evaluation Memo</button>
+      <button class="btn" onclick="loadTemplate('ada')">2. ADA / FHA Reasonable Accommodation &amp; Housing Demand</button>
+      <button class="btn" onclick="loadTemplate('hipaa')">3. HIPAA § 164.524 / § 164.526 EHR Amendment &amp; Audit Request</button>
+      <button class="btn" onclick="loadTemplate('hold')">4. Evidence Preservation &amp; Spoliation Hold Notice</button>
+    </div>
+
+    <textarea id="docOutput" readonly></textarea>
+
+    <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+      <button class="btn btn-success" onclick="copyGeneratorText()">📋 Copy Document to Clipboard</button>
+      <button class="btn" onclick="downloadGeneratorText()">💾 Download as .TXT File</button>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <b>Important Notice:</b> This <code>/ailaws</code> module is an organizational and analytical tool prepared to assist counsel, agency investigators, and the parties in reviewing the indexed evidentiary record of <b>HBNC Case 3</b>. It does not constitute formal legal representation or legal advice, and all statutory deadlines (including California Government Claims Act deadlines under Gov. Code § 911.2 and § 945.6) must be independently verified by a licensed California attorney.
+  </div>
+
+</div>
+
+<script>
+  // Auto-link all <code> exhibits to root or Evidence_Locker/
+  document.querySelectorAll('code').forEach(el => {
+    const text = el.textContent.trim();
+    if (!/^[a-zA-Z0-9_.\- ]+\.(md|jpg|jpeg|png|pdf|txt|html)$/i.test(text)) return;
+    const ext = text.split('.').pop().toLowerCase();
+    const href = ['jpg','jpeg','png','pdf','txt'].includes(ext) ? ('Evidence_Locker/' + text) : text;
+    const a = document.createElement('a');
+    a.href = href;
+    a.target = '_blank';
+    a.className = 'ev-link';
+    a.title = 'Open ' + href;
+    el.parentNode.insertBefore(a, el);
+    a.appendChild(el);
+  });
+
+  function filterLaws(category, btnEl) {
+    document.querySelectorAll('.filter-bar .btn').forEach(b => b.classList.remove('active'));
+    btnEl.classList.add('active');
+    document.querySelectorAll('.law-card').forEach(card => {
+      if (category === 'all' || card.dataset.cat === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  const TEMPLATES = {
+    intake: `MEMORANDUM FOR LEGAL INTAKE / CO-COUNSEL EVALUATION
+RE: HBNC Case 3 — Environmental Toxic Exposure, ADA/FHA Medical-Exit Expulsion & Dependent Adult Neglect
+CLAIMANTS: Elizabeth Tina Petruccio (DOB 07/29/1964) & Anthony Michael DiMarcello III (DOB 05/04/1983)
+CONTACT: amd949609@gmail.com
+SITE: Huntington Beach Navigation Center (17631 Cameron Lane, Huntington Beach, CA 92648)
+OPERATOR: Mercy House Living Centers | MUNICIPAL ENTITIES: City of Huntington Beach / County of Orange
+RELATED FEDERAL ACTION: Knabb v. City of Huntington Beach et al., No. 8:26-cv-00348-JWH-ADS (C.D. Cal.) (SAVC ECF 115; Opp. MTD ECF 130)
+
+I. EXECUTIVE SUMMARY OF DOCUMENTED CLAIMS
+We are requesting formal legal evaluation and representation regarding severe personal injuries, disability discrimination, and unlawful shelter expulsion arising from our residency at the Huntington Beach Navigation Center (HBNC). Unlike typical pro se intakes, our file is completely indexed to primary government contracts, GPS-stamped photographs, and a 1,400+ page hospital Electronic Health Record (EHR).
+
+II. FOUR ANCHOR EXHIBITS READY FOR IMMEDIATE INSPECTION
+1. THE CONDITIONAL APPROVAL & 1-YEAR CAP WARRANTY:
+   - EEC Phase II (08/03/2020) documented soil hexavalent chromium [Cr(VI)] up to 980 ug/kg (49x the DTSC residential screening level of 20 ug/kg), plus lead, arsenic, toxaphene, and 4,4'-DDE.
+   - County briefing (Exhibit: navigation_center_003.jpg) states the site was approved for shelter occupancy ONLY "as long as an asphalt pavement cover was placed over the soil."
+   - City contract with TTS Engineering (Laserfiche #5406552, $2,410,716.24) warranted that 2-inch asphalt cap for only ONE (1) YEAR, and Proposal #20390 states: "CREW INSTALLING AC WILL NOT BE 40-HOUR TRAINED."
+
+2. GPS-STAMPED PHOTOGRAPHIC PROOF OF CAP BREACH (NOVEMBER 7, 2023):
+   - Exhibits HB_Shelter_Nov2023_photo_01.jpg through photo_08.jpg (taken 11/07/2023, 12:20–12:36 PM PST, GPS 33.706389, -117.988611) show corroded steel anchor bolts driven through the floor cap beneath resident beds, with raw sub-slab sand/soil on the sleeping floor.
+
+3. LIFE-THREATENING ILLNESS CLUSTER & AUTOMATIC EXPULSION FROM ICU (JANUARY 2024):
+   - On 01/12/2024, Ms. Petruccio was admitted to Scripps Mercy (36 days inpatient + 26 days SNF) with right pleural empyema (103,752 WBC), bilateral cavitary pneumonia, sepsis, acute hypercapnic respiratory failure requiring intubation, and C4–C5 discitis-osteomyelitis. Her weight dropped from 160 lb to 116 lb.
+   - Five other residents in the same structure (Anthony DiMarcello III, Jesse Knabb, Burt Bell [deceased], Brian Bell [deceased], Curtis Simcox) suffered severe pulmonary, pleural, septic, or cardiac hospitalizations.
+   - On 01/19/2024, while Ms. Petruccio was in the ICU, hospital social worker Bettina S. documented in her chart (Exhibit: scripps_ehr_page_985.png) that the shelter exited her from the program under a 7-day hospitalization rule and barred her from returning for 30 days.
+
+4. THE MEDICAL CHART OMISSION:
+   - Social workers recorded "SHELTER HISTORY: HB Navigation Center" on pages 985, 1034, and 1051 of her chart, yet across 25+ physician notes and the discharge summary (pp. 654–983), the shelter is never mentioned.
+
+III. STATUTORY CAUSES OF ACTION & FEE-SHIFTING HOOKS
+- ADA Title II (42 U.S.C. § 12132) & Rehabilitation Act § 504 (29 U.S.C. § 794) / Cal. Gov. Code § 11135
+- Fair Housing Act (42 U.S.C. § 3604(f)(3)(B)) & Cal. FEHA
+- California Elder & Dependent Adult Civil Protection Act (Welf. & Inst. Code § 15657 — unilateral attorney's fees)
+- California Unruh & Tom Bane Civil Rights Acts (Civ. Code §§ 51, 52, 52.1)
+- Premises Liability / Negligence against private operator Mercy House Living Centers (CCP § 335.1)
+
+Please advise when we may transmit the Master Evidence Locker link for conflict check and intake review.`,
+
+    ada: `FORMAL REQUEST FOR REASONABLE ACCOMMODATION, POLICY MODIFICATION & SUPPORTIVE HOUSING PLACEMENT
+PURSUANT TO ADA TITLE II (42 U.S.C. § 12132; 28 C.F.R. § 35.130(b)(7)), REHABILITATION ACT § 504 (29 U.S.C. § 794), FAIR HOUSING ACT (42 U.S.C. § 3604(f)(3)(B)), AND CAL. GOV. CODE § 11135
+
+TO: ADA / § 504 Coordinator & Executive Director, Mercy House Living Centers
+    ADA Title II Coordinator, City of Huntington Beach & County of Orange Office of Care Coordination
+FROM: Elizabeth Tina Petruccio (DOB 07/29/1964) and Anthony Michael DiMarcello III (DOB 05/04/1983, Caregiver)
+EMAIL: amd949609@gmail.com
+
+1. QUALIFIED DISABILITY STATUS:
+Ms. Petruccio is a 62-year-old disabled woman with documented history of severe bilateral cavitary pneumonia, right pleural empyema, sepsis, acute hypercapnic respiratory failure, and C4–C5 spinal discitis-osteomyelitis (Scripps Mercy / Mission Hills SNF, Jan–Mar 2024). Mr. DiMarcello is her son and caregiver and has a permanently impaired left shoulder (comminuted proximal humerus fracture with posterior dislocation) and documented pulmonary disease.
+
+2. CHALLENGED POLICY & PRIOR ADVERSE ACTION:
+As documented in Ms. Petruccio's hospital chart on January 19, 2024 (Scripps EHR p. 985), while she was hospitalized in intensive care, the Huntington Beach Navigation Center exited her from the program pursuant to its 7-day hospitalization policy and imposed a 30-day ban on her return. Penalizing a disabled resident with loss of shelter and a 30-day bar because of an inpatient hospitalization for a life-threatening illness violates the reasonable-modification mandate of 28 C.F.R. § 35.130(b)(7) and the Fair Housing Act, 42 U.S.C. § 3604(f)(3)(B).
+
+3. SPECIFIC ACCOMMODATIONS REQUESTED:
+   (a) Written confirmation that neither Ms. Petruccio nor Mr. DiMarcello will be exited, penalized, or subjected to a 30-day re-entry bar due to any past or future disability-related emergency department visit or inpatient hospitalization;
+   (b) Placement in a habitable, non-congregate / permanent supportive housing unit (consistent with the integration mandate of Olmstead v. L.C., 527 U.S. 581 (1999)) free from unsealed sub-slab soil exposure; and
+   (c) A written explanation of the criteria used for supportive housing placements (including Oasis placements) from which we were excluded despite being original shelter residents.
+
+Please provide a written determination to amd949609@gmail.com within ten (10) business days.`,
+
+    hipaa: `WRITTEN REQUEST FOR DESIGNATED RECORD SET (45 C.F.R. § 164.524) AND REQUEST FOR AMENDMENT OF PROTECTED HEALTH INFORMATION (45 C.F.R. § 164.526)
+
+TO: Health Information Management / Medical Records & Privacy Officer
+    Scripps Mercy Hospital
+RE: Patient: Elizabeth Tina Petruccio | DOB: 07/29/1964
+    Admission Dates: January 12, 2024 – February 17, 2024 (and related outpatient/SNF records)
+
+1. REQUEST FOR AMENDMENT UNDER 45 C.F.R. § 164.526:
+Pursuant to 45 C.F.R. § 164.526, I formally request an amendment/addendum to the History & Physical, Physician Progress Notes, Infectious Disease / Pulmonary Consultations, and Discharge Summary (specifically pages 654–983 of the chart) to reflect accurate housing and environmental exposure history already recorded elsewhere in the same chart:
+   - On Page 1051 (01/13/2024, Channy RN), Page 1034 (01/15/2024, Ada R., LCSW), and Page 985 (01/19/2024, Bettina S., SW), hospital staff explicitly documented: "SHELTER HISTORY: HB Navigation Center" (17631 Cameron Lane, Huntington Beach, CA) and noted that the shelter exited the patient while hospitalized.
+   - However, the intake box and 25+ physician notes erroneously state "homeless, unsheltered" or "squatting with friends" and omit all reference to the Huntington Beach Navigation Center—a facility sited over documented hexavalent chromium soil contamination with a breached asphalt floor cap beneath the patient's bed (photographed November 7, 2023).
+
+Please append this formal clarification and cross-reference Pages 985, 1034, and 1051 to the Discharge Summary and Problem List so that all future treating and reviewing physicians have an accurate environmental and housing history.
+
+2. REQUEST FOR COMPLETE DESIGNATED RECORD SET & AUDIT LOGS (45 C.F.R. § 164.524):
+Please provide in electronic format (PDF) any remaining unproduced social work, case management, discharge planning communications with Mercy House Living Centers / Huntington Beach Navigation Center, and EHR access/modification audit logs for the intake housing status field.
+
+Please send written confirmation of this amendment within sixty (60) days pursuant to 45 C.F.R. § 164.526(b)(2) to amd949609@gmail.com.`,
+
+    hold: `NOTICE OF DUTY TO PRESERVE EVIDENCE AND LITIGATION HOLD
+RE: Huntington Beach Navigation Center (17631 Cameron Lane / 17642 Beach Blvd, Huntington Beach, CA 92648)
+CLAIMANTS: Elizabeth Tina Petruccio & Anthony Michael DiMarcello III
+
+TO: City Attorney & Risk Management, City of Huntington Beach
+    County Counsel & Office of Care Coordination, County of Orange
+    General Counsel & Executive Director, Mercy House Living Centers
+
+PLEASE TAKE NOTICE that Elizabeth Tina Petruccio and Anthony Michael DiMarcello III anticipate formal legal and administrative proceedings (in addition to pending related federal litigation in Knabb v. City of Huntington Beach et al., No. 8:26-cv-00348-JWH-ADS (C.D. Cal.)) arising from environmental conditions, asphalt cap maintenance failures, disability accommodations, and resident exits at the Huntington Beach Navigation Center.
+
+You are hereby notified of your legal obligation to immediately preserve and suspend any routine deletion, overwriting, or destruction of all physical and electronic records (ESI) relating to:
+1. All inspection, maintenance, repair, and warranty records for the 2-inch asphalt pavement cover installed under City Contract Doc ID 20-9041/235642 (Laserfiche #5406552) and the $75,000 Sprung structure base-seal repair allocation in the April 29, 2026 HHAP MOU;
+2. All indoor air, dust wipe, soil gas, and sub-slab sampling data or consultant communications for 17631 Cameron Lane from August 2020 to the present;
+3. Complete HMIS records, bed logs, intake thumbprint/photo files, grievance logs, medical-exit records, 30-day ban notices, and supportive housing (including Oasis) referral/scoring records for Elizabeth Tina Petruccio, Anthony Michael DiMarcello III, Jesse Knabb, Burt Bell, Brian Bell, and Curtis M. Simcox;
+4. All communications between Mercy House staff and Scripps Mercy Hospital, Hoag Hospital, or Mission Hills SNF between October 2023 and April 2024.
+
+Failure to preserve these materials may result in evidentiary sanctions, adverse-inference instructions, and statutory penalties for spoliation of evidence.`
+  };
+
+  let currentTemplateKey = 'intake';
+
+  function loadTemplate(key) {
+    currentTemplateKey = key;
+    document.getElementById('docOutput').value = TEMPLATES[key];
+    document.querySelectorAll('.gen-tabs .btn').forEach(b => b.classList.remove('btn-primary'));
+    event.target.classList.add('btn-primary');
+  }
+
+  function copyGeneratorText() {
+    const el = document.getElementById('docOutput');
+    navigator.clipboard.writeText(el.value).then(() => {
+      alert('Copied document to clipboard! You can now paste it directly into an email or word processor.');
+    });
+  }
+
+  function downloadGeneratorText() {
+    const text = document.getElementById('docOutput').value;
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'HBNC_Case3_' + currentTemplateKey + '_notice.txt';
+    a.click();
+  }
+
+  // Load default template on startup
+  document.getElementById('docOutput').value = TEMPLATES.intake;
+</script>
+</body>
+</html>

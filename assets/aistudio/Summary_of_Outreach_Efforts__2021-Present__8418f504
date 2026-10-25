@@ -1,0 +1,35 @@
+,OUTREACH SUMMARY & DISPATCH ANALYTICS DASHBOARD,,,,,,,,
+,TOTAL OUTREACH RECORDS,,PUBLIC SECTOR FILINGS,SUCCESSFUL DISPATCHES,,BOUNCED / BLOCKED,,AGENCY RESPONSES,
+,184,,76,105,,79,,11,
+,Total cataloged dispatches (2021–2026),,Government & oversight filings,Confirmed dispatches & filings,,Technical perimeter drops,,Formal replies & acknowledgments,
+,,,,,,,,,
+,Sector Category,Filings Count,% of Total,Primary Focus,,Delivery & Transmission Status,Count,Delivery Rate,Network Infrastructure Vector
+,Public Sector,74,40.2%,"Federal, State & Municipal Oversight",,Sent / Active Transmissions,89,48.4%,Outbound SMTP Transmitted
+,Private Sector,90,48.9%,"Corporate, Media & Financial Entities",,Bounced (Perimeter Rejections),37,20.1%,550 User Unknown / NXDOMAIN
+,NGO & Non-Profit,12,6.5%,"Civil Rights, Legal Aid & Shelters",,Blocked by Mail Flow Rules,8,4.3%,EOP / GCC Custom Rule Drop
+,Academic / Legal Clinics,6,3.3%,"Law Schools, Universities & Clinics",,Formal Intake & Agency Responses,8,4.3%,Casework & Confirmation Notice
+,Public / Private,2,1.1%,Joint Programs & Verification Bodies,,Declined (Pilot / Resources),2,1.1%,DOJ Pilot / Legal Defense Clinic
+,Total Dispatches,184,100.0%,All Sectors Combined,,Documented Evidence & Dossiers,12,6.5%,Internal Investigative Ledger
+,,,,,,Direct Filings & Case Outreach,28,15.2%,Under-Seal Filings & Prior Outreach
+,,,,,,Total Processed Transmissions,184,100.0%,100.0% Telemetry Coverage
+,Outreach Year,Dispatches Count,% of Total,Campaign Milestone / Focus,,,,,
+,2021,5,2.7%,"Pandemic Layoff, Housing Displacement & EDD Identity Blocks",,,,,
+,2022,5,2.7%,"Feinstein Casework, Emergency Relief & Early Whistleblower Alerts",,,,,
+,2023,3,1.6%,CFTC Commodities Fraud Disclosure & Identity Theft Cases,,,,,
+,2024,3,1.6%,FEMA Emergency Relief Requests & Shelter Placement Advocacy,,,,,
+,2025,11,6.0%,DOJ Task Force Contact & Environmental Records FOIA Demands,,,,,
+,2026,157,85.3%,"Federal Whistleblower Package, Qui Tam & Under-Seal Filings",,,,,
+,Total (2021–2026),184,100.0%,5-Year Cumulative Dissemination Campaign,,,,,
+,,,,,,,,,
+,Transmission Date,Sector,Target Entity / Agency,Subject / Formal Filing Topic,Agency Disposition,Docket / Control ID,Delivery Vector,Agency Response & Administrative Finding,Evidentiary Significance
+,2022-07-27,Public Sector,Sen. Dianne Feinstein's Office (Marshall Wu),"Stolen Hero Pay (IHSS), EDD & Eviction",Casework Written Reply,Feinstein Casework,Direct Staff Email,Staff replied: IHSS & legal disputes are state/law enforcement matters outside federal jurisdiction,Confirmed human staff casework response
+,2023-01-01,Public Sector,CFTC Whistleblower Office,Original commodities fraud disclosure,Automated Intake Acknowledgment,CFTC Intake Receipt,Electronic Portal,Automated intake confirmation issued cataloging corporate fiduciary & securities disclosures,Active regulatory tracking record
+,2024-05-22,Public Sector,Federal Emergency Management Agency (FEMA),Emergency relief & shelter conditions request,Agency Response Received,askia@fema.dhs.gov,SMTP Email,"Official FEMA response received on May 22, 2024 regarding emergency relief inquiry",Confirmed federal disaster agency contact
+,2026-04-02,Public Sector,DOJ Corporate Whistleblower Unit,Federal Whistleblower Protection Request,Formal Written Declination,DOJ Pilot Program,CorporateWhistleblower@usdoj.gov,Official agency decision: 'Submission not eligible for pilot program',Exhaustion of administrative remedy
+,2026-04-15,Academic / Legal,Loyola Law School (LLS) Admissions / Clinic,Pro bono qui tam attorney requests,Intake Referral,LLS Intake,Clinic Ingestion,Institutional response: referred to legal clinic intake line for case screening,Institutional clinical routing
+,2026-04-15,Academic / Legal,USC Gould School of Law Admissions,Pro bono qui tam attorney requests,Bar Referral,USC Gould Review,Admissions Desk,Institutional response: declined clinical representation; referred to LA County Bar,Exhaustion of pro bono clinics
+,2026-04-19,NGO & Non-Profit,Native American Rights Fund (NARF),ICWA assistance & IIM trust advocacy,Resource Declination,NARF Case Intake,Legal Direct,Institutional response: formal declination due to limited litigation resources,Documented lack of institutional resources
+,2026-04-20,Academic / Legal,Stanford Law Mills Legal Clinic,Whistleblower evidence distribution & pro bono,Clinic Referral,Mills Clinic Intake,Academic Direct,Institutional response: formal clinical referral issued,Documented clinical referral
+,2026-05-09,Public Sector,GAO FraudNet,$598.7M municipal & grant fraud referral,Active Federal Docket,COMP-26-004512,FraudNet Intake Engine,Assigned active GAO FraudNet control number COMP-26-004512 for federal program audit,Active federal tracking docket
+,2026-10-18,Public Sector,FBI IC3 / Public Corruption Field Office,Criminal Referral & False Claims Filing,Active Federal Docket,20IC002,FBI IC3 Portal,Verified electronic complaint record logged following direct email perimeter drops,Active law enforcement tracking record
+,"Summary: 10 documented responses, acknowledgments, declinations, and active federal control numbers (GAO COMP-26-004512, FBI 20IC002, CFTC) establishing constructive administrative notice and legal exhaustion.",,,,,,,,

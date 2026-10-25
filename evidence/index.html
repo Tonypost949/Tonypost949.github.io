@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HBNC Case 2 — Formal Record of Account, Evidence, Law and Protection</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --muted:#5b6470; --line:#d9dee5; --bg:#ffffff;
+    --record:#0b6b3a; --account:#1d4ed8; --alleg:#a15c00; --verify:#a11d1d;
+    --panel:#f6f8fa; --panel2:#eef2f6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size:16.5px; line-height:1.68;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:56px 28px 120px}
+  header.cover{border-bottom:3px solid var(--ink); padding-bottom:28px; margin-bottom:40px}
+  .kicker{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:700}
+  h1{font-size:34px; line-height:1.2; margin:14px 0 10px; letter-spacing:-.01em}
+  .sub{font-size:17px; color:var(--muted); margin:0 0 22px}
+  .meta{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    font-size:13px; color:var(--muted); display:grid; grid-template-columns:1fr 1fr; gap:4px 24px}
+  .meta b{color:var(--ink); font-weight:600}
+  h2{font-size:23px; margin:52px 0 6px; padding-top:18px; border-top:1px solid var(--line); letter-spacing:-.005em}
+  h2 .num{font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px; color:var(--muted);
+    display:block; letter-spacing:.16em; margin-bottom:6px; font-weight:700}
+  h3{font-size:17.5px; margin:30px 0 8px; font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+  h4{font-size:15px; margin:22px 0 6px; font-family:ui-sans-serif,system-ui,sans-serif; color:#2b3440}
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 16px; padding-left:22px}
+  li{margin:0 0 7px}
+  small,.small{font-size:13.5px; color:var(--muted)}
+  .lede{font-size:18px; color:#2b3440}
+  .panel{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:20px 22px; margin:22px 0}
+  .panel h4{margin-top:0}
+  .warn{background:#fff8f0; border:1px solid #f0d6b3; border-left:4px solid var(--alleg)}
+  .stop{background:#fff5f5; border:1px solid #f0c9c9; border-left:4px solid var(--verify)}
+  .calm{background:#f3f8ff; border:1px solid #cfe0f7; border-left:4px solid var(--account)}
+  blockquote{margin:22px 0; padding:4px 0 4px 20px; border-left:3px solid var(--line); color:#2b3440; font-style:italic}
+  table{width:100%; border-collapse:collapse; margin:18px 0 24px; font-size:14.5px;
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+  th{text-align:left; background:var(--panel2); font-weight:650; padding:9px 10px; border:1px solid var(--line); vertical-align:top}
+  td{padding:9px 10px; border:1px solid var(--line); vertical-align:top}
+  tr:nth-child(even) td{background:#fcfdfe}
+  .tag{font-family:ui-sans-serif,system-ui,sans-serif; font-size:10px; font-weight:800;
+    letter-spacing:.09em; padding:2px 6px; border-radius:4px; white-space:nowrap; vertical-align:1px}
+  .t-r{background:#e4f4ea; color:var(--record); border:1px solid #bfe3cd}
+  .t-a{background:#e8effd; color:var(--account); border:1px solid #c9d8fb}
+  .t-l{background:#fdf1e0; color:var(--alleg); border:1px solid #f2d9b6}
+  .t-v{background:#fdeaea; color:var(--verify); border:1px solid #f2c9c9}
+  nav.toc{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:20px 24px; margin:34px 0 10px}
+  nav.toc h4{margin:0 0 10px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+  nav.toc ol{margin:0; padding-left:20px; font-family:ui-sans-serif,system-ui,sans-serif; font-size:14px}
+  nav.toc a{color:var(--ink); text-decoration:none; border-bottom:1px dotted #b9c2cc}
+  nav.toc a:hover{color:var(--account)}
+  .rule{height:1px; background:var(--line); margin:34px 0}
+  .stat{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:24px 0}
+  .stat div{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px}
+  .stat b{display:block; font-size:24px; line-height:1.1; font-family:ui-sans-serif,system-ui,sans-serif}
+  .stat span{font-family:ui-sans-serif,system-ui,sans-serif; font-size:11.5px; letter-spacing:.07em;
+    text-transform:uppercase; color:var(--muted)}
+  footer{margin-top:64px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted)}
+  @media print{
+    body{font-size:11pt}
+    .wrap{max-width:none; padding:0}
+    nav.toc{page-break-after:always}
+    h2{page-break-after:avoid}
+    table{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <div class="kicker">HBNC Case 2 &nbsp;·&nbsp; Formal Record &nbsp;·&nbsp; New Build</div>
+  <h1>A Record of What Happened at the Huntington Beach Navigation Center — and What We Are Asking For</h1>
+  <p class="sub">Anthony Michael DiMarcello III and Elizabeth Tina Petruccio</p>
+  <div class="meta">
+    <div><b>Site:</b> 17631 Cameron Lane / 17642 Beach Blvd, Huntington Beach, CA 92648</div>
+    <div><b>Operator:</b> Mercy House Living Centers</div>
+    <div><b>Related federal matter:</b> <i>Knabb v. City of Huntington Beach et al.</i>, No. 8:26-cv-00348-JWH-ADS (C.D. Cal.)</div>
+    <div><b>Operative pleading:</b> SAVC, ECF 115 (08/17/2026)</div>
+    <div><b>Prepared:</b> October 23, 2026</div>
+    <div><b>Status:</b> Party-prepared record. Not a pleading. Not legal advice.</div>
+  </div>
+</header>
+
+<nav class="toc">
+  <h4>Contents</h4>
+  <ol>
+    <li><a href="#read">How to read this document</a></li>
+    <li><a href="#summary">Executive summary</a></li>
+    <li><a href="#who">Who we are and what we are asking for</a></li>
+    <li><a href="#site">The site: what is under the floor</a></li>
+    <li><a href="#people">The people: six residents</a></li>
+    <li><a href="#rules">The program rules</a></li>
+    <li><a href="#record">The medical record problem</a></li>
+    <li><a href="#procedural">Procedural posture</a></li>
+    <li><a href="#origin">The 2021 origin</a></li>
+    <li><a href="#belief">What we believe, what we can prove, what we do not say</a></li>
+    <li><a href="#law">The law, the remedies, and the deadlines</a></li>
+    <li><a href="#outreach">Outreach: who can act, and how</a></li>
+    <li><a href="#protection">Protection plan</a></li>
+    <li><a href="#gaps">What is missing</a></li>
+    <li><a href="#verify">Verification register</a></li>
+  </ol>
+</nav>
+
+<div class="panel stop">
+  <h4>If you have filed, or may file, a False Claims Act complaint under 31 U.S.C. § 3730(b)</h4>
+  <p><b>Do not send this document to any agency, any press contact, or any person outside your counsel and the Department of Justice.</b> A complaint filed under § 3730(b) is sealed under § 3730(b)(2). Disclosing its subject matter can result in dismissal, forfeiture of the relator's share under § 3730(d), sanctions, and a public-disclosure-bar fight under § 3730(e)(4).</p>
+  <p style="margin-bottom:0">This dossier is evidence of <i>conditions</i>. It is not evidence of <i>retaliation</i>. The retaliation file, the disclosure protocol, and the § 3730(h) analysis are in <code>06_Relator_Protection_Record.md</code>. Read that one first.</p>
+</div>
+
+<h2 id="read"><span class="num">Section 1</span>How to read this document</h2>
+
+<p>Every paragraph in this record carries one of four tags. The tags are the point. They let a lawyer, an agency investigator, a judge, or a reporter tell — at a glance — what kind of statement they are reading, and how much weight it can bear.</p>
+
+<table>
+  <tr><th style="width:130px">Tag</th><th>Meaning</th><th style="width:250px">Weight</th></tr>
+  <tr><td><span class="tag t-r">RECORD</span></td><td>A document exists and says this. The docket number, page, or exhibit is cited.</td><td>Highest. Documents decide cases.</td></tr>
+  <tr><td><span class="tag t-a">ACCOUNT</span></td><td>Our direct, first-hand experience: what we saw, did, were told, and lived.</td><td>Strong, and it is ours to give under oath.</td></tr>
+  <tr><td><span class="tag t-l">ALLEGATION</span></td><td>What we contend is true and intend to prove.</td><td>Normal. Every complaint works this way.</td></tr>
+  <tr><td><span class="tag t-v">TO VERIFY</span></td><td>Came from a secondary source, a memory, or a document not yet confirmed.</td><td>Must be confirmed before anyone official sees it.</td></tr>
+</table>
+
+<div class="panel stop">
+  <h4>The one rule for using this file</h4>
+  <p style="margin-bottom:0">Never send anything tagged <span class="tag t-v">TO VERIFY</span> to an agency or a court. Confirm it, then upgrade it. A single unverified sentence in an otherwise strong letter is what an adverse reader will use to discredit the rest — and they will be right to.</p>
+</div>
+
+<h2 id="summary"><span class="num">Section 2</span>Executive summary</h2>
+
+<p class="lede">Two people entered a publicly funded shelter together and both came out with hospital records. The floor beneath the beds was a two-inch asphalt cap over contaminated soil. The cap was warranted for one year. In November 2023, one of them photographed it failing.</p>
+
+<div class="stat">
+  <div><b>980</b><span>µg/kg Cr(VI), peak soil</span></div>
+  <div><b>49×</b><span>DTSC residential screening level</span></div>
+  <div><b>1 yr</b><span>warranty on the cap</span></div>
+  <div><b>116 lb</b><span>from a 160 lb baseline</span></div>
+  <div><b>62 days</b><span>hospitalized, Jan–Mar 2024</span></div>
+  <div><b>6</b><span>residents, same class of illness</span></div>
+</div>
+
+<p><span class="tag t-r">RECORD</span> The site at 17631 Cameron Lane contains hexavalent chromium at up to 980 µg/kg — 49 times the DTSC residential screening level of 20 µg/kg and 3.27 times the commercial level of 300 µg/kg — together with elevated lead, arsenic, toxaphene, and 4,4'-DDE. The County's own briefing states the site was approved for shelter occupancy <i>only as long as an asphalt pavement cover was placed over the soil</i>. The City's contract for that cover warranted it for <i>one year</i> and records that the installing crew would not be 40-hour HAZWOPER trained.</p>
+
+<p><span class="tag t-r">RECORD</span> On November 7, 2023, between 12:20 and 12:36 p.m., Elizabeth Petruccio photographed corroded anchor bolts driven through that cap beneath the resident beds, with raw sub-slab sand and soil on the sleeping floor, at GPS 33.706389, -117.988611. One frame shows her sweeping the soil up.</p>
+
+<p><span class="tag t-r">RECORD</span> She was admitted to Scripps Mercy on January 12, 2024 with right pleural empyema, sepsis, and acute hypercapnic respiratory failure requiring intubation, and transferred to a skilled nursing facility until March 14, 2024. Her weight fell from 160 pounds to 116. While she was in intensive care, the shelter exited her from the program and barred her from returning for thirty days.</p>
+
+<p><span class="tag t-r">RECORD</span> Her social workers documented the shelter three times in her chart, including the phrase <b>"SHELTER HISTORY: HB Navigation Center."</b> Across more than twenty-five physician notes and the discharge summary, the shelter appears nowhere. The intake box reads "homeless, unsheltered."</p>
+
+<p><span class="tag t-l">ALLEGATION</span> We contend that the physical condition of the shelter, the failure to maintain the only engineered barrier on the site, and a written policy that penalizes hospitalization combined to cause and worsen the injuries described here. That is our position. It is supported by documents. It has not yet been established by a physician or an exposure scientist, and obtaining that review is the first thing we are asking for.</p>
+
+<h2 id="who"><span class="num">Section 3</span>Who we are and what we are asking for</h2>
+
+<h3>3.1 The two of us</h3>
+<p><b>Elizabeth Tina Petruccio</b>, born July 29, 1964 — my mother. Before August 2021 she lived with me at 212 Southbrook, Apartment SB-212, Irvine, California 92604. Her driver's license issued August 9, 2021 records that address and her weight at 160 pounds <span class="tag t-r">RECORD</span> (<code>album7_photo_204.jpg</code>). She is a disabled 62-year-old mother and resident. <span class="tag t-a">ACCOUNT</span></p>
+<p><b>Anthony Michael DiMarcello III</b>, born May 4, 1983 — her son and caregiver. I took the photographs, made the reports, and kept the records. I have a permanently impaired left shoulder from this period and I work one-handed. <span class="tag t-a">ACCOUNT</span></p>
+
+<h3>3.2 The six requests</h3>
+<ol>
+  <li><b>An independent causation review.</b> By a physician and an industrial hygienist who are not employed by the City, the County, or Mercy House, given the complete hospital record and the complete environmental file — not a summary.</li>
+  <li><b>A written answer about the cap.</b> What design life was required, what maintenance obligation attached, who inspected it after acceptance, and whether a land use covenant was ever recorded.</li>
+  <li><b>A written accommodation determination</b> for both of us, so that a future hospitalization is not treated as an abandonment of a bed.</li>
+  <li><b>Legal representation.</b> We have not been able to obtain counsel willing to take this on. We are asking any attorney or legal services organization reading this to evaluate it.</li>
+  <li><b>Review of the arrest.</b> I have been arrested once in my life, on a complaint mailed to an address I left in 2021, after I made disclosures to federal and state officials. I am asking for that to be reviewed as what I believe it is.</li>
+  <li><b>Housing, and a written reason we were not placed.</b> We are the only two people who were at that shelter from the beginning who were never moved into supportive housing.</li>
+</ol>
+
+<h2 id="site"><span class="num">Section 4</span>The site: what is under the floor</h2>
+
+<h3>4.1 The contamination</h3>
+<table>
+  <tr><th>Contaminant</th><th>Concentration</th><th>Benchmark</th><th>Multiple</th><th>Tag</th></tr>
+  <tr><td>Hexavalent chromium, Cr(VI)</td><td>up to <b>980 µg/kg</b> (range 200–980)</td><td>DTSC residential 20 µg/kg</td><td><b>49×</b></td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>Hexavalent chromium, Cr(VI)</td><td>same</td><td>DTSC commercial/industrial 300 µg/kg</td><td><b>3.27×</b></td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>Lead</td><td>84.2 mg/kg (up to 145)</td><td>—</td><td>elevated</td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>Arsenic</td><td>9.36 mg/kg</td><td>—</td><td>elevated</td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>Toxaphene</td><td>500–1,600 µg/kg</td><td>—</td><td>elevated</td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>4,4'-DDE</td><td>3,100 µg/kg</td><td>—</td><td>elevated</td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>Other</td><td colspan="3">Mercury, buried metal debris, suspected cesspool/septic tank; soil gas PCE, TCE, benzene</td><td><span class="tag t-r">RECORD</span></td></tr>
+</table>
+<p class="small">Source: EEC Environmental Phase II, August 3, 2020; SAVC ¶¶ 1, 93; County briefing <code>navigation_center_002.jpg</code>, <code>003.jpg</code>.</p>
+
+<h3>4.2 The most important document pair in this case</h3>
+<div class="panel">
+<p><b>Document one.</b> The County's briefing states the site was deemed safe to operate as a shelter <b>only "as long as an asphalt pavement cover was placed over the soil."</b> <span class="tag t-r">RECORD</span> (<code>navigation_center_003.jpg</code>)</p>
+<p><b>Document two.</b> The City's construction contract with TTS Engineering, Inc. — City Doc ID 20-9041/235642, Laserfiche #5406552, amended to <b>$2,410,716.24</b> — warrants grading and asphalt paving for <b>"a period of one (1) year after CITY's acceptance thereof."</b> <span class="tag t-r">RECORD</span> (p. 6, § 9, lines 331–340)</p>
+<p style="margin-bottom:0"><b>Document three.</b> The contractor's proposal describes the work as <b>2" asphalt paving over native</b> and states <b>"CREW INSTALLING AC WILL NOT BE 40-HOUR TRAINED."</b> <span class="tag t-r">RECORD</span> (Proposal #20390, lines 1083, 1196)</p>
+</div>
+<p>Read together, those three documents say: the cover is the only thing protecting residents from the soil; the cover was warranted for twelve months; and the crew that installed it was not hazmat-trained. If that is accurate, then after late 2021 the only engineered control on the site had no enforceable maintenance obligation — well before the 2023–2024 shelter period.</p>
+
+<h3>4.3 Groundwater</h3>
+<table>
+  <tr><th>Well</th><th>Cr(VI)</th><th>Benchmark</th><th>Multiple</th><th>Tag</th></tr>
+  <tr><td>SMCMWC North Well</td><td>0.95 µg/L</td><td>OEHHA public health goal 0.02 µg/L</td><td><b>47.5×</b></td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>Liberty Park Water Assn. Well 01 (CA3000618)</td><td>0.41–1.30 µg/L, 6 tests 2014–2026</td><td>0.02 µg/L</td><td>20.5–65×</td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>OCWD MW-42</td><td>270 µg/L</td><td>—</td><td>—</td><td><span class="tag t-r">RECORD</span></td></tr>
+  <tr><td>OCWD MW-43B</td><td>62 µg/L</td><td>—</td><td>—</td><td><span class="tag t-r">RECORD</span></td></tr>
+</table>
+<p class="small">Source: OCWD laboratory records, Opposition to MTD Ex. I-1.</p>
+
+<h3>4.4 The breach: November 7, 2023</h3>
+<table>
+  <tr><th style="width:170px">Field</th><th>Detail</th></tr>
+  <tr><td>Device</td><td>Samsung Galaxy Tab A (SM-T580)</td></tr>
+  <tr><td>Date and time</td><td>November 7, 2023, 12:20:47 p.m. – 12:36:20 p.m. PST</td></tr>
+  <tr><td>GPS</td><td>33.706389, -117.988611</td></tr>
+  <tr><td>What is depicted</td><td>Corroded steel anchor bolts driven through the blue-painted asphalt floor cap along the Sprung structure perimeter, beneath resident beds; peeling duct tape; raw sub-slab sand and soil on the sleeping floor</td></tr>
+  <tr><td>Corroborating frame</td><td>Photograph 06 shows the resident sweeping the soil up with a broom and dustpan</td></tr>
+  <tr><td>Files</td><td><code>HB_Shelter_Nov2023_photo_01.jpg</code> – <code>photo_08.jpg</code></td></tr>
+</table>
+<p><span class="tag t-l">ALLEGATION</span> The defendants in the federal case have argued that cap deterioration occurred after Mr. Knabb moved out in October 2024. These photographs are dated November 7, 2023 — eleven months earlier — and carry embedded time and location.</p>
+
+<h3>4.5 Other site and habitability findings</h3>
+<table>
+  <tr><th>Finding</th><th>Evidence</th></tr>
+  <tr><td>Expired 2020 temporary certificate of occupancy still posted above the exit sign, April 4, 2025</td><td><code>mercy_house_044–046.jpg</code></td></tr>
+  <tr><td>Collapsed rusted ceiling exhaust fan grille with exposed wire-nut splices</td><td><code>navigation_center_027.jpg</code></td></tr>
+  <tr><td>Shattered porcelain bathroom sink, standing water, blistered flooring</td><td><code>navigation_center_029–035.jpg</code></td></tr>
+  <tr><td>Rusted-out wall panels; moldy ADA shower stalls</td><td><code>navigation_center_045.jpg</code>, <code>051–052.jpg</code></td></tr>
+  <tr><td>Daily high-pressure washing of the sleeping area</td><td>SAVC ¶ 19; <code>batch6_album6_photo_003.jpg.txt</code></td></tr>
+  <tr><td>Sprung structure base-seal failure; $75,000 repair allocation in the April 29, 2026 HHAP MOU</td><td>HHAP MOU</td></tr>
+</table>
+<p class="small">All items in this table: <span class="tag t-r">RECORD</span></p>
+
+<h2 id="people"><span class="num">Section 5</span>The people: six residents</h2>
+
+<p>Six people who slept in the same structure within the same fourteen months were hospitalized with pneumonia, pleural disease, sepsis, or soft-tissue infection. One died.</p>
+
+<table>
+  <tr><th style="width:150px">Resident</th><th style="width:130px">Shelter period</th><th>Hospitalizations</th><th>Documented pathology</th></tr>
+  <tr>
+    <td><b>Anthony M. DiMarcello III</b><br><span class="small">DOB 05/04/1983<br>son and caregiver</span></td>
+    <td>2023 – 02/11/2024</td>
+    <td>Hoag 03/24/2023 &amp; 03/28/2023; Hoag ED 02/11/2024; Hoag &amp; Arrowhead 08/29–12/05/2024; UCI 12/14/2025</td>
+    <td>Pulmonary infiltrates, bronchiectasis, left pleural effusion, four fractured left ribs; non-healing staph wound and cellulitis of the left leg; comminuted left proximal humerus fracture with posterior dislocation; syncope with occipital laceration requiring six staples</td>
+  </tr>
+  <tr>
+    <td><b>Elizabeth T. Petruccio</b><br><span class="small">DOB 07/29/1964<br>mother</span></td>
+    <td>Oct 2023 – Jan 2024</td>
+    <td>Hoag Nov 2023; Scripps Mercy 01/12–02/17/2024 (36 days); Mission Hills SNF 02/17–03/14/2024 (26 days)</td>
+    <td>Atypical pneumonia J18.9 with reverse-halo RUL opacity and bilateral cavitary disease; right pleural empyema (103,752 WBC, 94% neutrophils, glucose &lt;20) with chest tube; sepsis A41.9; acute hypercapnic respiratory failure J96.02 requiring intubation; C4–C5 discitis-osteomyelitis M46.22; weight 160 → 116 lb</td>
+  </tr>
+  <tr>
+    <td><b>Jesse Knabb</b><br><span class="small">DOB 04/04/1978</span></td>
+    <td>Nov 2022 – Oct 2024</td>
+    <td>09/19–10/11/2023 (22 days); 10/15–10/24/2023 (9 days, readmitted four days after discharge)</td>
+    <td>Pneumonitis, recurrent pneumonia, pleural effusion and empyema requiring thoracentesis; sepsis; renal impairment; microcytic anemia; eosinophilia</td>
+  </tr>
+  <tr>
+    <td><b>Burt Bell</b><br><span class="small">Bed #91</span></td>
+    <td>2023 – early 2024</td>
+    <td>Died early 2024</td>
+    <td>Final amended Sheriff-Coroner certificate 04/11/2024: community-acquired pneumonia with environmental respiratory vulnerability. Exited from the shelter while hospitalized, the same day as Mr. DiMarcello.</td>
+  </tr>
+  <tr>
+    <td><b>Brian Bell</b><br><span class="small">Bed #91</span></td>
+    <td>2024 – Jan 2025+</td>
+    <td>Died at Oasis supportive housing</td>
+    <td>Traumatic brain injury, four minor strokes, cognitive loss, severe arthritis; formal grievance 01/20/2025 signed by staff; his request-for-consideration follow-up page was left blank</td>
+  </tr>
+  <tr>
+    <td><b>Curtis M. Simcox</b><br><span class="small">MRN 14017651</span></td>
+    <td>Jan 2025</td>
+    <td>01/19/2025, 14:00</td>
+    <td>Troponin I 6.300 (acute myocardial injury); monocytosis 13.4%</td>
+  </tr>
+</table>
+<p class="small">All items: <span class="tag t-r">RECORD</span> — SAVC ¶¶ 11–13; Initial Complaint ¶ 8; Opp. MTD Ex. J-1; <code>1.E.Petruccio Patient Health.pdf</code>; facility records.</p>
+
+<h3>5.1 The clinical signature shared by two patients</h3>
+<table>
+  <tr><th style="width:170px">Dimension</th><th>Jesse Knabb</th><th>Elizabeth Petruccio</th></tr>
+  <tr><td>Pulmonary</td><td>Pneumonitis, recurrent pneumonia</td><td>Atypical pneumonia J18.9, bilateral cavitary disease</td></tr>
+  <tr><td>Pleural</td><td>Effusion and empyema, thoracentesis</td><td>Empyema, 103,752 WBC, chest tube thoracostomy</td></tr>
+  <tr><td>Systemic</td><td>Sepsis, renal impairment, anemia, eosinophilia</td><td>Sepsis A41.9, respiratory failure J96.02, intubation</td></tr>
+  <tr><td>Contiguous spread</td><td>—</td><td>Prevertebral C2–C7 → C4–C5 discitis-osteomyelitis M46.22</td></tr>
+  <tr><td>Antimicrobial signature</td><td>Doxycycline ×3; clindamycin 1%/BPO gel ×2</td><td>Vancomycin + ceftriaxone ×52 days; metronidazole; azithromycin; fluconazole; later doxycycline, linezolid</td></tr>
+</table>
+
+<h2 id="rules"><span class="num">Section 6</span>The program rules</h2>
+
+<p>These are written rules, not impressions. They matter because a written policy is what makes a claim against an institution rather than against an individual employee.</p>
+
+<table>
+  <tr><th style="width:190px">Rule</th><th>Text or effect</th><th style="width:190px">Evidence</th></tr>
+  <tr><td>No-walk-up / no-bike-up</td><td>"Guests are expected to remain on the property at all times unless when leaving for the day. Violation of this expectation may result in an immediate exit."</td><td><code>album6_photo_006.jpg</code>, p. 3 of 5</td></tr>
+  <tr><td>Neighbor complaint</td><td>Zero tolerance for loitering in surrounding neighborhoods; summary expulsion</td><td>Rule 13, same exhibit</td></tr>
+  <tr><td>Photography ban</td><td>Residents photographed and thumbprinted; barred from taking photos inside</td><td>Rules 8 &amp; 9, same exhibit</td></tr>
+  <tr><td>Curfew</td><td>9:00 p.m. curfew; 10:00 p.m. lights-out</td><td><code>album6_photo_017.jpg</code></td></tr>
+  <tr><td>Pharmacy access</td><td>Single 30-minute window at 5:00 p.m.</td><td>Same</td></tr>
+  <tr><td>Shuttle sign-up</td><td>4:30–7:30 a.m.</td><td>Same</td></tr>
+  <tr><td>Medical exit penalty</td><td>Hospitalization over seven days → automatic exit and a 30-day bar on returning</td><td><code>scripps_ehr_page_985.png</code></td></tr>
+</table>
+<p class="small">All items: <span class="tag t-r">RECORD</span></p>
+
+<div class="panel calm">
+<h4>Why the medical-exit rule is the center of this case</h4>
+<p style="margin-bottom:0">A rule that punishes a hospital stay only operates on people who are hospitalized. My mother was hospitalized for thirty-six days and then twenty-six more. The shelter exited her while she was in an intensive care unit and told her she could not come back for thirty days. That fact is written in her own hospital chart, by a social worker, on January 19, 2024 — not by us, and not after the fact.</p>
+</div>
+
+<h2 id="record"><span class="num">Section 7</span>The medical record problem</h2>
+
+<p>This is the most important factual finding in the file, and it is not an allegation. It is a comparison between two sets of pages in the same chart.</p>
+
+<table>
+  <tr><th style="width:90px">Page</th><th style="width:190px">Date and author</th><th>What it says</th></tr>
+  <tr><td>1051</td><td>01/13/2024, Channy RN</td><td>Family reported she was staying in a homeless shelter in Huntington Beach; prior Hoag admission November 2023</td></tr>
+  <tr><td>1034</td><td>01/15/2024, Ada R., LCSW</td><td><b>"SHELTER HISTORY: HB Navigation Center"</b> — stays with her son Anthony</td></tr>
+  <tr><td>985</td><td>01/19/2024, Bettina S., SW</td><td>Staying at the Navigation Center with her son; exited from the program; must wait 30 days before returning</td></tr>
+  <tr><td>654–983</td><td>25+ physician notes, consults, discharge summary</td><td>No mention of the Navigation Center. Repeats that the patient "had been squatting with friends"; intake checked "homeless, unsheltered"</td></tr>
+  <tr><td>659, 1426</td><td>—</td><td>CalOptima Medi-Cal ID 93931022D; pharmacy of record Walgreens #05771</td></tr>
+</table>
+<p class="small">All items: <span class="tag t-r">RECORD</span></p>
+
+<p><span class="tag t-l">ALLEGATION</span> A patient presenting with bilateral cavitary pneumonia and empyema has an environmental exposure differential. The one piece of history that would have prompted it was written in the chart three times by social work and did not appear in a single physician note. We are not alleging that any physician acted in bad faith. We are alleging that the connection was never evaluated — and that a review should determine why.</p>
+
+<h2 id="procedural"><span class="num">Section 8</span>Procedural posture</h2>
+
+<table>
+  <tr><th style="width:230px">Item</th><th>Detail</th></tr>
+  <tr><td>Case</td><td><i>Knabb v. City of Huntington Beach et al.</i>, No. 8:26-cv-00348-JWH-ADS (C.D. Cal.)</td></tr>
+  <tr><td>Court</td><td>Hon. John W. Holcomb; Magistrate Hon. Autumn D. Spaeth</td></tr>
+  <tr><td>Initial complaint</td><td>ECF 1, 59 pp., filed 02/18/2026</td></tr>
+  <tr><td>Order</td><td>ECF 105, 07/13/2026</td></tr>
+  <tr><td>Operative pleading</td><td>Second Amended Verified Complaint, ECF 115, filed 08/17/2026, 77 pp.</td></tr>
+  <tr><td>Opposition</td><td>Combined Opposition to Motions to Dismiss with evidentiary appendix, ECF 130, filed 09/09/2026, 373 pp.</td></tr>
+  <tr><td>Diligent prosecution</td><td>RWQCB Deputy AG John Sasaki stipulated on the record that the Water Board does not assert a diligent-prosecution bar under 42 U.S.C. § 6972(b)(1)(B) (SAVC ¶¶ 8, 109(b)); Water Board Petition A-2926 in abeyance 02/23/2026</td></tr>
+  <tr><td>Companion matters</td><td><i>Meyer-Coffey</i>, No. 8:25-cv-02560-AH-SP (§ 1983 &amp; VAWA, filed 11/14/2025); <i>Utzman et al. v. County of Orange, Mercy House Living Centers et al.</i> (OC Superior Court)</td></tr>
+</table>
+<p class="small">All items: <span class="tag t-r">RECORD</span></p>
+
+<h2 id="origin"><span class="num">Section 9</span>The 2021 origin</h2>
+
+<p>The shelter did not come out of nowhere. It came after a lockout that we have never been able to undo.</p>
+
+<table>
+  <tr><th style="width:130px">Date</th><th>Event</th><th style="width:200px">Document</th></tr>
+  <tr><td>08/09/2021</td><td>Ms. Petruccio's driver's license records 212 Southbrook, Irvine, and a weight of 160 lb</td><td><code>album7_photo_204.jpg</code></td></tr>
+  <tr><td>08/04/2021</td><td>Sheriff lockout at 212 Southbrook; Levying Officer File #2021102780; case 30-2021-01201327-CL-UD-CJC</td><td><code>album2_photo_018.jpg</code></td></tr>
+  <tr><td>08/20/2021, 3:11 p.m.</td><td>Judge Carmen Luege: <i>"Lockout is STAYED until a ruling is issued on this matter."</i></td><td><code>album3_photo_066.jpg</code>; Event ID 73592630</td></tr>
+  <tr><td>08/20/2021, 4:29 p.m.</td><td>Opposing counsel files a CCP § 170.6 challenge (ROA #37). Possession is never restored.</td><td>Register of Actions</td></tr>
+  <tr><td>05/19/2023</td><td>Storage burglary, unit #D2757; OCSD report #23-018358</td><td><code>album7_photo_187.jpg</code></td></tr>
+  <tr><td>2023</td><td>Identity theft report, HBPD #2023-600391 / T23000504</td><td><code>album8_photo_051.jpg</code></td></tr>
+</table>
+<p class="small">All items: <span class="tag t-r">RECORD</span></p>
+
+<p><span class="tag t-a">ACCOUNT</span> I am describing what the documents show and what happened to us. Whether that sequence was lawful is a legal question I am not qualified to answer, and I am not asking anyone reading this to accept my characterization of it. I am asking that the documents be looked at.</p>
+
+<h2 id="belief"><span class="num">Section 10</span>What we believe, what we can prove, what we do not say</h2>
+
+<p>This section exists because it is the section that will be tested, and because we would rather be the ones to draw the line than have it drawn for us.</p>
+
+<h3>10.1 What documents establish</h3>
+<ul>
+  <li>The site contains hexavalent chromium at concentrations the State's own screening levels treat as requiring controls. <span class="tag t-r">RECORD</span></li>
+  <li>The County conditioned shelter occupancy on an asphalt cover. <span class="tag t-r">RECORD</span></li>
+  <li>The cover was installed under a one-year warranty by a crew recorded as not hazmat-trained. <span class="tag t-r">RECORD</span></li>
+  <li>Ms. Petruccio photographed that cover failing beneath her bed on November 7, 2023, with time, date, and GPS embedded in the files. <span class="tag t-r">RECORD</span></li>
+  <li>Six residents of that structure were hospitalized with pulmonary, pleural, septic, or soft-tissue disease in the same period. <span class="tag t-r">RECORD</span></li>
+  <li>Her social workers documented the shelter; her physicians did not. <span class="tag t-r">RECORD</span></li>
+  <li>She was exited from the shelter while hospitalized and barred from returning for thirty days. <span class="tag t-r">RECORD</span></li>
+  <li>We made written disclosures to the ACLU, two Senate offices, a congressional office, the City Attorney, and a federal task force, on the dates listed in the record. <span class="tag t-r">RECORD</span></li>
+  <li>A federal case exists with the docket entries listed above. <span class="tag t-r">RECORD</span></li>
+</ul>
+
+<h3>10.2 What we believe but cannot yet prove to a scientific or legal standard</h3>
+<ul>
+  <li><span class="tag t-l">ALLEGATION</span> That the specific dust and vapor from that specific floor caused my mother's specific infection and my specific lung findings. This is our honest belief. It is supported by timing, the photographs, the site chemistry, and six people in one structure with the same class of illness. It has not been established by a physician or an exposure scientist. That is precisely the review requested in Section 3.</li>
+  <li><span class="tag t-l">ALLEGATION</span> That the failures described here resulted from deliberate choices rather than negligence, indifference, or bureaucratic drift. We do not know what was in anyone's mind. We know what the documents say and what the outcomes were.</li>
+  <li><span class="tag t-l">ALLEGATION</span> That the warrant and the arrest were retaliatory. It is our belief. We are asking for an investigation, not for agreement.</li>
+</ul>
+
+<h3>10.3 What we are not saying</h3>
+<ul>
+  <li>We are not saying any physician intended harm.</li>
+  <li>We are not saying any named individual committed a crime.</li>
+  <li>We are not saying this document proves any claim. It is a record of what exists and what we say happened.</li>
+</ul>
+
+<h2 id="law"><span class="num">Section 11</span>The law, the remedies, and the deadlines</h2>
+
+<div class="panel stop">
+<h4>Read this first</h4>
+<p style="margin-bottom:0">The dates below are general rules. Exceptions, tolling, and claim-presentation requirements can eliminate a claim entirely. Every date must be calculated by a licensed attorney from the actual facts. Do not rely on this table alone.</p>
+</div>
+
+<table>
+  <tr><th>Claim type</th><th style="width:210px">Authority</th><th style="width:170px">Clock</th></tr>
+  <tr><td>Claim against a California public entity (City, County, OCHCA, RWQCB)</td><td>Gov. Code §§ 900–915; § 911.2</td><td><b>6 months</b> personal injury/death; 1 year property</td></tr>
+  <tr><td>Lawsuit after rejection</td><td>Gov. Code § 945.6</td><td><b>6 months</b> from notice of rejection</td></tr>
+  <tr><td>Late-claim relief</td><td>Gov. Code § 946.6</td><td>Within 6 months of denial</td></tr>
+  <tr><td>Medical negligence</td><td>CCP § 340.5; § 364</td><td><b>1 year</b> from discovery; 3 years outer; 90-day pre-suit notice</td></tr>
+  <tr><td>Personal injury (non-medical)</td><td>CCP § 335.1</td><td><b>2 years</b></td></tr>
+  <tr><td>Elder / dependent adult abuse</td><td>Welf. &amp; Inst. Code § 15600 et seq.; § 15657</td><td>2 years; fees and punitive damages available</td></tr>
+  <tr><td>Federal civil rights (§ 1983, ADA, § 504)</td><td>Borrowed CCP § 335.1</td><td><b>2 years</b></td></tr>
+  <tr><td>Fair Housing Act</td><td>42 U.S.C. § 3613(a)(1)(A)</td><td><b>2 years</b> civil action; <b>1 year</b> HUD complaint</td></tr>
+  <tr><td>Whistleblower retaliation</td><td>Lab. Code § 1102.5</td><td><b>3 years</b></td></tr>
+  <tr><td>False Claims Act</td><td>31 U.S.C. § 3730(b); Gov. Code § 12650 et seq.</td><td>6 years federal; 3 years California</td></tr>
+  <tr><td>RCRA citizen suit</td><td>42 U.S.C. § 6972(b)</td><td>90-day pre-suit notice; already filed at ECF 115</td></tr>
+</table>
+
+<h3>11.1 The claims already in play</h3>
+<table>
+  <tr><th style="width:200px">Claim</th><th>What must be proven</th><th style="width:170px">Strongest evidence</th></tr>
+  <tr><td><b>RCRA citizen suit</b><br>42 U.S.C. § 6972(a)(1)(B)</td><td>Imminent and substantial endangerment; past or present owner/operator; notice given</td><td>Phase II data, cap warranty, breach photographs, indoor sampling (needed)</td></tr>
+  <tr><td><b>§ 1983</b><br>42 U.S.C. § 1983</td><td>Policy or custom (<i>Monell v. Dep't of Social Services</i>, 436 U.S. 658 (1978)); deprivation of a federal right</td><td>Written Good Neighbor Policy, shuttle schedule, medical-exit rule</td></tr>
+  <tr><td><b>ADA Title II</b><br>42 U.S.C. §§ 12131–12134; 28 C.F.R. § 35.130(b)(7)</td><td>Disability; denial of reasonable modification; deliberate indifference for damages (<i>Duvall v. County of Kitsap</i>, 260 F.3d 1124 (9th Cir. 2001) (en banc)); integration mandate, <i>Olmstead v. L.C.</i>, 527 U.S. 581 (1999)</td><td>Written accommodation request and the written response or silence</td></tr>
+  <tr><td><b>Rehabilitation Act § 504</b><br>29 U.S.C. § 794; Gov. Code § 11135</td><td>Receipt of federal or state funds; exclusion or denial of benefit on the basis of disability</td><td>Funding agreements, HHAP MOU</td></tr>
+  <tr><td><b>Fair Housing Act</b><br>42 U.S.C. § 3604(f)(3)(B)</td><td>Discriminatory housing practice; failure to reasonably accommodate</td><td>Hospital chart page 985; thirty-day bar</td></tr>
+  <tr><td><b>Unruh / Bane Act</b><br>Civ. Code §§ 51, 52, 52.1</td><td>Denial of full and equal access; ADA violation; threats, intimidation, or coercion interfering with rights</td><td>No-walk-up rule enforced by immediate-exit threat</td></tr>
+  <tr><td><b>Elder / dependent adult abuse</b><br>Welf. &amp; Inst. Code § 15600 et seq.</td><td>Neglect or abuse of a dependent adult by a custodian; § 15657 for recklessness</td><td>Exit during ICU stay; no discharge plan to habitable placement</td></tr>
+  <tr><td><b>Premises liability</b></td><td>Duty, breach, causation, damages</td><td>One-year warranty, untrained crew, failed base seal</td></tr>
+</table>
+
+<h3>11.2 The causation problem, and the three steps that solve it</h3>
+<p><span class="tag t-a">ACCOUNT</span> This case does not fail on documents. It fails or succeeds on medical causation — whether a professional will say, in writing, that the exposure was a substantial factor in the diagnoses.</p>
+<ol>
+  <li><b>An occupational or environmental medicine physician</b> retained for a records review — not a treating physician — asked for a written opinion on substantial-factor causation.</li>
+  <li><b>A certified industrial hygienist</b> to review the Phase II data, the cap design, the breach photographs, and the indoor dust pathway.</li>
+  <li><b>Indoor sampling</b> — dust wipes and air samples inside the structure, chain of custody, certified laboratory. Without indoor data the case rests on inference from soil.</li>
+</ol>
+<p>Ask every intake attorney specifically whether the firm will advance expert costs. If not, ask for a referral to one that will.</p>
+
+<h3>11.3 What not to do</h3>
+<ul>
+  <li>Do not sign a release, waiver, or settlement document without counsel.</li>
+  <li>Do not accept a confidential payment or gift card in exchange for silence.</li>
+  <li>Do not speak to an adjuster or opposing attorney about the facts.</li>
+  <li>Do not delete or edit any photograph, email, or message.</li>
+  <li>Do not post about individuals on social media.</li>
+  <li>Do not file a False Claims Act case or a federal complaint pro se.</li>
+  <li>Do not let a deadline pass because a phone call was not returned. Send the letter, keep the receipt, calendar the date.</li>
+</ul>
+
+<h2 id="outreach"><span class="num">Section 12</span>Outreach: who can act, and how</h2>
+
+<p>Eighteen offices are mapped in <code>04_Outreach_Pack.md</code>, with ten ready-to-send letters. The four that matter most in the next thirty days:</p>
+
+<table>
+  <tr><th style="width:230px">Office</th><th>What they can actually do</th><th style="width:150px">Letter</th></tr>
+  <tr><td><b>Legal Aid Society of Orange County</b></td><td>Free representation intake; the only realistic route to counsel for a Government Code claim</td><td>A</td></tr>
+  <tr><td><b>Disability Rights California</b></td><td>Protection and advocacy system; investigative authority; can request records and enter facilities</td><td>B</td></tr>
+  <tr><td><b>HUD Office of Fair Housing (FHEO)</b></td><td>Free investigation, subpoena power, one-year clock; produces an official finding</td><td>E</td></tr>
+  <tr><td><b>OC Adult Protective Services</b></td><td>Independent welfare check and neglect investigation; can act without consent in some circumstances</td><td>G</td></tr>
+</table>
+
+<div class="panel">
+<h4>The rule for every letter</h4>
+<p style="margin-bottom:0">Attach documents, not conclusions. The strongest attachment in this file is the November 7, 2023 photograph set and the County's asphalt-cover condition. A letter that says "look at these two documents" gets read. A letter that says "they poisoned us" gets closed.</p>
+</div>
+
+<h2 id="protection"><span class="num">Section 13</span>Protection plan</h2>
+
+<h3>13.1 Immediate</h3>
+<ul>
+  <li><b>Medical emergency:</b> 911 — give the address, her age, and the main symptom. If she has a PICC line, spinal history, or breathing difficulty, say that first.</li>
+  <li><b>Mental health crisis:</b> call or text <b>988</b>, 24 hours, free.</li>
+  <li><b>Shelter, food, same-day services:</b> dial <b>211</b> (Orange County) and ask for housing navigation and case management.</li>
+  <li><b>Never sign in the moment to make a situation stop.</b> Ask for a copy and say "I need this reviewed."</li>
+</ul>
+
+<h3>13.2 Medical</h3>
+<ul>
+  <li>Build one binder and one digital folder: medication list, allergy list (including the clindamycin allergy), one-page diagnosis summary, insurance cards, HIPAA authorizations, advance directive, health care power of attorney.</li>
+  <li>At every visit, say aloud at triage: <i>"She resided at the Huntington Beach Navigation Center, a shelter built over contaminated soil with a failing floor cap. Please put that in the chart."</i> Ask the nurse to read back what was entered.</li>
+  <li>Request the complete designated record set in writing — including social work and case management notes — under 45 C.F.R. § 164.524. Do not accept a summary.</li>
+</ul>
+
+<h3>13.3 Housing</h3>
+<ul>
+  <li>Photograph every page of the guest handbook. You cannot challenge a rule you cannot quote.</li>
+  <li>Put every accommodation request in writing and ask for a written response by a stated date.</li>
+  <li>If hospitalized again: notify the shelter in writing the same day, state that the absence is disability-related, and ask the hospital social worker to send the same notice on letterhead. That document converts "you abandoned your bed" into "you requested an accommodation and were denied."</li>
+</ul>
+
+<h3>13.4 Evidence</h3>
+<ul>
+  <li><b>3-2-1:</b> three copies, two kinds of media, one off-site.</li>
+  <li>Never edit an original photograph. Metadata is the proof.</li>
+  <li>Keep a one-page custody list: item, source, date obtained, where stored. That list is what you hand a lawyer.</li>
+  <li>Once counsel is retained, ask them to send a written litigation hold to the City, County, Mercy House, Scripps, Hoag, Mission Hills, and the Sheriff-Coroner.</li>
+</ul>
+
+<h3>13.5 If police contact you</h3>
+<ul>
+  <li>Stay calm. Do not run, resist, or argue.</li>
+  <li>Ask: <i>"Am I being detained or am I free to leave?"</i></li>
+  <li>Say: <i>"I am invoking my right to remain silent and I want a lawyer."</i> Then say nothing about the facts.</li>
+  <li>Do not consent to a search. Write down the officer's name, badge number, and the time.</li>
+</ul>
+
+<h2 id="gaps"><span class="num">Section 14</span>What is missing</h2>
+
+<p>These are the gaps a lawyer, agency, or expert will ask about first. Filling them is the highest-value work available.</p>
+
+<ol>
+  <li><span class="tag t-v">TO VERIFY</span> A written DTSC or OCHCA determination on the cap's required design life, and any recorded land use covenant for the parcel.</li>
+  <li><span class="tag t-v">TO VERIFY</span> Complete soil gas and indoor air sampling results for the shelter structure — not soil only.</li>
+  <li><span class="tag t-v">TO VERIFY</span> The full April 29, 2026 HHAP MOU, including the $75,000 base-seal repair scope.</li>
+  <li><span class="tag t-v">TO VERIFY</span> Mr. Knabb's September–October 2023 inpatient chart, if not already within ECF 130.</li>
+  <li><span class="tag t-v">TO VERIFY</span> Burt Bell's complete death certificate and coroner file, not only the amended certificate.</li>
+  <li><span class="tag t-v">TO VERIFY</span> The identity and outcome of the resident resuscitated on June 10, 2024, referenced in Senator Min's office response.</li>
+  <li><span class="tag t-v">TO VERIFY</span> Brian Bell's death investigation file from Oasis supportive housing.</li>
+  <li><span class="tag t-v">TO VERIFY</span> Any medical record in which a treating physician was asked, and answered, whether the shelter environment could be relevant.</li>
+  <li><span class="tag t-v">TO VERIFY</span> The complete disposition history of the § 496d(a) complaint, including the mailing address of record and the U-Haul corporate correspondence.</li>
+  <li><span class="tag t-v">TO VERIFY</span> Whether any resident was offered the Oasis placement that Mr. DiMarcello and Ms. Petruccio were not, and the written criteria used.</li>
+</ol>
+
+<h2 id="verify"><span class="num">Section 15</span>Verification register</h2>
+
+<p>Before this document is sent to anyone, each item below must be checked against the source. Record the result in the last column.</p>
+
+<table>
+  <tr><th style="width:60%">Item</th><th style="width:20%">Source</th><th style="width:20%">Verified (date/initials)</th></tr>
+  <tr><td>Cr(VI) 980 µg/kg and 49× DTSC residential level</td><td>EEC Phase II; SAVC ¶ 93</td><td></td></tr>
+  <tr><td>Asphalt cover condition quoted verbatim</td><td><code>navigation_center_003.jpg</code></td><td></td></tr>
+  <tr><td>One-year warranty and "not 40-hour trained" language</td><td>Laserfiche 5406552</td><td></td></tr>
+  <tr><td>Photograph date, time, and GPS</td><td>EXIF of <code>photo_01–08</code></td><td></td></tr>
+  <tr><td>All hospitalization dates and diagnoses</td><td>Discharge summaries; SAVC ¶¶ 11–13</td><td></td></tr>
+  <tr><td>Social work quotes on pages 985, 1034, 1051</td><td><code>1.E.Petruccio Patient Health.pdf</code></td><td></td></tr>
+  <tr><td>Absence of shelter from physician notes</td><td>Same, pp. 654–983</td><td></td></tr>
+  <tr><td>Thirty-day bar</td><td>Page 985</td><td></td></tr>
+  <tr><td>Docket entries ECF 1, 105, 115, 130</td><td>PACER / CM-ECF</td><td></td></tr>
+  <tr><td>2021 lockout dates, file number, case number</td><td>Sheriff's Return; ROA</td><td></td></tr>
+  <tr><td>Judge Luege stay order and 170.6 timing</td><td>Minute Order; ROA #37</td><td></td></tr>
+  <tr><td>Email dates and recipients</td><td><code>amd949609@gmail.com</code></td><td></td></tr>
+  <tr><td>Warrant envelope address and return address</td><td><code>photo_a74G5sEDR54YwTiF7.jpg</code></td><td></td></tr>
+</table>
+
+<div class="rule"></div>
+
+<h3>Closing</h3>
+<p>My mother is 62. She nearly died of an infection that I believe she got from the floor she slept on. She lost 44 pounds. She has a spine with an infection in its history and a PICC line scar. She cannot start over from nothing again.</p>
+<p>I have a left shoulder that does not work, a record that shows three years of emergency departments, and a criminal case I believe was manufactured. We are not asking anyone to agree with us before they look. We are asking them to look.</p>
+<p>If you are a lawyer reading this, the documents are indexed and ready. If you are an agency, the records request is written. If you are a reporter, every factual sentence is tagged and sourced. If you are someone in the same situation, the protection plan in Section 13 is what we wish we had in 2023.</p>
+
+<footer>
+  <p><b>HBNC Case 2 — Formal Record of Account, Evidence, Law and Protection.</b> Prepared October 23, 2026. Party-prepared; not a pleading; not legal advice. Original source files (<code>HBNC_Case_Report.html</code> and <code>v3 medical ep jk 2 case hbnc mercy.txt</code>) were not modified and remain in <code>C:\Users\Amd949609\Downloads\</code>.</p>
+  <p>Companion files: <code>00_README_START_HERE.md</code> · <code>01_Formal_Statement.md</code> · <code>02_The_Record.md</code> · <code>03_Law_and_Remedies.md</code> · <code>04_Outreach_Pack.md</code> · <code>05_Protection_Plan.md</code></p>
+</footer>
+
+</div>
+</body>
+</html>

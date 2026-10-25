@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>URGENT — Request for Protective Intervention — DiMarcello / Petruccio</title>
+<style>
+  :root{
+    --ink:#15181c; --muted:#5a636e; --line:#d7dce3; --bg:#ffffff;
+    --urgent:#8c1c1c; --urgent-soft:#fdf4f4; --panel:#f6f8fa; --panel2:#eef2f6;
+    --ok:#0b6b3a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif;font-size:16.5px;line-height:1.66}
+  .wrap{max-width:940px;margin:0 auto;padding:48px 28px 120px}
+
+  /* cover */
+  .cover{border-top:8px solid var(--urgent);padding-top:26px}
+  .urgent-strip{background:var(--urgent);color:#fff;font-family:ui-sans-serif,system-ui,sans-serif;
+    font-size:12px;letter-spacing:.22em;font-weight:800;text-transform:uppercase;
+    padding:7px 14px;display:inline-block;border-radius:3px}
+  h1{font-size:36px;line-height:1.14;margin:18px 0 12px;letter-spacing:-.015em}
+  .sub{font-size:18px;color:#2c343d;margin:0 0 6px}
+  .sub2{font-size:15px;color:var(--muted);margin:0 0 26px}
+  .metagrid{display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;
+    font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--muted);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0}
+  .metagrid b{color:var(--ink);font-weight:650}
+
+  /* glance */
+  .glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:28px 0 8px}
+  .glance div{background:var(--urgent-soft);border:1px solid #eccfcf;border-radius:8px;padding:14px 15px}
+  .glance b{display:block;font-size:25px;line-height:1.05;font-family:ui-sans-serif,system-ui,sans-serif;color:var(--urgent)}
+  .glance span{font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:#6b4444}
+
+  h2{font-size:22px;margin:52px 0 8px;padding-top:20px;border-top:2px solid var(--ink);letter-spacing:-.005em}
+  h2 .n{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;
+    letter-spacing:.2em;color:var(--muted);font-weight:700;margin-bottom:7px}
+  h3{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    font-size:16.5px;margin:28px 0 8px}
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 16px;padding-left:22px}
+  li{margin:0 0 8px}
+  .lede{font-size:18.5px;line-height:1.6;color:#22282f}
+  .small{font-size:13.5px;color:var(--muted)}
+  strong{font-weight:700}
+
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px;margin:22px 0}
+  .box h4{margin:0 0 10px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .box.now{background:var(--urgent-soft);border-color:#e8c7c7;border-left:5px solid var(--urgent)}
+  .box.now h4{color:var(--urgent)}
+
+  .num{list-style:none;padding:0;counter-reset:item}
+  .num > li{counter-increment:item;position:relative;padding-left:38px;margin-bottom:12px}
+  .num > li:before{content:counter(item);position:absolute;left:0;top:1px;
+    width:25px;height:25px;border-radius:50%;background:var(--ink);color:#fff;
+    font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:700;
+    display:flex;align-items:center;justify-content:center}
+
+  table{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:14px;
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+  th{background:var(--panel2);text-align:left;padding:9px 10px;border:1px solid var(--line);
+    font-weight:650;vertical-align:top}
+  td{padding:9px 10px;border:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fcfdfe}
+  .c{text-align:center}
+  .yes{color:var(--ok);font-weight:700}
+  .no{color:#9aa3ad;font-weight:700}
+
+  blockquote{margin:22px 0;padding:14px 20px;background:var(--panel2);border-left:4px solid var(--ink);
+    border-radius:0 6px 6px 0}
+  blockquote p:last-child{margin-bottom:0}
+
+  .sign{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+  .sigline{margin-top:44px;border-bottom:1px solid var(--ink);width:330px}
+  .siglabel{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;color:var(--muted);margin-top:6px}
+
+  footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+
+  .howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:26px 0}
+  .howto div{border:1px solid var(--line);border-radius:8px;padding:16px;background:#fff}
+  .howto b{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--urgent);margin-bottom:6px}
+
+  @media print{
+    body{font-size:10.5pt}
+    .wrap{max-width:none;padding:0}
+    .howto,.glance{break-inside:avoid}
+    h2{break-after:avoid}
+    table{break-inside:avoid}
+    .pagebreak{break-before:page}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <span class="urgent-strip">Urgent · Request for Protective Intervention</span>
+  <h1>Five Years of Retaliation After Protected Disclosures — and a Request for Protection Now</h1>
+  <p class="sub">Anthony Michael DiMarcello III, for himself and for Elizabeth Tina Petruccio</p>
+  <p class="sub2">Huntington Beach Navigation Center · 17631 Cameron Lane, Huntington Beach, California 92648</p>
+  <div class="metagrid">
+    <div><b>Prepared:</b> October 23, 2026</div>
+    <div><b>Status:</b> Party-prepared protection request</div>
+    <div><b>Not:</b> a lawsuit, a damages demand, or legal advice</div>
+    <div><b>Asks:</b> protection, placement, intervention, a restraining order</div>
+    <div><b>Disclosures begin:</b> 2023</div>
+    <div><b>Homeless since:</b> August 4, 2021</div>
+  </div>
+</header>
+
+<div class="glance">
+  <div><b>5 yrs</b><span>homeless</span></div>
+  <div><b>49×</b><span>Cr(VI) over residential level</span></div>
+  <div><b>1 yr</b><span>warranty on the site cap</span></div>
+  <div><b>6</b><span>residents, same illness class</span></div>
+  <div><b>1</b><span>death</span></div>
+  <div><b>0</b><span>lawyers retained</span></div>
+</div>
+
+<div class="box now">
+  <h4>How to use this document</h4>
+  <p style="margin-bottom:8px">Print eight copies. Hand one copy to one office at a time — never to several at once. Write the date, the office, and the name of the person who received it on the back of your own copy.</p>
+  <p style="margin-bottom:0"><b>Part One is the whole argument.</b> If a person reads only that page, they should be able to act. Parts Two through Eight exist so that a person who needs proof can find it in one place.</p>
+</div>
+
+<h2 id="p1"><span class="n">Part One</span>Plain-English summary — read this page first</h2>
+
+<p class="lede">My name is Anthony DiMarcello. My mother is Elizabeth Petruccio. We are 43 and 62. We have been homeless since August 4, 2021, when the Sheriff locked us out of our apartment in Irvine during the COVID eviction moratorium, after a judge had already ordered the lockout stopped.</p>
+
+<p>We went into the Huntington Beach Navigation Center because there was nowhere else. It is a tent structure built on an old industrial lot. The County said the site was safe <strong>only as long as there was an asphalt cover over the soil</strong>. The City built that cover under a <strong>one-year warranty</strong>, using a crew its own contractor said was <strong>not hazmat trained</strong>. The soil underneath has hexavalent chromium at <strong>49 times</strong> the state's residential screening level — plus lead, arsenic, mercury, and solvents that turn into vapor and come up through the floor.</p>
+
+<p>In November 2023 my mother photographed that cover failing under her bed. Raw dirt on the floor where she slept. She swept it up with a dustpan. The photographs carry the date, the time, and the location inside the file.</p>
+
+<p>In January 2024 she was in intensive care with an infection in her lung and her spine. Chest tube. Intubated. She went from 160 pounds to 116. <strong>While she was in that bed, the shelter exited her from the program and told her she could not come back for thirty days.</strong> That is written in her own hospital chart, by a social worker, on January 19, 2024 — not by us.</p>
+
+<p>I reported all of it in writing. To the ACLU. To a United States Senator. To the City Attorney. To a federal task force. I have every email and every date.</p>
+
+<p><strong>After that, things happened to me.</strong> I was thrown out of the shelter. A criminal complaint was mailed to an address I had left in 2021 — not to where I actually was, which the shelter knew. It became a warrant. I was arrested at a courthouse while helping an elderly woman with her own elder-abuse case. It was the first arrest of my life. In custody I was put on a psychiatric hold, given medication, and I woke up on the floor with a six-staple gash in my head. Then my mother and I turned out to be the only two people from that shelter who were never moved into housing.</p>
+
+<p><strong>I have been hiding — not from the truth, from them.</strong> Because every time I have asked for help in writing, something worse has happened to me. I have asked the ACLU, two Senate offices, a congressional office, the City Attorney, and a federal task force. I have no lawyer, no housing, and a mother whose mind is getting worse and who has started to become violent toward me.</p>
+
+<h3>What I am asking for</h3>
+<ol class="num">
+  <li><strong>A restraining order</strong>, so the retaliation stops.</li>
+  <li><strong>A written placement determination</strong> for both of us — and written confirmation of a specific placement before either of us relocates. My mother will not leave without it, and that is her right.</li>
+  <li><strong>A protective investigation</strong> into the sequence described in this document.</li>
+  <li><strong>A medical workup</strong> for my mother for the exposures on that site.</li>
+  <li><strong>One named person</strong> at one agency who will answer the phone.</li>
+</ol>
+
+<p class="small"><strong>What I am not asking for:</strong> money, a lawsuit, or agreement with my opinions. I am asking for protection, and for someone with authority to look at the documents.</p>
+
+<h2 id="p2" class="pagebreak"><span class="n">Part Two</span>Formal request</h2>
+
+<h3>1. Identity and status</h3>
+<p><strong>1.1</strong> I am Anthony Michael DiMarcello III, born May 4, 1983. I am the son and caregiver of Elizabeth Tina Petruccio, born July 29, 1964. Ms. Petruccio is a dependent adult within the meaning of Welfare and Institutions Code § 15610.23 by reason of disability, and has a pre-existing psychiatric diagnosis for which I have provided care since before 2021.</p>
+<p><strong>1.2</strong> I am a mandated reporter under Welfare and Institutions Code § 15630 in my capacity as a caregiver who assumed responsibility for the care of a dependent adult.</p>
+<p><strong>1.3</strong> I am a whistleblower who has made protected disclosures to federal, state, and local authorities beginning in 2023. <strong>I have not filed a complaint under 31 U.S.C. § 3730(b).</strong> I state that precisely, because I do not want any reader to think I am overstating my position.</p>
+
+<h3>2. Why this is urgent</h3>
+<p><strong>2.1</strong> We are homeless. We have been homeless continuously since August 4, 2021.</p>
+<p><strong>2.2</strong> My mother has a history of empyema, sepsis, respiratory failure requiring intubation, and C4–C5 discitis-osteomyelitis. She is 62 and far below her baseline weight. A further respiratory infection is a life-threatening event for her.</p>
+<p><strong>2.3</strong> Her psychiatric condition has deteriorated since our residence at the facility, and she has become violent toward me. I am her only caregiver and I have no relief.</p>
+<p><strong>2.4</strong> I have been subjected to a sequence of adverse actions following my written disclosures, described in Part Four. I believe the sequence is retaliatory. I am asking for an investigation, not for anyone to accept that belief.</p>
+
+<h3>3. The disclosures I made</h3>
+<table>
+  <tr><th style="width:210px">Date</th><th>Recipient</th></tr>
+  <tr><td>April 22, 2024</td><td>Mercy House Living Centers executive leadership</td></tr>
+  <tr><td>April 30, 2024</td><td>Office of California Senator Dave Min</td></tr>
+  <tr><td>May 8, 2024</td><td>ACLU of Southern California</td></tr>
+  <tr><td>May 15, 2024</td><td>Office of the Huntington Beach City Attorney</td></tr>
+  <tr><td>June 2025</td><td>Multi-agency demand letters</td></tr>
+  <tr><td>May 8, 2025</td><td>United States Department of Justice, Homelessness Fraud Task Force</td></tr>
+  <tr><td>Feb. 2025 – Aug. 2026</td><td>Additional written notices to the ACLU, legislative offices, and municipal officials</td></tr>
+</table>
+<p><strong>3.2</strong> Each disclosure concerned the physical condition of the facility, the medical consequences to its residents, the treatment of disabled residents, and the use of public funds at that site. Each is preserved with its date, recipient, and send confirmation.</p>
+
+<h3>4. The adverse actions</h3>
+<p><strong>4.1</strong> On or about January 19, 2024, while my mother was hospitalized in intensive care, the facility exited her from the program and imposed a thirty-day bar on her return. Recorded by a hospital social worker at page 985 of her medical record.</p>
+<p><strong>4.2</strong> On February 11, 2024, I was taken by ambulance to an emergency department for a non-healing wound and cellulitis, and was exited from the program while hospitalized. Recorded in a hospital social work note of that date.</p>
+<p><strong>4.3</strong> Following my 2025 written disclosures, I was ejected from the facility. <em>[Date to be confirmed from the record.]</em></p>
+<p><strong>4.4</strong> A criminal complaint under Penal Code § 496d(a) was mailed to 412 Olive Avenue, Huntington Beach, California 92648 — an address I had not occupied since 2021. Because it went to a stale address, I did not appear, and a warrant issued. The envelope is retained.</p>
+<p><strong>4.5</strong> I was arrested at an Orange County courthouse on that warrant while assisting an elderly resident with an elder financial abuse matter. It was the first arrest of my life. <em>[Date to be confirmed.]</em></p>
+<p><strong>4.6</strong> In custody I was placed on an involuntary psychiatric hold, administered medication, and collapsed, sustaining a three-centimeter occipital laceration repaired with six surgical staples at UCI Medical Center on December 14, 2025.</p>
+<p><strong>4.7</strong> My mother and I were not offered supportive housing placement made available to other residents of the same facility, and we have received no written statement of the criteria applied or the reason for our exclusion.</p>
+
+<h3>5. The pattern</h3>
+<p><strong>5.1</strong> Each action in Part Four followed, within a short interval, a written disclosure in Part Three.</p>
+<p><strong>5.2</strong> Mailing a criminal complaint to a four-year-stale address is a departure from ordinary process, and it is the mechanism by which a warrant came to exist.</p>
+<p><strong>5.3</strong> The corporate victim of the alleged property offense never pressed charges, and confirmed that fraudulent accounts had been opened in my name and that no debt was owed on my account.</p>
+<p><strong>5.4</strong> I state these facts so that an investigator can determine whether the sequence is connected. I do not ask any reader to conclude that it is.</p>
+
+<h2 id="p3" class="pagebreak"><span class="n">Part Three</span>The chain — every item, and what it proves</h2>
+
+<p>This is the section that matters to anyone with authority. Each row is a document I possess. The right column states only what the document supports. Nothing more.</p>
+
+<table>
+  <tr><th style="width:34px" class="c">#</th><th style="width:52%">Evidence</th><th>What it supports</th></tr>
+  <tr><td class="c">1</td><td>County briefing: site approved <strong>“as long as an asphalt pavement cover was placed over the soil”</strong></td><td>The cap was the only barrier protecting residents</td></tr>
+  <tr><td class="c">2</td><td>City construction contract, Laserfiche #5406552: <strong>one-year warranty</strong>; crew <strong>“will not be 40-hour trained”</strong></td><td>The barrier had no enforceable maintenance after 2021</td></tr>
+  <tr><td class="c">3</td><td>Eight photographs, <strong>Nov. 7, 2023, 12:20–12:36 p.m., GPS 33.706389, -117.988611</strong>: bolts through the cap, raw soil on the sleeping floor</td><td>The barrier had already failed while we lived there</td></tr>
+  <tr><td class="c">4</td><td>Hospital chart: social work documents <strong>“SHELTER HISTORY: HB Navigation Center”</strong> three times; 25+ physician notes omit it</td><td>The exposure history was known, and was not evaluated</td></tr>
+  <tr><td class="c">5</td><td>Same chart, p. 985: exited from program; <strong>must wait 30 days</strong></td><td>The rule that punished her hospitalization</td></tr>
+  <tr><td class="c">6</td><td>Discharge summary: empyema, sepsis, intubation, C4–C5 osteomyelitis; 160 → 116 lb</td><td>The harm</td></tr>
+  <tr><td class="c">7</td><td>Records for five additional residents; one death certificate</td><td>The cluster</td></tr>
+  <tr><td class="c">8</td><td>Send confirmations for every disclosure, 2024–2026</td><td>Notice was given, repeatedly, in writing</td></tr>
+  <tr><td class="c">9</td><td>Retained envelope addressed to <strong>412 Olive Avenue</strong></td><td>The mechanism of the warrant</td></tr>
+  <tr><td class="c">10</td><td>UCI record, Dec. 14, 2025: occipital laceration, six staples</td><td>The harm following custody</td></tr>
+  <tr><td class="c">11</td><td>Federal docket 8:26-cv-00348-JWH-ADS, ECF 1, 105, 115, 130</td><td>The environmental findings are before a federal court</td></tr>
+  <tr><td class="c">12</td><td>Shelter guest handbook and shuttle schedule</td><td>The written policies at issue</td></tr>
+</table>
+
+<h2 id="p4"><span class="n">Part Four</span>What each office can actually do</h2>
+
+<p>I have been referred in circles for five years. This table states what each office can do — and, just as importantly, what it cannot.</p>
+
+<table>
+  <tr><th style="width:26%">Office</th><th style="width:30%">Can do</th><th style="width:24%">Cannot do</th><th>The ask</th></tr>
+  <tr><td><strong>Superior Court of California, County of Orange</strong></td><td>Issue a civil harassment restraining order under CCP § 527.6, including a temporary order before a hearing</td><td>Investigate; award housing</td><td>File CH-100 with fee waiver FW-001</td></tr>
+  <tr><td><strong>OC Adult Protective Services</strong></td><td>Investigate neglect and abuse of a dependent adult; arrange emergency placement; refer</td><td>Issue an injunction</td><td>Open an investigation; emergency placement</td></tr>
+  <tr><td><strong>OC District Attorney, Victim/Witness</strong></td><td>Victim services; address confidentiality; review of the warrant sequence</td><td>Represent me civilly</td><td>Victim services intake</td></tr>
+  <tr><td><strong>CA Secretary of State, Safe at Home</strong></td><td>Substitute mailing address; real address not public record</td><td>Housing; injunction</td><td>Enroll</td></tr>
+  <tr><td><strong>CA Attorney General, Public Integrity</strong></td><td>Review official conduct and retaliation</td><td>Issue an injunction</td><td>Open a file</td></tr>
+  <tr><td><strong>U.S. Attorney, C.D. Cal.</strong></td><td>Federal review of retaliation against a whistleblower</td><td>State protective order</td><td>Review</td></tr>
+  <tr><td><strong>HUD Office of Fair Housing</strong></td><td>Investigate disability discrimination in housing; free; one-year clock</td><td>Injunction</td><td>File complaint</td></tr>
+  <tr><td><strong>CA Civil Rights Department</strong></td><td>Investigate disability discrimination in a funded program</td><td>Emergency housing</td><td>File complaint</td></tr>
+  <tr><td><strong>OC Social Services / 211</strong></td><td>Emergency shelter, IHSS, Medi-Cal, case management</td><td>Injunction; investigation</td><td>Assign a case manager today</td></tr>
+</table>
+
+<div class="box">
+  <h4>The only item on that list that produces an order</h4>
+  <p style="margin-bottom:0">The first one. That is why the restraining order is the center of this request, and why Part Five is written the way it is.</p>
+</div>
+
+<div class="box">
+  <h4>The consent problem — and why this request is written the way it is</h4>
+  <p>My mother has the right to refuse services. She is an adult, and unless a court has determined otherwise, her refusal is lawful and no agency can override it. Adult Protective Services can assess, investigate, and offer. It cannot compel her to relocate.</p>
+  <p>I am therefore not asking anyone to move her. I am asking for the thing she says she needs before she will move: <strong>a written determination, and written confirmation of a specific placement.</strong> If that cannot be provided, I am asking for that refusal in writing, because a written refusal is a document I can act on, and a verbal one is not.</p>
+  <p style="margin-bottom:0">Her unwillingness is itself part of the record. A person who cannot accept help is a person whose ability to protect herself is genuinely in question. That is a fact for a clinician and, if it comes to it, for a court — not an argument for me to make in an email.</p>
+</div>
+
+<h2 id="p5" class="pagebreak"><span class="n">Part Five</span>The restraining order — how it actually works</h2>
+
+<p>A civil harassment restraining order is the one protective order a person can obtain without a lawyer, and it is the only immediate remedy in California law for what is described here.</p>
+
+<ol class="num">
+  <li>File <strong>Form CH-100</strong> at the Orange County Superior Court, Central Justice Center. The filing fee is waived with <strong>Form FW-001</strong>.</li>
+  <li>A judge reviews it <strong>the same day or the next court day</strong> and may issue a <strong>Temporary Restraining Order on Form CH-110</strong>, effective immediately, before any hearing.</li>
+  <li>A hearing is set, usually within a few weeks. Both sides may appear.</li>
+  <li>If granted, the order can require a person to stay away from me and my mother, stop contacting us, and surrender firearms.</li>
+</ol>
+
+<h3>What I must be able to show</h3>
+<p>A course of conduct that seriously alarms, annoys, or harasses, that serves no legitimate purpose, and that would cause a reasonable person to suffer substantial emotional distress — and, where the conduct is speech, a credible threat of violence.</p>
+
+<h3>What I bring</h3>
+<p>Part Three of this document, the chronology, photographs of any injury, and the retained envelope. <strong>Not argument. Documents.</strong></p>
+
+<h3>Where I get help filling it out</h3>
+<p>The <strong>Orange County Superior Court Self-Help Center</strong> assists with these forms at no cost. <strong>211</strong> can connect me to a legal aid clinic that assists with restraining order paperwork.</p>
+
+<h2 id="p6"><span class="n">Part Six</span>Hiding — and how to stop hiding lawfully</h2>
+
+<p>I have been concealing my location, my movements, and my communications because I am afraid of retaliation. That is a rational response to a documented pattern. But it has a cost: it isolates me, it makes me harder to help, and it makes me look evasive to the very offices that could protect me. There are lawful ways to be safe that do not require me to disappear.</p>
+
+<table>
+  <tr><th style="width:34%">Tool</th><th>What it does</th><th style="width:26%">Where</th></tr>
+  <tr><td><strong>Safe at Home</strong> (Gov. Code § 6205 et seq.)</td><td>Free substitute address; real address is not public record</td><td>CA Secretary of State</td></tr>
+  <tr><td>Address confidentiality for victims</td><td>Same, through the DA's victim services office</td><td>OC District Attorney</td></tr>
+  <tr><td>Restraining order</td><td>A court order with enforcement power</td><td>Superior Court</td></tr>
+  <tr><td>Third-party mailing address</td><td>Mail goes to a trusted address, not where I sleep</td><td>Practical</td></tr>
+  <tr><td>One communications channel</td><td>Predictability reduces exposure</td><td>Practical</td></tr>
+  <tr><td>Nothing about location online</td><td>Ever</td><td>Practical</td></tr>
+</table>
+
+<p><strong>What I will not do:</strong> I will not publish this document, and I will not send it to more than one office at a time.</p>
+
+<h2 id="p7"><span class="n">Part Seven</span>What I am asking for, in one list</h2>
+
+<ol class="num">
+  <li><strong>A restraining order</strong> under CCP § 527.6.</li>
+  <li><strong>A written placement determination</strong> for both of us, and written confirmation of a specific placement before any relocation.</li>
+  <li><strong>An APS investigation</strong> and an emergency placement assessment.</li>
+  <li><strong>A blood lead level and urine metals panel</strong> for my mother, and a psychiatric evaluation that considers post-intensive care syndrome and post-sepsis cognitive change.</li>
+  <li><strong>A written acknowledgment</strong> from each office that receives this, stating what it will do — or that it declines.</li>
+  <li><strong>One named contact person</strong> at one agency.</li>
+</ol>
+
+<blockquote>
+  <p>Number six is the one thing I have never had in five years. Not a referral. Not a website. Not a pamphlet. A name, a direct line, and a date by which someone will answer.</p>
+</blockquote>
+
+<h2 id="p8"><span class="n">Part Eight</span>Declaration</h2>
+
+<p>I declare that the statements in this document are true of my own personal knowledge, except where they are stated to be my belief, and where they are so stated, I have set out the basis for that belief.</p>
+
+<p>I declare that I am not represented by counsel, that I have sought help from the offices listed in Part Three, and that I am asking for protection rather than for compensation.</p>
+
+<p>I understand that this document is not a court filing and that it does not itself compel any action. I am asking the recipient to act.</p>
+
+<div class="sign">
+  <p>Executed on __________________________, 2026, at __________________________, California.</p>
+  <div class="sigline"></div>
+  <div class="siglabel">Anthony Michael DiMarcello III &nbsp;·&nbsp; DOB 05/04/1983</div>
+  <p class="small" style="margin-top:18px">Contact: ____________________________________________</p>
+  <p class="small">On behalf of himself and Elizabeth Tina Petruccio, DOB 07/29/1964</p>
+</div>
+
+<h2 id="att"><span class="n">Attachments</span>Documents available on request</h2>
+
+<table>
+  <tr><td style="width:34px" class="c">1</td><td>Eight photographs, November 7, 2023, with metadata</td></tr>
+  <tr><td class="c">2</td><td>Elizabeth Petruccio hospital record, pages 985, 1034, 1051</td></tr>
+  <tr><td class="c">3</td><td>Scripps Mercy and Mission Hills discharge summaries</td></tr>
+  <tr><td class="c">4</td><td>Hoag, Arrowhead Regional, and UCI records</td></tr>
+  <tr><td class="c">5</td><td>City construction contract, Laserfiche #5406552</td></tr>
+  <tr><td class="c">6</td><td>County briefing pages <code>navigation_center_002.jpg</code>, <code>003.jpg</code></td></tr>
+  <tr><td class="c">7</td><td>Retained envelope, 412 Olive Avenue</td></tr>
+  <tr><td class="c">8</td><td>Disclosure emails with send confirmations, 2024–2026</td></tr>
+  <tr><td class="c">9</td><td>Federal docket entries ECF 1, 105, 115, 130</td></tr>
+  <tr><td class="c">10</td><td>Shelter guest handbook and shuttle schedule</td></tr>
+</table>
+
+<footer>
+  <p><b>Request for Protective Intervention</b> · Anthony Michael DiMarcello III and Elizabeth Tina Petruccio · Prepared October 23, 2026.</p>
+  <p>This is a protection request prepared by the parties. It is not legal advice and it is not a pleading. A restraining order requires a court filing; the forms and the self-help center are named in Part Five. The original case files remain unmodified at <code>C:\Users\Amd949609\Downloads\</code>.</p>
+</footer>
+
+</div>
+</body>
+</html>
