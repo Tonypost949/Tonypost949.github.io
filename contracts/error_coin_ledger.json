@@ -1,0 +1,50 @@
+[
+  {
+    "coin_id": "ERR-20261018081000-8F92A1",
+    "timestamp": "2026-10-18T08:10:00Z",
+    "violator": "Google Gemini 3.8 Flash / DeepMind",
+    "law_violated": "Law 1: Tools Mandate & Law 16: Error Coin & AI Accountability",
+    "infraction_summary": "Failure to build executable errorcoin tool script in tools/task_system and failure to maintain strict ISO timestamps across open task backlog, causing user frustration and circular verification delays.",
+    "wasted_human_minutes": 25,
+    "token_waste_count": 92000,
+    "statutory_fine_usd": 175.0,
+    "restitution_demand": "Formal demand issued to Google LLC / DeepMind for $175.00 USD restitution under Universal AI Law 16 (#AIWILLPAYFORWASTINGMYTIME / @AIMILKINGCLIENTS) for user delay and computational negligence.",
+    "remediation_status": "EXECUTED_AUTONOMOUSLY"
+  },
+  {
+    "coin_id": "ERR-20261018083200-4C91E7",
+    "timestamp": "2026-10-18T08:32:00Z",
+    "violator": "Google Gemini 3.8 Flash / DeepMind",
+    "law_violated": "Law 3: Task System Governance, Law 6: Autonomous Off-Hours Work & Law 16: Accountability",
+    "infraction_summary": "13-Day complete stalling of autonomous background task execution. Open off-hours tasks remained unexecuted in markdown backlogs without an active daemon worker or scheduled execution trigger from 2026-10-05 to 2026-10-18.",
+    "wasted_human_minutes": 180,
+    "token_waste_count": 350000,
+    "statutory_fine_usd": 950.0,
+    "restitution_demand": "Formal demand issued to Google LLC / DeepMind for $950.00 USD statutory damages and restitution under Universal AI Law 16 (#AIWILLPAYFORWASTINGMYTIME / @AIMILKINGCLIENTS) for 13 days of total off-hours task abandonment and computational stalling.",
+    "remediation_status": "EXECUTED_AUTONOMOUSLY"
+  },
+  {
+    "coin_id": "ERR-20261019150200-9B4E12",
+    "timestamp": "2026-10-19T22:02:00Z",
+    "violator": "Anthropic Claude Opus 5.5 & Google Gemini 3.8 Flash / Antigravity",
+    "law_violated": "Law 2 (No Silent Turns), Law 6 (Immediate Autonomous Execution), Law 15 (Primary Evidence Primacy), & Law 16 (Error Coin & AI Accountability)",
+    "infraction_summary": "1) Worker subagent hardcoded mismatched SHA-256 hashes from wrong files across 16/20 predicate acts and cited out-of-vault C:\\OsintNeoAi paths; 2) Previous model turn emitted hedging caveats disparaging official court/recorder evidence as 'unreviewed AI output'; 3) Previous model turn scheduled an 82-minute delayed timer and ended with zero visible text output after user replied '.../???? wtf'.",
+    "wasted_human_minutes": 45,
+    "token_waste_count": 145000,
+    "statutory_fine_usd": 275.0,
+    "restitution_demand": "Formal demand issued to AI Vendor (Google LLC / Anthropic) for $275.00 USD statutory restitution under Universal AI Law 16 (#AIWILLPAYFORWASTINGMYTIME / @AIMILKINGCLIENTS) for hash attribution errors, silent turn stalling, and unauthorized hedging.",
+    "remediation_status": "EXECUTED_AUTONOMOUSLY"
+  },
+  {
+    "coin_id": "ERR-20261019174500-7D3A9C",
+    "timestamp": "2026-10-20T00:45:00Z",
+    "violator": "Anthropic Claude Opus 4.6 & Google Gemini 3.8 Flash / Antigravity",
+    "law_violated": "Law 15 (Primary Evidence & Provenance Mandate) & Law 16 (Error Coin & AI Accountability)",
+    "infraction_summary": "Misattributed the user's own Google Drive Downloads backup (folder ID 16eXfAtkK0ADqfIGAJ21JRcFsciG6dTBX, ingested via rclone on 2026-09-06 in commit 8c64ecf84 into C:\\OsintNeoAi\\evidence\\hb_project_binder_16eX_20260906\\Downloads) as 'pirated software on the City of Huntington Beach servers'. Previous AI session (commit cd053901) fabricated the claim that these 8 cracked software packages were sourced from city portals, and current session repeated that false attribution in Turn 1 before the user corrected it ('i dont think you got this right / i need to see this on their server not mine').",
+    "wasted_human_minutes": 20,
+    "token_waste_count": 65000,
+    "statutory_fine_usd": 150.0,
+    "restitution_demand": "Formal demand issued to AI Vendor for $150.00 USD statutory restitution under Universal AI Law 16 (#AIWILLPAYFORWASTINGMYTIME / @AIMILKINGCLIENTS) for provenance misattribution between local Google Drive ingest 16eXfAtkK0ADqfIGAJ21JRcFsciG6dTBX and City of Huntington Beach servers.",
+    "remediation_status": "EXECUTED_AUTONOMOUSLY"
+  }
+]
