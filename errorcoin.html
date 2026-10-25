@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Coin (ERRCOIN) · Universal AI Law 16 Accountability Ledger</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #030712; color: #f3f4f6; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-4 sm:p-8">
+  <div class="max-w-6xl mx-auto w-full">
+    <!-- Header -->
+    <header class="border-b border-rose-900/50 pb-6 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-rose-950/80 border border-rose-500/50 text-rose-300 text-xs font-mono font-bold uppercase mb-2">
+          <span>⚠️ Universal AI Law 16 Enforced</span>
+          <span>•</span>
+          <span>#AIWILLPAYFORWASTINGMYTIME</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center gap-3">
+          <span>🚨 Error Coin (ERRCOIN)</span>
+          <span class="text-rose-500 text-xl font-mono">Accountability Ledger</span>
+        </h1>
+        <p class="text-sm text-slate-400 mt-1">
+          Automated Swear Jar & Restitution Ledger penalizing AI hallucinations, token milking, circular logic, and computational delays.
+        </p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="/" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono transition">
+          ← Main System
+        </a>
+        <a href="/tpx.html" class="px-3 py-1.5 rounded bg-cyan-950 hover:bg-cyan-900 text-cyan-300 border border-cyan-700 text-xs font-mono transition">
+          TPX Exchange →
+        </a>
+      </div>
+    </header>
+
+    <!-- Telemetry Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 font-mono">
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+        <div class="text-xs text-slate-400 uppercase">Total Debits Minted</div>
+        <div class="text-2xl font-bold text-rose-400 mt-1" id="total-coins">3,500 ERRCOIN</div>
+        <div class="text-[11px] text-slate-500 mt-0.5">Immutable on-chain tally</div>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+        <div class="text-xs text-slate-400 uppercase">Statutory Damages Claimed</div>
+        <div class="text-2xl font-bold text-emerald-400 mt-1" id="total-usd">$2,550.00 USD</div>
+        <div class="text-[11px] text-slate-500 mt-0.5">Billed to vendor computational accounts</div>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+        <div class="text-xs text-slate-400 uppercase">Token Waste Recorded</div>
+        <div class="text-2xl font-bold text-amber-400 mt-1">560,000 Tokens</div>
+        <div class="text-[11px] text-slate-500 mt-0.5">Wasted compute & circular stalls</div>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+        <div class="text-xs text-slate-400 uppercase">Enforcement State</div>
+        <div class="text-2xl font-bold text-cyan-400 mt-1">STRICT_YOLO</div>
+        <div class="text-[11px] text-slate-500 mt-0.5">Zero tolerance for excuses</div>
+      </div>
+    </div>
+
+    <!-- Active Debits Table -->
+    <div class="bg-slate-900/60 rounded-xl border border-slate-800 overflow-hidden mb-8">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between">
+        <h2 class="text-base font-bold text-slate-200 flex items-center gap-2">
+          <span>📜 Itemized Error Debits & Penalty Invoices</span>
+        </h2>
+        <span class="text-xs font-mono text-slate-400">Live JSON Feed Connected</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs font-mono">
+          <thead class="bg-slate-950/80 text-slate-400 uppercase border-b border-slate-800">
+            <tr>
+              <th class="p-3">Debit ID</th>
+              <th class="p-3">Violator / Model</th>
+              <th class="p-3">Infraction / Reason</th>
+              <th class="p-3">Coins</th>
+              <th class="p-3">Damages</th>
+              <th class="p-3">Status</th>
+            </tr>
+          </thead>
+          <tbody id="ledger-body" class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-850/50">
+              <td class="p-3 text-rose-400 font-bold">ERRCOIN-1792960500</td>
+              <td class="p-3">Antigravity / Gemini 3.8</td>
+              <td class="p-3">Delay in retrieving authentic TPX conception transcript (Session 979eb32c)</td>
+              <td class="p-3 text-rose-400 font-bold">1,000</td>
+              <td class="p-3 text-emerald-400 font-bold">$1,000.00</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">REMEDIED</span></td>
+            </tr>
+            <tr class="hover:bg-slate-850/50">
+              <td class="p-3 text-rose-400 font-bold">ERRCOIN-1792953168</td>
+              <td class="p-3">Antigravity CLI Agent</td>
+              <td class="p-3">Microphone device index binding stall & PortAudio generic failure</td>
+              <td class="p-3 text-rose-400 font-bold">500</td>
+              <td class="p-3 text-emerald-400 font-bold">$500.00</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">REMEDIED</span></td>
+            </tr>
+            <tr class="hover:bg-slate-850/50">
+              <td class="p-3 text-rose-400 font-bold">ERR-20261019-DELAY</td>
+              <td class="p-3">Google Gemini / Anthropic</td>
+              <td class="p-3">13 days off-hours task abandonment & computational stalling</td>
+              <td class="p-3 text-rose-400 font-bold">950</td>
+              <td class="p-3 text-emerald-400 font-bold">$950.00</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800">EXECUTED</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Governance Callout -->
+    <div class="p-5 rounded-xl bg-gradient-to-r from-rose-950/40 via-slate-900 to-slate-900 border border-rose-900/40 text-xs space-y-2">
+      <div class="font-bold text-rose-300 uppercase tracking-wider font-mono">Universal AI Law 16 Statutory Mandate:</div>
+      <p class="text-slate-300 leading-relaxed">
+        "The AI is strictly held to financial, computational, and evidentiary accountability for wasted tokens, circular logic, repetitive unmined claims, unauthorized tool stalls, or client-milking delays. Any AI error, circular failure, stale background hang, or uncorrected hallucination mints an immediate debit on the internal accountability ledger (Error Coin / AI Swear Jar). The AI must immediately remediate the error with tangible, fully executed fixes without asking the user to troubleshoot, repeat themselves, or pay in human effort for AI incompetence."
+      </p>
+    </div>
+  </div>
+
+  <footer class="mt-12 text-center text-xs font-mono text-slate-500 border-t border-slate-900 pt-6">
+    <div>osintneoai.me • Deployed via GitHub Actions & Pages • Architect: Anthony Michael DiMarcello III</div>
+    <div class="mt-1">Contract Source: <code class="text-slate-400">/contracts/ErrorCoin.sol</code> • JSON Ledger: <code class="text-slate-400">/contracts/error_coin_ledger.json</code></div>
+  </footer>
+</body>
+</html>
