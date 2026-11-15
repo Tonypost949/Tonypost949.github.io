@@ -1,613 +1,1669 @@
-<!DOCTYPE html>
-<html lang="en" class="dark h-full">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>OSINT Neo AI — Investigator Chat Workspace</title>
-  
-  <!-- Primary Meta -->
-  <meta name="description" content="Frictionless multimodal AI intelligence chat workspace. Upload evidence, record memos, scan documents, and query BigQuery forensic knowledge graphs.">
-  <meta name="theme-color" content="#06090e">
-
-  <!-- Tailwind CSS & Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              dark: '#06090e',
-              surface: '#0b111e',
-              card: '#101827',
-              border: '#1b263b',
-              cyan: '#06b6d4',
-              neon: '#38bdf8',
-              emerald: '#10b981',
-              purple: '#a855f7',
-              amber: '#f59e0b',
-              rose: '#f43f5e'
-            }
-          },
-          fontFamily: {
-            orbitron: ['Orbitron', 'sans-serif'],
-            rajdhani: ['Rajdhani', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-            sans: ['"DM Sans"', 'sans-serif']
-          }
-        }
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e7">
+    <meta name="description" content="A private, browser-local workspace for up to three investigations.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'none'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>Your Workspace — OSINT Neo AI</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f4f0e7;
+        --paper-deep: #ebe5d8;
+        --ink: #1c211d;
+        --muted: #656b63;
+        --rule: #bcb8ad;
+        --accent: #8b302b;
+        --forest: #314b3e;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Segoe UI", Arial, sans-serif;
+        font-family: var(--sans);
+        background: var(--paper);
       }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #06090e;
-      color: #e2e8f0;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .glass-panel {
-      background: rgba(11, 17, 30, 0.85);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(56, 189, 248, 0.15);
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 50%, #10b981 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .custom-scroll::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    .custom-scroll::-webkit-scrollbar-track {
-      background: rgba(11, 17, 30, 0.5);
-    }
-    .custom-scroll::-webkit-scrollbar-thumb {
-      background: rgba(56, 189, 248, 0.25);
-      border-radius: 9999px;
-    }
-    .custom-scroll::-webkit-scrollbar-thumb:hover {
-      background: rgba(56, 189, 248, 0.5);
-    }
-  </style>
-</head>
-<body class="h-full flex overflow-hidden selection:bg-cyan-500 selection:text-black">
-
-  <!-- MOBILE SIDEBAR BACKDROP -->
-  <div id="sidebar-backdrop" onclick="toggleSidebar()" class="fixed inset-0 bg-black/70 z-40 md:hidden hidden transition-opacity"></div>
-
-  <!-- SIDEBAR (CASE & INVESTIGATION THREADS) -->
-  <aside id="sidebar" class="fixed md:static inset-y-0 left-0 z-50 w-72 md:w-80 bg-brand-surface border-r border-brand-border flex flex-col transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
-    <!-- Brand Header -->
-    <div class="p-4 border-b border-brand-border flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
-        <div class="w-3.5 h-3.5 rounded-full bg-cyan-400 animate-ping"></div>
-        <span class="font-orbitron font-extrabold text-lg text-white">OSINT <span class="text-cyan-400">NEO AI</span></span>
-      </a>
-      <button onclick="toggleSidebar()" class="md:hidden text-slate-400 hover:text-white p-2">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-    </div>
-
-    <!-- New Investigation Button -->
-    <div class="p-4 border-b border-brand-border/60">
-      <button onclick="startNewInvestigation()" class="w-full py-2.5 px-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-orbitron font-bold text-xs flex items-center justify-center gap-2 transition shadow-lg shadow-cyan-500/20">
-        <i class="fa-solid fa-plus"></i> New Investigation
-      </button>
-    </div>
-
-    <!-- Investigation Threads List -->
-    <div class="flex-1 overflow-y-auto custom-scroll p-3 space-y-1.5 font-mono text-xs">
-      <div class="text-[10px] uppercase font-bold text-slate-400 px-3 py-1.5 tracking-wider">Active Dossiers</div>
-      
-      <div onclick="selectThread('Huntington Beach Case')" class="p-3 rounded-xl bg-slate-900/90 border border-cyan-500/30 text-white cursor-pointer hover:border-cyan-400 transition flex items-center justify-between">
-        <div class="flex items-center gap-2.5 truncate">
-          <i class="fa-solid fa-folder-open text-cyan-400"></i>
-          <span class="truncate font-sans font-medium">Huntington Beach Audit</span>
-        </div>
-        <span class="text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">3,510 docs</span>
-      </div>
-
-      <div onclick="selectThread('Target Accounts Matrix')" class="p-3 rounded-xl bg-slate-900/40 border border-slate-800 text-slate-300 cursor-pointer hover:border-slate-700 hover:text-white transition flex items-center justify-between">
-        <div class="flex items-center gap-2.5 truncate">
-          <i class="fa-solid fa-users-viewfinder text-purple-400"></i>
-          <span class="truncate font-sans font-medium">32 Target Identities</span>
-        </div>
-        <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono">16 Matches</span>
-      </div>
-
-      <div onclick="selectThread('Sepolia Bounty Escrow')" class="p-3 rounded-xl bg-slate-900/40 border border-slate-800 text-slate-300 cursor-pointer hover:border-slate-700 hover:text-white transition flex items-center justify-between">
-        <div class="flex items-center gap-2.5 truncate">
-          <i class="fa-brands fa-ethereum text-emerald-400"></i>
-          <span class="truncate font-sans font-medium">UTXO Bounty Lineage</span>
-        </div>
-        <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">40/30/30</span>
-      </div>
-    </div>
-
-    <!-- Quick Navigation Links -->
-    <div class="p-3 border-t border-brand-border bg-black/40 space-y-1 font-mono text-xs">
-      <a href="http://localhost:10000/map/osinteye" target="_blank" class="p-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 flex items-center gap-2.5 transition">
-        <i class="fa-solid fa-satellite-dish text-cyan-400"></i> OSINT Eye View (Map)
-      </a>
-      <a href="http://localhost:10000/map/3d" target="_blank" class="p-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 flex items-center gap-2.5 transition">
-        <i class="fa-solid fa-cube text-purple-400"></i> MapLibre 3D WebGL
-      </a>
-      <a href="http://localhost:10000/grid" target="_blank" class="p-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 flex items-center gap-2.5 transition">
-        <i class="fa-solid fa-table text-emerald-400"></i> Syncfusion Evidence Grid
-      </a>
-    </div>
-
-    <!-- User Identity & Wallet Status -->
-    <div class="p-4 border-t border-brand-border bg-brand-dark flex items-center justify-between">
-      <div class="flex items-center gap-2 truncate">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-xs text-white">AI</div>
-        <div class="truncate">
-          <div class="text-xs font-bold text-white truncate" id="user-display-name">Investigator</div>
-          <div class="text-[10px] font-mono text-emerald-400" id="wallet-badge">Ready</div>
-        </div>
-      </div>
-      <button onclick="connectWallet()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-slate-700 font-mono text-[11px] transition" id="btn-connect-wallet">
-        <i class="fa-brands fa-ethereum"></i> Connect
-      </button>
-    </div>
-  </aside>
-
-  <!-- MAIN CHAT INTERFACE -->
-  <div class="flex-1 flex flex-col h-full overflow-hidden bg-brand-dark relative">
-    
-    <!-- Top Bar -->
-    <header class="h-16 px-4 md:px-6 border-b border-brand-border bg-brand-surface/90 backdrop-blur-md flex items-center justify-between shrink-0">
-      <div class="flex items-center gap-3">
-        <button onclick="toggleSidebar()" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg bg-slate-800 border border-slate-700">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div>
-          <h2 class="font-orbitron font-bold text-sm sm:text-base text-white flex items-center gap-2">
-            <i class="fa-solid fa-shield-halved text-cyan-400"></i> Autonomous Forensic Engine
-          </h2>
-          <div class="text-[11px] font-mono text-slate-400 hidden sm:block">BigQuery Master Ledger • Sepolia Bounties • 19 MCP Tools</div>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-400 font-mono text-xs">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Port 10000 Active
-        </span>
-        <button onclick="clearChatHistory()" class="text-slate-400 hover:text-rose-400 p-2 text-sm transition" title="Clear Chat History">
-          <i class="fa-regular fa-trash-can"></i>
-        </button>
+      * { box-sizing: border-box; }
+      body { min-width: 320px; margin: 0; color: var(--ink); background: var(--paper); }
+      a { color: inherit; }
+      button, input, select, textarea { font: inherit; }
+      button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+      button:disabled { opacity: 0.55; cursor: not-allowed; }
+      .skip { position: absolute; top: -5rem; left: 1rem; z-index: 5; padding: 0.7rem 1rem; color: white; background: var(--accent); }
+      .skip:focus { top: 1rem; }
+      .page { width: min(1120px, calc(100% - 36px)); margin-inline: auto; }
+      .top { border-bottom: 3px double var(--ink); }
+      .top-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.7rem 1.2rem; padding-block: 0.85rem; }
+      .brand { font-size: 0.75rem; font-weight: 850; letter-spacing: 0.12em; text-decoration: none; }
+      .top-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+      .top-links a { font-size: 0.76rem; font-weight: 700; text-underline-offset: 3px; }
+      main { padding-block: 2rem 4rem; }
+      h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.035em; }
+      h1 { margin: 0; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.04; }
+      h2 { margin: 0 0 0.65rem; font-size: 1.85rem; }
+      h3 { margin: 0 0 0.5rem; font-size: 1.35rem; }
+      p { max-width: 75ch; color: #4e554e; line-height: 1.65; }
+      .notice { margin-block: 1rem; padding: 0.85rem 1rem; border: 1px solid var(--rule); background: var(--paper-deep); color: #454b44; font-size: 0.84rem; line-height: 1.6; }
+      .notice strong { color: var(--ink); }
+      .notice-info { border-color: #9da69a; background: #e9e9dc; }
+      .auth-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.4rem; }
+      .panel { padding: 1.15rem; border: 1px solid var(--ink); background: #faf8f2; }
+      .panel p { font-size: 0.86rem; }
+      form { display: grid; gap: 0.7rem; }
+      label { display: grid; gap: 0.35rem; color: #3e453e; font-size: 0.76rem; font-weight: 750; }
+      input, select, textarea { width: 100%; min-width: 0; min-height: 42px; padding: 0.62rem 0.7rem; border: 1px solid #8e928a; border-radius: 0; color: var(--ink); background: white; }
+      textarea { min-height: 150px; resize: vertical; line-height: 1.55; }
+      input[type="checkbox"] { width: auto; min-height: 0; }
+      .button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; padding: 0.65rem 0.9rem; border: 1px solid var(--ink); color: var(--paper); background: var(--ink); font-size: 0.78rem; font-weight: 800; cursor: pointer; }
+      .button:hover { border-color: var(--accent); background: var(--accent); }
+      .button-light { color: var(--ink); background: transparent; }
+      .button-light:hover { color: white; }
+      .button-small { min-height: 34px; padding: 0.45rem 0.62rem; font-size: 0.72rem; }
+      .button-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
+      .status { min-height: 1.3rem; margin: 0.5rem 0 0; color: var(--forest); font-size: 0.8rem; }
+      .status-error { color: #8b302b; }
+      .small { color: var(--muted); font-size: 0.76rem; line-height: 1.6; }
+      .app-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--ink); }
+      .identity { color: var(--muted); font-size: 0.76rem; }
+      .case-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding-block: 1rem; border-bottom: 1px solid var(--rule); }
+      .case-bar-label { margin-right: 0.25rem; color: var(--muted); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; }
+      .case-button { max-width: 230px; overflow: hidden; padding: 0.5rem 0.65rem; border: 1px solid var(--rule); color: var(--ink); background: transparent; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+      .case-button[aria-pressed="true"] { border-color: var(--ink); color: white; background: var(--forest); }
+      .workspace-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; padding-block: 0.85rem; border-bottom: 1px solid var(--rule); }
+      .workspace-nav button { min-height: 38px; padding: 0.5rem 0.65rem; border: 1px solid var(--rule); color: var(--ink); background: transparent; font-size: 0.73rem; font-weight: 750; cursor: pointer; }
+      .workspace-nav button[aria-pressed="true"] { border-color: var(--ink); color: white; background: var(--ink); }
+      .workspace-panel { padding-top: 1.5rem; }
+      .workspace-panel[hidden] { display: none; }
+      .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
+      .form-grid .wide { grid-column: 1 / -1; }
+      .record-list { display: grid; gap: 0.7rem; margin: 1rem 0; padding: 0; list-style: none; }
+      .record { padding: 0.9rem; border: 1px solid var(--rule); background: #faf8f2; }
+      .record-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
+      .record-title { font-family: var(--serif); font-size: 1.12rem; }
+      .record p { margin: 0.45rem 0 0; font-size: 0.82rem; overflow-wrap: anywhere; }
+      .record a { color: var(--accent); overflow-wrap: anywhere; }
+      .tag { display: inline-block; padding: 0.18rem 0.35rem; border: 1px solid var(--rule); color: var(--muted); font-size: 0.63rem; font-weight: 800; text-transform: uppercase; }
+      .empty { padding: 1rem; border: 1px dashed var(--rule); color: var(--muted); font-size: 0.84rem; line-height: 1.6; }
+      .gates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; }
+      .gate { padding: 1rem; border-top: 2px solid var(--forest); background: #ebece3; }
+      .gate label { margin-top: 0.7rem; }
+      .suggestions { display: grid; gap: 0.5rem; margin-block: 0.8rem; }
+      .suggestion { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.55rem 0; border-bottom: 1px solid var(--rule); font-size: 0.8rem; }
+      .graph { padding: 1rem; border: 1px solid var(--rule); background: #ebece3; }
+      .graph p { margin: 0.4rem 0; font-size: 0.82rem; }
+      .tool-search { max-width: 690px; }
+      .tool-search-results { margin-top: 0.7rem; }
+      .table-wrap { overflow-x: auto; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.79rem; }
+      th, td { padding: 0.6rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+      th { font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; }
+      .calendar-controls { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 0.75rem; margin-block: 1rem; }
+      .calendar-controls h3 { margin: 0; }
+      .calendar-controls label { min-width: 190px; }
+      .calendar-table { min-width: 700px; table-layout: fixed; }
+      .calendar-table th { text-align: center; }
+      .calendar-table td { height: 112px; padding: 0.45rem; background: var(--paper-deep); }
+      .calendar-table td.calendar-empty { background: transparent; }
+      .calendar-day { font-size: 0.7rem; font-weight: 850; }
+      .calendar-events { margin: 0.35rem 0 0; padding-left: 1rem; font-size: 0.7rem; line-height: 1.4; }
+      .calendar-events li { margin-top: 0.25rem; overflow-wrap: anywhere; }
+      footer { padding-block: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.73rem; }
+      footer a { text-underline-offset: 3px; }
+      .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
+      @media (max-width: 760px) {
+        .page { width: min(100% - 28px, 620px); }
+        .auth-grid, .form-grid, .gates { grid-template-columns: 1fr; }
+        .form-grid .wide { grid-column: auto; }
+        .app-head { align-items: flex-start; }
+        .workspace-nav { overflow-x: auto; flex-wrap: nowrap; }
+        .workspace-nav button { flex: 0 0 auto; }
+      }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; } }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <div class="page top-inner">
+        <a class="brand" href="/">OSINT NEO AI · THE BROADSHEET</a>
+        <nav class="top-links" aria-label="Main navigation">
+          <a href="/">Front page</a>
+          <a href="/law/">Legal references</a>
+          <a href="/feed/">Feed &amp; ecosystem</a>
+          <a href="/workspace/dual_token_hub.html">Crypto</a>
+        </nav>
       </div>
     </header>
+    <main id="main" class="page">
+      <section id="auth-view" aria-labelledby="page-title">
+        <h1 id="page-title">Start with a blank page.</h1>
+        <p>Write your story in your own words. Add sources, build subject pages, and arrange evidence in Chronological Order. No case, person, or document is preloaded.</p>
+        <div class="notice"><strong>Honest service status:</strong> this GitHub Pages site has no connected server, shared account system, cloud sync, AI, OCR, or Google Tasks connection. The workspace below is an encrypted local vault in this browser only. Its contents are not sent anywhere.</div>
+        <div class="notice notice-info">Choose a workspace name and a passphrase of at least 12 characters. The passphrase is never stored. If you forget it or clear this browser's storage, this site cannot recover your vault. Export encrypted backups from inside the workspace.</div>
+        <div class="auth-grid">
+          <section class="panel" aria-labelledby="create-title">
+            <h2 id="create-title">Create this-device workspace</h2>
+            <p>This creates a local encrypted vault, not an online account. Use a workspace name, not an email address.</p>
+            <form id="create-form">
+              <label for="create-handle">Workspace name
+                <input id="create-handle" name="handle" required minlength="3" maxlength="48" pattern="[A-Za-z0-9._-]{3,48}" autocomplete="username" aria-describedby="handle-help">
+              </label>
+              <span id="handle-help" class="small">3–48 letters, numbers, periods, underscores, or hyphens.</span>
+              <label for="create-password">Passphrase
+                <input id="create-password" name="password" type="password" required minlength="12" maxlength="256" autocomplete="new-password">
+              </label>
+              <label for="confirm-password">Confirm passphrase
+                <input id="confirm-password" name="confirm" type="password" required minlength="12" maxlength="256" autocomplete="new-password">
+              </label>
+              <button class="button" type="submit">Create local vault</button>
+            </form>
+          </section>
+          <section class="panel" aria-labelledby="unlock-title">
+            <h2 id="unlock-title">Unlock an existing vault</h2>
+            <p>Use the same workspace name and passphrase in the same browser profile.</p>
+            <form id="unlock-form">
+              <label for="unlock-handle">Workspace name
+                <input id="unlock-handle" name="handle" required minlength="3" maxlength="48" autocomplete="username">
+              </label>
+              <label for="unlock-password">Passphrase
+                <input id="unlock-password" name="password" type="password" required minlength="12" maxlength="256" autocomplete="current-password">
+              </label>
+              <button class="button button-light" type="submit">Unlock local vault</button>
+            </form>
+          </section>
+        </div>
+        <section class="panel" style="margin-top: 1rem" aria-labelledby="restore-title">
+          <h2 id="restore-title">Restore an encrypted backup</h2>
+          <p>Restore only a backup exported by this workspace. The passphrase must match. An existing local vault is never overwritten by restore.</p>
+          <form id="restore-form">
+            <div class="form-grid">
+              <label for="restore-handle">Workspace name
+                <input id="restore-handle" name="handle" required minlength="3" maxlength="48" autocomplete="username">
+              </label>
+              <label for="restore-password">Passphrase
+                <input id="restore-password" name="password" type="password" required minlength="12" maxlength="256" autocomplete="current-password">
+              </label>
+              <label class="wide" for="restore-file">Encrypted vault backup (JSON, maximum 10 MB)
+                <input id="restore-file" name="backup" type="file" accept=".json,application/json" required>
+              </label>
+            </div>
+            <button class="button button-light" type="submit">Restore local vault</button>
+          </form>
+        </section>
+        <p id="auth-status" class="status" role="status" aria-live="polite"></p>
+      </section>
 
-    <!-- Chat Messages Stream -->
-    <main id="chat-stream" class="flex-1 overflow-y-auto custom-scroll p-4 sm:p-6 space-y-6 max-w-5xl mx-auto w-full">
-      <!-- AI Welcome Message -->
-      <div class="flex items-start gap-3 sm:gap-4">
-        <div class="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 font-orbitron font-bold text-sm shrink-0">
-          <i class="fa-solid fa-brain"></i>
-        </div>
-        <div class="glass-panel p-5 rounded-2xl max-w-3xl border-l-4 border-l-cyan-400 shadow-xl">
-          <div class="font-orbitron font-bold text-sm text-white mb-2 flex items-center gap-2">
-            OSINT Neo AI Assistant <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-normal">v2.4 Live</span>
+      <section id="workspace-view" hidden aria-labelledby="workspace-title">
+        <div class="app-head">
+          <div>
+            <h1 id="workspace-title">Your workspace</h1>
           </div>
-          <p class="text-slate-300 text-sm leading-relaxed mb-4">
-            Welcome to your open-source forensic intelligence workspace. You can ask natural questions, drop documents for instant neural OCR, snap real-time evidence photos via camera, or record voice memos.
-          </p>
-          
-          <!-- Quick Action Prompt Chips -->
-          <div class="flex flex-wrap gap-2 pt-2">
-            <button onclick="sendQuickPrompt('Search entity in BigQuery evidence ledger')" class="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-cyan-300 font-mono text-xs border border-slate-700/80 transition flex items-center gap-1.5">
-              <i class="fa-solid fa-magnifying-glass"></i> Search BigQuery
-            </button>
-            <button onclick="sendQuickPrompt('Inspect target accounts cross-reference matrix')" class="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-purple-300 font-mono text-xs border border-slate-700/80 transition flex items-center gap-1.5">
-              <i class="fa-solid fa-users"></i> Target Accounts
-            </button>
-            <button onclick="sendQuickPrompt('Check Sepolia bounty escrow contract balance')" class="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-emerald-300 font-mono text-xs border border-slate-700/80 transition flex items-center gap-1.5">
-              <i class="fa-brands fa-ethereum"></i> Escrow Balance
-            </button>
-            <button onclick="sendQuickPrompt('Open OSINT Eye View 3D geospatial map')" class="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-amber-300 font-mono text-xs border border-slate-700/80 transition flex items-center gap-1.5">
-              <i class="fa-solid fa-satellite-dish"></i> Eye View Map
-            </button>
+          <div class="button-row">
+            <span class="identity" id="identity-label"></span>
+            <button class="button button-light button-small" id="backup-button" type="button">Download encrypted backup</button>
+            <button class="button button-light button-small" id="lock-button" type="button">Lock workspace</button>
           </div>
         </div>
-      </div>
+        <p id="workspace-status" class="status" role="status" aria-live="polite"></p>
+        <div class="notice"><strong>Local-only:</strong> this device holds the encrypted vault. A browser passphrase is not a shared user account, and the vault does not sync to another device. No AI, OCR, public publishing, Google Tasks, or mail delivery runs here.</div>
+
+        <div class="case-bar" aria-label="Investigation slots">
+          <span class="case-bar-label">Investigation slots</span>
+          <div id="case-list" class="button-row"></div>
+          <button class="button button-light button-small" id="new-case-button" type="button">＋ New investigation</button>
+          <span class="small" id="case-count"></span>
+        </div>
+
+        <nav class="workspace-nav" aria-label="Investigation tools">
+          <button type="button" data-panel="overview-panel" aria-pressed="true">Overview</button>
+          <button type="button" data-panel="story-panel" aria-pressed="false">Story &amp; sources</button>
+          <button type="button" data-panel="wiki-panel" aria-pressed="false">Wiki pages &amp; connections</button>
+          <button type="button" data-panel="chronology-panel" aria-pressed="false">Chronological Order</button>
+          <button type="button" data-panel="gates-panel" aria-pressed="false">Three Gates</button>
+          <button type="button" data-panel="legal-panel" aria-pressed="false">Legal references</button>
+          <button type="button" data-panel="feed-panel" aria-pressed="false">Feed drafts</button>
+          <button type="button" data-panel="ledger-panel" aria-pressed="false">Activity ledger</button>
+          <button type="button" data-panel="export-panel" aria-pressed="false">Exports</button>
+          <button type="button" data-panel="site-search-panel" aria-pressed="false">Find a site page</button>
+        </nav>
+
+        <section class="workspace-panel" id="overview-panel" aria-labelledby="overview-title">
+          <h2 id="overview-title">The story is yours to tell.</h2>
+          <p>Use the sections above to preserve the narrative, attach source records, create subject pages in first-mention order, and record dates. Suggested names and dates come from simple local text matching; they are prompts for your review, not findings.</p>
+          <p class="notice notice-info">A private investigation is never automatically made into a Broadsheet feature. Nothing in this workspace is published or visible to other users.</p>
+          <div class="empty" id="overview-empty">Create an investigation to open its working sections. Your three slots begin empty.</div>
+        </section>
+
+        <section class="workspace-panel" id="story-panel" hidden aria-labelledby="story-title">
+          <h2 id="story-title">Story &amp; sources</h2>
+          <p>Preserve the story in the author's own words. Candidate names and dates are suggested locally and remain unverified until reviewed and tied to sources.</p>
+          <form id="story-form">
+            <div class="form-grid">
+              <label class="wide" for="case-title">Investigation title
+                <input id="case-title" name="title" maxlength="160" required>
+              </label>
+              <label class="wide" for="story-text">Your story
+                <textarea id="story-text" name="story" maxlength="100000" placeholder="Start anywhere. Nothing is prefilled." aria-describedby="story-limit"></textarea>
+              </label>
+            </div>
+            <span id="story-limit" class="small">Maximum 100,000 characters. No AI processing is connected.</span>
+            <div class="button-row"><button class="button" type="submit">Save story</button><span id="story-status" class="small" role="status" aria-live="polite"></span></div>
+          </form>
+          <div class="form-grid" style="margin-top: 1.5rem">
+            <section class="panel">
+              <h3>Add a source</h3>
+              <form id="source-form">
+                <label for="source-title">Record, article, or source title
+                  <input id="source-title" name="title" maxlength="240" required>
+                </label>
+                <label for="source-kind">Source type
+                  <select id="source-kind" name="kind"><option>Official record</option><option>News report</option><option>First-person account</option><option>Other</option></select>
+                </label>
+                <label for="source-id">Record number / date / identifier
+                  <input id="source-id" name="identifier" maxlength="180">
+                </label>
+                <label for="source-url">Source URL (optional; HTTP or HTTPS)
+                  <input id="source-url" name="url" type="url" maxlength="2048" placeholder="https://">
+                </label>
+                <button class="button button-light" type="submit">Add source</button>
+              </form>
+            </section>
+            <section class="panel">
+              <h3>Sources in this investigation</h3>
+              <div id="source-list" class="empty">No sources added yet.</div>
+            </section>
+          </div>
+          <section class="panel" style="margin-top: 1rem">
+            <h3>Candidate pages from the story</h3>
+            <p class="small">Simple matching can miss names or suggest ordinary words. Review before creating anything; a suggestion is not verification.</p>
+            <div id="entity-suggestions" class="suggestions"><p class="empty">Save a story to review candidate names.</p></div>
+            <h3>Date mentions to review</h3>
+            <div id="date-suggestions" class="suggestions"><p class="empty">Save a story to review date mentions.</p></div>
+          </section>
+          <p class="notice">Text import, PDF/image OCR, attachment preservation, external research, and automatic enrichment are not connected. Do not rely on this page as a court-ready evidence system.</p>
+        </section>
+
+        <section class="workspace-panel" id="wiki-panel" hidden aria-labelledby="wiki-title">
+          <h2 id="wiki-title">Wiki pages &amp; connections</h2>
+          <p>Add subjects in the order they first appear in the story. Each page is a private, user-authored record with source links. This is a structure for your notes, not a copy of Wikipedia and not a public wiki.</p>
+          <div class="form-grid">
+            <section class="panel">
+              <h3>Create a subject page</h3>
+              <form id="entity-form">
+                <label for="entity-name">Person, organization, place, or topic
+                  <input id="entity-name" name="name" maxlength="180" required>
+                </label>
+                <label for="entity-type">Page type
+                  <select id="entity-type" name="type"><option>Person</option><option>Organization</option><option>Place</option><option>Event</option><option>Topic</option></select>
+                </label>
+                <label for="entity-summary">Summary in your words
+                  <textarea id="entity-summary" name="summary" maxlength="5000"></textarea>
+                </label>
+                <label for="entity-source">Supporting source
+                  <select id="entity-source" name="source"><option value="">No source linked yet</option></select>
+                </label>
+                <button class="button" type="submit">Create subject page</button>
+              </form>
+            </section>
+            <section class="panel">
+              <h3>Connect two pages</h3>
+              <form id="relation-form">
+                <label for="relation-from">First page
+                  <select id="relation-from" name="from" required></select>
+                </label>
+                <label for="relation-label">Relationship (as described by you)
+                  <input id="relation-label" name="label" maxlength="160" required>
+                </label>
+                <label for="relation-to">Second page
+                  <select id="relation-to" name="to" required></select>
+                </label>
+                <label for="relation-source">Supporting source
+                  <select id="relation-source" name="source"><option value="">No source linked yet</option></select>
+                </label>
+                <button class="button button-light" type="submit">Add connection</button>
+              </form>
+            </section>
+          </div>
+          <h3 style="margin-top: 1.5rem">Pages in first-mention order</h3>
+          <ol id="entity-list" class="record-list"><li class="empty">No subject pages yet.</li></ol>
+          <h3>Connection view</h3>
+          <div id="graph-view" class="graph" role="region" aria-label="Text view of user-recorded subject connections"><p class="empty">No connections recorded yet.</p></div>
+        </section>
+
+        <section class="workspace-panel" id="chronology-panel" hidden aria-labelledby="chronology-title">
+          <h2 id="chronology-title">Chronological Order</h2>
+          <p>Enter the date or year as shown by a source. If the year is unknown, the card is marked <strong>YEAR NEEDED</strong> until you fill it in. An entry is not verified just because it has a date.</p>
+          <section class="panel">
+            <h3>Add an event card</h3>
+            <form id="timeline-form">
+              <div class="form-grid">
+                <label for="event-date">Date or year (leave blank if unknown)
+                  <input id="event-date" name="date" maxlength="40" placeholder="YYYY-MM-DD, year, or blank">
+                </label>
+                <label for="event-title">Event / record title
+                  <input id="event-title" name="title" maxlength="240" required>
+                </label>
+                <label class="wide" for="event-note">What the source says / what still needs checking
+                  <textarea id="event-note" name="note" maxlength="5000"></textarea>
+                </label>
+                <label class="wide" for="event-source">Source
+                  <select id="event-source" name="source"><option value="">No source linked yet</option></select>
+                </label>
+              </div>
+              <button class="button" type="submit">Add date card</button>
+            </form>
+          </section>
+          <div class="button-row" role="group" aria-label="Chronological Order views" style="margin-block: 1rem">
+            <button class="button button-light button-small" id="timeline-list-toggle" type="button" aria-pressed="true">List view</button>
+            <button class="button button-light button-small" id="timeline-calendar-toggle" type="button" aria-pressed="false">Calendar board</button>
+          </div>
+          <div class="table-wrap" id="timeline-list-view">
+            <table>
+              <caption class="sr-only">Investigation events ordered by date, with unknown dates marked</caption>
+              <thead><tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Source / note</th><th scope="col">Status</th></tr></thead>
+              <tbody id="timeline-list"><tr><td colspan="4">No date cards yet.</td></tr></tbody>
+            </table>
+          </div>
+          <section id="timeline-calendar-view" hidden aria-labelledby="calendar-board-title">
+            <div class="calendar-controls">
+              <h3 id="calendar-board-title">Calendar evidence board</h3>
+              <label for="calendar-month">Calendar month
+                <input id="calendar-month" type="month">
+              </label>
+            </div>
+            <p class="small">Only exact dates are placed on a day. Year-only, unclear, and undated cards stay in the review list below.</p>
+            <div class="table-wrap">
+              <table class="calendar-table">
+                <caption id="calendar-caption">Calendar evidence board</caption>
+                <thead><tr><th scope="col">Sunday</th><th scope="col">Monday</th><th scope="col">Tuesday</th><th scope="col">Wednesday</th><th scope="col">Thursday</th><th scope="col">Friday</th><th scope="col">Saturday</th></tr></thead>
+                <tbody id="calendar-grid"></tbody>
+              </table>
+            </div>
+            <h3 style="margin-top: 1.2rem">Dates needing a precise day</h3>
+            <ol id="calendar-unplaced" class="record-list"><li class="empty">No date cards need placement.</li></ol>
+          </section>
+        </section>
+
+        <section class="workspace-panel" id="gates-panel" hidden aria-labelledby="gates-title">
+          <h2 id="gates-title">The Three Gates</h2>
+          <p>Record the review state and reasoning for each gate. This form does not independently verify sources, calculate odds, or decide that a claim is true.</p>
+          <form id="gates-form">
+            <div class="gates">
+              <section class="gate">
+                <h3>1 · Physical reality</h3>
+                <p class="small">Sequence, dates, locations, and hard constraints.</p>
+                <label for="gate-physical-status">Review status
+                  <select id="gate-physical-status" name="physicalStatus"><option>Not reviewed</option><option>Needs checking</option><option>Checked against cited source</option></select>
+                </label>
+                <label for="gate-physical-note">Reasoning / source
+                  <textarea id="gate-physical-note" name="physicalNote" maxlength="4000"></textarea>
+                </label>
+              </section>
+              <section class="gate">
+                <h3>2 · Probability &amp; odds</h3>
+                <p class="small">Source reliability, sample size, and independent corroboration.</p>
+                <label for="gate-odds-status">Review status
+                  <select id="gate-odds-status" name="oddsStatus"><option>Not reviewed</option><option>Needs corroboration</option><option>Sources compared</option></select>
+                </label>
+                <label for="gate-odds-note">Reasoning / source
+                  <textarea id="gate-odds-note" name="oddsNote" maxlength="4000"></textarea>
+                </label>
+              </section>
+              <section class="gate">
+                <h3>3 · Baseline &amp; frequency</h3>
+                <p class="small">Historical norms, cycles, and potential outliers.</p>
+                <label for="gate-baseline-status">Review status
+                  <select id="gate-baseline-status" name="baselineStatus"><option>Not reviewed</option><option>Baseline needed</option><option>Compared with cited records</option></select>
+                </label>
+                <label for="gate-baseline-note">Reasoning / source
+                  <textarea id="gate-baseline-note" name="baselineNote" maxlength="4000"></textarea>
+                </label>
+              </section>
+            </div>
+            <p><button class="button" type="submit">Save gate notes</button></p>
+          </form>
+        </section>
+
+        <section class="workspace-panel" id="legal-panel" hidden aria-labelledby="legal-title">
+          <h2 id="legal-title">Legal references</h2>
+          <p>Add a law only when it is relevant to this story. Keep its exact title, citation, official source, and the originating record together. This does not determine that a law was violated.</p>
+          <section class="panel">
+            <h3>Add a reference</h3>
+            <form id="law-form">
+              <div class="form-grid">
+                <label for="law-title">Title
+                  <input id="law-title" name="title" maxlength="240" required>
+                </label>
+                <label for="law-citation">Statute / citation
+                  <input id="law-citation" name="citation" maxlength="240" required>
+                </label>
+                <label for="law-url">Official source URL (required; HTTP or HTTPS)
+                  <input id="law-url" name="url" type="url" maxlength="2048" placeholder="https://" required>
+                </label>
+                <label for="law-source">Story source that raised it
+                  <select id="law-source" name="source" required><option value="">Add a source first</option></select>
+                </label>
+              </div>
+              <p><button class="button" type="submit">Add legal reference</button></p>
+            </form>
+          </section>
+          <ol id="law-list" class="record-list"><li class="empty">No legal references added to this investigation.</li></ol>
+          <p class="notice">This private list is not the public Legal References page and is not the AI Laws repository. It stays in this browser and does not provide legal advice.</p>
+        </section>
+
+        <section class="workspace-panel" id="feed-panel" hidden aria-labelledby="feed-title">
+          <h2 id="feed-title">Feed &amp; ecosystem trials</h2>
+          <p>Record a link or product, its ecosystem note, trial outcome, and any affiliate relationship. These drafts stay private. This form does not install software, create a Google Task, or publish a post.</p>
+          <section class="panel">
+            <h3>Add a feed draft</h3>
+            <form id="feed-form">
+              <div class="form-grid">
+                <label for="feed-kind">Item type
+                  <select id="feed-kind" name="kind"><option>Article / link</option><option>Tool / product</option><option>Site post</option></select>
+                </label>
+                <label for="feed-status">Trial state
+                  <select id="feed-status" name="status"><option>Not trialed</option><option>Trial needed</option><option>Trial result recorded</option></select>
+                </label>
+                <label for="feed-title-input">Title
+                  <input id="feed-title-input" name="title" maxlength="240" required>
+                </label>
+                <label for="feed-url">Original URL
+                  <input id="feed-url" name="url" type="url" maxlength="2048" placeholder="https://">
+                </label>
+                <label class="wide" for="feed-ecosystem">Ecosystem note / trial result
+                  <textarea id="feed-ecosystem" name="ecosystem" maxlength="4000"></textarea>
+                </label>
+                <label class="wide" for="feed-affiliate">Affiliate relationship / disclosure
+                  <input id="feed-affiliate" name="affiliate" maxlength="1000" placeholder="State any relationship, or write “None known”">
+                </label>
+              </div>
+              <p><button class="button" type="submit">Save private feed draft</button></p>
+            </form>
+          </section>
+          <ol id="feed-list" class="record-list"><li class="empty">No feed drafts yet.</li></ol>
+          <p class="notice">Google Tasks and public feed publishing are not connected. Use Exports to preserve your records; no trial is marked complete unless you enter its result.</p>
+        </section>
+
+        <section class="workspace-panel" id="ledger-panel" hidden aria-labelledby="ledger-title">
+          <h2 id="ledger-title">Activity ledger</h2>
+          <p>Each local edit includes a SHA-256 hash and the prior entry's hash. This page does not verify the chain; it is editable and not blockchain-backed, independently witnessed, or a court-certified chain of custody.</p>
+          <ol id="audit-list" class="record-list"><li class="empty">No activity recorded yet.</li></ol>
+        </section>
+
+        <section class="workspace-panel" id="export-panel" hidden aria-labelledby="export-title">
+          <h2 id="export-title">Exports</h2>
+          <p>Plain exports are unencrypted. Store them carefully. The encrypted backup requires the same passphrase to unlock and can be copied to another device, but this page has no automatic sync or restore flow.</p>
+          <div class="button-row">
+            <button class="button" id="export-case-button" type="button">Download current investigation JSON</button>
+            <button class="button button-light" id="export-csv-button" type="button">Download Chronological Order CSV</button>
+            <button class="button button-light" id="export-feed-button" type="button">Download feed drafts CSV</button>
+          </div>
+          <p class="notice">An export contains private information. Review it before sharing. A CSV is a spreadsheet-compatible file, not a live Excel backend.</p>
+        </section>
+
+        <section class="workspace-panel" id="site-search-panel" hidden aria-labelledby="site-search-title">
+          <h2 id="site-search-title">Find a site page</h2>
+          <p>This searches page names and descriptions only. It is not AI chat, web search, or a search of private investigations.</p>
+          <form id="site-search-form" class="tool-search">
+            <label for="site-search-query">Search public site pages
+              <input id="site-search-query" type="search" autocomplete="off" placeholder="Try “legal”, “feed”, or “crypto”">
+            </label>
+            <button class="button" type="submit">Search pages</button>
+          </form>
+          <div id="site-search-results" class="tool-search-results" role="status" aria-live="polite"></div>
+        </section>
+      </section>
     </main>
-
-    <!-- Multimodal Attachment Preview Tray -->
-    <div id="attachment-tray" class="hidden px-4 sm:px-6 py-2 bg-brand-surface/90 border-t border-brand-border max-w-5xl mx-auto w-full">
-      <div class="flex items-center gap-3 overflow-x-auto custom-scroll py-1" id="attachment-list"></div>
-    </div>
-
-    <!-- Multimodal Input Bar (Desktop & Mobile Friendly) -->
-    <footer class="p-3 sm:p-4 border-t border-brand-border bg-brand-surface/95 backdrop-blur-md shrink-0">
-      <div class="max-w-5xl mx-auto">
-        <form id="chat-form" onsubmit="handleFormSubmit(event)" class="relative flex items-end gap-2 bg-brand-card/90 rounded-2xl border border-brand-border focus-within:border-cyan-400 p-2 transition shadow-2xl">
-          
-          <!-- Hidden File Upload Input -->
-          <input type="file" id="file-picker" multiple class="hidden" onchange="handleFileSelected(event)">
-          
-          <!-- Media Action Buttons -->
-          <div class="flex items-center gap-1 pb-1">
-            <button type="button" onclick="document.getElementById('file-picker').click()" class="w-9 h-9 rounded-xl text-slate-400 hover:text-cyan-400 hover:bg-slate-800/80 flex items-center justify-center transition" title="Upload Document / Evidence">
-              <i class="fa-solid fa-paperclip text-base"></i>
-            </button>
-            <button type="button" onclick="openCameraModal()" class="w-9 h-9 rounded-xl text-slate-400 hover:text-cyan-400 hover:bg-slate-800/80 flex items-center justify-center transition" title="Take Evidence Photo">
-              <i class="fa-solid fa-camera text-base"></i>
-            </button>
-            <button type="button" id="btn-voice-record" onclick="toggleVoiceRecording()" class="w-9 h-9 rounded-xl text-slate-400 hover:text-rose-400 hover:bg-slate-800/80 flex items-center justify-center transition" title="Record Voice Memo">
-              <i class="fa-solid fa-microphone text-base" id="mic-icon"></i>
-            </button>
-          </div>
-
-          <!-- Dynamic Auto-Expanding Textarea -->
-          <textarea id="user-input" rows="1" class="flex-1 bg-transparent border-none focus:ring-0 text-white text-sm sm:text-base p-2 resize-none max-h-36 custom-scroll placeholder-slate-500 font-sans" placeholder="Ask anything, investigate an entity, or drop evidence..." onkeydown="handleKeyDown(event)"></textarea>
-
-          <!-- Submit Button -->
-          <button type="submit" id="btn-submit-chat" class="w-10 h-10 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 flex items-center justify-center font-bold transition shadow-lg shadow-cyan-500/25 shrink-0">
-            <i class="fa-solid fa-paper-plane text-sm"></i>
-          </button>
-        </form>
-        
-        <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 px-3 pt-2">
-          <span>Encrypted Session • Immutable SHA-256 Checksums</span>
-          <span>Press <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300">Enter</kbd> to Send</span>
-        </div>
-      </div>
+    <footer>
+      <div class="page">OSINT Neo AI · <a href="/">The Broadsheet</a> · <a href="/law/">Legal references</a> · <a href="/feed/">Feed</a></div>
     </footer>
-  </div>
+    <script>
+      (() => {
+        "use strict";
+        const DB_NAME = "osintneoai-workspace-v1";
+        const STORE_NAME = "vaults";
+        const PBKDF2_ITERATIONS = 310000;
+        const MAX_CASES = 3;
+        const encoder = new TextEncoder();
+        const decoder = new TextDecoder();
+        const authView = document.getElementById("auth-view");
+        const workspaceView = document.getElementById("workspace-view");
+        const authStatus = document.getElementById("auth-status");
+        const workspaceStatus = document.getElementById("workspace-status");
+        const pageDirectory = [
+          { title: "The Broadsheet — front page", url: "/", text: "tax-funded reporting public records newspaper" },
+          { title: "Reporting archive", url: "/workspace/newspaper_broadsheet_v3.html", text: "tax-funded newspaper archive" },
+          { title: "Private workspace", url: "/chat/", text: "investigation story sources wiki chronology" },
+          { title: "Legal references", url: "/law/", text: "organic legal database citations statutes" },
+          { title: "Feed and ecosystem", url: "/feed/", text: "article tool product trial affiliate" },
+          { title: "Crypto", url: "/workspace/dual_token_hub.html", text: "crypto token page" },
+          { title: "Print and Mail Studio", url: "/workspace/letter-studio.html", text: "letter print mail" }
+        ];
+        let db;
+        let activeHandle = "";
+        let activeKeyId = "";
+        let encryptionKey = null;
+        let vault = null;
+        let activeCaseId = null;
+        let activePanel = "overview-panel";
+        let renderedCaseId = null;
+        let storyDirty = false;
+        let calendarMonthManuallySet = false;
 
-  <!-- WEBRTC CAMERA CAPTURE MODAL -->
-  <div id="camera-modal" class="fixed inset-0 bg-black/85 z-50 hidden flex flex-col items-center justify-center p-4">
-    <div class="relative bg-brand-surface border border-brand-border rounded-2xl overflow-hidden max-w-lg w-full shadow-2xl">
-      <div class="p-4 border-b border-brand-border flex items-center justify-between bg-slate-900/80">
-        <span class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
-          <i class="fa-solid fa-camera text-cyan-400"></i> Evidence Capture Viewfinder
-        </span>
-        <button onclick="closeCameraModal()" class="text-slate-400 hover:text-white p-1">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
+        function setMessage(element, message, isError) {
+          element.textContent = message;
+          element.classList.toggle("status-error", Boolean(isError));
+        }
 
-      <div class="relative bg-black h-72 sm:h-80 flex items-center justify-center overflow-hidden">
-        <video id="camera-feed" autoplay playsinline class="w-full h-full object-cover"></video>
-        <canvas id="camera-snapshot-canvas" class="hidden"></canvas>
-      </div>
+        function openDatabase() {
+          return new Promise((resolve, reject) => {
+            if (!("indexedDB" in window)) {
+              reject(new Error("This browser does not support local encrypted storage."));
+              return;
+            }
+            const request = indexedDB.open(DB_NAME, 1);
+            request.onupgradeneeded = () => {
+              const database = request.result;
+              if (!database.objectStoreNames.contains(STORE_NAME)) {
+                database.createObjectStore(STORE_NAME, { keyPath: "keyId" });
+              }
+            };
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(new Error("Could not open browser storage."));
+          });
+        }
 
-      <div class="p-4 bg-slate-900/90 border-t border-brand-border flex items-center justify-between">
-        <button onclick="closeCameraModal()" class="px-4 py-2 rounded-xl text-xs font-mono text-slate-400 hover:text-white">Cancel</button>
-        <button onclick="captureCameraSnapshot()" class="px-5 py-2.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-orbitron font-bold text-xs flex items-center gap-2 transition shadow-lg shadow-cyan-500/25">
-          <i class="fa-solid fa-camera-retro"></i> Capture Evidence
-        </button>
-      </div>
-    </div>
-  </div>
+        function requestResult(request) {
+          return new Promise((resolve, reject) => {
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(new Error("Browser storage request failed."));
+          });
+        }
 
-  <!-- JAVASCRIPT ENGINE -->
-  <script>
-    // --- Session State ---
-    let pendingAttachments = [];
-    let mediaRecorder = null;
-    let audioChunks = [];
-    let isRecording = false;
-    let cameraMediaStream = null;
-    let userWalletAddress = null;
+        function transactionDone(transaction) {
+          return new Promise((resolve, reject) => {
+            transaction.oncomplete = () => resolve();
+            transaction.onerror = () => reject(new Error("Browser storage transaction failed."));
+            transaction.onabort = () => reject(new Error("Browser storage transaction was interrupted."));
+          });
+        }
 
-    // --- DOM Elements ---
-    const chatStream = document.getElementById('chat-stream');
-    const userInput = document.getElementById('user-input');
-    const attachmentTray = document.getElementById('attachment-tray');
-    const attachmentList = document.getElementById('attachment-list');
-    const cameraModal = document.getElementById('camera-modal');
-    const cameraFeed = document.getElementById('camera-feed');
-    const snapshotCanvas = document.getElementById('camera-snapshot-canvas');
-    const sidebar = document.getElementById('sidebar');
-    const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+        async function getRecord(keyId) {
+          const transaction = db.transaction(STORE_NAME, "readonly");
+          const result = await requestResult(transaction.objectStore(STORE_NAME).get(keyId));
+          await transactionDone(transaction);
+          return result;
+        }
 
-    // --- UI Helpers ---
-    function toggleSidebar() {
-      sidebar.classList.toggle('-translate-x-full');
-      sidebarBackdrop.classList.toggle('hidden');
-    }
+        async function putRecord(record) {
+          const transaction = db.transaction(STORE_NAME, "readwrite");
+          transaction.objectStore(STORE_NAME).put(record);
+          await transactionDone(transaction);
+        }
 
-    function handleKeyDown(e) {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        handleFormSubmit(e);
-      }
-    }
+        function normalizeHandle(value) {
+          return value.trim().toLowerCase();
+        }
 
-    function autoResizeTextarea() {
-      userInput.style.height = 'auto';
-      userInput.style.height = Math.min(userInput.scrollHeight, 144) + 'px';
-    }
-    userInput.addEventListener('input', autoResizeTextarea);
+        async function makeKeyId(handle) {
+          const digest = await crypto.subtle.digest("SHA-256", encoder.encode(handle));
+          return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
+        }
 
-    function clearChatHistory() {
-      if (confirm('Clear current workspace chat history?')) {
-        chatStream.innerHTML = '';
-        appendAIMessage('Workspace cleared. Ready for your next investigation query.');
-      }
-    }
+        function toBase64(bytes) {
+          let binary = "";
+          for (const byte of bytes) binary += String.fromCharCode(byte);
+          return btoa(binary);
+        }
 
-    function startNewInvestigation() {
-      clearChatHistory();
-      if (window.innerWidth < 768) toggleSidebar();
-    }
+        function fromBase64(value) {
+          const binary = atob(value);
+          return Uint8Array.from(binary, (character) => character.charCodeAt(0));
+        }
 
-    function selectThread(name) {
-      appendAIMessage(`Loaded dossier: **${name}**. Querying relational BigQuery graph records...`);
-      if (window.innerWidth < 768) toggleSidebar();
-    }
-
-    // --- Chat Rendering ---
-    function appendUserMessage(text, files = []) {
-      const msgDiv = document.createElement('div');
-      msgDiv.className = 'flex items-start justify-end gap-3 sm:gap-4';
-      
-      let filesHtml = '';
-      if (files.length > 0) {
-        filesHtml = '<div class="flex flex-wrap gap-2 mb-2">' + files.map(f => `
-          <div class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-[11px] font-mono text-cyan-300 flex items-center gap-1.5">
-            <i class="fa-solid fa-file"></i> ${f.name} <span class="text-slate-500">(${f.size})</span>
-          </div>
-        `).join('') + '</div>';
-      }
-
-      msgDiv.innerHTML = `
-        <div class="glass-panel p-4 rounded-2xl max-w-2xl bg-cyan-950/20 border-r-4 border-r-cyan-400 shadow-lg text-slate-100 text-sm leading-relaxed">
-          ${filesHtml}
-          <div>${escapeHtml(text)}</div>
-        </div>
-        <div class="w-9 h-9 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-xs text-white shrink-0">
-          YOU
-        </div>
-      `;
-      chatStream.appendChild(msgDiv);
-      chatStream.scrollTop = chatStream.scrollHeight;
-    }
-
-    function appendAIMessage(text, metadata = null) {
-      const msgDiv = document.createElement('div');
-      msgDiv.className = 'flex items-start gap-3 sm:gap-4';
-
-      let metaHtml = '';
-      if (metadata) {
-        metaHtml = `
-          <div class="mt-3 pt-3 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-2 text-[11px] font-mono">
-            <div class="p-2 rounded bg-slate-900/90 border border-slate-800">
-              <span class="text-slate-400 uppercase text-[10px]">Confidence:</span>
-              <div class="font-bold text-emerald-400">${metadata.confidence || '99.8%'}</div>
-            </div>
-            <div class="p-2 rounded bg-slate-900/90 border border-slate-800">
-              <span class="text-slate-400 uppercase text-[10px]">Source Ledger:</span>
-              <div class="font-bold text-cyan-400">${metadata.source || 'BigQuery v2'}</div>
-            </div>
-            <div class="p-2 rounded bg-slate-900/90 border border-slate-800">
-              <span class="text-slate-400 uppercase text-[10px]">SHA-256 Hash:</span>
-              <div class="font-bold text-purple-400 truncate">${metadata.hash || 'Verified'}</div>
-            </div>
-          </div>
-        `;
-      }
-
-      msgDiv.innerHTML = `
-        <div class="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 font-orbitron font-bold text-sm shrink-0">
-          <i class="fa-solid fa-brain"></i>
-        </div>
-        <div class="glass-panel p-5 rounded-2xl max-w-3xl border-l-4 border-l-cyan-400 shadow-xl text-slate-200 text-sm leading-relaxed">
-          <div class="font-orbitron font-bold text-xs text-white mb-2 flex items-center gap-2">
-            OSINT Neo AI <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-normal">Analysis Complete</span>
-          </div>
-          <div class="prose prose-invert max-w-none text-slate-300">${formatMarkdown(text)}</div>
-          ${metaHtml}
-        </div>
-      `;
-      chatStream.appendChild(msgDiv);
-      chatStream.scrollTop = chatStream.scrollHeight;
-    }
-
-    function sendQuickPrompt(promptText) {
-      userInput.value = promptText;
-      handleFormSubmit(new Event('submit'));
-    }
-
-    async function handleFormSubmit(e) {
-      if (e) e.preventDefault();
-      const message = userInput.value.trim();
-      const filesToSend = [...pendingAttachments];
-
-      if (!message && filesToSend.length === 0) return;
-
-      appendUserMessage(message, filesToSend);
-      userInput.value = '';
-      userInput.style.height = 'auto';
-      clearAttachments();
-
-      // Show typing indicator
-      const typingId = 'typing-' + Date.now();
-      const typingDiv = document.createElement('div');
-      typingDiv.id = typingId;
-      typingDiv.className = 'flex items-center gap-3 text-slate-400 text-xs font-mono pl-12';
-      typingDiv.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-cyan-400"></i> Querying BigQuery knowledge graph & running entity extraction...';
-      chatStream.appendChild(typingDiv);
-      chatStream.scrollTop = chatStream.scrollHeight;
-
-      try {
-        // Query local /api/inspect or backend router
-        const res = await fetch(`http://localhost:10000/api/inspect?query=${encodeURIComponent(message)}`);
-        const data = await res.json();
-        
-        document.getElementById(typingId)?.remove();
-
-        if (data.records && data.records.length > 0) {
-          const count = data.records.length;
-          const first = data.records[0];
-          appendAIMessage(`Found **${count} matching forensic records** in the BigQuery Master Ledger:\n\n` + 
-            data.records.slice(0, 3).map((r, i) => `• **${r.filename || 'Evidence File'}**\n  *Path:* \`${r.relative_path || 'data/'}\`\n  *SHA-256:* \`${r.sha256_hash ? r.sha256_hash.substring(0, 24) + '...' : 'Verified'}\``).join('\n\n'),
-            { confidence: '99.9%', source: 'BigQuery (noble-beanbag)', hash: first.sha256_hash }
-          );
-        } else {
-          // Dynamic Intelligence response
-          appendAIMessage(`**Forensic Query Executed:** "${message}"\n\n` +
-            `• **Entity Cross-Reference:** Scanned against 32 master target accounts.\n` +
-            `• **Evidence Ledger:** Indexed across 3,510 verified documents with zero static key vulnerabilities.\n` +
-            `• **Tactical Recommendation:** Launch the **[OSINT Eye View Cockpit](http://localhost:10000/map/osinteye)** to inspect spatial GPS waypoints and animated trajectory tracks.`,
-            { confidence: '98.5%', source: 'OpenOSINT MCP Engine', hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' }
+        async function deriveKey(password, salt) {
+          const material = await crypto.subtle.importKey("raw", encoder.encode(password), "PBKDF2", false, ["deriveKey"]);
+          return crypto.subtle.deriveKey(
+            { name: "PBKDF2", salt, iterations: PBKDF2_ITERATIONS, hash: "SHA-256" },
+            material,
+            { name: "AES-GCM", length: 256 },
+            false,
+            ["encrypt", "decrypt"]
           );
         }
-      } catch (err) {
-        document.getElementById(typingId)?.remove();
-        appendAIMessage(`Connected to offline mode. Received payload "${message}". 19 native MCP tools and BigQuery property graph stand ready.`, { confidence: '95.0%', source: 'Local AI Cache' });
-      }
-    }
 
-    // --- File Attachment Handling ---
-    function handleFileSelected(e) {
-      const files = Array.from(e.target.files);
-      files.forEach(f => {
-        pendingAttachments.push({
-          name: f.name,
-          size: (f.size / 1024).toFixed(1) + ' KB',
-          file: f
-        });
-      });
-      renderAttachments();
-    }
+        function emptyVault() {
+          return { schemaVersion: 1, investigations: [], feedItems: [], audit: [] };
+        }
 
-    function renderAttachments() {
-      if (pendingAttachments.length === 0) {
-        attachmentTray.classList.add('hidden');
-        return;
-      }
-      attachmentTray.classList.remove('hidden');
-      attachmentList.innerHTML = pendingAttachments.map((f, i) => `
-        <div class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-mono text-cyan-300 flex items-center gap-2 shrink-0">
-          <i class="fa-solid fa-file-lines"></i>
-          <span>${f.name}</span>
-          <button onclick="removeAttachment(${i})" class="text-slate-500 hover:text-rose-400 ml-1">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-      `).join('');
-    }
+        function validateVault(value) {
+          const text = (input, maximum) => typeof input === "string" && input.length <= maximum;
+          if (!value || value.schemaVersion !== 1 || !text(value.salt, 64)
+            || !Array.isArray(value.investigations) || value.investigations.length > MAX_CASES
+            || !Array.isArray(value.feedItems) || value.feedItems.length > 500
+            || !Array.isArray(value.audit) || value.audit.length > 5000) return false;
+          return value.investigations.every((item) => item
+            && text(item.id, 80) && text(item.title, 160) && text(item.story, 100000)
+            && Array.isArray(item.sources) && item.sources.length <= 300
+            && item.sources.every((source) => source && text(source.id, 80) && text(source.title, 240)
+              && text(source.kind, 80) && text(source.identifier, 180) && text(source.url, 2048))
+            && Array.isArray(item.pages) && item.pages.length <= 300
+            && item.pages.every((page) => page && text(page.id, 80) && text(page.name, 180)
+              && text(page.type, 80) && text(page.summary, 5000) && text(page.sourceId, 80)
+              && Number.isInteger(page.order) && page.order > 0 && page.order <= 300)
+            && Array.isArray(item.relations) && item.relations.length <= 1000
+            && item.relations.every((relation) => relation && text(relation.from, 80) && text(relation.to, 80)
+              && text(relation.label, 160) && text(relation.sourceId, 80))
+            && Array.isArray(item.timeline) && item.timeline.length <= 2000
+            && item.timeline.every((entry) => entry && text(entry.id, 80) && text(entry.date, 40)
+              && text(entry.title, 240) && text(entry.note, 5000) && text(entry.sourceId, 80)
+              && text(entry.status, 80))
+            && Array.isArray(item.laws) && item.laws.length <= 300
+            && item.laws.every((law) => law && text(law.title, 240) && text(law.citation, 240)
+              && text(law.url, 2048) && text(law.sourceId, 80))
+            && item.gates && ["physical", "odds", "baseline"].every((gate) => item.gates[gate]
+              && text(item.gates[gate].status, 80) && text(item.gates[gate].note, 4000)))
+            && value.feedItems.every((feed) => feed && text(feed.id, 80) && text(feed.kind, 80)
+              && text(feed.status, 80) && text(feed.title, 240) && text(feed.url, 2048)
+              && text(feed.ecosystem, 4000) && text(feed.affiliate, 1000) && text(feed.createdAt, 80))
+            && value.audit.every((entry) => entry && text(entry.occurredAt, 80) && text(entry.action, 160)
+              && text(entry.detail, 1000) && /^[a-f0-9]{64}$/.test(entry.previousHash)
+              && /^[a-f0-9]{64}$/.test(entry.hash));
+        }
 
-    function removeAttachment(index) {
-      pendingAttachments.splice(index, 1);
-      renderAttachments();
-    }
-
-    function clearAttachments() {
-      pendingAttachments = [];
-      renderAttachments();
-      document.getElementById('file-picker').value = '';
-    }
-
-    // --- WebRTC Camera Viewfinder ---
-    async function openCameraModal() {
-      cameraModal.classList.remove('hidden');
-      try {
-        cameraMediaStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
-        cameraFeed.srcObject = cameraMediaStream;
-      } catch (err) {
-        alert('Camera access denied or device not found: ' + err.message);
-        closeCameraModal();
-      }
-    }
-
-    function closeCameraModal() {
-      if (cameraMediaStream) {
-        cameraMediaStream.getTracks().forEach(t => t.stop());
-        cameraMediaStream = null;
-      }
-      cameraModal.classList.add('hidden');
-    }
-
-    function captureCameraSnapshot() {
-      const context = snapshotCanvas.getContext('2d');
-      snapshotCanvas.width = cameraFeed.videoWidth || 640;
-      snapshotCanvas.height = cameraFeed.videoHeight || 480;
-      context.drawImage(cameraFeed, 0, 0, snapshotCanvas.width, snapshotCanvas.height);
-      
-      const dataUrl = snapshotCanvas.toDataURL('image/jpeg');
-      pendingAttachments.push({
-        name: `evidence_snap_${Date.now()}.jpg`,
-        size: '180 KB',
-        dataUrl: dataUrl
-      });
-      renderAttachments();
-      closeCameraModal();
-    }
-
-    // --- Voice Recording ---
-    async function toggleVoiceRecording() {
-      const micIcon = document.getElementById('mic-icon');
-      if (!isRecording) {
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-          mediaRecorder = new MediaRecorder(stream);
-          audioChunks = [];
-          mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
-          mediaRecorder.onstop = () => {
-            const blob = new Blob(audioChunks, { type: 'audio/webm' });
-            pendingAttachments.push({
-              name: `voice_memo_${Date.now()}.webm`,
-              size: (blob.size / 1024).toFixed(1) + ' KB',
-              blob: blob
-            });
-            renderAttachments();
+        async function encryptVault() {
+          const iv = crypto.getRandomValues(new Uint8Array(12));
+          const plaintext = encoder.encode(JSON.stringify(vault));
+          const ciphertext = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, encryptionKey, plaintext);
+          return {
+            keyId: activeKeyId,
+            schemaVersion: 1,
+            salt: vault.salt,
+            iv: toBase64(iv),
+            ciphertext: toBase64(new Uint8Array(ciphertext)),
+            updatedAt: new Date().toISOString()
           };
-          mediaRecorder.start();
-          isRecording = true;
-          micIcon.className = 'fa-solid fa-circle text-rose-500 animate-pulse';
-        } catch (err) {
-          alert('Microphone access denied: ' + err.message);
         }
-      } else {
-        mediaRecorder.stop();
-        isRecording = false;
-        micIcon.className = 'fa-solid fa-microphone';
-      }
-    }
 
-    // --- Web3 Wallet Connection ---
-    async function connectWallet() {
-      if (window.ethereum) {
-        try {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          userWalletAddress = accounts[0];
-          document.getElementById('wallet-badge').innerText = userWalletAddress.substring(0, 6) + '...' + userWalletAddress.substring(38);
-          document.getElementById('btn-connect-wallet').innerText = 'Connected';
-          document.getElementById('btn-connect-wallet').className = 'px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-mono text-[11px] font-bold';
-        } catch (err) {
-          console.error(err);
+        async function persistVault() {
+          const record = await encryptVault();
+          await putRecord(record);
+          setMessage(workspaceStatus, `Saved locally · ${new Date(record.updatedAt).toLocaleString()}`, false);
         }
-      } else {
-        alert('MetaMask or Web3 wallet not detected. Running in standard zero-trust mode.');
-      }
-    }
 
-    // --- Utilities ---
-    function escapeHtml(str) {
-      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    }
+        async function addAudit(action, detail) {
+          if (vault.audit.length >= 5000) throw new Error("Activity ledger limit reached. Export a copy before recording more changes.");
+          const last = vault.audit[vault.audit.length - 1];
+          const entry = {
+            occurredAt: new Date().toISOString(),
+            action,
+            detail,
+            previousHash: last ? last.hash : "0".repeat(64)
+          };
+          const digest = await crypto.subtle.digest("SHA-256", encoder.encode(JSON.stringify(entry)));
+          entry.hash = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
+          vault.audit.push(entry);
+        }
 
-    function formatMarkdown(str) {
-      return str
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.*?)\*/g, '<em>$1</em>')
-        .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-700 text-cyan-300 font-mono text-xs">$1</code>')
-        .replace(/\n\n/g, '<br/><br/>')
-        .replace(/\n/g, '<br/>');
-    }
-  </script>
-</body>
+        async function commitChange(action, detail, change) {
+          try {
+            change();
+            await addAudit(action, detail);
+            await persistVault();
+            renderWorkspace();
+            return true;
+          } catch (error) {
+            const reason = error instanceof Error ? error.message : "browser storage error";
+            setMessage(workspaceStatus, `Could not save this change: ${reason} The current page may contain unsaved work; keep it open and resolve the storage issue before locking.`, true);
+            return false;
+          }
+        }
+
+        function currentCase() {
+          return vault && vault.investigations.find((item) => item.id === activeCaseId);
+        }
+
+        function newInvestigation(number) {
+          return {
+            id: crypto.randomUUID(),
+            title: `Investigation ${number}`,
+            story: "",
+            sources: [],
+            pages: [],
+            relations: [],
+            timeline: [],
+            laws: [],
+            gates: {
+              physical: { status: "Not reviewed", note: "" },
+              odds: { status: "Not reviewed", note: "" },
+              baseline: { status: "Not reviewed", note: "" }
+            }
+          };
+        }
+
+        function makeElement(tag, className, text) {
+          const element = document.createElement(tag);
+          if (className) element.className = className;
+          if (text !== undefined) element.textContent = text;
+          return element;
+        }
+
+        function makeLink(url, label) {
+          const link = document.createElement("a");
+          link.href = url;
+          link.textContent = label;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          return link;
+        }
+
+        function safeHttpUrl(value) {
+          if (!value) return "";
+          try {
+            const parsed = new URL(value);
+            return parsed.protocol === "http:" || parsed.protocol === "https:" ? parsed.href : "";
+          } catch {
+            return "";
+          }
+        }
+
+        function addRecord(list, title, tag, body, url) {
+          const item = makeElement("li", "record");
+          const heading = makeElement("div", "record-head");
+          heading.append(makeElement("strong", "record-title", title));
+          if (tag) heading.append(makeElement("span", "tag", tag));
+          item.append(heading);
+          if (body) item.append(makeElement("p", "", body));
+          if (url) {
+            const linkLine = makeElement("p");
+            linkLine.append(makeLink(url, url));
+            item.append(linkLine);
+          }
+          list.append(item);
+        }
+
+        function setEmpty(container, message) {
+          container.replaceChildren(makeElement("p", "empty", message));
+        }
+
+        function renderSources() {
+          const item = currentCase();
+          const list = document.getElementById("source-list");
+          const sourceSelects = ["entity-source", "relation-source", "event-source", "law-source"];
+          if (!item) {
+            setEmpty(list, "Create an investigation to add sources.");
+            sourceSelects.forEach((id) => document.getElementById(id).replaceChildren(new Option("No investigation selected", "")));
+            return;
+          }
+          list.replaceChildren();
+          if (!item.sources.length) setEmpty(list, "No sources added yet.");
+          item.sources.forEach((source) => {
+            const body = [source.kind, source.identifier].filter(Boolean).join(" · ");
+            addRecord(list, source.title, source.kind, body, safeHttpUrl(source.url));
+          });
+          sourceSelects.forEach((id) => {
+            const select = document.getElementById(id);
+            const previous = select.value;
+            select.replaceChildren(new Option("No source linked yet", ""));
+            item.sources.forEach((source) => select.add(new Option(source.title, source.id)));
+            if (item.sources.some((source) => source.id === previous)) select.value = previous;
+          });
+        }
+
+        function renderCaseList() {
+          const list = document.getElementById("case-list");
+          list.replaceChildren();
+          vault.investigations.forEach((item, index) => {
+            const button = makeElement("button", "case-button", `${index + 1}. ${item.title || "Untitled investigation"}`);
+            button.type = "button";
+            button.setAttribute("aria-pressed", String(item.id === activeCaseId));
+            button.addEventListener("click", async () => {
+              if (item.id === activeCaseId) return;
+              if (activePanel === "story-panel" && !await saveStoryDraft()) return;
+              activeCaseId = item.id;
+              renderWorkspace();
+            });
+            list.append(button);
+          });
+          document.getElementById("new-case-button").disabled = vault.investigations.length >= MAX_CASES;
+          document.getElementById("case-count").textContent = `${vault.investigations.length} of ${MAX_CASES} used`;
+          const empty = document.getElementById("overview-empty");
+          empty.textContent = vault.investigations.length
+            ? "Select an investigation above. Each one has its own story, sources, subject pages, Chronological Order, Three Gates, and legal references."
+            : "No investigations yet. Create one when you are ready; all three slots start blank.";
+        }
+
+        function renderEntityPages() {
+          const item = currentCase();
+          const list = document.getElementById("entity-list");
+          const from = document.getElementById("relation-from");
+          const to = document.getElementById("relation-to");
+          list.replaceChildren();
+          if (!item || !item.pages.length) {
+            list.append(makeElement("li", "empty", "No subject pages yet."));
+          } else {
+            [...item.pages].sort((a, b) => a.order - b.order).forEach((page) => {
+              const entry = document.createElement("li");
+              entry.className = "record";
+              const heading = makeElement("div", "record-head");
+              heading.append(makeElement("strong", "record-title", `${page.order}. ${page.name}`));
+              heading.append(makeElement("span", "tag", page.type));
+              entry.append(heading);
+              entry.append(makeElement("p", "", page.summary || "No summary added."));
+              const source = item.sources.find((record) => record.id === page.sourceId);
+              if (source) entry.append(makeElement("p", "", `Source: ${source.title}`));
+              list.append(entry);
+            });
+          }
+
+          [from, to].forEach((select) => {
+            const previous = select.value;
+            select.replaceChildren(new Option(item && item.pages.length ? "Choose a page" : "Add subject pages first", ""));
+            if (item) item.pages.forEach((page) => select.add(new Option(page.name, page.id)));
+            if (item && item.pages.some((page) => page.id === previous)) select.value = previous;
+            select.disabled = !item || item.pages.length < 2;
+          });
+
+          const graph = document.getElementById("graph-view");
+          graph.replaceChildren();
+          if (!item || !item.relations.length) {
+            graph.append(makeElement("p", "empty", "No connections recorded yet. Add two subject pages, then describe a source-supported relationship."));
+          } else {
+            item.relations.forEach((relation) => {
+              const first = item.pages.find((page) => page.id === relation.from);
+              const second = item.pages.find((page) => page.id === relation.to);
+              if (!first || !second) return;
+              const line = makeElement("p", "", `${first.name} — ${relation.label} → ${second.name}`);
+              const source = item.sources.find((record) => record.id === relation.sourceId);
+              if (source) line.append(document.createTextNode(` · Source: ${source.title}`));
+              graph.append(line);
+            });
+          }
+        }
+
+        function dateSortKey(value) {
+          const text = value.trim();
+          const numeric = /^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?$/.exec(text);
+          if (numeric) {
+            const year = Number(numeric[1]);
+            const month = Number(numeric[2] || 1);
+            const day = Number(numeric[3] || 1);
+            const date = new Date(Date.UTC(year, month - 1, day));
+            if (date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day) return date.getTime();
+            return Number.POSITIVE_INFINITY;
+          }
+          const named = /^(January|February|March|April|May|June|July|August|September|October|November|December)\.?\s+(\d{1,2}),?\s+(\d{4})$/i.exec(text);
+          if (named) {
+            const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+            const year = Number(named[3]);
+            const month = months.indexOf(named[1].toLowerCase());
+            const day = Number(named[2]);
+            const date = new Date(Date.UTC(year, month, day));
+            if (date.getUTCFullYear() === year && date.getUTCMonth() === month && date.getUTCDate() === day) return date.getTime();
+          }
+          return Number.POSITIVE_INFINITY;
+        }
+
+        function timelineSort(a, b) {
+          return dateSortKey(a.date || "") - dateSortKey(b.date || "") || a.title.localeCompare(b.title);
+        }
+
+        function calendarDateParts(value) {
+          const text = value.trim();
+          const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(text);
+          if (iso && Number.isFinite(dateSortKey(text))) {
+            return { year: Number(iso[1]), month: Number(iso[2]), day: Number(iso[3]) };
+          }
+          const named = /^(January|February|March|April|May|June|July|August|September|October|November|December)\.?\s+(\d{1,2}),?\s+(\d{4})$/i.exec(text);
+          if (named && Number.isFinite(dateSortKey(text))) {
+            const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+            return { year: Number(named[3]), month: months.indexOf(named[1].toLowerCase()) + 1, day: Number(named[2]) };
+          }
+          return null;
+        }
+
+        function renderCalendar() {
+          const item = currentCase();
+          const monthInput = document.getElementById("calendar-month");
+          if (!calendarMonthManuallySet) {
+            const firstDatedEvent = item
+              ? [...item.timeline].sort(timelineSort).map((event) => calendarDateParts(event.date || "")).find(Boolean)
+              : null;
+            const today = new Date();
+            const year = firstDatedEvent ? firstDatedEvent.year : today.getFullYear();
+            const month = firstDatedEvent ? firstDatedEvent.month : today.getMonth() + 1;
+            monthInput.value = `${year}-${String(month).padStart(2, "0")}`;
+          }
+          const [year, month] = monthInput.value.split("-").map(Number);
+          const firstWeekday = new Date(Date.UTC(year, month - 1, 1)).getUTCDay();
+          const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+          const grid = document.getElementById("calendar-grid");
+          const caption = document.getElementById("calendar-caption");
+          const unplaced = document.getElementById("calendar-unplaced");
+          grid.replaceChildren();
+          caption.textContent = `Calendar evidence board: ${new Date(Date.UTC(year, month - 1, 1)).toLocaleDateString(undefined, { month: "long", year: "numeric", timeZone: "UTC" })}`;
+
+          const events = item ? item.timeline : [];
+          const dated = events.map((event) => ({ event, date: calendarDateParts(event.date || "") }));
+          const weekCount = Math.ceil((firstWeekday + daysInMonth) / 7);
+          for (let week = 0; week < weekCount; week++) {
+            const row = document.createElement("tr");
+            for (let weekday = 0; weekday < 7; weekday++) {
+              const day = week * 7 + weekday - firstWeekday + 1;
+              const cell = document.createElement("td");
+              if (day < 1 || day > daysInMonth) {
+                cell.className = "calendar-empty";
+                cell.setAttribute("aria-hidden", "true");
+              } else {
+                const dateLabel = new Date(Date.UTC(year, month - 1, day)).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+                cell.setAttribute("aria-label", dateLabel);
+                cell.append(makeElement("span", "calendar-day", String(day)));
+                const dayEvents = dated.filter(({ date }) => date && date.year === year && date.month === month && date.day === day);
+                if (dayEvents.length) {
+                  const list = document.createElement("ol");
+                  list.className = "calendar-events";
+                  dayEvents.forEach(({ event }) => list.append(makeElement("li", "", event.title)));
+                  cell.append(list);
+                }
+              }
+              row.append(cell);
+            }
+            grid.append(row);
+          }
+
+          unplaced.replaceChildren();
+          const needsPlacement = dated.filter(({ date }) => !date).map(({ event }) => event);
+          if (!needsPlacement.length) {
+            unplaced.append(makeElement("li", "empty", "No year-only, unclear, or undated cards need placement."));
+          } else {
+            needsPlacement.sort(timelineSort).forEach((event) => {
+              const source = item.sources.find((record) => record.id === event.sourceId);
+              const detail = [event.date || "YEAR NEEDED", source ? `Source: ${source.title}` : "", event.note].filter(Boolean).join(" · ");
+              addRecord(unplaced, event.title, "Needs precise date", detail);
+            });
+          }
+        }
+
+        function renderTimeline() {
+          const item = currentCase();
+          const body = document.getElementById("timeline-list");
+          body.replaceChildren();
+          if (!item || !item.timeline.length) {
+            const row = document.createElement("tr");
+            const cell = makeElement("td", "", "No date cards yet.");
+            cell.colSpan = 4;
+            row.append(cell);
+            body.append(row);
+            renderCalendar();
+            return;
+          }
+          [...item.timeline].sort(timelineSort).forEach((event) => {
+            const row = document.createElement("tr");
+            const dateCell = makeElement("td", "", event.date || "YEAR NEEDED");
+            const titleCell = makeElement("td", "", event.title);
+            const source = item.sources.find((record) => record.id === event.sourceId);
+            const noteCell = makeElement("td", "", [source ? `Source: ${source.title}` : "", event.note].filter(Boolean).join(" · ") || "No source/note recorded.");
+            const statusCell = makeElement("td", "", event.status || (event.date ? "Needs review" : "YEAR NEEDED"));
+            row.append(dateCell, titleCell, noteCell, statusCell);
+            body.append(row);
+          });
+          renderCalendar();
+        }
+
+        function renderLaws() {
+          const item = currentCase();
+          const list = document.getElementById("law-list");
+          list.replaceChildren();
+          if (!item || !item.laws.length) {
+            list.append(makeElement("li", "empty", "No legal references added to this investigation."));
+            return;
+          }
+          item.laws.forEach((law) => {
+            const source = item.sources.find((record) => record.id === law.sourceId);
+            addRecord(list, `${law.title} · ${law.citation}`, "Reference only", source ? `Story source: ${source.title}` : "", safeHttpUrl(law.url));
+          });
+        }
+
+        function renderFeed() {
+          const list = document.getElementById("feed-list");
+          list.replaceChildren();
+          if (!vault.feedItems.length) {
+            list.append(makeElement("li", "empty", "No private feed drafts yet."));
+            return;
+          }
+          [...vault.feedItems].reverse().forEach((feed) => {
+            const details = [feed.kind, `Trial: ${feed.status}`, feed.ecosystem ? `Ecosystem / result: ${feed.ecosystem}` : "", feed.affiliate ? `Affiliate: ${feed.affiliate}` : ""].filter(Boolean).join(" · ");
+            addRecord(list, feed.title, "Private draft · not published", details, safeHttpUrl(feed.url));
+          });
+        }
+
+        function renderAudit() {
+          const list = document.getElementById("audit-list");
+          list.replaceChildren();
+          if (!vault.audit.length) {
+            list.append(makeElement("li", "empty", "No activity recorded yet."));
+            return;
+          }
+          [...vault.audit].reverse().forEach((entry) => {
+            const item = document.createElement("li");
+            item.className = "record";
+            const heading = makeElement("div", "record-head");
+            heading.append(makeElement("strong", "record-title", entry.action));
+            heading.append(makeElement("span", "tag", new Date(entry.occurredAt).toLocaleString()));
+            item.append(heading, makeElement("p", "", entry.detail), makeElement("p", "small", `SHA-256: ${entry.hash}`));
+            list.append(item);
+          });
+        }
+
+        function renderGates() {
+          const item = currentCase();
+          const gates = item && item.gates;
+          const pairs = [
+            ["physical", "gate-physical-status", "gate-physical-note"],
+            ["odds", "gate-odds-status", "gate-odds-note"],
+            ["baseline", "gate-baseline-status", "gate-baseline-note"]
+          ];
+          pairs.forEach(([key, statusId, noteId]) => {
+            document.getElementById(statusId).value = gates ? gates[key].status : "Not reviewed";
+            document.getElementById(noteId).value = gates ? gates[key].note : "";
+          });
+        }
+
+        function candidateEntities(text) {
+          const stop = new Set(["The", "This", "That", "Then", "When", "Where", "What", "Who", "Why", "How", "After", "Before", "Because", "There", "Their", "They", "Today", "Yesterday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"]);
+          const matches = text.match(/\b(?:[A-Z][A-Za-z0-9&'.-]*)(?:\s+(?:(?:of|and|the)\s+)?[A-Z][A-Za-z0-9&'.-]*){0,3}\b/g) || [];
+          const seen = new Set();
+          return matches.map((name) => name.trim()).filter((name) => {
+            const words = name.split(/\s+/);
+            if (words.length === 1 && (words[0].length < 3 || stop.has(words[0]))) return false;
+            if (words.length > 1 && stop.has(words[0])) return false;
+            const key = name.toLocaleLowerCase();
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          }).slice(0, 40);
+        }
+
+        function candidateDates(text) {
+          const month = "(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)";
+          const pattern = new RegExp(`\\b(?:\\d{4}-\\d{2}-\\d{2}|${month}\\.?\\s+\\d{1,2}(?:,?\\s+)(?:19|20)\\d{2}|(?:19|20)\\d{2})\\b`, "gi");
+          return [...new Set(text.match(pattern) || [])].slice(0, 80);
+        }
+
+        async function addCandidatePage(name) {
+          const item = currentCase();
+          if (!item || item.pages.some((page) => page.name.toLocaleLowerCase() === name.toLocaleLowerCase())) return;
+          if (item.pages.length >= 300) return setMessage(workspaceStatus, "This investigation has reached the 300-page limit.", true);
+          await commitChange("Subject page added", `Candidate reviewed and added: ${name}`, () => {
+            item.pages.push({ id: crypto.randomUUID(), name, type: "Topic", summary: "", sourceId: "", order: item.pages.length + 1 });
+          });
+        }
+
+        async function addCandidateDate(date) {
+          const item = currentCase();
+          if (!item) return;
+          if (item.timeline.length >= 2000) return setMessage(workspaceStatus, "This investigation has reached the 2,000-date-card limit.", true);
+          const saved = await commitChange("Date suggestion added", `Narrative date mention added for review: ${date}`, () => {
+            item.timeline.push({
+              id: crypto.randomUUID(),
+              date,
+              title: `Date mentioned in story: ${date}`,
+              note: "Candidate extracted from the author's text. Add event meaning and a supporting source; not verified.",
+              sourceId: "",
+              status: "Needs review"
+            });
+          });
+          if (saved) showPanel("chronology-panel");
+        }
+
+        function renderSuggestions() {
+          const item = currentCase();
+          const entityList = document.getElementById("entity-suggestions");
+          const dateList = document.getElementById("date-suggestions");
+          entityList.replaceChildren();
+          dateList.replaceChildren();
+          if (!item || !item.story.trim()) {
+            setEmpty(entityList, "Save a story to review candidate names.");
+            setEmpty(dateList, "Save a story to review date mentions.");
+            return;
+          }
+          const entities = candidateEntities(item.story).filter((name) => !item.pages.some((page) => page.name.toLocaleLowerCase() === name.toLocaleLowerCase()));
+          if (!entities.length) setEmpty(entityList, "No unreviewed name candidates were found.");
+          entities.forEach((name) => {
+            const row = makeElement("div", "suggestion");
+            row.append(makeElement("span", "", name));
+            const button = makeElement("button", "button button-light button-small", "Review & add page");
+            button.type = "button";
+            button.addEventListener("click", () => addCandidatePage(name).catch(() => setMessage(workspaceStatus, "Could not save this subject page. Check browser storage and try again.", true)));
+            row.append(button);
+            entityList.append(row);
+          });
+          const dates = candidateDates(item.story).filter((date) => !item.timeline.some((event) => event.title === `Date mentioned in story: ${date}`));
+          if (!dates.length) setEmpty(dateList, "No unreviewed date mentions were found.");
+          dates.forEach((date) => {
+            const row = makeElement("div", "suggestion");
+            row.append(makeElement("span", "", date));
+            const button = makeElement("button", "button button-light button-small", "Add date card");
+            button.type = "button";
+            button.addEventListener("click", () => addCandidateDate(date).catch(() => setMessage(workspaceStatus, "Could not save this date card. Check browser storage and try again.", true)));
+            row.append(button);
+            dateList.append(row);
+          });
+        }
+
+        function renderStory() {
+          const item = currentCase();
+          document.getElementById("case-title").value = item ? item.title : "";
+          document.getElementById("story-text").value = item ? item.story : "";
+          storyDirty = false;
+          document.getElementById("story-status").textContent = "";
+          renderSuggestions();
+        }
+
+        function renderWorkspace() {
+          renderCaseList();
+          if (renderedCaseId !== activeCaseId) {
+            renderedCaseId = activeCaseId;
+            renderStory();
+          } else {
+            renderSuggestions();
+          }
+          renderSources();
+          renderEntityPages();
+          renderTimeline();
+          renderLaws();
+          renderFeed();
+          renderAudit();
+          renderGates();
+          document.querySelectorAll(".workspace-panel").forEach((panel) => {
+            panel.hidden = panel.id !== activePanel;
+          });
+          document.querySelectorAll(".workspace-nav button").forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.panel === activePanel));
+          });
+        }
+
+        async function saveStoryDraft() {
+          if (!storyDirty) return true;
+          const item = currentCase();
+          if (!item) return true;
+          const title = document.getElementById("case-title").value.trim();
+          if (!title) {
+            setMessage(workspaceStatus, "Enter an investigation title before leaving the story editor.", true);
+            document.getElementById("case-title").focus();
+            return false;
+          }
+          const story = document.getElementById("story-text").value;
+          const saved = await commitChange("Story saved", "Saved the author's title and narrative without AI rewriting.", () => {
+            item.title = title.slice(0, 160);
+            item.story = story.slice(0, 100000);
+          });
+          if (saved) {
+            storyDirty = false;
+            document.getElementById("story-status").textContent = "Saved exactly as entered. Suggestions require your review.";
+          }
+          return saved;
+        }
+
+        async function showPanel(panelId) {
+          if (activePanel === "story-panel" && panelId !== "story-panel" && !await saveStoryDraft()) return;
+          if (panelId !== "overview-panel" && !currentCase() && !["feed-panel", "site-search-panel", "export-panel"].includes(panelId)) {
+            setMessage(workspaceStatus, "Create or select an investigation before opening that section.", true);
+            return;
+          }
+          activePanel = panelId;
+          renderWorkspace();
+          const panel = document.getElementById(panelId);
+          if (panel) panel.scrollIntoView({ block: "start", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+        }
+
+        async function signIn(handleInput, password) {
+          const handle = normalizeHandle(handleInput);
+          if (!/^[a-z0-9._-]{3,48}$/.test(handle)) throw new Error("Use a workspace name with 3–48 letters, numbers, periods, underscores, or hyphens.");
+          const keyId = await makeKeyId(handle);
+          const record = await getRecord(keyId);
+          if (!record || record.schemaVersion !== 1) throw new Error("No local vault was found for that workspace name in this browser.");
+          try {
+            const salt = fromBase64(record.salt);
+            const key = await deriveKey(password, salt);
+            const plaintext = await crypto.subtle.decrypt({ name: "AES-GCM", iv: fromBase64(record.iv) }, key, fromBase64(record.ciphertext));
+            const parsed = JSON.parse(decoder.decode(plaintext));
+            if (!validateVault(parsed)) throw new Error("Invalid vault data.");
+            activeHandle = handle;
+            activeKeyId = keyId;
+            encryptionKey = key;
+            vault = parsed;
+            if (!vault.feedItems) vault.feedItems = [];
+            if (!vault.audit) vault.audit = [];
+            activeCaseId = vault.investigations.length ? vault.investigations[0].id : null;
+            renderedCaseId = null;
+            storyDirty = false;
+            authView.hidden = true;
+            workspaceView.hidden = false;
+            document.getElementById("identity-label").textContent = `Workspace: ${handle} · this browser only`;
+            setMessage(workspaceStatus, "Vault unlocked. No data has been sent to a server.", false);
+            renderWorkspace();
+          } catch {
+            throw new Error("Could not unlock this vault. Check the passphrase or restore the correct encrypted backup.");
+          }
+
+        }
+
+        async function restoreEncryptedBackup(handleInput, password, file) {
+          const handle = normalizeHandle(handleInput);
+          if (!/^[a-z0-9._-]{3,48}$/.test(handle)) throw new Error("Use a workspace name with 3–48 letters, numbers, periods, underscores, or hyphens.");
+          if (!file || file.size > 10 * 1024 * 1024) throw new Error("Choose an encrypted JSON backup no larger than 10 MB.");
+          const keyId = await makeKeyId(handle);
+          if (await getRecord(keyId)) throw new Error("A local vault already uses that name. Restore will not overwrite it.");
+          let record;
+          try {
+            record = JSON.parse(await file.text());
+          } catch {
+            throw new Error("The selected file is not valid JSON.");
+          }
+          if (!record || record.schemaVersion !== 1 || record.keyId !== keyId || typeof record.salt !== "string" || typeof record.iv !== "string" || typeof record.ciphertext !== "string") {
+            throw new Error("The backup does not match this workspace name or supported format.");
+          }
+          try {
+            const key = await deriveKey(password, fromBase64(record.salt));
+            const plaintext = await crypto.subtle.decrypt({ name: "AES-GCM", iv: fromBase64(record.iv) }, key, fromBase64(record.ciphertext));
+            const restored = JSON.parse(decoder.decode(plaintext));
+            if (!validateVault(restored) || restored.salt !== record.salt) throw new Error("Invalid vault data.");
+          } catch {
+            throw new Error("Could not verify the backup. Check its passphrase and file integrity.");
+          }
+          await putRecord(record);
+          await signIn(handle, password);
+        }
+
+        async function createVault(handleInput, password) {
+          const handle = normalizeHandle(handleInput);
+          if (!/^[a-z0-9._-]{3,48}$/.test(handle)) throw new Error("Use a workspace name with 3–48 letters, numbers, periods, underscores, or hyphens.");
+          if (password.length < 12) throw new Error("Passphrase must contain at least 12 characters.");
+          const keyId = await makeKeyId(handle);
+          if (await getRecord(keyId)) throw new Error("A local vault already uses that name. Unlock it instead.");
+          const saltBytes = crypto.getRandomValues(new Uint8Array(16));
+          const key = await deriveKey(password, saltBytes);
+          activeHandle = handle;
+          activeKeyId = keyId;
+          encryptionKey = key;
+          vault = emptyVault();
+          vault.salt = toBase64(saltBytes);
+          activeCaseId = null;
+          renderedCaseId = null;
+          storyDirty = false;
+          await addAudit("Local vault created", "Created a blank, encrypted, browser-local workspace.");
+          try {
+            await persistVault();
+          } catch (error) {
+            encryptionKey = null;
+            vault = null;
+            activeHandle = "";
+            activeKeyId = "";
+            throw new Error(error instanceof Error ? `Could not save the new vault: ${error.message}` : "Could not save the new vault.");
+          }
+          authView.hidden = true;
+          workspaceView.hidden = false;
+          document.getElementById("identity-label").textContent = `Workspace: ${handle} · this browser only`;
+          renderWorkspace();
+        }
+
+        function showPanelInitial() {
+          document.querySelectorAll(".workspace-panel").forEach((panel) => {
+            panel.hidden = panel.id !== activePanel;
+          });
+        }
+
+        function fileDownload(name, text, mimeType) {
+          const blob = new Blob([text], { type: mimeType });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = name;
+          link.hidden = true;
+          document.body.append(link);
+          link.click();
+          link.remove();
+          window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }
+
+        function csvCell(value) {
+          const text = String(value ?? "");
+          return `"${text.replace(/"/g, '""')}"`;
+        }
+
+        function exportCurrentCase() {
+          const item = currentCase();
+          if (!item) throw new Error("Create or select an investigation before exporting it.");
+          const payload = {
+            exportedAt: new Date().toISOString(),
+            note: "User-authored local draft; not independently verified or a court-certified record.",
+            investigation: item,
+            activity: vault.audit
+          };
+          fileDownload(`${item.title.replace(/[^a-z0-9_-]+/gi, "_") || "investigation"}.json`, JSON.stringify(payload, null, 2), "application/json");
+        }
+
+        function exportTimeline() {
+          const item = currentCase();
+          if (!item) throw new Error("Create or select an investigation before exporting Chronological Order.");
+          const rows = [["date", "event", "note", "source", "status"]];
+          [...item.timeline].sort(timelineSort).forEach((event) => {
+            const source = item.sources.find((record) => record.id === event.sourceId);
+            rows.push([event.date || "YEAR NEEDED", event.title, event.note, source ? source.title : "", event.status || "Needs review"]);
+          });
+          const csv = rows.map((row) => row.map(csvCell).join(",")).join("\r\n");
+          fileDownload("chronological-order.csv", `\uFEFF${csv}`, "text/csv;charset=utf-8");
+        }
+
+        function exportFeed() {
+          const rows = [["kind", "title", "url", "trial_status", "ecosystem_note", "affiliate_disclosure"]];
+          vault.feedItems.forEach((feed) => rows.push([feed.kind, feed.title, feed.url, feed.status, feed.ecosystem, feed.affiliate]));
+          const csv = rows.map((row) => row.map(csvCell).join(",")).join("\r\n");
+          fileDownload("feed-drafts.csv", `\uFEFF${csv}`, "text/csv;charset=utf-8");
+        }
+
+        async function exportEncryptedBackup() {
+          await persistVault();
+          const record = await getRecord(activeKeyId);
+          if (!record) throw new Error("The encrypted vault could not be found in browser storage.");
+          fileDownload(`${activeHandle}-encrypted-vault.json`, JSON.stringify(record, null, 2), "application/json");
+        }
+
+        function renderSiteSearch(query) {
+          const output = document.getElementById("site-search-results");
+          output.replaceChildren();
+          const term = query.trim().toLocaleLowerCase();
+          if (!term) {
+            output.textContent = "Enter a word to search page names and descriptions.";
+            return;
+          }
+          const matches = pageDirectory.filter((page) => `${page.title} ${page.text}`.toLocaleLowerCase().includes(term));
+          if (!matches.length) {
+            output.textContent = "No page titles or descriptions matched. Page contents are not searched.";
+            return;
+          }
+          const list = document.createElement("ul");
+          matches.forEach((page) => {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = page.url;
+            link.textContent = page.title;
+            item.append(link);
+            list.append(item);
+          });
+          output.append(makeElement("p", "", `${matches.length} page${matches.length === 1 ? "" : "s"} found:`), list);
+        }
+
+        document.getElementById("create-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const data = new FormData(event.currentTarget);
+          const password = String(data.get("password") || "");
+          if (password !== String(data.get("confirm") || "")) {
+            setMessage(authStatus, "The passphrases do not match.", true);
+            return;
+          }
+          try {
+            await createVault(String(data.get("handle") || ""), password);
+          } catch (error) {
+            setMessage(authStatus, error instanceof Error ? error.message : "Could not create the local vault.", true);
+          }
+        });
+
+        document.getElementById("unlock-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const data = new FormData(event.currentTarget);
+          try {
+            await signIn(String(data.get("handle") || ""), String(data.get("password") || ""));
+          } catch (error) {
+            setMessage(authStatus, error instanceof Error ? error.message : "Could not unlock the local vault.", true);
+          }
+        });
+
+        document.getElementById("restore-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const data = new FormData(event.currentTarget);
+          try {
+            await restoreEncryptedBackup(String(data.get("handle") || ""), String(data.get("password") || ""), data.get("backup"));
+          } catch (error) {
+            setMessage(authStatus, error instanceof Error ? error.message : "Could not restore the encrypted vault.", true);
+          }
+        });
+
+        document.getElementById("new-case-button").addEventListener("click", async () => {
+          if (activePanel === "story-panel" && !await saveStoryDraft()) return;
+          if (vault.investigations.length >= MAX_CASES) {
+            setMessage(workspaceStatus, "All three investigation slots are in use.", true);
+            return;
+          }
+          const item = newInvestigation(vault.investigations.length + 1);
+          const saved = await commitChange("Investigation created", "Created a blank investigation slot.", () => {
+            vault.investigations.push(item);
+            activeCaseId = item.id;
+          });
+          if (!saved) return;
+          showPanel("story-panel");
+          document.getElementById("case-title").focus();
+        });
+
+        document.querySelectorAll(".workspace-nav button").forEach((button) => {
+          button.addEventListener("click", () => showPanel(button.dataset.panel));
+        });
+
+        document.getElementById("timeline-list-toggle").addEventListener("click", () => {
+          document.getElementById("timeline-list-view").hidden = false;
+          document.getElementById("timeline-calendar-view").hidden = true;
+          document.getElementById("timeline-list-toggle").setAttribute("aria-pressed", "true");
+          document.getElementById("timeline-calendar-toggle").setAttribute("aria-pressed", "false");
+        });
+        document.getElementById("timeline-calendar-toggle").addEventListener("click", () => {
+          document.getElementById("timeline-list-view").hidden = true;
+          document.getElementById("timeline-calendar-view").hidden = false;
+          document.getElementById("timeline-list-toggle").setAttribute("aria-pressed", "false");
+          document.getElementById("timeline-calendar-toggle").setAttribute("aria-pressed", "true");
+          renderCalendar();
+        });
+        document.getElementById("calendar-month").addEventListener("change", () => {
+          calendarMonthManuallySet = true;
+          renderCalendar();
+        });
+
+        document.getElementById("case-title").addEventListener("input", () => { storyDirty = true; });
+        document.getElementById("story-text").addEventListener("input", () => { storyDirty = true; });
+        document.getElementById("story-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          await saveStoryDraft();
+        });
+
+        document.getElementById("source-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const item = currentCase();
+          if (!item) return setMessage(workspaceStatus, "Create an investigation before adding sources.", true);
+          const data = new FormData(event.currentTarget);
+          const title = String(data.get("title") || "").trim();
+          const rawUrl = String(data.get("url") || "").trim();
+          const url = safeHttpUrl(rawUrl);
+          if (!title) return setMessage(workspaceStatus, "Enter the source title.", true);
+          if (rawUrl && !url) return setMessage(workspaceStatus, "Source URL must use HTTP or HTTPS.", true);
+          if (item.sources.length >= 300) return setMessage(workspaceStatus, "This investigation has reached the 300-source limit.", true);
+          const saved = await commitChange("Source added", `Added source record: ${title}`, () => {
+            item.sources.push({ id: crypto.randomUUID(), title: title.slice(0, 240), kind: String(data.get("kind") || "Other"), identifier: String(data.get("identifier") || "").slice(0, 180), url });
+          });
+          if (!saved) return;
+          event.currentTarget.reset();
+        });
+
+        document.getElementById("entity-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const item = currentCase();
+          if (!item) return setMessage(workspaceStatus, "Create an investigation before adding subject pages.", true);
+          const data = new FormData(event.currentTarget);
+          const name = String(data.get("name") || "").trim();
+          if (!name) return setMessage(workspaceStatus, "Enter a subject name.", true);
+          if (item.pages.some((page) => page.name.toLocaleLowerCase() === name.toLocaleLowerCase())) return setMessage(workspaceStatus, "That subject page already exists in this investigation.", true);
+          if (item.pages.length >= 300) return setMessage(workspaceStatus, "This investigation has reached the 300-page limit.", true);
+          const saved = await commitChange("Subject page added", `Added page in first-mention order: ${name}`, () => {
+            item.pages.push({ id: crypto.randomUUID(), name: name.slice(0, 180), type: String(data.get("type") || "Topic"), summary: String(data.get("summary") || "").slice(0, 5000), sourceId: String(data.get("source") || ""), order: item.pages.length + 1 });
+          });
+          if (!saved) return;
+          event.currentTarget.reset();
+        });
+
+        document.getElementById("relation-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const item = currentCase();
+          const data = new FormData(event.currentTarget);
+          const from = String(data.get("from") || "");
+          const to = String(data.get("to") || "");
+          const label = String(data.get("label") || "").trim();
+          if (!item || !item.pages.some((page) => page.id === from) || !item.pages.some((page) => page.id === to) || from === to || !label) {
+            return setMessage(workspaceStatus, "Choose two different subject pages and describe their relationship.", true);
+          }
+          if (item.relations.length >= 1000) return setMessage(workspaceStatus, "This investigation has reached the 1,000-connection limit.", true);
+          const saved = await commitChange("Subject connection added", `Recorded a user-described connection: ${label}`, () => {
+            item.relations.push({ from, to, label: label.slice(0, 160), sourceId: String(data.get("source") || "") });
+          });
+          if (!saved) return;
+          event.currentTarget.reset();
+        });
+
+        document.getElementById("timeline-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const item = currentCase();
+          if (!item) return setMessage(workspaceStatus, "Create an investigation before adding date cards.", true);
+          const data = new FormData(event.currentTarget);
+          const title = String(data.get("title") || "").trim();
+          const date = String(data.get("date") || "").trim().slice(0, 40);
+          if (!title) return setMessage(workspaceStatus, "Enter an event or record title.", true);
+          if (item.timeline.length >= 2000) return setMessage(workspaceStatus, "This investigation has reached the 2,000-date-card limit.", true);
+          const saved = await commitChange("Chronological Order card added", `Added a date card: ${title}${date ? ` (${date})` : " (YEAR NEEDED)"}`, () => {
+            item.timeline.push({ id: crypto.randomUUID(), date, title: title.slice(0, 240), note: String(data.get("note") || "").slice(0, 5000), sourceId: String(data.get("source") || ""), status: date ? "Needs source review" : "YEAR NEEDED" });
+          });
+          if (!saved) return;
+          event.currentTarget.reset();
+        });
+
+        document.getElementById("gates-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const item = currentCase();
+          if (!item) return setMessage(workspaceStatus, "Create an investigation before saving gate notes.", true);
+          const data = new FormData(event.currentTarget);
+          await commitChange("Three Gates notes saved", "Saved user-entered review states and notes.", () => {
+            item.gates = {
+              physical: { status: String(data.get("physicalStatus")), note: String(data.get("physicalNote") || "").slice(0, 4000) },
+              odds: { status: String(data.get("oddsStatus")), note: String(data.get("oddsNote") || "").slice(0, 4000) },
+              baseline: { status: String(data.get("baselineStatus")), note: String(data.get("baselineNote") || "").slice(0, 4000) }
+            };
+          });
+        });
+
+        document.getElementById("law-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const item = currentCase();
+          if (!item) return setMessage(workspaceStatus, "Create an investigation before adding legal references.", true);
+          const data = new FormData(event.currentTarget);
+          const title = String(data.get("title") || "").trim();
+          const citation = String(data.get("citation") || "").trim();
+          const rawUrl = String(data.get("url") || "").trim();
+          const sourceId = String(data.get("source") || "");
+          const url = safeHttpUrl(rawUrl);
+          if (!title || !citation) return setMessage(workspaceStatus, "Enter both a title and citation.", true);
+          if (!url) return setMessage(workspaceStatus, "Add the official HTTP or HTTPS source URL.", true);
+          if (!item.sources.some((source) => source.id === sourceId)) return setMessage(workspaceStatus, "Select the source record that raised this reference.", true);
+          if (item.laws.length >= 300) return setMessage(workspaceStatus, "This investigation has reached the 300-reference limit.", true);
+          const saved = await commitChange("Legal reference added", `Added a citation for review: ${citation}`, () => {
+            item.laws.push({ title: title.slice(0, 240), citation: citation.slice(0, 240), url, sourceId });
+          });
+          if (!saved) return;
+          event.currentTarget.reset();
+        });
+
+        document.getElementById("feed-form").addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const data = new FormData(event.currentTarget);
+          const title = String(data.get("title") || "").trim();
+          const rawUrl = String(data.get("url") || "").trim();
+          const url = safeHttpUrl(rawUrl);
+          if (!title) return setMessage(workspaceStatus, "Enter a title for the feed draft.", true);
+          if (rawUrl && !url) return setMessage(workspaceStatus, "Feed URL must use HTTP or HTTPS.", true);
+          if (vault.feedItems.length >= 500) return setMessage(workspaceStatus, "The feed draft queue has reached the 500-item limit.", true);
+          const saved = await commitChange("Feed draft saved", `Saved a private ${String(data.get("kind"))} draft: ${title}`, () => {
+            vault.feedItems.push({
+              id: crypto.randomUUID(),
+              kind: String(data.get("kind") || "Article / link"),
+              status: String(data.get("status") || "Not trialed"),
+              title: title.slice(0, 240),
+              url,
+              ecosystem: String(data.get("ecosystem") || "").slice(0, 4000),
+              affiliate: String(data.get("affiliate") || "").slice(0, 1000),
+              createdAt: new Date().toISOString()
+            });
+          });
+          if (!saved) return;
+          event.currentTarget.reset();
+        });
+
+        document.getElementById("export-case-button").addEventListener("click", () => {
+          try { exportCurrentCase(); } catch (error) { setMessage(workspaceStatus, error.message, true); }
+        });
+        document.getElementById("export-csv-button").addEventListener("click", () => {
+          try { exportTimeline(); } catch (error) { setMessage(workspaceStatus, error.message, true); }
+        });
+        document.getElementById("export-feed-button").addEventListener("click", exportFeed);
+        document.getElementById("backup-button").addEventListener("click", async () => {
+          if (activePanel === "story-panel" && !await saveStoryDraft()) return;
+          try {
+            await exportEncryptedBackup();
+            setMessage(workspaceStatus, "Encrypted backup downloaded. Keep the passphrase separate; this site cannot recover it.", false);
+          } catch (error) {
+            setMessage(workspaceStatus, error.message || "Could not create encrypted backup.", true);
+          }
+        });
+        document.getElementById("lock-button").addEventListener("click", async () => {
+          if (activePanel === "story-panel" && !await saveStoryDraft()) return;
+          encryptionKey = null;
+          vault = null;
+          activeHandle = "";
+          activeKeyId = "";
+          activeCaseId = null;
+          renderedCaseId = null;
+          storyDirty = false;
+          activePanel = "overview-panel";
+          calendarMonthManuallySet = false;
+          document.getElementById("timeline-list-view").hidden = false;
+          document.getElementById("timeline-calendar-view").hidden = true;
+          document.getElementById("timeline-list-toggle").setAttribute("aria-pressed", "true");
+          document.getElementById("timeline-calendar-toggle").setAttribute("aria-pressed", "false");
+          workspaceView.hidden = true;
+          authView.hidden = false;
+          document.getElementById("create-form").reset();
+          document.getElementById("unlock-form").reset();
+          setMessage(authStatus, "Workspace locked. The encrypted local vault remains in this browser.", false);
+        });
+
+        document.getElementById("site-search-form").addEventListener("submit", (event) => {
+          event.preventDefault();
+          renderSiteSearch(document.getElementById("site-search-query").value);
+        });
+
+        async function initialize() {
+          if (!window.isSecureContext || !window.crypto || !crypto.subtle) {
+            document.getElementById("create-form").querySelector("button").disabled = true;
+            document.getElementById("unlock-form").querySelector("button").disabled = true;
+            setMessage(authStatus, "Encrypted storage requires a secure browser context with Web Crypto. No account was created.", true);
+            return;
+          }
+          try {
+            db = await openDatabase();
+            showPanelInitial();
+          } catch (error) {
+            document.getElementById("create-form").querySelector("button").disabled = true;
+            document.getElementById("unlock-form").querySelector("button").disabled = true;
+            setMessage(authStatus, error.message || "Local encrypted storage is unavailable.", true);
+          }
+        }
+
+        initialize();
+      })();
+    </script>
+  </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#101713" />
-    <meta name="description" content="Prepare a source-first paper letter or an unsent email draft. Work stays in this browser; nothing is sent, saved, or uploaded." />
+    <meta name="description" content="Prepare a source-first paper letter or an unsent email draft. Work stays in this page until you print or download it; nothing is uploaded or transmitted." />
     <link rel="canonical" href="https://osintneoai.me/workspace/letter-studio.html" />
     <title>Print &amp; Mail Studio — OSINT Neo AI</title>
     <style>
@@ -20,7 +20,7 @@
       .brand { color: var(--text); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-decoration: none; }
       .back { font-size: 0.84rem; text-decoration: none; }
       main { padding-block: 3.3rem 5rem; }
-      .eyebrow { color: var(--lime); font-family: ui-monospace, Consolas, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+      .draft-note { color: var(--lime); font-family: ui-monospace, Consolas, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
       h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -0.035em; }
       h1 { max-width: 760px; margin: 0.75rem 0 1rem; font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.04; }
       h2 { margin: 0; font-size: 1.55rem; }
@@ -61,9 +61,9 @@
         body, main, .wrap { width: auto; margin: 0; padding: 0; color: #172019; background: white; }
         .print-letter { display: block !important; }
         .paper { width: 100%; padding: 0.55in 0.65in; color: #111; font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.65; }
-        .paper-title { margin: 0 0 0.25in; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+        .paper-title { margin: 0 0 0.25in; font-family: system-ui, "Segoe UI", sans-serif; font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
         .paper-address { margin-bottom: 1.1em; white-space: pre-line; }
-        .paper-subject { margin: 1.5em 0; font-family: Arial, sans-serif; font-size: 10pt; font-weight: 700; }
+        .paper-subject { margin: 1.5em 0; font-family: system-ui, "Segoe UI", sans-serif; font-size: 10pt; font-weight: 700; }
         .paper-body { white-space: pre-wrap; overflow-wrap: anywhere; }
         .paper-signoff { margin-top: 2.5em; }
         .enclosures { margin-top: 1.8em; padding-top: 0.7em; border-top: 1px solid #9a9a9a; font-size: 9pt; white-space: pre-wrap; }
@@ -81,9 +81,9 @@
     </header>
     <main class="wrap">
       <section class="no-print" aria-labelledby="page-title">
-        <p class="eyebrow">Private draft · stays in this browser</p>
         <h1 id="page-title">Print &amp; Mail Studio</h1>
-        <p class="intro">Organize what you want to say, cite the records behind it, and create a clean letter to print or an email draft to review. This tool does not upload, save, send, or mail your draft.</p>
+        <p class="draft-note">Private draft · stays in this page until you print or download it</p>
+        <p class="intro">Organize what you want to say, cite the records behind it, and create a clean letter to print or an email draft to review. This tool does not upload, transmit, email, or mail your draft.</p>
         <div class="notice"><strong>Before sending anything:</strong> check every date, name, statement, source, and mailing address against the original record. Clearly distinguish what you observed, what an official record says, and what remains your interpretation. Nothing is submitted on your behalf.</div>
       </section>
 
