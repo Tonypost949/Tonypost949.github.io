@@ -740,6 +740,16 @@
           };
         }
 
+        function isBlankInvestigation(item) {
+          return !item.story.trim()
+            && !item.sources.length
+            && !item.pages.length
+            && !item.relations.length
+            && !item.timeline.length
+            && !item.laws.length
+            && Object.values(item.gates).every((gate) => gate.status === "Not reviewed" && !gate.note.trim());
+        }
+
         function makeElement(tag, className, text) {
           const element = document.createElement(tag);
           if (className) element.className = className;
@@ -1222,30 +1232,54 @@
           const keyId = await makeKeyId(handle);
           const record = await getRecord(keyId);
           if (!record || record.schemaVersion !== 1) throw new Error("No local vault was found for that workspace name in this browser.");
+          let parsed;
+          let key;
           try {
             const salt = fromBase64(record.salt);
-            const key = await deriveKey(password, salt);
+            key = await deriveKey(password, salt);
             const plaintext = await crypto.subtle.decrypt({ name: "AES-GCM", iv: fromBase64(record.iv) }, key, fromBase64(record.ciphertext));
-            const parsed = JSON.parse(decoder.decode(plaintext));
-            if (!validateVault(parsed)) throw new Error("Invalid vault data.");
-            activeHandle = handle;
-            activeKeyId = keyId;
-            encryptionKey = key;
-            vault = parsed;
-            if (!vault.feedItems) vault.feedItems = [];
-            if (!vault.audit) vault.audit = [];
-            activeCaseId = vault.investigations.length ? vault.investigations[0].id : null;
-            renderedCaseId = null;
-            storyDirty = false;
-            authView.hidden = true;
-            workspaceView.hidden = false;
-            document.getElementById("identity-label").textContent = `Workspace: ${handle} · this browser only`;
-            setMessage(workspaceStatus, "Vault unlocked. No data has been sent to a server.", false);
-            renderWorkspace();
+            parsed = JSON.parse(decoder.decode(plaintext));
           } catch {
             throw new Error("Could not unlock this vault. Check the passphrase or restore the correct encrypted backup.");
           }
-
+          if (!validateVault(parsed)) throw new Error("Could not unlock this vault. Check the passphrase or restore the correct encrypted backup.");
+          activeHandle = handle;
+          activeKeyId = keyId;
+          encryptionKey = key;
+          vault = parsed;
+          if (!vault.feedItems) vault.feedItems = [];
+          if (!vault.audit) vault.audit = [];
+          if (vault.investigations.length) {
+            activeCaseId = vault.investigations[0].id;
+            activePanel = isBlankInvestigation(vault.investigations[0]) ? "story-panel" : "overview-panel";
+          } else {
+            const firstInvestigation = newInvestigation(1);
+            vault.investigations.push(firstInvestigation);
+            activeCaseId = firstInvestigation.id;
+            activePanel = "story-panel";
+            try {
+              await addAudit("Investigation created", "Opened a blank investigation for the user to enter their own story.");
+              await persistVault();
+            } catch (error) {
+              encryptionKey = null;
+              vault = null;
+              activeHandle = "";
+              activeKeyId = "";
+              activeCaseId = null;
+              activePanel = "overview-panel";
+              throw new Error(error instanceof Error ? `Could not save the first blank investigation: ${error.message}` : "Could not save the first blank investigation.");
+            }
+          }
+          renderedCaseId = null;
+          storyDirty = false;
+          authView.hidden = true;
+          workspaceView.hidden = false;
+          document.getElementById("identity-label").textContent = `Workspace: ${handle} · this browser only`;
+          setMessage(workspaceStatus, "Vault unlocked. No data has been sent to a server.", false);
+          renderWorkspace();
+          if (activePanel === "story-panel" && isBlankInvestigation(currentCase())) {
+            document.getElementById("story-text").focus();
+          }
         }
 
         async function restoreEncryptedBackup(handleInput, password, file) {
@@ -1288,10 +1322,13 @@
           encryptionKey = key;
           vault = emptyVault();
           vault.salt = toBase64(saltBytes);
-          activeCaseId = null;
+          const firstInvestigation = newInvestigation(1);
+          vault.investigations.push(firstInvestigation);
+          activeCaseId = firstInvestigation.id;
+          activePanel = "story-panel";
           renderedCaseId = null;
           storyDirty = false;
-          await addAudit("Local vault created", "Created a blank, encrypted, browser-local workspace.");
+          await addAudit("Local vault created", "Created a blank, encrypted, browser-local workspace with the first investigation ready for the user's story.");
           try {
             await persistVault();
           } catch (error) {
@@ -1299,12 +1336,15 @@
             vault = null;
             activeHandle = "";
             activeKeyId = "";
+            activeCaseId = null;
+            activePanel = "overview-panel";
             throw new Error(error instanceof Error ? `Could not save the new vault: ${error.message}` : "Could not save the new vault.");
           }
           authView.hidden = true;
           workspaceView.hidden = false;
           document.getElementById("identity-label").textContent = `Workspace: ${handle} · this browser only`;
           renderWorkspace();
+          document.getElementById("story-text").focus();
         }
 
         function showPanelInitial() {
