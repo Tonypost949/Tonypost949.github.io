@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101713" />
+    <meta name="description" content="Prepare a source-first paper letter or an unsent email draft. Work stays in this browser; nothing is sent, saved, or uploaded." />
+    <link rel="canonical" href="https://osintneoai.me/workspace/letter-studio.html" />
+    <title>Print &amp; Mail Studio — OSINT Neo AI</title>
+    <style>
+      :root { color-scheme: dark; --ink: #101713; --panel: #151f19; --line: #334239; --text: #f3f1e8; --muted: #aab8ad; --lime: #c4ee8e; --cyan: #92e0d1; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: var(--ink); color: var(--text); }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 320px; background: var(--ink); color: var(--text); }
+      a { color: var(--cyan); }
+      button, input, textarea { font: inherit; }
+      :focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+      .wrap { width: min(1080px, calc(100% - 36px)); margin: 0 auto; }
+      .topbar { border-bottom: 1px solid var(--line); }
+      .nav { display: flex; min-height: 69px; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { color: var(--text); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-decoration: none; }
+      .back { font-size: 0.84rem; text-decoration: none; }
+      main { padding-block: 3.3rem 5rem; }
+      .eyebrow { color: var(--lime); font-family: ui-monospace, Consolas, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+      h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -0.035em; }
+      h1 { max-width: 760px; margin: 0.75rem 0 1rem; font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.04; }
+      h2 { margin: 0; font-size: 1.55rem; }
+      .intro { max-width: 710px; margin-bottom: 1.7rem; color: var(--muted); font-size: 0.97rem; line-height: 1.8; }
+      .notice { margin: 1.1rem 0; padding: 0.95rem 1rem; border: 1px solid rgb(146 224 209 / 30%); border-radius: 0.55rem; background: rgb(146 224 209 / 5%); color: #d3e2d7; font-size: 0.84rem; line-height: 1.7; }
+      .notice strong { color: var(--text); }
+      .editor { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr); gap: 1rem; align-items: start; }
+      .panel { padding: 1.3rem; border: 1px solid var(--line); border-radius: 0.75rem; background: var(--panel); }
+      .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; margin-top: 1.05rem; }
+      .field { display: grid; gap: 0.38rem; }
+      .field-wide { grid-column: 1 / -1; }
+      label { color: #e1e7dd; font-size: 0.79rem; font-weight: 700; }
+      .hint { margin: 0; color: var(--muted); font-size: 0.72rem; line-height: 1.5; }
+      input, textarea { width: 100%; min-height: 43px; padding: 0.7rem 0.78rem; border: 1px solid var(--line); border-radius: 0.48rem; color: var(--text); background: #0e1511; font-size: 0.85rem; }
+      textarea { min-height: 114px; resize: vertical; line-height: 1.6; }
+      textarea.tall { min-height: 148px; }
+      input::placeholder, textarea::placeholder { color: #7e8d82; opacity: 1; }
+      .section-label { margin: 1.3rem 0 0.15rem; color: var(--lime); font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+      .checklist { display: grid; gap: 0.85rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
+      .checklist li { display: grid; grid-template-columns: 25px 1fr; gap: 0.6rem; color: var(--muted); font-size: 0.83rem; line-height: 1.7; }
+      .step { display: grid; width: 24px; height: 24px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--lime); font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+      .button { display: inline-flex; min-height: 45px; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.7rem 0.9rem; border: 1px solid var(--line); border-radius: 0.5rem; color: var(--text); background: #1c2921; font-weight: 700; font-size: 0.81rem; text-decoration: none; cursor: pointer; }
+      .button:hover { border-color: var(--cyan); }
+      .button-primary { border-color: var(--lime); color: var(--ink); background: var(--lime); }
+      .button-primary:hover { background: #d7f7af; }
+      .status { min-height: 1.2rem; margin: 0.8rem 0 0; color: var(--cyan); font-size: 0.78rem; }
+      .fine { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.73rem; line-height: 1.7; }
+      .preview { margin-top: 1rem; }
+      .preview p { color: var(--muted); font-size: 0.82rem; line-height: 1.7; }
+      .footer { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.75rem; }
+
+      @media (max-width: 750px) { .editor { grid-template-columns: 1fr; } }
+      @media (max-width: 470px) { .wrap { width: min(100% - 24px, 100%); } .fields { grid-template-columns: 1fr; } .field-wide { grid-column: auto; } .footer { flex-direction: column; } .actions > * { width: 100%; } }
+      @media print {
+        :root { color-scheme: light; color: #172019; background: white; }
+        .no-print, .topbar, .footer, #letter-form, .side-panel { display: none !important; }
+        body, main, .wrap { width: auto; margin: 0; padding: 0; color: #172019; background: white; }
+        .print-letter { display: block !important; }
+        .paper { width: 100%; padding: 0.55in 0.65in; color: #111; font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.65; }
+        .paper-title { margin: 0 0 0.25in; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+        .paper-address { margin-bottom: 1.1em; white-space: pre-line; }
+        .paper-subject { margin: 1.5em 0; font-family: Arial, sans-serif; font-size: 10pt; font-weight: 700; }
+        .paper-body { white-space: pre-wrap; overflow-wrap: anywhere; }
+        .paper-signoff { margin-top: 2.5em; }
+        .enclosures { margin-top: 1.8em; padding-top: 0.7em; border-top: 1px solid #9a9a9a; font-size: 9pt; white-space: pre-wrap; }
+        @page { margin: 0.65in; size: letter; }
+      }
+      .print-letter { display: none; }
+    </style>
+  </head>
+  <body>
+    <header class="topbar no-print">
+      <nav class="wrap nav" aria-label="Main navigation">
+        <a class="brand" href="/">OSINT NEO AI</a>
+        <a class="back" href="/">← Back to OSINT Neo AI</a>
+      </nav>
+    </header>
+    <main class="wrap">
+      <section class="no-print" aria-labelledby="page-title">
+        <p class="eyebrow">Private draft · stays in this browser</p>
+        <h1 id="page-title">Print &amp; Mail Studio</h1>
+        <p class="intro">Organize what you want to say, cite the records behind it, and create a clean letter to print or an email draft to review. This tool does not upload, save, send, or mail your draft.</p>
+        <div class="notice"><strong>Before sending anything:</strong> check every date, name, statement, source, and mailing address against the original record. Clearly distinguish what you observed, what an official record says, and what remains your interpretation. Nothing is submitted on your behalf.</div>
+      </section>
+
+      <form class="editor" id="letter-form" autocomplete="off">
+        <section class="panel" aria-labelledby="details-title">
+          <h2 id="details-title">Prepare your letter</h2>
+          <p class="hint">Only information you type is used. It stays in this page's memory until you leave or reload.</p>
+          <div class="fields">
+            <div class="field"><label for="sender-name">Your name</label><input id="sender-name" autocomplete="off" placeholder="Name as you want it to appear" /></div>
+            <div class="field"><label for="letter-date">Date</label><input id="letter-date" type="date" required /></div>
+            <div class="field field-wide"><label for="sender-address">Return address (optional)</label><textarea id="sender-address" rows="2" autocomplete="off" placeholder="Street address&#10;City, state ZIP"></textarea></div>
+
+            <p class="section-label field-wide">Recipient</p>
+            <div class="field"><label for="recipient-name">Person or office</label><input id="recipient-name" autocomplete="off" placeholder="Recipient or agency office" /></div>
+            <div class="field"><label for="recipient-agency">Agency or organization</label><input id="recipient-agency" autocomplete="off" placeholder="Agency name" /></div>
+            <div class="field field-wide"><label for="recipient-email">Recipient email (email drafts only)</label><input id="recipient-email" type="email" autocomplete="off" placeholder="Optional for paper mail; required for an email draft" /><p class="hint">Verify this address with the intended office. The email export is an unsent draft.</p></div>
+            <div class="field field-wide"><label for="recipient-address">Mailing address</label><textarea id="recipient-address" rows="3" autocomplete="off" placeholder="Verify the current address using the recipient's official website"></textarea><p class="hint">No address lookup is performed. Verify it with the office's official source.</p></div>
+            <div class="field field-wide"><label for="subject">Subject</label><input id="subject" required placeholder="Short, neutral description of your request" /></div>
+
+            <p class="section-label field-wide">What the record shows</p>
+            <div class="field field-wide"><label for="facts">Documented facts and timeline</label><textarea class="tall" id="facts" required placeholder="Describe specific, dated events. Separate your own observations from facts recorded by others."></textarea></div>
+            <div class="field field-wide"><label for="sources">Sources and identifying details</label><textarea id="sources" required placeholder="For each source: record title or issuing office, date, case / file number, page or record ID, and original link if available."></textarea><p class="hint">Name where each statement came from. Attach copies only when appropriate; keep your originals.</p></div>
+            <div class="field field-wide"><label for="request">What you are asking for</label><textarea id="request" required placeholder="State a specific action or response you are requesting. Keep a request distinct from a conclusion."></textarea></div>
+            <div class="field field-wide"><label for="enclosures">Enclosures (optional)</label><textarea id="enclosures" rows="3" placeholder="List copies by title, date, page count, or file / record number."></textarea></div>
+            <div class="field field-wide"><label for="closing">Closing (optional)</label><input id="closing" value="Respectfully," maxlength="120" /></div>
+          </div>
+        </section>
+
+        <aside class="panel side-panel" aria-labelledby="delivery-title">
+          <h2 id="delivery-title">Review, then choose how</h2>
+          <ol class="checklist">
+            <li><span class="step">1</span><span>Check dates and sequence against the source documents. Add citations for each important point.</span></li>
+            <li><span class="step">2</span><span>Make the request specific. Label analysis and unresolved issues clearly; do not call a disputed claim proven.</span></li>
+            <li><span class="step">3</span><span>Verify the official recipient and address. Review the final draft before printing, mailing, or sending.</span></li>
+          </ol>
+          <div class="actions">
+            <button class="button button-primary" type="button" id="print-letter">Print letter / Save PDF</button>
+            <button class="button" type="button" id="email-draft">Download email draft (.eml)</button>
+          </div>
+          <p id="form-status" class="status" role="status" aria-live="polite"></p>
+          <p class="fine">This studio only creates a printable document or an unsent email file. It has no connection to USPS, an email account, an AI service, or a mailroom. It does not keep a copy. Posting an email draft from another application requires your review and action.</p>
+          <div class="preview">
+            <h2>Need email outreach?</h2>
+            <p>The existing <a href="https://github.com/Tonypost949/civil-rights-activist-emailer" target="_blank" rel="noopener noreferrer">Civil Rights Activist Emailer source project</a> is a separate application. This site does not send its email or provide its credentials.</p>
+          </div>
+        </aside>
+      </form>
+
+      <article class="paper print-letter" id="print-letter-content" aria-labelledby="paper-title">
+        <p class="paper-title" id="paper-title">Written correspondence</p>
+        <div class="paper-address" id="paper-sender"></div>
+        <div class="paper-address" id="paper-recipient"></div>
+        <div id="paper-date"></div>
+        <p class="paper-subject" id="paper-subject"></p>
+        <div class="paper-body" id="paper-body"></div>
+        <div class="paper-signoff"><div id="paper-closing"></div><div style="height: 2.5em"></div><div id="paper-name"></div></div>
+        <div class="enclosures" id="paper-enclosures"></div>
+      </article>
+    </main>
+
+    <footer class="wrap footer no-print"><a href="/">OSINT Neo AI</a><span>Source first. Facts in context. No automatic sending.</span></footer>
+    <script>
+      (() => {
+        const byId = (id) => document.getElementById(id);
+        const form = byId("letter-form");
+        const status = byId("form-status");
+        const field = (id) => byId(id).value.trim();
+        const dateField = byId("letter-date");
+        const today = new Date();
+        dateField.value = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+
+        function fillLetter() {
+          byId("paper-sender").textContent = [field("sender-name"), field("sender-address")].filter(Boolean).join("\n");
+          byId("paper-recipient").textContent = [field("recipient-name"), field("recipient-agency"), field("recipient-address")].filter(Boolean).join("\n");
+          const date = dateField.value ? new Date(`${dateField.value}T12:00:00`).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }) : "";
+          byId("paper-date").textContent = date;
+          byId("paper-subject").textContent = `Re: ${field("subject")}`;
+          byId("paper-body").textContent = `${field("facts")}\n\nSources and identifying details:\n${field("sources")}\n\nRequest:\n${field("request")}`;
+          byId("paper-closing").textContent = field("closing") || "Respectfully,";
+          byId("paper-name").textContent = field("sender-name");
+          const enclosures = field("enclosures");
+          byId("paper-enclosures").textContent = enclosures ? `Enclosures:\n${enclosures}` : "";
+          byId("paper-enclosures").hidden = !enclosures;
+        }
+
+        form.addEventListener("input", () => {
+          status.textContent = "";
+        });
+
+        byId("print-letter").addEventListener("click", () => {
+          if (!form.reportValidity()) return;
+          fillLetter();
+          status.textContent = "Print opens your browser's local print window; choose a printer or Save as PDF.";
+          window.print();
+        });
+
+        byId("email-draft").addEventListener("click", () => {
+          if (!form.reportValidity()) return;
+          const recipientEmail = field("recipient-email");
+          if (!recipientEmail) {
+            byId("recipient-email").setCustomValidity("Enter the recipient email address to create an email draft.");
+            byId("recipient-email").reportValidity();
+            byId("recipient-email").setCustomValidity("");
+            return;
+          }
+          const recipient = field("recipient-name");
+          const agency = field("recipient-agency");
+          const date = dateField.value;
+          const subject = field("subject").replace(/[\r\n]+/g, " ");
+          const sender = field("sender-name");
+          const toLine = [recipient, agency].filter(Boolean).join(", ");
+          const body = [
+            `Date: ${date}`,
+            sender ? `From: ${sender}` : "",
+            `To: ${toLine || recipientEmail}`,
+            `Subject: ${subject}`,
+            "",
+            field("facts"),
+            "",
+            "Sources and identifying details:",
+            field("sources"),
+            "",
+            "Request:",
+            field("request"),
+            "",
+            field("closing"),
+            sender,
+            field("enclosures") ? `\nEnclosures:\n${field("enclosures")}` : ""
+          ].filter((line) => line !== "").join("\r\n");
+          const escapeHeader = (value) => value.replace(/[\r\n]/g, " ");
+          const eml = [
+            `To: ${escapeHeader(recipientEmail)}`,
+            `Subject: ${escapeHeader(subject)}`,
+            "MIME-Version: 1.0",
+            "Content-Type: text/plain; charset=UTF-8",
+            "Content-Transfer-Encoding: 8bit",
+            "",
+            body
+          ].join("\r\n");
+          const blob = new Blob([new TextEncoder().encode(eml)], { type: "message/rfc822" });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = "correspondence-draft.eml";
+          link.click();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          status.textContent = "Unsent .eml draft downloaded. Check your saved file; this did not send or store a copy online.";
+        });
+      })();
+    </script>
+  </body>
+</html>
