@@ -1,294 +1,94 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#101713" />
-    <meta name="description" content="OSINT Neo AI: a source-first investigation and publishing workspace. Check physical reality, weigh independent evidence, and test the pattern over time." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>osintneoai.me — OSINT Neo AI · Live Investigation & Legal Matrix</title>
     <link rel="canonical" href="https://osintneoai.me/" />
-    <meta property="og:title" content="OSINT Neo AI — Find it. Verify it. Put it on the record." />
-    <meta property="og:description" content="An investigation workspace grounded in physical facts, independent corroboration, and historical patterns." />
+    <meta name="description" content="osintneoai.me — Main Site for OSINT Neo AI, Live Investigation & Legal Matrix: 17631 Cameron Lane (HBNC Case 3), 617-Entity RICO Topology, Form 700 Void Ab Initio Deals, /ailaws Matrix, Read-Only Evidence Locker & Live .ZIP Incorporation." />
+    <meta property="og:url" content="https://osintneoai.me/" />
+    <meta property="og:site_name" content="osintneoai.me — OSINT Neo AI" />
+    <meta property="og:title" content="osintneoai.me — OSINT Neo AI · Live Investigation & Legal Matrix" />
+    <meta property="og:description" content="Main OSINT Neo AI Portal: Orange County Homeless & Disabled Displacement Investigation, Relator Anthony Michael DiMarcello III & Elizabeth Tina Petruccio, 617-Entity RICO Graph, and /ailaws Legal Matrix." />
     <meta property="og:type" content="website" />
-    <title>OSINT Neo AI — Find it. Verify it. Put it on the record.</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --ink: #101713;
-        --panel: #151f19;
-        --panel-light: #1c2921;
-        --line: #334239;
-        --text: #f3f1e8;
-        --muted: #aab8ad;
-        --lime: #c4ee8e;
-        --cyan: #92e0d1;
-        --serif: Georgia, "Times New Roman", serif;
-        --sans: "Segoe UI", system-ui, -apple-system, sans-serif;
-        font-family: var(--sans);
-        scroll-behavior: smooth;
-        background: var(--ink);
-      }
-
-      * { box-sizing: border-box; }
-      body { margin: 0; min-width: 320px; color: var(--text); background: var(--ink); }
-      a { color: inherit; }
-      button, select { font: inherit; }
-      button:disabled, select:disabled { opacity: 0.6; cursor: not-allowed; }
-      button:focus-visible, a:focus-visible, select:focus-visible { outline: 3px solid var(--lime); outline-offset: 4px; }
-      .skip { position: absolute; top: -5rem; left: 1rem; z-index: 5; padding: 0.75rem 1rem; color: var(--ink); background: var(--lime); border-radius: 0.5rem; }
-      .skip:focus { top: 1rem; }
-      .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
-      .topbar { position: sticky; top: 0; z-index: 2; background: rgb(16 23 19 / 93%); border-bottom: 1px solid rgb(170 184 173 / 13%); backdrop-filter: blur(16px); }
-      .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
-      .brand { display: inline-flex; align-items: center; gap: 0.7rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.17em; text-decoration: none; white-space: nowrap; }
-      .brand-mark { display: grid; width: 31px; height: 31px; place-items: center; color: var(--ink); background: var(--lime); border-radius: 50% 50% 50% 15%; font-family: var(--serif); font-size: 1rem; font-weight: 700; }
-      .links { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.4rem 1.3rem; }
-      .links a { color: var(--muted); font-size: 0.84rem; text-decoration: none; }
-      .links a:hover { color: var(--lime); }
-      .links .nav-cta { padding: 0.72rem 1rem; color: var(--ink); background: var(--lime); border-radius: 0.55rem; font-weight: 750; }
-      .links .nav-cta:hover { color: var(--ink); background: #d7f7af; }
-
-      .hero { position: relative; overflow: hidden; padding-block: clamp(5.5rem, 11vw, 9.5rem) 4.6rem; }
-      .hero:before { position: absolute; top: 12%; right: 3%; width: min(34vw, 410px); aspect-ratio: 1; content: ""; background: radial-gradient(circle, rgb(196 238 142 / 11%), transparent 69%); pointer-events: none; }
-      .eyebrow { display: flex; align-items: center; gap: 0.65rem; margin: 0; color: var(--lime); font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
-      .eyebrow:before { width: 27px; height: 1px; content: ""; background: currentcolor; }
-      h1 { max-width: 790px; margin: 1.4rem 0 1.1rem; font-family: var(--serif); font-size: clamp(3rem, 8.3vw, 6.7rem); font-weight: 400; line-height: 0.99; letter-spacing: -0.052em; }
-      h1 em { color: var(--lime); font-style: normal; }
-      .hero-copy { max-width: 650px; color: #c2cec2; font-size: clamp(1.05rem, 2vw, 1.23rem); line-height: 1.8; }
-      .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-top: 2rem; }
-      .button { display: inline-flex; min-height: 47px; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.74rem 1.08rem; border: 1px solid var(--line); border-radius: 0.55rem; color: var(--text); background: var(--panel-light); font-size: 0.87rem; font-weight: 700; text-decoration: none; transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease; }
-      .button:hover { border-color: var(--cyan); transform: translateY(-1px); }
-      .button-primary { border-color: var(--lime); color: var(--ink); background: var(--lime); }
-      .button-primary:hover { border-color: #d7f7af; background: #d7f7af; }
-      .button-quiet { background: transparent; }
-      .arrow { color: var(--cyan); }
-
-      .rule { height: 1px; border: 0; background: var(--line); }
-      .section { padding-block: 4.4rem; }
-      .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.6rem; }
-      h2 { margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 3.2rem); font-weight: 400; letter-spacing: -0.035em; }
-      .section-head p { max-width: 440px; margin: 0; color: var(--muted); font-size: 0.94rem; line-height: 1.7; }
-      .gate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem; }
-      .card { position: relative; min-height: 244px; padding: 1.4rem; border: 1px solid var(--line); border-radius: 0.72rem; background: linear-gradient(150deg, rgb(28 41 33 / 88%), rgb(21 31 25 / 68%)); }
-      .card-number { color: var(--lime); font-family: ui-monospace, Consolas, monospace; font-size: 0.72rem; letter-spacing: 0.13em; }
-      .card h3 { margin: 2.8rem 0 0.55rem; font-family: var(--serif); font-size: 1.6rem; font-weight: 400; }
-      .card p { max-width: 35ch; margin: 0; color: var(--muted); font-size: 0.91rem; line-height: 1.75; }
-
-      .workspace { display: grid; grid-template-columns: 1fr 0.86fr; align-items: center; gap: 2.5rem; padding: 1.8rem; border: 1px solid var(--line); border-radius: 0.9rem; background: var(--panel); }
-      .workspace p { max-width: 54ch; color: var(--muted); font-size: 0.94rem; line-height: 1.8; }
-      .tool-links { display: grid; gap: 0.65rem; }
-      .tool-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.95rem 1rem; border: 1px solid var(--line); border-radius: 0.6rem; background: var(--ink); text-decoration: none; }
-      .tool-link:hover { border-color: var(--cyan); }
-      .tool-link strong { font-size: 0.9rem; }
-      .tool-link small { display: block; margin-top: 0.25rem; color: var(--muted); font-size: 0.78rem; line-height: 1.5; }
-
-      .voice { display: grid; grid-template-columns: 1fr 0.75fr; align-items: center; gap: 2rem; padding: 1.8rem; border: 1px solid var(--line); border-radius: 0.9rem; background: linear-gradient(115deg, rgb(146 224 209 / 9%), transparent 64%), var(--panel); }
-      .voice p:not(.eyebrow) { max-width: 56ch; color: var(--muted); font-size: 0.9rem; line-height: 1.75; }
-      .voice-controls { display: grid; gap: 0.7rem; }
-      .voice-controls label { color: var(--muted); font-size: 0.78rem; font-weight: 700; }
-      .voice-controls select { width: 100%; min-height: 45px; padding: 0.65rem; border: 1px solid var(--line); border-radius: 0.5rem; color: var(--text); background: var(--ink); }
-      .voice-controls .button { width: 100%; }
-      #voice-status { min-height: 1.25rem; margin: 0; color: var(--cyan); font-size: 0.77rem; }
-
-      .principle { padding: 3.1rem 0 3.4rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-      .principle blockquote { max-width: 880px; margin: 0; font-family: var(--serif); font-size: clamp(1.7rem, 4vw, 3rem); line-height: 1.37; letter-spacing: -0.025em; }
-      .principle blockquote em { color: var(--lime); font-style: normal; }
-      .principle cite { display: block; margin-top: 1rem; color: var(--muted); font-family: var(--sans); font-size: 0.78rem; font-style: normal; }
-      .footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.55rem; color: var(--muted); font-size: 0.78rem; }
-      .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
-      .footer a { color: var(--muted); text-decoration: none; }
-      .footer a:hover { color: var(--lime); }
-      noscript { display: block; padding: 1rem; color: var(--text); background: #5e3028; text-align: center; }
-
-      @media (max-width: 760px) {
-        .wrap { width: min(100% - 32px, 600px); }
-        .nav { min-height: 68px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 0.8rem; padding-block: 0.85rem; }
-        .links { justify-content: flex-start; gap: 0.65rem 1rem; }
-        .links a { font-size: 0.78rem; }
-        .links .nav-cta { padding: 0.55rem 0.7rem; }
-        .hero { padding-top: 5rem; }
-        .section { padding-block: 3.5rem; }
-        .section-head { align-items: flex-start; flex-direction: column; }
-        .gate-grid, .workspace, .voice { grid-template-columns: 1fr; }
-        .card { min-height: 190px; }
-        .card h3 { margin-top: 1.8rem; }
-        .workspace, .voice { gap: 1.1rem; padding: 1.2rem; }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        *, *:before, *:after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
-      }
-    </style>
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-ChEupTGd.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-TnnklPsF.css">
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <header class="topbar">
-      <nav class="wrap nav" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="OSINT Neo AI home"><span class="brand-mark" aria-hidden="true">N</span> OSINT NEO AI</a>
-        <div class="links">
-          <a href="#method">The method</a>
-          <a href="/workspace/letter-studio.html">Mail studio</a>
-          <a href="https://github.com/Tonypost949/civil-rights-activist-emailer" target="_blank" rel="noopener noreferrer">Email project</a>
-          <a class="nav-cta" href="/chat/">Open your workspace <span aria-hidden="true">↗</span></a>
-        </div>
-      </nav>
-    </header>
+    <div id="root"></div>
 
-    <main id="main">
-      <section class="wrap hero" aria-labelledby="hero-title">
-        <p class="eyebrow">A source-first investigation workspace</p>
-        <h1 id="hero-title">Find the record.<br />Check the <em>whole picture.</em></h1>
-        <p class="hero-copy">Keep what happened grounded in the physical record. Weigh the odds. Check the pattern over time. Make the evidence traceable, and say plainly what is known, what is supported, and what still needs corroboration.</p>
-        <div class="actions">
-          <a class="button button-primary" href="/chat/">Open your workspace <span aria-hidden="true">↗</span></a>
-          <a class="button" href="/workspace/letter-studio.html">Write and print a letter <span aria-hidden="true">→</span></a>
-        </div>
-      </section>
-
-      <section class="wrap section" id="method" aria-labelledby="method-title">
-        <div class="section-head">
-          <div><p class="eyebrow">The Trinity · three checks</p><h2 id="method-title">Slow down. Check all three.</h2></div>
-          <p>One dramatic claim is not the same as a verified finding. Every lead gets checked against reality, its sources, and the longer record.</p>
-        </div>
-        <div class="gate-grid">
-          <article class="card"><span class="card-number">GATE 01&nbsp; / &nbsp;PHYSICAL REALITY</span><h3>Could it have happened?</h3><p>Check dates, locations, distances, sequence, and original records. If the physical facts do not fit, stop and investigate why.</p></article>
-          <article class="card"><span class="card-number">GATE 02&nbsp; / &nbsp;ODDS</span><h3>What backs it up?</h3><p>Record the source. Assess reliability and independent corroboration. Show uncertainty; do not dress a single unverified account up as fact.</p></article>
-          <article class="card"><span class="card-number">GATE 03&nbsp; / &nbsp;BASELINE</span><h3>Does the pattern hold?</h3><p>Compare what happened with historical frequency, ordinary baselines, and changes over time. Separate a real shift from a temporary spike.</p></article>
-        </div>
-      </section>
-
-      <section class="wrap section" id="workspace" aria-labelledby="workspace-title">
-        <div class="workspace">
-          <div>
-            <p class="eyebrow">The working space</p>
-            <h2 id="workspace-title">From first source<br />to finished dispatch.</h2>
-            <p>Your workspace, your investigation, your record. Follow source links and dates, work through the Three Gates, and choose what is ready to share. Prepare a print-ready letter or export an email draft without sending either one for you.</p>
-            <a class="button button-primary" href="/chat/">Go to the user workspace <span aria-hidden="true">↗</span></a>
+    <!-- Text File (.md, .txt) Viewer Modal -->
+    <div id="globalTextModal" class="hidden fixed inset-0 z-[9999] bg-slate-950/80 backdrop-blur-sm items-center justify-center p-4">
+      <div class="bg-slate-900 border border-slate-700 rounded-xl shadow-2xl max-w-3xl w-full max-h-[85vh] flex flex-col overflow-hidden text-slate-100 font-sans">
+        <div class="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">DOC</span>
+            <h3 id="globalTextModalTitle" class="text-sm font-bold text-white truncate">Document Viewer</h3>
           </div>
-          <div class="tool-links" aria-label="Open a workspace tool">
-            <a class="tool-link" href="/workspace/letter-studio.html"><span><strong>Print &amp; Mail Studio</strong><small>Prepare a factual letter or save it as a PDF; nothing gets sent or saved by this page.</small></span><span class="arrow" aria-hidden="true">→</span></a>
-            <a class="tool-link" href="/workspace/newspaper_broadsheet_v3.html"><span><strong>The Tax-Funded Dispatch</strong><small>Open the existing newsroom workspace.</small></span><span class="arrow" aria-hidden="true">→</span></a>
-            <a class="tool-link" href="https://github.com/Tonypost949/civil-rights-activist-emailer" target="_blank" rel="noopener noreferrer"><span><strong>Civil Rights Activist Emailer</strong><small>Visit the separate email tool's source repository and setup.</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <div class="flex items-center gap-2 shrink-0">
+            <a id="globalTextModalRawLink" href="#" target="_blank" class="px-2.5 py-1 text-xs rounded bg-blue-600 hover:bg-blue-500 text-white font-medium">Open in New Tab</a>
+            <button id="globalTextModalClose" class="px-2.5 py-1 text-xs rounded bg-slate-800 hover:bg-slate-700 text-slate-300">✕ Close</button>
           </div>
         </div>
-      </section>
-
-      <section class="wrap section" id="voice" aria-labelledby="voice-title">
-        <div class="voice">
-          <div>
-            <p class="eyebrow">A voice you choose · no autoplay</p>
-            <h2 id="voice-title">A calmer read-out.</h2>
-            <p>Choose an offline English voice that is available on this device. Playback starts only when you press the button. The voice list excludes online voices; nothing is sent to a voice service.</p>
-          </div>
-          <div class="voice-controls">
-            <label for="voice-choice">Voice on this device</label>
-            <select id="voice-choice" aria-describedby="voice-status"><option value="">Loading available voices…</option></select>
-            <button id="voice-button" class="button button-primary" type="button">▶&nbsp; Listen to the overview</button>
-            <p id="voice-status" role="status" aria-live="polite">Ready when you are. No sound plays until you choose.</p>
-          </div>
+        <div class="p-4 overflow-y-auto flex-1 font-mono text-xs leading-relaxed whitespace-pre-wrap text-slate-200 bg-slate-950/50" id="globalTextModalBody">
+          Loading document...
         </div>
-      </section>
+      </div>
+    </div>
 
-      <section class="wrap principle" aria-label="Editorial principle">
-        <blockquote>“Keep the original. Name the source. Check it against reality. Mark the uncertainty. <em>Then put it on the record.</em>”</blockquote>
-        <cite>OSINT Neo AI · source, evidence, and provenance first</cite>
-      </section>
-    </main>
-
-    <footer class="wrap footer">
-      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">N</span> OSINT NEO AI</a>
-      <span>Independent work. Primary sources. Uncertainty in plain sight.</span>
-      <div class="footer-links"><a href="/chat/">Workspace</a><a href="/workspace/letter-studio.html">Mail studio</a><a href="https://github.com/Tonypost949/OsintNeoAi">GitHub</a></div>
-    </footer>
-    <noscript>Turn on JavaScript only if you want to use the optional local voice reader; the rest of the site is available without it.</noscript>
     <script>
-      (() => {
-        const voiceChoice = document.getElementById("voice-choice");
-        const voiceButton = document.getElementById("voice-button");
-        const voiceStatus = document.getElementById("voice-status");
-        const summary = "Check physical reality. Weigh the odds. Watch the pattern over time. Keep every source traceable, and show plainly what is known and what still needs corroboration.";
-        let utterance;
+      // Global click handler to capture .md and .txt links and display in modal
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('a');
+        if (!target) return;
+        const href = target.getAttribute('href');
+        if (!href) return;
+        const cleanHref = href.split('?')[0].split('#')[0];
+        if (cleanHref.endsWith('.md') || cleanHref.endsWith('.txt')) {
+          e.preventDefault();
+          const modal = document.getElementById('globalTextModal');
+          const title = document.getElementById('globalTextModalTitle');
+          const body = document.getElementById('globalTextModalBody');
+          const rawLink = document.getElementById('globalTextModalRawLink');
+          if (!modal || !title || !body || !rawLink) return;
 
-        if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
-          voiceChoice.disabled = true;
-          voiceButton.disabled = true;
-          voiceButton.textContent = "Voice playback is not available here";
-          voiceStatus.textContent = "The rest of the site still works without the optional voice reader.";
-          return;
+          title.textContent = cleanHref.split('/').pop();
+          rawLink.href = href;
+          body.textContent = 'Loading ' + href + '...';
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+
+          fetch(href)
+            .then(res => {
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+              return res.text();
+            })
+            .then(text => {
+              body.textContent = text;
+            })
+            .catch(err => {
+              body.textContent = 'Document content: ' + href + '\\n\\n(File available at raw path: ' + href + ')';
+            });
         }
+      });
 
-        function populateVoices() {
-          const synthesis = window.speechSynthesis;
-          const englishVoices = synthesis.getVoices().filter((voice) => /^en(?:-|$)/i.test(voice.lang) && voice.localService === true);
-          const previousName = voiceChoice.value;
-          voiceChoice.replaceChildren();
-
-          if (!englishVoices.length) {
-            voiceChoice.add(new Option("No English voices available on this device", ""));
-            voiceChoice.disabled = true;
-            voiceButton.disabled = true;
-            voiceStatus.textContent = "No offline English voice is available in this browser. You can still use the rest of the site.";
-            return;
-          }
-
-          englishVoices.forEach((voice) => {
-            const option = new Option(`${voice.name} (${voice.lang})`, voice.voiceURI);
-            voiceChoice.add(option);
-          });
-          voiceChoice.disabled = false;
-          voiceButton.disabled = false;
-          const preferred = englishVoices.find((voice) => /\b(natural|neural|premium|aria|jenny|ava)\b/i.test(voice.name))
-            || englishVoices.find((voice) => /\bzira\b/i.test(voice.name))
-            || englishVoices.find((voice) => voice.lang.toLowerCase() === "en-us" && voice.default)
-            || englishVoices.find((voice) => voice.lang.toLowerCase() === "en-us")
-            || englishVoices[0];
-          voiceChoice.value = englishVoices.some((voice) => voice.voiceURI === previousName) ? previousName : preferred.voiceURI;
-          voiceStatus.textContent = "Ready when you are. No sound plays until you choose.";
+      document.getElementById('globalTextModalClose')?.addEventListener('click', function() {
+        const modal = document.getElementById('globalTextModal');
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
         }
-
-        voiceChoice.addEventListener("change", () => {
-          if (window.speechSynthesis.speaking) {
-            window.speechSynthesis.cancel();
-            voiceButton.textContent = "▶  Listen to the overview";
-          }
-          voiceStatus.textContent = `Selected ${voiceChoice.selectedOptions[0]?.textContent || "device voice"}.`;
-        });
-
-        voiceButton.addEventListener("click", () => {
-          const synthesis = window.speechSynthesis;
-          if (synthesis.speaking) {
-            synthesis.cancel();
-            voiceButton.textContent = "▶  Listen to the overview";
-            voiceStatus.textContent = "Playback stopped.";
-            return;
-          }
-
-          const voice = synthesis.getVoices().find((item) => item.voiceURI === voiceChoice.value && item.localService === true);
-          if (!voice) {
-            voiceStatus.textContent = "Choose an available English voice before playback.";
-            return;
-          }
-
-          synthesis.cancel();
-          utterance = new SpeechSynthesisUtterance(summary);
-          utterance.voice = voice;
-          utterance.rate = 0.94;
-          utterance.pitch = 1;
-          utterance.onend = () => {
-            voiceButton.textContent = "▶  Listen to the overview";
-            voiceStatus.textContent = "Overview finished.";
-          };
-          utterance.onerror = () => {
-            voiceButton.textContent = "▶  Listen to the overview";
-            voiceStatus.textContent = "This device could not play that voice. Try another from the list.";
-          };
-          voiceStatus.textContent = `Speaking with ${voice.name}. Press Stop to end playback.`;
-          voiceButton.textContent = "■  Stop";
-          synthesis.speak(utterance);
-        });
-
-        window.speechSynthesis.addEventListener("voiceschanged", populateVoices);
-        populateVoices();
-      })();
+      });
+      document.getElementById('globalTextModal')?.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.add('hidden');
+          this.classList.remove('flex');
+        }
+      });
     </script>
   </body>
 </html>
